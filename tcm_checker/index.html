@@ -373,6 +373,117 @@
       text-decoration: underline;
     }
 
+    .evidence-card {
+      border-left: 5px solid #26352a;
+    }
+
+    .negative-studies {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .negative-study {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 20px;
+      background: #fbfcfa;
+    }
+
+    .study-header {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .study-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      background: #26352a;
+      color: #fff;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .study-n {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      background: rgba(46, 125, 50, 0.12);
+      color: var(--green);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Mono", Menlo, monospace;
+    }
+
+    .negative-study h3 {
+      margin: 4px 0 10px;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+    }
+
+    .negative-study p {
+      margin: 0 0 10px;
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #344054;
+    }
+
+    .negative-study p em {
+      color: var(--red);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .negative-study .study-meta {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+      font-size: 14px;
+      color: #475569;
+    }
+
+    .negative-study a {
+      color: #0f5f9e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .negative-study a:hover {
+      text-decoration: underline;
+    }
+
+    .evidence-summary {
+      margin-top: 22px;
+      padding: 16px 18px;
+      background: rgba(38, 53, 42, 0.06);
+      border-radius: 16px;
+      border-left: 4px solid #26352a;
+    }
+
+    .evidence-summary p {
+      margin: 0 0 8px;
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: #243028;
+    }
+
+    .evidence-summary p:last-child {
+      margin-bottom: 0;
+    }
+
+    .evidence-summary em {
+      font-style: italic;
+      font-weight: 700;
+    }
+
     @media (max-width: 880px) {
       .grid { grid-template-columns: 1fr; }
       .toolbar { grid-template-columns: 1fr; }
@@ -527,6 +638,75 @@
           <div class="small interaction-note">甘草酸抑制 11β-HSD2,使内源/外源皮质醇活性增强,与激素或盐皮质激素受体相关药物叠加。</div>
           <div class="small"><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2021.719197/full" target="_blank" rel="noopener noreferrer">Frontiers in Nutrition</a></div>
         </div>
+      </div>
+    </section>
+
+    <section class="card evidence-card">
+      <h2>关键的阴性研究</h2>
+      <p class="note">下面这些是大样本、严格随机对照、双盲、安慰剂对照、发表于顶级期刊的研究。它们检验的是中医药/针灸最核心的疗效宣称。结果是:在最干净的研究设计下,中医药与安慰剂没有差异。</p>
+
+      <div class="negative-studies">
+
+        <article class="negative-study">
+          <div class="study-header">
+            <span class="study-tag">2024 · The Lancet</span>
+            <span class="study-n">n = 1,641</span>
+          </div>
+          <h3>中风醒脑口服液 (FYTF-919) 治疗急性脑出血:CHAIN 试验</h3>
+          <p>这是迄今最重要的一项中药 RCT。"中风醒脑"是中国治疗急性脑出血的常用中成药复方,基于"化瘀吸收血肿、抗炎"等理论被广泛使用。CHAIN 试验在中国 26 家医院招募了 1,641 名中重度脑出血患者,随机给予中风醒脑口服液或外观、口味完全一致的安慰剂,持续 28 天。</p>
+          <p><strong>结果:</strong>主要结局 90 天 utility-weighted 改良 Rankin 量表评分,试验组 0.44,安慰剂组 0.44,差值 0.01(95% CI -0.02 至 0.04),<em>p = 0.63</em>。功能恢复、生存率、生活质量——全部三项关键指标无任何差异。Lancet 编辑部评论指出,这一结果"再次确认了对包括中医药在内的、已在全世界广泛使用的现有疗法,进行方法学严格的随机对照试验的必要性"。</p>
+          <p class="study-meta"><strong>意义:</strong>这是首篇以中药复方为主题、发表在 Lancet 的 RCT。其阴性结果之所以重要,在于它的设计完全无法被传统辩护词反驳——不是"剂量不够"(用的是临床推荐剂量)、不是"病人不对"(选的是适应症患者)、不是"不个体化"(中成药本身就是固定方)、不是"西医不懂中医"(主要研究者来自广州中医药大学)。<a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)02261-X/abstract" target="_blank" rel="noopener noreferrer">原文链接</a></p>
+        </article>
+
+        <article class="negative-study">
+          <div class="study-header">
+            <span class="study-tag">2013 · Stroke (AHA)</span>
+            <span class="study-n">n = 1,100</span>
+          </div>
+          <h3>NeuroAiD (MLC601) 治疗急性缺血性卒中:CHIMES 试验</h3>
+          <p>CHIMES 是一项国际多中心(中国、新加坡、菲律宾、泰国、斯里兰卡)、双盲、安慰剂对照 RCT,检验的是另一个被广泛使用的中药复方 NeuroAiD,声称可促进卒中后神经功能恢复。患者在卒中发作后 72 小时内入组,治疗 3 个月。</p>
+          <p><strong>结果:</strong>主要结局 3 个月时改良 Rankin 量表评分,中药组与安慰剂组<em>无统计学差异</em>。结论原文:"MLC601 在用于中等严重程度急性缺血性卒中患者时,在 3 个月改善结局方面在统计学上不优于安慰剂"。</p>
+          <p class="study-meta"><strong>意义:</strong>这项试验由中医药支持机构(CHIMES Society / Moleac)赞助——即由<em>利益相关方自己设计</em>的试验,在严格盲法下也得出阴性结果,可信度极高。<a href="https://pubmed.ncbi.nlm.nih.gov/23780952/" target="_blank" rel="noopener noreferrer">PubMed</a></p>
+        </article>
+
+        <article class="negative-study">
+          <div class="study-header">
+            <span class="study-tag">2008 · JAMA</span>
+            <span class="study-n">n = 3,069</span>
+          </div>
+          <h3>银杏叶提取物预防痴呆:GEM 研究</h3>
+          <p>美国国立补充与替代医学中心 (NCCAM) 资助的大型 RCT,在 5 个学术医学中心招募 3,069 名 75 岁以上、认知正常或轻度认知损害的老年人,随机服用 EGb761 银杏叶提取物 120 mg 每日两次或安慰剂,中位随访 6.1 年。</p>
+          <p><strong>结果:</strong>痴呆和阿尔茨海默病的发病率在两组间<em>无统计学差异</em>。JAMA 同期社论结论:"GEM 研究为大量证据再添一项,证明常规使用的银杏叶提取物不能预防有或无认知障碍人群的痴呆,对阿尔茨海默病也无效。使用者不应期待它有用。"</p>
+          <p class="study-meta"><strong>意义:</strong>银杏是全球销量最大的"植物药"之一,产业巨大,所谓"改善记忆""保护脑血管"的宣传无处不在。GEM 是迄今为止唯一一项有足够样本量和随访时间来真正检验这一核心宣称的研究。它的阴性结果至今未被任何同等量级的研究推翻。<a href="https://jamanetwork.com/journals/jama/fullarticle/182929" target="_blank" rel="noopener noreferrer">JAMA</a></p>
+        </article>
+
+        <article class="negative-study">
+          <div class="study-header">
+            <span class="study-tag">2007 · Postgrad Med J</span>
+            <span class="study-n">系统综述</span>
+          </div>
+          <h3>"个体化中药辨证论治"的循证检验:Guo, Canter, Ernst 综述</h3>
+          <p>"中医必须个体化辨证论治、不能用 RCT 研究"是中医捍卫者最常见的辩护。Ernst 团队系统检索了所有以"个体化草药处方"(包括中医、欧洲草药、阿育吠陀)为干预的随机对照试验。</p>
+          <p><strong>结果:</strong>全球只检索到 3 项符合标准的 RCT。膝骨关节炎试验中,试验组优于安慰剂的趋势可由基线差异和均值回归解释;肠易激综合征试验中,个体化治疗优于安慰剂但<em>劣于标准化中药方</em>;化疗毒性预防试验中,个体化中药与安慰剂<em>无差异</em>。综述结论原文:"没有令人信服的证据支持在任何适应症上使用个体化草药治疗。"</p>
+          <p class="study-meta"><strong>意义:</strong>这项综述击中了"中医不能用现代科学方法评价"的核心辩护。当真的有人按"辨证论治"的方式做了 RCT,结果是:个体化处方既无优势,反而可能不如固定的标准方。这意味着,即使在"中医自己的规则"下进行严格检验,也不能证明其有效。<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2600130/" target="_blank" rel="noopener noreferrer">PMC</a></p>
+        </article>
+
+        <article class="negative-study">
+          <div class="study-header">
+            <span class="study-tag">多项 Cochrane / Meta 综述</span>
+            <span class="study-n">数百项 RCT</span>
+          </div>
+          <h3>针灸的"穴位特异性"在严格盲法下消失</h3>
+          <p>针灸的核心理论宣称是经络与穴位的特异性——扎对穴位有效,扎错没效。在使用"假针灸"(sham acupuncture,即在非穴位扎入或假装扎入)作为对照的 RCT 中,这一宣称反复被证伪:</p>
+          <p><strong>结果:</strong>多项系统综述显示,真针灸 vs 假针灸在大多数适应症(疼痛、偏头痛、腰痛、骨关节炎等)上<em>差异微小或无差异</em>,而真针灸+假针灸 vs 不治疗都比不治疗好——也就是说,所谓"针灸效果"主要是<em>非特异性安慰剂效应</em>,与穴位选择、经络理论无关。一项 51 项研究的综述发现,36 项血清生物标志物中绝大多数在真假针灸之间无差异。</p>
+          <p class="study-meta"><strong>意义:</strong>这是对中医理论体系的根本性证伪。如果"经络穴位"真的存在并具有生理特异性,那么扎在错误的位置不应当产生同样的效果。但实际数据显示恰恰相反——这说明经络理论作为一个解释框架是空的,所谓的"治疗效应"完全可以用安慰剂理论解释。<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3001416/" target="_blank" rel="noopener noreferrer">综述 1</a> · <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8850388/" target="_blank" rel="noopener noreferrer">综述 2</a></p>
+        </article>
+
+      </div>
+
+      <div class="evidence-summary">
+        <p><strong>共同模式 — </strong>当中医药接受现代医学的金标准检验(大样本、随机、双盲、安慰剂对照、独立数据监查)时,几乎无一例外地得出阴性结果或无法重复的小效应。这不是个别研究的问题,而是<em>一个一致的模式</em>。任何一个具体的中药、复方、疗法在小样本、开放标签或仅以"有效率"为指标的中文文献中显示"有效",但当研究设计变得严格,效应就消失。</p>
+        <p>这种模式在科学史上有一个标准解释:这些治疗手段的"疗效"主要是安慰剂效应、自然病程、回归均值和偏倚的混合产物,而不是治疗本身的特异性药理作用。</p>
       </div>
     </section>
 
