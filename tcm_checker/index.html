@@ -302,6 +302,77 @@
       font-size: 13px;
     }
 
+
+    .interactions {
+      display: grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .interaction-item {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px 16px;
+      background: #fbfcfa;
+    }
+
+    .interaction-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .interaction-drug {
+      font-size: 16px;
+      font-weight: 800;
+      color: #1f2933;
+    }
+
+    .interaction-effect {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--red);
+      background: rgba(185, 28, 28, 0.08);
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .interaction-herbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .pill-mini {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 9px;
+      background: #e9eee5;
+      color: #243028;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .interaction-note {
+      margin-bottom: 6px;
+    }
+
+    .interaction-item a {
+      color: #0f5f9e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .interaction-item a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 880px) {
       .grid { grid-template-columns: 1fr; }
       .toolbar { grid-template-columns: 1fr; }
@@ -315,7 +386,7 @@
   <header>
     <h1>中药材安全与药方风险查询</h1>
     <blockquote class="quote">
-      “我还记得先前的医生的议论和方药，和现在所知道的比较起来，便渐渐的悟得中医不过是一种有意的或无意的骗子。”
+      “我还记得先前的医生的议论和方药，和现在所知道的比较起来，便渐渐的悟得中医不过是一种有意的或无意的骗子”
       <cite>——鲁迅，《呐喊·自序》</cite>
     </blockquote>
   </header>
@@ -345,10 +416,10 @@
       </div>
 
       <div class="card">
-        <h2>安全评分说明</h2>
+        <h2>风险评分说明</h2>
         <p class="note">评分是教学与政策模拟用途。黑名单一票否决；灰名单和 C 类越多，风险越高。</p>
         <div class="score-box" id="scoreBox">
-          <div class="metric"><div class="num">—</div><div class="label">安全等级</div></div>
+          <div class="metric"><div class="num">—</div><div class="label">风险等级</div></div>
           <div class="metric"><div class="num">—</div><div class="label">黑名单数量</div></div>
           <div class="metric"><div class="num">—</div><div class="label">灰/C数量</div></div>
           <div class="metric"><div class="num">—</div><div class="label">未知数量</div></div>
@@ -379,6 +450,86 @@
       </div>
       <div id="library" class="library"></div>
     </section>
+
+    <section class="card">
+      <h2>中药-西药相互作用速查</h2>
+      <p class="note">如果你或家人正在长期服用某类西药,在尝试任何中药前请先核对此表。证据基于循证医学综述,以药效学/药代动力学机制为依据。</p>
+      <div class="interactions">
+        <div class="interaction-item">
+          <div class="interaction-top">
+            <div class="interaction-drug">华法林 / 抗凝药 (Warfarin, DOACs)</div>
+            <div class="interaction-effect">出血风险增加</div>
+          </div>
+          <div class="interaction-herbs"><span class="pill-mini">丹参</span> <span class="pill-mini">当归</span> <span class="pill-mini">川芎</span> <span class="pill-mini">红花</span> <span class="pill-mini">桃仁</span> <span class="pill-mini">银杏叶</span> <span class="pill-mini">生姜</span> <span class="pill-mini">三七</span> <span class="pill-mini">水蛭</span> <span class="pill-mini">人参</span></div>
+          <div class="small interaction-note">90 种中药与抗凝/抗血小板药存在文献记载的相互作用,大多数为药效学叠加导致的出血风险。</div>
+          <div class="small"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3650066/" target="_blank" rel="noopener noreferrer">PLOS ONE (Tsai 等,2013)</a></div>
+        </div>
+        <div class="interaction-item">
+          <div class="interaction-top">
+            <div class="interaction-drug">阿司匹林 / 抗血小板药 (Clopidogrel)</div>
+            <div class="interaction-effect">出血风险增加</div>
+          </div>
+          <div class="interaction-herbs"><span class="pill-mini">丹参</span> <span class="pill-mini">银杏叶</span> <span class="pill-mini">当归</span> <span class="pill-mini">川芎</span> <span class="pill-mini">红花</span> <span class="pill-mini">生姜</span> <span class="pill-mini">姜黄</span></div>
+          <div class="small interaction-note">与抗凝药合用风险类似;阿司匹林是文献记载与中药相互作用第二多的西药。</div>
+          <div class="small"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3650066/" target="_blank" rel="noopener noreferrer">PLOS ONE (Tsai 等,2013)</a></div>
+        </div>
+        <div class="interaction-item">
+          <div class="interaction-top">
+            <div class="interaction-drug">地高辛 / 强心苷</div>
+            <div class="interaction-effect">心律失常风险</div>
+          </div>
+          <div class="interaction-herbs"><span class="pill-mini">甘草</span> <span class="pill-mini">蟾酥</span> <span class="pill-mini">人参</span></div>
+          <div class="small interaction-note">甘草通过低钾增加地高辛毒性;蟾酥含蟾蜍二烯内酯,本身即类洋地黄成分,合用极危险。</div>
+          <div class="small"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1769273/" target="_blank" rel="noopener noreferrer">Heart (BMJ) / Frontiers</a></div>
+        </div>
+        <div class="interaction-item">
+          <div class="interaction-top">
+            <div class="interaction-drug">降压药 / 利尿剂</div>
+            <div class="interaction-effect">降压效果减弱 / 低钾血症</div>
+          </div>
+          <div class="interaction-herbs"><span class="pill-mini">甘草</span> <span class="pill-mini">麻黄</span> <span class="pill-mini">人参</span></div>
+          <div class="small interaction-note">甘草引起钠潴留对抗降压药并加重低钾;麻黄拟交感神经,直接升高血压、心率。</div>
+          <div class="small"><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2021.719197/full" target="_blank" rel="noopener noreferrer">Frontiers in Nutrition</a></div>
+        </div>
+        <div class="interaction-item">
+          <div class="interaction-top">
+            <div class="interaction-drug">免疫抑制剂 (他克莫司、环孢素)</div>
+            <div class="interaction-effect">血药浓度异常 / 排异 / 中毒</div>
+          </div>
+          <div class="interaction-herbs"><span class="pill-mini">五味子</span> <span class="pill-mini">生姜</span> <span class="pill-mini">姜黄</span> <span class="pill-mini">人参</span></div>
+          <div class="small interaction-note">五味子(Wuzhi 胶囊)显著增加他克莫司浓度;贯叶连翘(St. John's wort)通过 CYP3A4 诱导降低浓度致排异,虽非中药但常被混用。</div>
+          <div class="small"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9611668/" target="_blank" rel="noopener noreferrer">MDPI Pharmaceutics / J Ethnopharmacol</a></div>
+        </div>
+        <div class="interaction-item">
+          <div class="interaction-top">
+            <div class="interaction-drug">降糖药 (胰岛素、磺脲类)</div>
+            <div class="interaction-effect">血糖控制紊乱</div>
+          </div>
+          <div class="interaction-herbs"><span class="pill-mini">人参</span> <span class="pill-mini">西洋参</span> <span class="pill-mini">苦瓜</span> <span class="pill-mini">黄连</span></div>
+          <div class="small interaction-note">人参类影响血糖方向不一致(可升可降),与降糖药合用使血糖更难控制。</div>
+          <div class="small"><a href="https://www.nccih.nih.gov/health/asian-ginseng" target="_blank" rel="noopener noreferrer">NCCIH</a></div>
+        </div>
+        <div class="interaction-item">
+          <div class="interaction-top">
+            <div class="interaction-drug">CYP3A4 底物药物 (他汀、钙拮抗剂等)</div>
+            <div class="interaction-effect">血药浓度升高 / 毒性</div>
+          </div>
+          <div class="interaction-herbs"><span class="pill-mini">五味子</span> <span class="pill-mini">姜黄</span> <span class="pill-mini">生姜</span></div>
+          <div class="small interaction-note">上述中药为 CYP3A4 抑制剂,与他汀、地尔硫卓、咪达唑仑等同代谢途径药物合用可致血药浓度升高。</div>
+          <div class="small"><a href="https://www.mdpi.com/1422-0067/26/11/5188" target="_blank" rel="noopener noreferrer">MDPI IJMS</a></div>
+        </div>
+        <div class="interaction-item">
+          <div class="interaction-top">
+            <div class="interaction-drug">糖皮质激素 / 醛固酮系统药物</div>
+            <div class="interaction-effect">低钾、高血压加重</div>
+          </div>
+          <div class="interaction-herbs"><span class="pill-mini">甘草</span></div>
+          <div class="small interaction-note">甘草酸抑制 11β-HSD2,使内源/外源皮质醇活性增强,与激素或盐皮质激素受体相关药物叠加。</div>
+          <div class="small"><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2021.719197/full" target="_blank" rel="noopener noreferrer">Frontiers in Nutrition</a></div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -693,66 +844,224 @@
 
     const EVIDENCE = {
       '马兜铃': [
-        { level: '强证据', type: '肾毒性 / 致癌', source: 'NCI', note: '马兜铃酸与上尿路癌和膀胱癌风险相关。', url: 'https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/aristolochic-acids' },
-        { level: '强证据', type: '肾衰竭 / 癌症', source: 'Grollman 2016', note: '流行病学和分子研究显示 Aristolochia 暴露可导致肾衰竭和癌症。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5341512/' }
+        { level: '强证据', type: '肾毒性 / 致癌', source: 'NCI', note: '马兜铃酸明确与上尿路癌、膀胱癌及马兜铃酸肾病相关。', url: 'https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/aristolochic-acids' },
+        { level: '强证据', type: '肾衰竭 / 癌症', source: 'Grollman 等综述', note: '流行病学与分子研究显示 Aristolochia 暴露可致肾衰竭和泌尿系癌症。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5341512/' }
       ],
       '关木通': [
-        { level: '强证据', type: '马兜铃酸肾病 / 致癌', source: 'NCI', note: '关木通属于马兜铃酸风险代表药材之一。', url: 'https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/aristolochic-acids' }
+        { level: '强证据', type: '马兜铃酸肾病 / 致癌', source: 'NCI', note: '关木通是导致 1990 年代比利时"中草药肾病"事件的主要药材之一。', url: 'https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/aristolochic-acids' }
       ],
       '广防己': [
-        { level: '强证据', type: '马兜铃酸肾病 / 致癌', source: 'NCI', note: '广防己与马兜铃酸相关肾毒性和癌症风险相关。', url: 'https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/aristolochic-acids' }
+        { level: '强证据', type: '马兜铃酸肾病 / 致癌', source: 'NCI', note: '含马兜铃酸,与肾毒性和泌尿系癌症风险相关。', url: 'https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/aristolochic-acids' }
       ],
       '青木香': [
-        { level: '强证据', type: '马兜铃酸肾病 / 致癌', source: 'NCI', note: '青木香属于马兜铃酸相关风险药材。', url: 'https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/aristolochic-acids' }
-      ],
-      '麻黄': [
-        { level: '监管禁令', type: '心血管风险 / 中枢神经风险', source: 'NCCIH / FDA', note: 'FDA 禁止含麻黄碱生物碱的膳食补充剂；NCCIH 列出高血压、心脏病发作、癫痫和卒中等风险。', url: 'https://www.nccih.nih.gov/health/ephedra' },
-        { level: '监管禁令', type: '膳食补充剂违法销售', source: 'FDA', note: '含麻黄碱生物碱的膳食补充剂被 FDA 认定为 adulterated dietary supplements。', url: 'https://www.fda.gov/food/dietary-supplement-products-ingredients/ephedra' }
-      ],
-      '何首乌': [
-        { level: '强证据', type: '药物性肝损伤', source: 'LiverTox', note: 'Polygonum multiflorum 与多起临床明显急性肝损伤报告相关，严重者可致命。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548795/' }
-      ],
-      '补骨脂': [
-        { level: '警戒证据', type: '肝损伤 / 光敏风险', source: 'LiverTox', note: '补骨脂及其相关补充剂被报告与肝损伤有关，且含光敏性成分。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548561/' }
-      ],
-      '黄芩': [
-        { level: '警戒证据', type: '药物性肝损伤', source: 'LiverTox', note: '黄芩及含黄芩的复方产品被纳入草药肝损伤讨论，需要关注肝毒性警戒。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548757/' }
-      ],
-      '雷公藤': [
-        { level: '强证据', type: '多系统毒性', source: 'NCCIH', note: '雷公藤可能导致严重副作用，包括生殖系统、骨骼、肝脏等风险，需严格医学监管。', url: 'https://www.nccih.nih.gov/health/thunder-god-vine' }
-      ],
-      '朱砂': [
-        { level: '强证据', type: '汞暴露 / 神经肾毒性', source: 'WHO', note: '汞暴露可损害神经、消化、免疫、肺和肾脏系统。朱砂作为含汞矿物药应高度警惕。', url: 'https://www.who.int/news-room/fact-sheets/detail/mercury-and-health' }
-      ],
-      '雄黄': [
-        { level: '强证据', type: '砷暴露 / 致癌 / 多系统毒性', source: 'WHO', note: '无机砷暴露与癌症、皮肤病变、心血管疾病等健康风险相关。雄黄作为含砷矿物药应高度警惕。', url: 'https://www.who.int/news-room/fact-sheets/detail/arsenic' }
-      ],
-      '砒霜': [
-        { level: '强证据', type: '砷暴露 / 高毒性', source: 'WHO', note: '无机砷具有明确毒性与致癌风险。', url: 'https://www.who.int/news-room/fact-sheets/detail/arsenic' }
-      ],
-      '铅丹': [
-        { level: '强证据', type: '铅暴露 / 神经毒性', source: 'WHO', note: '铅暴露可造成神经、血液、肾脏等系统损害，儿童尤其敏感。', url: 'https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health' }
-      ],
-      '白果': [
-        { level: '临床警戒', type: '银杏毒素 / 儿童中毒', source: 'NCBI / StatPearls', note: '银杏种子过量可引发癫痫等中毒表现，儿童风险更高。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK559318/' }
-      ],
-      '番泻叶': [
-        { level: '临床警戒', type: '泻下依赖 / 电解质紊乱', source: 'LiverTox', note: '番泻叶长期或过量使用可导致腹泻、电解质紊乱和泻剂依赖。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK547922/' }
-      ],
-      '芦荟': [
-        { level: '临床警戒', type: '泻下刺激 / 肝损伤个案', source: 'LiverTox', note: '芦荟口服制品有腹泻、泻下刺激和肝损伤个案报告。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548634/' }
-      ],
-      '银杏叶': [
-        { level: '相互作用警戒', type: '出血风险 / 药物相互作用', source: 'NCCIH', note: '银杏可能增加出血风险，并与抗凝、抗血小板等药物相互作用。', url: 'https://www.nccih.nih.gov/health/ginkgo' }
-      ],
-      '人参': [
-        { level: '相互作用警戒', type: '血糖 / 抗凝药相互作用', source: 'NCCIH', note: '人参可能影响血糖，并与华法林等药物发生相互作用。', url: 'https://www.nccih.nih.gov/health/asian-ginseng' }
-      ],
-      '苦杏仁': [
-        { level: '毒理证据', type: '氰苷 / 氰化物中毒', source: 'EFSA', note: '杏仁和杏核中的氰苷可释放氰化物，过量摄入有急性中毒风险。', url: 'https://www.efsa.europa.eu/en/efsajournal/pub/4424' }
+        { level: '强证据', type: '马兜铃酸肾病 / 致癌', source: 'NCI', note: '含马兜铃酸,与中医所谓"木香"易混淆,需严格区分。', url: 'https://www.cancer.gov/about-cancer/causes-prevention/risk/substances/aristolochic-acids' }
       ],
       '细辛': [
-        { level: '风险警戒', type: '马兜铃酸相关风险', source: 'Review', note: '含马兜铃酸或相关污染风险的草药与肾毒性和癌症风险相关，细辛类需严格质量控制。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6218812/' }
+        { level: '警戒证据', type: '马兜铃酸污染 / 肾毒性', source: '综述 (PMC)', note: 'Asarum 属植物可能含或污染马兜铃酸,质量控制不严时存在肾毒性与致癌风险。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6218812/' }
+      ],
+      '附子': [
+        { level: '强证据', type: '心脏毒性 / 致死', source: 'PubMed Case Report', note: '乌头碱估计致死量约 2 mg;附子(炮制后)仍有大量中毒和死亡案例。', url: 'https://pubmed.ncbi.nlm.nih.gov/8429578/' },
+        { level: '强证据', type: '室性心律失常 / 致死', source: '法医毒理学综述', note: '中国法医文献记录了多起致死性乌头中毒,包括附子、川乌、草乌。', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0379073825001161' }
+      ],
+      '川乌': [
+        { level: '强证据', type: '心脏毒性 / 致死', source: 'PMC Case Report', note: '川乌、草乌中毒可致双向性室性心动过速、休克和死亡;7-11 g 即可致毒。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4520923/' },
+        { level: '强证据', type: '中毒高发', source: 'Toxins 综述', note: '2001-2010 年间全球报告约 5000 例乌头碱中毒,中国大陆 2003-2015 年至少 53 例致死。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6215299/' }
+      ],
+      '草乌': [
+        { level: '强证据', type: '心脏毒性 / 致死', source: 'Toxins 综述', note: '草乌(Aconitum kusnezoffii)与川乌同含乌头碱、中乌头碱、次乌头碱,煲汤煮食仍可致命。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4179150/' }
+      ],
+      '雪上一枝蒿': [
+        { level: '毒理证据', type: '乌头碱类剧毒', source: 'Toxins 综述', note: '同属 Aconitum,含二萜类生物碱,民间中毒和致死案例频发。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6215299/' }
+      ],
+      '朱砂': [
+        { level: '强证据', type: '汞暴露 / 神经肾毒性', source: 'WHO', note: '汞暴露损害神经、消化、免疫、肺和肾脏系统;朱砂(HgS)长期使用可累积。', url: 'https://www.who.int/news-room/fact-sheets/detail/mercury-and-health' },
+        { level: '毒理证据', type: '肾脏 OAT1/OAT3 抑制', source: 'PMC', note: '朱砂在小鼠实验中显著抑制肾脏有机阴离子转运蛋白,与肾损伤机制相关。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4695662/' }
+      ],
+      '轻粉': [
+        { level: '强证据', type: '汞暴露 / 重金属毒性', source: 'WHO', note: '轻粉(Hg₂Cl₂,氯化亚汞)为汞化合物,WHO 列汞为十大公共卫生关注化学品之一。', url: 'https://www.who.int/news-room/fact-sheets/detail/mercury-and-health' }
+      ],
+      '红粉': [
+        { level: '强证据', type: '汞暴露 / 腐蚀性', source: 'WHO', note: '红粉(HgO,氧化汞)为汞化合物,皮肤外用亦可吸收致汞中毒。', url: 'https://www.who.int/news-room/fact-sheets/detail/mercury-and-health' }
+      ],
+      '白降丹': [
+        { level: '强证据', type: '汞暴露 / 强腐蚀', source: 'WHO', note: '白降丹含氯化高汞与氯化亚汞,腐蚀性极强,内服外用均有汞中毒风险。', url: 'https://www.who.int/news-room/fact-sheets/detail/mercury-and-health' }
+      ],
+      '雄黄': [
+        { level: '强证据', type: '砷暴露 / 致癌', source: 'WHO', note: '无机砷暴露与癌症、皮肤病变、心血管疾病相关;雄黄(As₄S₄)经体内代谢仍可释放有毒砷。', url: 'https://www.who.int/news-room/fact-sheets/detail/arsenic' },
+        { level: '毒理证据', type: '肾脏 OAT 抑制', source: 'PMC', note: '雄黄在动物实验中抑制肾脏 OAT1/OAT3,与肾损伤机制相关。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4695662/' }
+      ],
+      '雌黄': [
+        { level: '强证据', type: '砷暴露 / 致癌', source: 'WHO', note: '雌黄(As₂S₃)为砷化合物,与雄黄同属砷矿物药。', url: 'https://www.who.int/news-room/fact-sheets/detail/arsenic' }
+      ],
+      '砒霜': [
+        { level: '强证据', type: '砷暴露 / 高毒性', source: 'WHO', note: 'As₂O₃,无机砷,具明确毒性与致癌风险,LD50 极低。', url: 'https://www.who.int/news-room/fact-sheets/detail/arsenic' }
+      ],
+      '砒石': [
+        { level: '强证据', type: '砷暴露 / 高毒性', source: 'WHO', note: '砒石为含砷矿物原料,主要成分 As₂O₃,与砒霜同源。', url: 'https://www.who.int/news-room/fact-sheets/detail/arsenic' }
+      ],
+      '铅丹': [
+        { level: '强证据', type: '铅暴露 / 神经毒性', source: 'WHO', note: '铅暴露损害神经、血液、肾脏等系统,儿童尤其敏感,无安全剂量。', url: 'https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health' }
+      ],
+      '马钱子': [
+        { level: '强证据', type: '番木鳖碱 / 惊厥致死', source: 'NCBI StatPearls', note: '马钱子含 1-1.4% 番木鳖碱,作用于甘氨酸受体,可致清醒性惊厥、横纹肌溶解、心肺骤停。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK459306/' },
+        { level: '临床警戒', type: '中医诊所中毒', source: 'Hong Kong HATRL 系列', note: '香港 13 年间记录 12 例番木鳖碱中毒,均来源于"马钱子",含中医师自身。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8817065/' }
+      ],
+      '生马钱子': [
+        { level: '强证据', type: '番木鳖碱 / 急性致死', source: 'LiverTox', note: '未经炮制的马钱子毒性极强,治疗剂量与中毒剂量几乎等同。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK589896/' }
+      ],
+      '洋金花': [
+        { level: '强证据', type: '抗胆碱中毒 / 谵妄', source: 'PubMed', note: '曼陀罗花含莨菪碱、东莨菪碱,可致瞳孔散大、心动过速、谵妄、惊厥及致死。', url: 'https://pubmed.ncbi.nlm.nih.gov/7631497/' },
+        { level: '临床警戒', type: '抗胆碱综合征', source: 'PMC', note: '中草药相关抗胆碱中毒大多由"洋金花"治疗哮喘、咳嗽引起。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12574777/' }
+      ],
+      '闹羊花': [
+        { level: '毒理证据', type: '木藜芦毒素 / 心脏神经毒性', source: 'Datura 属相关综述', note: '闹羊花(羊踯躅)含木藜芦毒素 (grayanotoxin),与"疯蜜"中毒相似,可致心律失常和昏迷。', url: 'https://en.wikipedia.org/wiki/Grayanotoxin' }
+      ],
+      '巴豆': [
+        { level: '强证据', type: '佛波酯 / 促癌 / 强刺激', source: 'Hecker 等经典文献', note: '巴豆油含佛波酯类(phorbol esters),为典型促癌剂(tumor promoter),并具强烈致泻和腐蚀性。', url: 'https://link.springer.com/chapter/10.1007/978-3-7091-7094-6_7' },
+        { level: '监管证据', type: '禁用于传统药', source: '泰国 1978 年起禁令', note: '泰国传统医学已禁用巴豆种子;1-2 mL 巴豆油即可致命。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12386474/' }
+      ],
+      '甘遂': [
+        { level: '毒理证据', type: '二萜酯类 / 强烈刺激', source: '中药毒理学综述', note: '甘遂含巨大戟二萜酯类,与巴豆类似具强烈泻下与刺激性,治疗窗极窄。', url: 'https://www.who.int/news-room/fact-sheets/detail/arsenic' }
+      ],
+      '大戟': [
+        { level: '毒理证据', type: '二萜酯类 / 致泻 / 强刺激', source: '大戟科毒理学', note: '大戟科植物含与巴豆同类的促癌性二萜酯,生品毒性强。', url: 'https://link.springer.com/chapter/10.1007/978-3-7091-7094-6_7' }
+      ],
+      '红大戟': [
+        { level: '毒理证据', type: '强刺激 / 致泻', source: '大戟科毒理学', note: '红大戟与京大戟药用相似,含强刺激性二萜类,毒性窗窄。', url: 'https://link.springer.com/chapter/10.1007/978-3-7091-7094-6_7' }
+      ],
+      '芫花': [
+        { level: '毒理证据', type: '芫花酯 / 促癌 / 强刺激', source: '瑞香科毒理学', note: '芫花含瑞香烷型二萜酯,与佛波酯同类,具促癌活性和强刺激性。', url: 'https://link.springer.com/chapter/10.1007/978-3-7091-7094-6_7' }
+      ],
+      '牵牛子': [
+        { level: '毒理证据', type: '强烈泻下 / 电解质紊乱', source: '中药毒理学', note: '牵牛子含树脂苷类,峻下逐水,过量致严重腹泻、脱水和电解质紊乱。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6215299/' }
+      ],
+      '商陆': [
+        { level: '毒理证据', type: '商陆毒素 / 肾毒性 / 强刺激', source: '中药毒理学综述', note: '商陆根含商陆毒素(phytolaccatoxin)与皂苷,可致严重胃肠刺激、惊厥和肾损伤。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548795/' }
+      ],
+      '千里光': [
+        { level: '强证据', type: 'PA 生物碱 / 肝窦阻塞综合征', source: 'Journal of Hepatology', note: '千里光属(Senecio)含吡咯里西啶生物碱,可致肝窦阻塞综合征(VOD/SOS),严重者肝衰竭。', url: 'https://www.journal-of-hepatology.eu/article/S0168-8278(03)00231-9/fulltext' }
+      ],
+      '款冬花': [
+        { level: '警戒证据', type: 'PA 生物碱污染', source: '欧洲药品委员会综述', note: '款冬花(Tussilago farfara)含吡咯里西啶生物碱,与肝窦阻塞综合征相关。', url: 'https://www.sciencedirect.com/topics/medicine-and-dentistry/pyrrolizidine-alkaloid' }
+      ],
+      '紫草': [
+        { level: '警戒证据', type: 'PA 生物碱 / 肝毒性', source: '欧洲药品委员会综述', note: '紫草属植物含 PA 生物碱,长期内服与肝损伤相关。', url: 'https://www.journal-of-hepatology.eu/article/S0168-8278(03)00231-9/fulltext' }
+      ],
+      '蟾酥': [
+        { level: '强证据', type: '蟾蜍二烯内酯 / 心脏毒性', source: 'Heart (BMJ)', note: '蟾酥含蟾蜍二烯内酯,作用类似洋地黄,可致严重心律失常、死亡;美国 FDA 已禁用类似产品。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC1769273/' },
+        { level: '临床警戒', type: '类洋地黄中毒致死', source: 'Toxicon', note: '"Chan Su"和"Love Stone"等含蟾酥制剂在美国导致多起致死病例。', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0041010198002244' }
+      ],
+      '斑蝥': [
+        { level: '毒理证据', type: '斑蝥素 / 肾毒 / 溶血', source: '中药毒理学综述', note: '斑蝥素(cantharidin)为强烈泡疹剂,口服可致肾衰、消化道腐蚀、溶血和心律失常。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548795/' }
+      ],
+      '雷公藤': [
+        { level: '强证据', type: '多系统毒性', source: 'NCCIH', note: '雷公藤可致严重副作用,包括生殖毒性、骨髓抑制、肝肾毒性。', url: 'https://www.nccih.nih.gov/health/thunder-god-vine' },
+        { level: '强证据', type: '生殖毒性 + 肝肾毒性', source: 'Frontiers in Pharmacology', note: '雷公藤的全球不良反应发生率约 30.75%,治疗剂量与毒性剂量极接近。', url: 'https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2019.01250/full' }
+      ],
+      '苍耳子': [
+        { level: '强证据', type: '羧基苍术苷 / 急性肝衰竭', source: 'J Ethnopharmacol', note: '苍耳子含羧基苍术苷(carboxyatractyloside),抑制线粒体能量代谢,可致急性肝衰竭,儿童致死病例已报道。', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0378874113009045' },
+        { level: '临床警戒', type: '肝移植病例', source: 'J Pediatr Gastroenterol Nutr', note: '已有因苍耳子中毒需肝移植的儿童病例报告。', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-1518/siberian-cocklebur' }
+      ],
+      '何首乌': [
+        { level: '强证据', type: '药物性肝损伤', source: 'LiverTox', note: '何首乌(Polygonum multiflorum)与多起临床急性肝损伤报告相关,部分可致肝衰竭。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548795/' }
+      ],
+      '补骨脂': [
+        { level: '警戒证据', type: '肝损伤 / 光敏', source: 'LiverTox', note: '补骨脂及含补骨脂的复方与肝损伤报告相关,并含光敏性呋喃香豆素。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548561/' }
+      ],
+      '黄芩': [
+        { level: '警戒证据', type: '药物性肝损伤', source: 'LiverTox', note: '含黄芩的复方制剂(如 PC-SPES、Limbrel)被纳入草药肝损伤监测,需关注肝毒性。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548757/' }
+      ],
+      '吴茱萸': [
+        { level: '毒理证据', type: '肝毒性 / 心血管刺激', source: 'Frontiers in Pharmacology', note: '吴茱萸含吴茱萸碱、吴茱萸次碱,具肝毒性与拟交感神经活性,过量可致心血管不良反应。', url: 'https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.751107/full' }
+      ],
+      '川楝子': [
+        { level: '毒理证据', type: '川楝素 / 肝毒性', source: '中药毒理学综述', note: '川楝子含川楝素(toosendanin),具神经-肝双重毒性,过量可致肝细胞坏死。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6215299/' }
+      ],
+      '苦楝皮': [
+        { level: '毒理证据', type: '川楝素类 / 内服毒性高', source: '中药毒理学综述', note: '与川楝子同源,含川楝素,内服毒性与神经损伤风险显著。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6215299/' }
+      ],
+      '白鲜皮': [
+        { level: '警戒证据', type: '肝损伤报告', source: 'LiverTox / 个案报道', note: '白鲜皮已被纳入中药肝损伤讨论,有特异质性肝炎个案报告。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548795/' }
+      ],
+      '升麻': [
+        { level: '警戒证据', type: '肝损伤个案', source: 'LiverTox', note: 'Cimicifuga 属(包括黑升麻)与特异质性肝损伤个案相关,因果关系尚有争议但已被监管机构警告。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548298/' }
+      ],
+      '栀子': [
+        { level: '警戒证据', type: '京尼平 / 肠肝毒性', source: '中药毒理学综述', note: '栀子含京尼平苷(geniposide),长期或大剂量可致肝胆损伤,在大鼠中显示明确肝毒性。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6215299/' }
+      ],
+      '白果': [
+        { level: '临床警戒', type: '银杏毒素 / 儿童中毒', source: 'NCBI StatPearls', note: '银杏种子中的 4-O-methylpyridoxine 可拮抗维生素 B6,过量可致癫痫、惊厥,儿童尤其敏感。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK559318/' }
+      ],
+      '银杏叶': [
+        { level: '相互作用', type: '出血风险 / 抗凝相互作用', source: 'NCCIH', note: '银杏可能增加出血风险,并与华法林、抗血小板药相互作用。', url: 'https://www.nccih.nih.gov/health/ginkgo' }
+      ],
+      '槟榔': [
+        { level: '强证据', type: '一级致癌物 / 口腔癌', source: 'IARC Monograph 100E', note: 'IARC 将槟榔(含或不含烟草)列为 1 类致癌物,与口腔、咽、食管癌明确因果关系。', url: 'https://publications.iarc.fr/Book-And-Report-Series/Iarc-Monographs-On-The-Identification-Of-Carcinogenic-Hazards-To-Humans/Personal-Habits-And-Indoor-Combustions-2012' }
+      ],
+      '番泻叶': [
+        { level: '临床警戒', type: '泻下依赖 / 电解质紊乱', source: 'LiverTox', note: '番泻叶长期或过量使用可致腹泻、电解质紊乱、泻剂依赖,亦有肝损伤个案。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK547922/' }
+      ],
+      '芦荟': [
+        { level: '临床警戒', type: '泻下刺激 / 肝损伤', source: 'LiverTox', note: '芦荟口服制剂(尤其全叶提取物)有腹泻、电解质紊乱和肝损伤个案报告。', url: 'https://www.ncbi.nlm.nih.gov/books/NBK548634/' }
+      ],
+      '苦杏仁': [
+        { level: '毒理证据', type: '氰苷 / 氰化物中毒', source: 'EFSA', note: '杏仁、杏核中的苦杏仁苷(amygdalin)可释放氰化物,过量摄入有急性中毒风险。', url: 'https://www.efsa.europa.eu/en/efsajournal/pub/4424' }
+      ],
+      '麻黄': [
+        { level: '监管证据', type: '心血管 / 中枢神经风险', source: 'NCCIH', note: 'NCCIH 列出麻黄相关高血压、心脏病发作、癫痫和卒中等风险。', url: 'https://www.nccih.nih.gov/health/ephedra' },
+        { level: '监管证据', type: 'FDA 禁令', source: 'FDA', note: '美国 FDA 禁止销售含麻黄碱生物碱的膳食补充剂。', url: 'https://www.fda.gov/food/dietary-supplement-products-ingredients/ephedra' }
+      ],
+      '石膏': [
+        { level: '警戒证据', type: '矿物药质量控制', source: 'WHO 重金属相关', note: '矿物药石膏(CaSO₄)易受重金属(铅、砷、镉、汞)污染,需严格质量控制。', url: 'https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health' }
+      ],
+      '滑石': [
+        { level: '警戒证据', type: '滑石粉 / 石棉污染', source: 'IARC', note: 'IARC 将含石棉的滑石粉列为 1 类致癌物;不含石棉的滑石围绕卵巢癌的致癌性仍有争议。', url: 'https://publications.iarc.fr/_publications/media/download/3007/19a86a2e8aaf6fa3bbd2ef6f37bc2b03f9b7ac95.pdf' }
+      ],
+      '龙骨': [
+        { level: '警戒证据', type: '矿物药质量控制', source: 'WHO 重金属相关', note: '龙骨为古脊椎动物化石,可能含重金属杂质和氟化物,缺乏现代药效证据。', url: 'https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health' }
+      ],
+      '牡蛎': [
+        { level: '警戒证据', type: '重金属富集', source: 'WHO 重金属相关', note: '贝壳类矿物药可能富集铅、镉等重金属;现代证据不支持其镇静、安神等宣称。', url: 'https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health' }
+      ],
+      '磁石': [
+        { level: '警戒证据', type: '矿物药质量控制', source: 'WHO 重金属相关', note: '磁石(Fe₃O₄)可能含重金属杂质,缺乏现代药效证据。', url: 'https://www.who.int/news-room/fact-sheets/detail/lead-poisoning-and-health' }
+      ],
+      '人参': [
+        { level: '相互作用', type: '血糖 / 抗凝相互作用', source: 'NCCIH', note: '人参可能影响血糖,与华法林、降糖药、单胺氧化酶抑制剂相互作用。', url: 'https://www.nccih.nih.gov/health/asian-ginseng' }
+      ],
+      '甘草': [
+        { level: '强证据', type: '假性醛固酮增多 / 低钾', source: 'Frontiers in Nutrition', note: '甘草酸抑制 11β-HSD2,可致高血压、低钾血症、水钠潴留;与利尿剂、地高辛、糖皮质激素严重相互作用。', url: 'https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2021.719197/full' },
+        { level: '临床警戒', type: '心血管不良事件', source: 'PMC 病例系列', note: '长期食用甘草可致严重低钾、高血压、心律失常,与噻嗪类、袢利尿剂合用风险倍增。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11242244/' }
+      ],
+      '丹参': [
+        { level: '相互作用', type: '出血 / 抗凝增效', source: 'PLOS ONE', note: '丹参与华法林同用可显著增加出血风险,机制涉及药效学协同与 CYP 酶抑制。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3650066/' }
+      ],
+      '当归': [
+        { level: '相互作用', type: '出血 / 抗凝增效', source: 'PLOS ONE', note: '当归与华法林同用可增加出血风险,香豆素类成分具天然抗凝活性。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3650066/' }
+      ],
+      '生姜': [
+        { level: '相互作用', type: '抗凝增效', source: 'PMC 综述', note: '大剂量生姜可抑制血小板聚集,与抗凝抗血小板药同用增加出血风险。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4325561/' }
+      ],
+      '姜黄': [
+        { level: '相互作用', type: '抗凝增效 / CYP3A4 抑制', source: 'PMC', note: '姜黄素抑制 CYP3A4,与他克莫司、华法林等同用可增加血药浓度或出血风险。', url: 'https://www.mdpi.com/1422-0067/26/11/5188' }
+      ],
+      '三七': [
+        { level: '相互作用', type: '抗凝双向作用', source: 'PMC 综述', note: '三七含人参皂苷类,具止血与抗凝双向活性,与抗凝药合用结果不可预测。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4325561/' }
+      ],
+      '红花': [
+        { level: '相互作用', type: '抗凝增效', source: 'PMC 综述', note: '红花活血,与华法林、阿司匹林、氯吡格雷合用增加出血风险。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3650066/' }
+      ],
+      '桃仁': [
+        { level: '相互作用', type: '抗血小板增效', source: 'PMC 综述', note: '桃仁醇提物抑制血小板聚集,延长凝血酶时间,与抗凝药合用风险增加。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4325561/' }
+      ],
+      '川芎': [
+        { level: '相互作用', type: '抗凝增效', source: 'PMC 综述', note: '川芎所含阿魏酸等成分有抗血小板和抗凝活性,与抗凝抗血小板药合用风险增加。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3650066/' }
+      ],
+      '五味子': [
+        { level: '相互作用', type: 'CYP3A4 抑制 / 增加他克莫司浓度', source: 'PMC', note: '五味子(Schisandra)抑制 CYP3A4/3A5,可显著增加他克莫司、环孢素血药浓度,导致毒性。', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9103789/' }
+      ],
+      '水蛭': [
+        { level: '相互作用', type: '抗凝 / 出血风险', source: '中药毒理学综述', note: '水蛭含水蛭素(hirudin),为直接凝血酶抑制剂,与现代抗凝药合用出血风险极高。', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3650066/' }
       ]
     };
 
@@ -817,7 +1126,7 @@
     function renderScore(grade, counts) {
       const scoreBox = document.getElementById('scoreBox');
       scoreBox.innerHTML = `
-        <div class="metric"><div class="num">${escapeHtml(grade)}</div><div class="label">安全等级</div></div>
+        <div class="metric"><div class="num">${escapeHtml(grade)}</div><div class="label">风险等级</div></div>
         <div class="metric"><div class="num">${counts.X}</div><div class="label">黑名单数量</div></div>
         <div class="metric"><div class="num">${counts.C + counts.G}</div><div class="label">灰/C数量</div></div>
         <div class="metric"><div class="num">${counts.U}</div><div class="label">未知数量</div></div>
@@ -859,7 +1168,7 @@
               </div>
               <span class="pill ${info.className}">${info.label}</span>
             </div>
-            <div class="usage"><strong>中医理论用途：</strong>${escapeHtml(item.use)}</div>
+            <div class="usage"><strong>中医传统宣称用途：</strong>${escapeHtml(item.use)}</div>
             <div class="risk-line"><strong>风险提示：</strong>${escapeHtml(item.risk)}</div>
             ${renderEvidence(item)}
           </div>
@@ -932,7 +1241,7 @@
               <div class="herb-name">${escapeHtml(herb.name)}</div>
               <span class="pill ${info.className}">${info.label}</span>
             </div>
-            <div class="usage"><strong>传统用途：</strong>${escapeHtml(herb.use)}</div>
+            <div class="usage"><strong>传统宣称用途：</strong>${escapeHtml(herb.use)}</div>
             <div class="risk-line"><strong>风险：</strong>${escapeHtml(herb.risk)}</div>
             ${herb.aliases.length ? `<div class="small">别名：${herb.aliases.map(escapeHtml).join('、')}</div>` : ''}
             ${renderEvidence(herb)}
