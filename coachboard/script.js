@@ -11,6 +11,9 @@ const noteInput = document.getElementById("noteInput");
 const notePreview = document.getElementById("notePreview");
 const resetBtn = document.getElementById("resetBtn");
 const exportBtn = document.getElementById("exportBtn");
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+const boardFullscreenBtn = document.getElementById("boardFullscreenBtn");
+const captureArea = document.getElementById("captureArea");
 const clearDrawingsBtn = document.getElementById("clearDrawingsBtn");
 const flipBoardBtn = document.getElementById("flipBoardBtn");
 const toggleHome = document.getElementById("toggleHome");
@@ -432,6 +435,59 @@ async function exportBoardAsPng() {
 
   image.src = url;
 }
+
+
+function isFullscreenActive() {
+  return document.fullscreenElement === captureArea || captureArea.classList.contains("is-fullscreen");
+}
+
+function updateFullscreenButtons() {
+  const label = isFullscreenActive() ? "Exit Fullscreen" : "Fullscreen";
+  fullscreenBtn.textContent = label;
+  boardFullscreenBtn.textContent = label;
+}
+
+async function toggleFullscreen() {
+  try {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+      captureArea.classList.remove("is-fullscreen");
+      document.body.classList.remove("fullscreen-fallback");
+    } else if (captureArea.requestFullscreen) {
+      await captureArea.requestFullscreen();
+    } else {
+      captureArea.classList.toggle("is-fullscreen");
+      document.body.classList.toggle("fullscreen-fallback", captureArea.classList.contains("is-fullscreen"));
+    }
+  } catch (error) {
+    captureArea.classList.toggle("is-fullscreen");
+    document.body.classList.toggle("fullscreen-fallback", captureArea.classList.contains("is-fullscreen"));
+  }
+
+  updateFullscreenButtons();
+  setTimeout(resizeCanvas, 80);
+}
+
+document.addEventListener("fullscreenchange", () => {
+  if (!document.fullscreenElement) {
+    captureArea.classList.remove("is-fullscreen");
+    document.body.classList.remove("fullscreen-fallback");
+  }
+  updateFullscreenButtons();
+  setTimeout(resizeCanvas, 80);
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && captureArea.classList.contains("is-fullscreen")) {
+    captureArea.classList.remove("is-fullscreen");
+    document.body.classList.remove("fullscreen-fallback");
+    updateFullscreenButtons();
+    setTimeout(resizeCanvas, 80);
+  }
+});
+
+fullscreenBtn.addEventListener("click", toggleFullscreen);
+boardFullscreenBtn.addEventListener("click", toggleFullscreen);
 
 window.addEventListener("resize", resizeCanvas);
 

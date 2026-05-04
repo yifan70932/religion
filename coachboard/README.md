@@ -21,6 +21,7 @@ A deployable static HTML, CSS, and JavaScript football tactics board.
 - Add a coaching note
 - Flip the board
 - Clear drawings or reset the board
+- Expand the current field view into fullscreen display
 - Export board as a PNG
 
 ## Deployment
