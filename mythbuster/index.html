@@ -49,6 +49,21 @@
     position: relative;
   }
 
+  /* On larger screens, expand the page container.
+     Note: the epigraph block keeps its narrower width via its own max-width,
+     so only the masthead, index entries, and footer benefit from the extra width. */
+  @media (min-width: 1024px) {
+    .page {
+      max-width: 1100px;
+      padding: 60px 60px 120px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .page {
+      max-width: 1200px;
+    }
+  }
+
   /* ============== TOP BAR ============== */
   .topbar {
     display: flex;
@@ -97,6 +112,14 @@
     font-weight: 600;
     letter-spacing: -0.01em;
   }
+  @media (min-width: 1024px) {
+    .wordmark { font-size: 88px; }
+    body[data-lang="zh"] .wordmark { font-size: 72px; }
+  }
+  @media (min-width: 1440px) {
+    .wordmark { font-size: 96px; }
+    body[data-lang="zh"] .wordmark { font-size: 76px; }
+  }
   .tagline {
     font-size: 22px;
     line-height: 1.5;
@@ -109,6 +132,10 @@
     font-size: 18px;
     font-style: normal;
     line-height: 1.7;
+  }
+  @media (min-width: 1024px) {
+    .tagline { font-size: 24px; max-width: 760px; }
+    body[data-lang="zh"] .tagline { font-size: 19px; }
   }
   .tagline em {
     color: var(--accent);
@@ -223,6 +250,13 @@
     gap: 20px;
     align-items: baseline;
   }
+  @media (min-width: 1024px) {
+    .entry-row {
+      grid-template-columns: 80px 1fr auto;
+      gap: 32px;
+    }
+    .entry { padding: 32px 0; }
+  }
   .entry-num {
     font-family: var(--mono);
     font-size: 13px;
@@ -253,6 +287,14 @@
   body[data-lang="zh"] .entry-title em {
     font-style: normal;
   }
+  @media (min-width: 1024px) {
+    .entry-title { font-size: 30px; }
+    body[data-lang="zh"] .entry-title { font-size: 25px; }
+  }
+  @media (min-width: 1440px) {
+    .entry-title { font-size: 32px; }
+    body[data-lang="zh"] .entry-title { font-size: 27px; }
+  }
   .entry-subtitle {
     font-family: var(--serif-en);
     font-style: italic;
@@ -266,6 +308,12 @@
     font-style: normal;
     font-size: 14px;
     color: var(--ink-soft);
+  }
+  @media (min-width: 1024px) {
+    .entry-subtitle { font-size: 17px; }
+    body[data-lang="zh"] .entry-subtitle { font-size: 15px; }
+    .entry-num { font-size: 14px; }
+    .entry-meta { font-size: 12px; }
   }
   .entry-meta {
     font-family: var(--mono);
