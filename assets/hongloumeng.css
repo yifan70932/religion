@@ -20,9 +20,9 @@
   --hlm-rule-soft:  #f3eee2;
 
   /* ─── Surfaces ───────────────────────────────────────────────────── */
-  --hlm-paper:      #faf6ec;     /* primary page color — 旧抄本纸 */
-  --hlm-paper-deep: #f3eddc;     /* sidebar / panel — 略深的米色 */
-  --hlm-paper-warm: #f7efd9;     /* callout / def box — 偏暖的米色 */
+  --hlm-paper:      #fdfbf5;     /* primary page color — 接近白色，仅留一丝暖意 */
+  --hlm-paper-deep: #f7f2e6;     /* sidebar / panel — 略深的米色 */
+  --hlm-paper-warm: #faf3df;     /* callout / def box — 偏暖的米色 */
 
   /* ─── Accents ────────────────────────────────────────────────────── */
   --hlm-jiang:      #8b1a1a;     /* 绛 — primary accent, deep crimson */
@@ -58,7 +58,7 @@ body.hlm-page {
 /* ─── Topbar ─────────────────────────────────────────────────────── */
 .hlm-page .topbar {
   border-bottom: 1px solid var(--hlm-rule);
-  background: rgba(250, 246, 236, 0.92);
+  background: rgba(253, 251, 245, 0.92);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -209,7 +209,7 @@ body.hlm-page {
   margin: 0 0 0.5rem 0;
   letter-spacing: 0.04em;
   line-height: 1.15;
-  color: var(--hlm-ink);
+  color: var(--hlm-jiang);
 }
 
 .hlm-page .hero .subtitle {
