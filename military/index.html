@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Conscript's Refusal — yifanova.com</title>
+  <meta name="description" content="Personal wiki on the position that one should not become a soldier — historical genealogy of the Chinese proverb, the Western anti-conscription tradition, the sociology of recruitment, and the Schopenhauerian case. Bilingual EN / 中文.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&family=JetBrains+Mono:wght@400&display=swap">
+
+  <link rel="stylesheet" href="military.css">
+</head>
+
+<body class="military-page" data-lang="en">
+
+<!-- ─── Topbar ─────────────────────────────────────────────────── -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">Yifanova Personal Wiki</span>
+      <span class="brand-sep">|</span>
+      <span class="brand-page">
+        <span data-lang-content="en">The Conscript's Refusal</span>
+        <span data-lang-content="zh">论拒服兵役</span>
+      </span>
+    </div>
+    <div class="lang-toggle" role="tablist" aria-label="Language">
+      <button type="button" data-lang-set="en" class="active">EN</button>
+      <button type="button" data-lang-set="zh">中文</button>
+    </div>
+  </div>
+</header>
+
+<!-- ─── Layout: TOC sidebar + main column ──────────────────────── -->
+<div class="layout">
+
+  <!-- ───── Table of contents ──────────────────────────────────── -->
+  <nav class="toc" aria-label="Table of contents">
+    <button class="toc-mobile-toggle" type="button" aria-expanded="false">
+      <span data-lang-content="en">Contents</span>
+      <span data-lang-content="zh">目录</span>
+    </button>
+    <p class="toc-title">
+      <span data-lang-content="en">Contents</span>
+      <span data-lang-content="zh">目录</span>
+    </p>
+    <div class="toc-list-wrapper">
+      <ol>
+        <li><a href="#sec-proverb">
+          <span data-lang-content="en">1 · The Proverb &amp; Its History</span>
+          <span data-lang-content="zh">一 · 谚语及其历史</span>
+        </a></li>
+        <li><a href="#sec-west">
+          <span data-lang-content="en">2 · Western Refusal of Soldiering</span>
+          <span data-lang-content="zh">二 · 西方拒绝从军的传统</span>
+        </a></li>
+        <li><a href="#sec-poverty-draft">
+          <span data-lang-content="en">3 · The Sociology of Recruitment</span>
+          <span data-lang-content="zh">三 · 招募的社会学</span>
+        </a></li>
+        <li><a href="#sec-schopenhauer">
+          <span data-lang-content="en">4 · Schopenhauer &amp; the Negation of Will</span>
+          <span data-lang-content="zh">四 · 叔本华与意志的否定</span>
+        </a></li>
+        <li><a href="#sec-military-marriage">
+          <span data-lang-content="en">5 · The Crime of Disrupting a Military Marriage</span>
+          <span data-lang-content="zh">五 · 破坏军婚罪</span>
+        </a></li>
+        <li><a href="#sec-objections">
+          <span data-lang-content="en">6 · Objections &amp; Replies</span>
+          <span data-lang-content="zh">六 · 反驳与回应</span>
+        </a></li>
+        <li><a href="#sec-references">
+          <span data-lang-content="en">7 · References</span>
+          <span data-lang-content="zh">七 · 参考文献</span>
+        </a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ───── Main column ────────────────────────────────────────── -->
+  <main class="main">
+
+    <!-- ───── Article header ──────────────────────────────────── -->
+    <header class="article-header">
+      <p class="kicker">
+        <span data-lang-content="en">On Military Service</span>
+        <span data-lang-content="zh">论拒服兵役</span>
+      </p>
+      <h1>
+        <span data-lang-content="en">The Conscript's Refusal</span>
+        <span data-lang-content="zh">好铁不打钉，好男不当兵</span>
+      </h1>
+
+      <blockquote class="epigraph">
+        <span data-lang-content="en">
+          <em>Men of our times will perform the very duties required of them to keep them in slavery, especially the duty of military service. We see people enslaving themselves, suffering from this slavery, and believing that it must be so.</em>
+          <span class="attribution">Leo Tolstoy, <em>The Kingdom of God Is Within You</em>, 1894, ch. IX (tr. Garnett)</span>
+        </span>
+        <span data-lang-content="zh">
+          <em>我们这个时代的人，会去履行那些让他们继续身处奴役之中的种种义务，尤其是服兵役这一项。我们眼看着人们把自己交给奴役、在这奴役中受苦，却仍然相信事情本该如此。</em>
+          <span class="attribution">列夫·托尔斯泰，《天国在你心中》，1894，第九章（Garnett 英译本）</span>
+        </span>
+      </blockquote>
+
+      <blockquote class="epigraph">
+        <span data-lang-content="en">
+          <em class="cjk">信知生男恶，反是生女好。生女犹得嫁比邻，生男埋没随百草。</em><br>
+          Now indeed I know — a son's birth is a sorrow, a daughter's a blessing; for a daughter at least may be married to a neighbour, but a son will be buried among a hundred grasses.
+          <span class="attribution">Du Fu, <em>Ballad of the Army Carts</em>, c. 750 CE</span>
+        </span>
+        <span data-lang-content="zh">
+          <em>信知生男恶，反是生女好。生女犹得嫁比邻，生男埋没随百草。</em>
+          <span class="attribution">杜甫，《兵车行》，约 750 年</span>
+        </span>
+      </blockquote>
+    </header>
+
+    <h3 style="margin-top: 0;">
+      <span data-lang-content="en">Take-home</span>
+      <span data-lang-content="zh">要点速览</span>
+    </h3>
+
+    <div class="table-wrap" data-lang-content="en">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 88%;">Claim</th>
+            <th>§</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The proverb <em><span class="cjk">好男不当兵</span></em> ("a good man does not become a soldier") is not a Song-era invention. It surfaces in Tang and pre-Tang records, has survived a thousand years and four wholly different recruitment regimes, and its persistence is the empirical case for taking it seriously.</td>
+            <td><a href="#sec-proverb">1</a></td>
+          </tr>
+          <tr>
+            <td>The Western tradition — Quaker, Tolstoyan, Russellian — converges on the same conclusion, and its target is not conscription as a procedure but soldiering as a moral role. The volunteer is not in a better position than the conscript; in some readings he is in a worse one.</td>
+            <td><a href="#sec-west">2</a></td>
+          </tr>
+          <tr>
+            <td>Modern volunteer recruitment is sociologically class-selective: in the United States, the institution targets the working poor with operational deliberation and on average fails to deliver the upward mobility it promises. This is a symptom of the institution's character, not the premise of the argument against it.</td>
+            <td><a href="#sec-poverty-draft">3</a></td>
+          </tr>
+          <tr>
+            <td>A standing army is, in Schopenhauer's terms, the Will's most concentrated institutional form: an apparatus by which one collective Will extracts individual bodies to inflict damage on other bodies whose Wills are, at the metaphysical level, numerically identical to its own. The refusal of soldiering and the antinatalist refusal are the same ethical position at two levels of the Will's renewal mechanism.</td>
+            <td><a href="#sec-schopenhauer">4</a></td>
+          </tr>
+          <tr>
+            <td>Article 259 of the PRC Criminal Law — the offence of "disrupting a military marriage" — makes a civilian's sexual or marital relationship with a serviceman's spouse a criminal act, with the codified rationale of preserving the serviceman's "peace of mind in service." The statute is the positive-law instantiation of the Schopenhauerian claim: the state, having taken possession of the soldier, takes a protected interest in the people his body now mediates. Tolstoy's word for what such a structure does to the soldier — <em>slavery</em> — is structural, not abusive, and it applies.</td>
+            <td><a href="#sec-military-marriage">5</a></td>
+          </tr>
+          <tr>
+            <td>The six strongest objections — the Kantian universalisation, the social-contract debt, the privilege of the objector, the Just War tradition, the sincerity of the volunteer, and the charge of dishonouring the dead — can each be met without retreating from the underlying position.</td>
+            <td><a href="#sec-objections">6</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrap" data-lang-content="zh">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 88%;">主张</th>
+            <th>§</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>「<em>好男不当兵</em>」这条谚语并非宋代发明，它在唐代乃至更早的史料中已经出现，历经一千年与四种全然不同的兵役体制而存活——这种延续本身是认真对待它的经验依据。</td>
+            <td><a href="#sec-proverb">一</a></td>
+          </tr>
+          <tr>
+            <td>西方传统——贵格会、托尔斯泰、罗素——独立地汇聚到同一结论；他们所针对的不是「征兵」这一程序，而是「军人」这一道德角色。志愿入伍者并不比被征召者处境更佳，在某些解读下他陷得更深。</td>
+            <td><a href="#sec-west">二</a></td>
+          </tr>
+          <tr>
+            <td>现代全志愿招募体制在社会学上呈阶级选择性：在美国，该机构以可操作的明确意图针对工薪贫困人口，而它所许诺的上升流动平均而言并未兑现。这是该机构性质的<em>症状</em>，不是反对它的论证<em>前提</em>。</td>
+            <td><a href="#sec-poverty-draft">三</a></td>
+          </tr>
+          <tr>
+            <td>常备军是叔本华意义上「意志」最浓缩的制度形式：一个把个体身体征用于其自身目的的集合性意志装置，被征用的身体与施加者的意志在形而上学层面上是同一个意志。拒绝从军与反生育是同一伦理立场在意志续生机制两个不同层级上的应用。</td>
+            <td><a href="#sec-schopenhauer">四</a></td>
+          </tr>
+          <tr>
+            <td>《中华人民共和国刑法》第 259 条「破坏军婚罪」将平民与军人配偶的性或婚姻关系定为刑事罪，其法定立法理由是保障军人「安心服役」。这一法条是叔本华式主张的实定法呈现：国家在已经占有士兵之后，对那些因士兵之身体而被中介的亲密关系进一步主张了一份受保护利益。托尔斯泰对这一结构所用的词——<em>奴役</em>——是结构性的，而非用作辱骂，并且适用。</td>
+            <td><a href="#sec-military-marriage">五</a></td>
+          </tr>
+          <tr>
+            <td>六项最有力的反驳——康德式普遍化、社会契约之债、拒绝者的特权、正义战争传统、志愿者的真心、亵渎死者之控——皆可在不退让底层立场的前提下被严肃回应。</td>
+            <td><a href="#sec-objections">六</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ───── §1 The Proverb & Its History ──────────────────────── -->
+    <h2 id="sec-proverb"><span class="sec-num">1 ·</span>
+      <span data-lang-content="en">The Proverb &amp; Its History</span>
+      <span data-lang-content="zh">谚语及其历史</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>The proverb <span class="cjk">好铁不打钉，好男不当兵</span> — "good iron is not used for nails; a good man does not become a soldier" — is not, as the contemporary Chinese mainstream narrative insists, a feudal slander invented by the Song court to weaken the martial spirit of the Han people. It is a piece of folk knowledge with a verifiable historical trigger and a long, evidence-based career, and the position it compresses is defensible on its merits.</p>
+
+      <p>This page does not argue that the proverb is empirically true in every era. It argues something narrower and harder: that the position the proverb expresses — that becoming a soldier is something a person of moral seriousness has reason not to do — is defensible on its merits. The proverb's literal claim is that a <em>good</em> man does not <em>become</em> a soldier; the verbs apply to the volunteer as much as to the conscript. The position defended here applies likewise. Whether the state takes a person by force, takes a person by economic pressure, or accepts a person who has volunteered with full information and undivided enthusiasm, the act of putting one's body at the disposal of organised armed violence is the same act, and the moral objections to it do not turn on whether consent was free. They turn on what the act is.</p>
+
+      <p>The organised effort to discredit this position — in China since 1949, and in the West since the First World War — is itself one of the clearest pieces of evidence in its favour.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p><span class="cjk">好铁不打钉，好男不当兵</span>——并不像今天的中国主流叙事所坚持的那样，是宋代朝廷为削弱汉族尚武精神而捏造的封建谰言。它是一条可考据其历史起因、经验依据深厚的民间知识，其所压缩的立场在论据上是可以辩护的。</p>
+
+      <p>本页不论证这一谚语在每一时代都经验为真。它论证一个更狭义、也更艰难的命题：谚语所表达的立场——一个对道德有所认真的人有理由不去做军人——在论据上是可以辩护的。这条谚语的字面是「<em>好</em>男不<em>当</em>兵」；其中的动词同样适用于志愿入伍者和被征召者。本页所辩护的立场也是如此。无论国家以强力相迫、以经济条件相挤压，还是接纳一个完全知情且毫无保留地热情志愿入伍的人，将一己之身交付给有组织的武装暴力使用——其行为本身是同一种行为；针对它的道德反驳，不取决于这种交付出于何种程度的自由同意。它取决于这种交付本身是什么。</p>
+
+      <p>对这一立场进行有组织的污名化——1949 年后的中国、一战以来的西方——本身就是支持它的最清晰证据之一。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">A genealogy older than the Song</span>
+      <span data-lang-content="zh">一条早于宋代的源流</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The standard official narrative — repeated in <em>Baidu Baike</em>, on the website of the PLA Daily, and in the People's Daily online — places the origin of the saying in the early Northern Song and attributes it to a deliberate court policy of <span class="term">chongwen yiwu</span> (<span class="cjk">崇文抑武</span>, "exalting the civil and suppressing the martial"). The implication is that the proverb is an artefact of imperial propaganda, no longer applicable now that "the people have their own army." This narrative is not wholly wrong — the Song court did very deliberately suppress military prestige — but it is incomplete in a way that matters.</p>
+
+      <p>The historical record places resistance to military service well before the Song. The <em>Old Book of Tang</em>, in the biography of Liu Renggui (<span class="cjk">刘仁轨</span>, d. 685), records that when prefectures and counties tried to fill their quotas of soldier-recruits, "the able-bodied with money and connections in the yamens scattered east and west into hiding and all got off." Earlier still, an account of the <span class="term">fubing</span> (<span class="cjk">府兵</span>) garrison-militia system describes its members as "toiling no different from commoners; the populace would not serve, the fubing were despised, the people considered it shameful, and went so far as to steam and scald their hands and feet to escape the conscription." Self-mutilation to escape service, in the seventh century, in the dynasty the current Chinese state holds up as the apex of native martial vigour: the attitude the proverb later compressed was already there.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>标准的官方叙事——在《百度百科》、解放军报网站与人民日报海外版上反复出现——将这一谚语的起源定在北宋初年，归之于朝廷有意推行的<span class="term">崇文抑武</span>政策。其暗示是：这一谚语是帝制宣传的遗物，既然「人民有了自己的军队」，它就已经过时。这一叙事并非全错——宋廷确实有意识地压低武人地位——但它在一个重要的地方残缺。</p>
+
+      <p>史料中对兵役的抵触远早于宋代。《旧唐书·刘仁轨传》记载，州县发遣兵募之际，「人身少壮、家有钱财、参逐官府者，东西藏避，并即得脱」。更早的<span class="term">府兵</span>制相关记述则称：「劳苦与白丁无异，百姓不愿从军，府兵为人所贱，百姓耻之，至蒸熨手足以避其役。」公元七世纪，在当今中国官方推崇为汉民族尚武顶点的王朝里，普通人已经愿意自残以逃避服役——谚语后来所压缩的那种态度，那时已经在那里。</p>
+    </div>
+
+    <aside class="sidenote" data-lang-content="en">
+      A revisionist reading promoted on Chinese state-affiliated platforms claims that <span class="cjk">钉</span> originally referred to horseshoe nails and <span class="cjk">兵</span> to a general's retainer rather than a foot soldier, and that the original meaning was actually pro-military. No serious philological evidence supports this. It surfaces only on military-recruitment-adjacent sites and is best understood as a defensive folk etymology produced to neutralise a saying the state finds inconvenient.
+    </aside>
+    <aside class="sidenote" data-lang-content="zh">
+      国内官方平台上有一种修正性解读，主张「钉」本指马掌钉，「兵」原指主将侍从而非普通士卒，原句反而是「激励青年投身战场」。此说没有任何严肃的训诂证据支撑：只出现在与征兵宣传相关的网站上，更合理地理解为为中和一句令官方不便的谚语而后制造出来的辩护性民间词源学。
+    </aside>
+
+    <h3>
+      <span data-lang-content="en">From Song tattoos to the 1949 rewrite</span>
+      <span data-lang-content="zh">从宋代刺字到 1949 年后的重写</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The proverb in its recognisable modern form crystallised in the Northern Song, and the trigger was structural. The Song replaced earlier conscription-based systems with a salaried <span class="term">mubing</span> (<span class="cjk">募兵</span>) standing army in which enlistment was lifelong, pay barely subsistence, and — the detail even contemporary Chinese state defences cannot fully obscure — new recruits were tattooed on the face or arm to mark them as soldiers, using the same procedure used to mark convicted criminals. The categorical equation the practice produced — soldier <em>as</em> criminal — was explicit. A man who enlisted carried that mark on his face for the rest of his life. The Song-era poet Qian Yi wrote of front-line soldiers: "the wound-iron grew flesh in winter, paper armour bred maggots in rain; small hills buried bones in frost, dried rivers were piled with rotted fish." The proverb is the lay summary of that fact.</p>
+
+      <p>The Qing inherited the Song's basic political logic for a different reason — a Manchu minority ruling a Han majority needed Han military spirit suppressed, not cultivated — and the catastrophic performance of the Banner armies and Green Standard against Britain in 1842 and Japan in 1895 vindicated the proverb in the only sense that mattered to families deciding whether to enlist their sons: armies of the late Qing absorbed and consumed the lives of their members and returned nothing.</p>
+
+      <p>The interesting move comes after 1949. Chinese state media now treats the proverb as a piece of feudal-era contamination that the Communist Party has, through the construction of a "people's army," <em>changed</em>. The Party defenders do not claim that the proverb was always wrong; they claim that the conditions that produced it have been transcended — implicitly admitting that under conditions other than those the Party arranges (i.e., under the historical norm), the proverb was correct. More tellingly, the rebuttal is not made by argument. State outlets classify the people who repeat the proverb into three derogatory types — the "snobbish man" (<span class="cjk">清高男</span>) who feels superior, the "prejudiced man" (<span class="cjk">偏见男</span>) who is ignorant, the "cowardly man" (<span class="cjk">怯弱男</span>) who is soft. This is a textbook <em>ad hominem</em>: the standard signature of an institution losing an argument on the substance and forced to fight on the character of those making it.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>谚语在可辨识的现代形式上是在北宋固定下来的，其触发是结构性的。宋代以募兵制替代了此前以征兵为基础的体制，建立了一支常备的雇佣军——入伍即终身、军饷仅够温饱，且——这是即便今天的中国官方军事宣传也无法完全遮蔽的细节——新兵入伍时要在脸上或手臂上刺字以标识其身份，与刺配罪犯所用的是同一种程序。由此所确立的范畴等同——士兵<em>等同于</em>罪犯——是明确的。一个人一旦入伍，便要把这个印记带在脸上度过余生。宋代诗人钱易写边军：「金疮寒长肉，纸甲雨生蛆。山小埋霜骨，河枯胪腐鱼。」这句谚语只是这一事实的民间总结。</p>
+
+      <p>清代继承了宋代的基本政治逻辑，但出于不同的原因——一个统治汉族多数的满族少数政权，需要的是压制而非培育汉人的尚武精神——而八旗与绿营在 1842 年对英、1895 年对日的灾难性表现，在唯一对决定是否让儿子入伍的人有意义的层面上证实了谚语：清末的军队吞噬其成员的生命，却什么都不回馈。</p>
+
+      <p>真正值得注意的是 1949 年之后的处理。中国官方媒体如今将这一谚语视为封建时代遗留的污染物，并主张共产党通过建立「人民军队」已经<em>把它改了过来</em>。党的辩护者并未声称谚语向来错误，他们声称的是产生它的条件已被超越——这一立论实际上承认了：在党所安排的条件之外的条件下（即历史上的常态条件下），谚语是对的。更能说明问题的是：这种反驳不是通过论证。官方媒体把重复这一谚语的人分为三种贬义类型——自觉高人一等的「清高男」、无知的「偏见男」、软弱的「怯弱男」。这是教科书式的<em>诉诸人身</em>：一个在实质论证上失利、被迫退守对方人格之战的机构的标志性签名。</p>
+    </div>
+
+    <blockquote>
+      <span data-lang-content="en">
+        The proverb's persistence across a thousand years of dynastic change, four wholly different recruitment regimes, and into the present is itself the strongest argument against the official position that conditions have been transcended.
+      </span>
+      <span data-lang-content="zh">
+        这一谚语在一千年的王朝更替、四种全然不同的兵役体制之中持续存活，并延续至今——这件事本身，就是反对官方「条件已被超越」立场的最强论据。
+      </span>
+    </blockquote>
+
+    <!-- ───── §2 The Western Refusal of Soldiering ──────────────── -->
+    <h2 id="sec-west"><span class="sec-num">2 ·</span>
+      <span data-lang-content="en">The Western Refusal of Soldiering</span>
+      <span data-lang-content="zh">西方拒绝从军的传统</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>A common Chinese-language response to the position defended here is that the saying is a parochial relic of Han political culture, with no analogue in the West. This is empirically false. The position has a long, intellectually serious, and politically expensive history in the European tradition. Its sharpest expressions arose around conscription, because conscription is where the position meets the state in its starkest form; but the underlying objection is not to conscription specifically. It is to the act of taking up arms in the service of a state — whether by compulsion or by choice — and the most consistent proponents of the position have said so plainly.</p>
+
+      <p>Three traditions are worth distinguishing: Tolstoy and the Christian non-resistance lineage, Russell and the secular pacifist lineage, and the Anglo-American Quaker tradition that supplied both with their organisational and rhetorical backbone. All three paid for their position in concrete terms.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>本立场在中文世界常遭遇的一种反驳是：这只是汉族政治文化中地方性的遗存，西方没有对应物。这在经验上不成立。这一立场在欧洲传统中有一条漫长、智识严肃、政治代价高昂的历史脉络。其最尖锐的表述围绕征兵展开，因为征兵是该立场与国家以最赤裸方式相遇的场合；但底层的反对并非专门针对征兵。它反对的是为某个国家拿起武器这一行为本身——不管出于强制还是出于自愿——而这一立场最一贯的主张者们已经明白说出过这一点。</p>
+
+      <p>有三条传统值得分开：托尔斯泰所属的基督教不抵抗脉络、罗素所属的世俗和平主义脉络，以及为前二者提供组织与修辞骨架的英美贵格会传统。三者都为这一立场付出了具体代价。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Tolstoy: the soldier as the most direct instrument of violence</span>
+      <span data-lang-content="zh">托尔斯泰：士兵作为暴力最直接的执行者</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Tolstoy is the case worth taking most seriously because he came to the position from inside the military. He served as a junior artillery officer in the Crimean War (1854–55) and made his early literary reputation with the <em>Sevastopol Sketches</em>, which are precisely the opposite of patriotic war reportage. Forty years later, in <em>The Kingdom of God Is Within You</em> (1894) — a book banned in Russia and first published in Germany — he set out a fully developed account of why a Christian person cannot accept military service of any kind.</p>
+
+      <p>The point most often missed about Tolstoy is that his target is not conscription as such. His target is the soldier as a moral category. Conscription receives sustained attention in chapter VI of <em>The Kingdom of God Is Within You</em> because it is the form in which the state most baldly exposes what it asks of every soldier — but Tolstoy is equally clear that the volunteer is in no better position. A man who walks into a recruiting office is agreeing, in advance and at his own initiative, to do precisely what the conscript is forced to do; his consent does not redeem the agreement, it implicates him more deeply. Tolstoy treats the standing army of his own country, Russia, and the volunteer professional forces of Britain and Germany, as equally compromised by the same underlying act.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>托尔斯泰是最值得严肃对待的情形，因为他是从军队<em>内部</em>抵达这一立场的。他曾在克里米亚战争（1854–55）中担任炮兵少尉，并凭《塞瓦斯托波尔随笔》一举成名——这些文字恰恰是爱国战争通讯的反面。四十年后，他在《天国在你心中》（1894）一书——此书在俄罗斯被禁，最初在德国出版——里完整地阐述了一个基督徒为何不能接受任何形式的军事服役。</p>
+
+      <p>关于托尔斯泰最常被忽略的一点是：他所针对的并非征兵本身，而是士兵作为一种道德范畴。征兵在《天国在你心中》第六章中获得集中处理，是因为它是国家最赤裸地暴露其对每一个士兵之所求的那种形式——但托尔斯泰同样明确地指出，志愿者并不处在更好的位置。一个走进招募办公室的人，是在事前主动同意去做被征召者被迫做的同一件事；他的同意不能赎回这一同意，反而使他卷得更深。托尔斯泰把他自己祖国俄罗斯的常备军，与英国和德国的志愿职业军队，视为同样被同一底层行为所玷污。</p>
+    </div>
+
+    <div class="argument" data-lang-content="en">
+      <span class="label">Tolstoy's three steps</span>
+      <ol>
+        <li>The Sermon on the Mount enjoins non-resistance to evil by force as a categorical command (Matthew 5:39), not as a counsel to be applied prudentially.</li>
+        <li>A soldier is, by the definition of the office, a person who has agreed to use force against persons whom he has no personal quarrel with, on the state's authority alone. The conscript agrees under duress; the volunteer agrees freely; but what is agreed to is the same.</li>
+        <li>Any social role that requires this agreement is, on Tolstoy's analysis, a form of <em>slavery</em> — a slavery that the conscript suffers and the volunteer chooses, but a slavery either way.</li>
+      </ol>
+      <div class="conclusion">The proverbial form of the same position would be: <em>a good man does not become a soldier</em>.</div>
+    </div>
+
+    <div class="argument" data-lang-content="zh">
+      <span class="label">托尔斯泰的三步论证</span>
+      <ol>
+        <li>《登山宝训》（马太福音 5:39）所颁布的「不以暴力抗恶」，是一条绝对命令，不是可酌情应用的劝告。</li>
+        <li>士兵——按其职务的定义——就是一个已经同意为国家所授权、对自己并无私人恩怨之人施暴的人。被征召者在强迫下同意，志愿者出于自愿同意，但其所同意的是同一件事。</li>
+        <li>任何要求这种同意的社会角色，按托尔斯泰的分析，都是一种<em>奴役</em>形式——被征召者承受这种奴役，志愿者选择这种奴役，但二者皆是奴役。</li>
+      </ol>
+      <div class="conclusion">同一立场的谚语形式即是：<em>好男不当兵</em>。</div>
+    </div>
+
+    <div data-lang-content="en">
+      <p>What makes Tolstoy more than a religious eccentric is the chain of historical consequence his argument produced. <em>The Kingdom of God Is Within You</em> reached Gandhi in South Africa in 1894; Gandhi corresponded with Tolstoy until Tolstoy's death in 1910 and built the doctrine of <span class="lat">satyagraha</span> on it; Gandhi's success in India in turn became the formative reference for Martin Luther King Jr.'s American civil rights movement. A non-trivial fraction of the twentieth century's most consequential non-violent political movements descend from a single sustained argument against the soldier as a moral role.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>使托尔斯泰超越宗教怪人范畴的，是他的论证所引发的一连串历史后果。《天国在你心中》于 1894 年传到南非的甘地手中；甘地与托尔斯泰通信直至 1910 年托尔斯泰去世，并以此为基础发展出「非暴力不合作」（<span class="lat">satyagraha</span>）；甘地在印度的成功又成为马丁·路德·金美国民权运动的形成性参照。二十世纪最重要的非暴力政治运动中有相当一部分，可以追溯到这同一项持续不懈的论证——一项反对「士兵」这一道德角色本身的论证。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Russell: the cost of dissent</span>
+      <span data-lang-content="zh">罗素：异见的代价</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Russell's case is more austere than Tolstoy's because Russell came to the position not from Christian theology but from an analytical conviction that the First World War was simply a stupid war whose costs no rational accounting could justify. His most sustained statement of the underlying position is the lecture series delivered at Caxton Hall in early 1916 and published as <em>Principles of Social Reconstruction</em> (American edition: <em>Why Men Fight</em>). The chapter "War as an Institution" treats the soldier not as the victim of conscription but as the unit on which the entire institution of organised state violence depends. Russell does not argue that a man should refuse to be drafted while remaining open to volunteering; he argues that the institution itself is a moral catastrophe, and that the volunteer who walks into it freely is, if anything, more compromised than the conscript who is forced.</p>
+
+      <p>In April 1916, working with the No-Conscription Fellowship, Russell wrote and distributed a leaflet defending Ernest Everett, a schoolteacher who had refused induction. Six men were arrested for handing it out. Russell wrote to <em>The Times</em>: "If anyone is to be prosecuted I am the person primarily responsible."</p>
+
+      <p>The British government's response was instructive. Russell was tried under the Defence of the Realm Act, fined £100, dismissed from his lectureship at Trinity College, Cambridge, denied a passport to take up a teaching post at Harvard, and forbidden to travel to certain parts of the United Kingdom. In February 1918, after a further anti-war article, he was sentenced to six months in Brixton Prison. He used the time to write what became <em>Introduction to Mathematical Philosophy</em>. At the war's end he wrote that his work had been "totally useless except to myself. I had not saved a single life or shortened the War by a minute."</p>
+
+      <p>Russell's self-assessment is too modest. The No-Conscription Fellowship he worked with represented some 16,000 conscientious objectors during the war, of whom about 6,000 served prison sentences. Thirty-seven were initially sentenced to death — a sentence that, after Russell and others lobbied Prime Minister Asquith directly, was commuted. The Quaker formula "we cannot take part in wars and fightings" — note: not <em>we cannot be conscripted into</em> them, but <em>we cannot take part in</em> them — survived the First World War with state credibility that no court ruling could have given it.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>罗素的情形比托尔斯泰更冷峻，因为罗素抵达这一立场不是出于基督教神学，而是出于一种分析性的判断——第一次世界大战只是一场愚蠢的战争，其代价无任何理性的会计可以辩护。他对底层立场最完整的陈述，是 1916 年初在 Caxton Hall 所作的系列讲座，结集出版为《社会重建原理》（Principles of Social Reconstruction，美国版书名为《人为何而战》Why Men Fight）。其中「战争作为一种制度」（War as an Institution）一章，所处理的不是「作为征兵受害者的士兵」，而是「作为整个有组织国家暴力之制度赖以维系的最小单位」的士兵。罗素并不主张一个人应当拒服征兵但仍可考虑志愿入伍；他主张这一制度本身是道德上的灾难，而自愿走进这一制度的志愿者——如果有任何区别的话——比被强迫的征召者陷得更深。</p>
+
+      <p>1916 年 4 月，他与「反征兵协会」（No-Conscription Fellowship）合作撰写并散发了一份小册子，为拒服兵役的中学教师 Ernest Everett 辩护。六人因散发此件被捕。罗素写信给《泰晤士报》：「如果有人要被起诉，那个首要责任人是我。」</p>
+
+      <p>英国政府的回应有教益。罗素依《国土防卫法》（Defence of the Realm Act）受审，被处罚款 100 英镑，剑桥三一学院讲师职被撤，赴哈佛任教的护照被拒签，并被禁止前往英国部分地区。1918 年 2 月，因另一篇反战文章，他被判入布里克斯顿监狱六个月。狱中他写成了后来出版的《数理哲学导论》。战争结束后他写道，自己的工作「除对我自己之外完全无用。我没有救下一条人命，也没有让战争缩短一分钟。」</p>
+
+      <p>罗素的自我评价过于谦抑。他所参与的「反征兵协会」在战争期间代表约一万六千名良心拒服兵役者，其中约六千人服了刑。最初有三十七人被判死刑——经罗素等人直接游说首相阿斯奎斯之后获减刑。贵格会的公式「我们不能参与战争与厮杀」——注意：不是「我们不能被征入战争」，而是「我们不能参与战争」——在一战中存活下来，并因此获得了任何法庭裁决都无法赋予的国家级认信。</p>
+    </div>
+
+    <aside class="sidenote" data-lang-content="en">
+      The Anglo-American conscientious-objection tradition is older than Tolstoy by two centuries. George Fox refused to take a commission in Cromwell's army in 1651; William Penn's Pennsylvania experimented with a colony without standing arms. Tolstoy was put on to this lineage by letters from American Quakers responding to his earlier <em>What I Believe</em> (1884), and he explicitly cites Garrison's <em>Declaration of Sentiments</em>, Adin Ballou's non-resistance writings, and Dymond's <em>On War</em>.
+    </aside>
+    <aside class="sidenote" data-lang-content="zh">
+      英美的良心拒服兵役传统比托尔斯泰早两个世纪。乔治·福克斯（George Fox）在 1651 年拒绝接受克伦威尔军队的军职；威廉·宾（William Penn）在宾夕法尼亚的殖民地实验过一个不设常备军的社会。托尔斯泰是经由美国贵格会读者就他更早的《我的信仰是什么》（1884）所写来的信件接触到这条脉络的，他在书中明确引证了加里森（Garrison）的《情感宣言》、阿丁·巴卢（Adin Ballou）的非抵抗写作以及戴蒙德（Dymond）的《论战争》。
+    </aside>
+
+    <h3>
+      <span data-lang-content="en">The legal status of conscience</span>
+      <span data-lang-content="zh">良知的法律地位</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The most important institutional outcome of this tradition is that the right to refuse military service on grounds of conscience is now embedded in the law of most liberal democracies and is recognised as a human right by international bodies. The United Nations Human Rights Committee, in <em>General Comment No. 22</em> (1993) on Article 18 of the International Covenant on Civil and Political Rights, held that conscientious objection to military service can be derived from the freedom of thought, conscience, and religion. The protection runs to the conscript who refuses induction and, in many jurisdictions, to the soldier who develops conscientious objections after enlisting and seeks discharge — i.e. it acknowledges that the moral problem with soldiering does not arise solely from compulsion. Refusing military service on grounds of conscience is, in the legal regimes that have shaped the modern human-rights vocabulary, a recognised exercise of a fundamental right.</p>
+
+      <p>The People's Republic of China is a signatory to the ICCPR but has not ratified it. The PRC's 1984 Military Service Law (revised 1998, 2011, 2021) makes no provision for conscientious objection. The 2021 revision sharpened penalties for draft evasion — a regulatory direction that is hard to read as anything but a confession that the recruitment system is under pressure from the very population it is meant to draw on.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>这一传统最重要的制度成果在于：依良知拒服兵役的权利已被绝大多数自由民主国家的法律所内化，并被国际机构认定为一项人权。联合国人权委员会在 1993 年发布的《一般性意见第 22 号》中针对《公民权利和政治权利国际公约》第十八条裁定：依良心拒服兵役的权利可以从思想、良心与宗教自由权中推出。这一保护既适用于拒绝应征入伍的被征召者，在许多司法管辖区也适用于入伍后形成良知反对、申请退役的现役军人——也就是说，它承认从军的道德问题并不仅仅源于强制。在塑造现代人权语汇的法律体制内，依良知拒服兵役不再是怪癖，而是一项基本权利之被承认的行使。</p>
+
+      <p>中华人民共和国是《公民权利和政治权利国际公约》的签署国，但并未予以批准。中华人民共和国 1984 年《兵役法》（1998、2011、2021 年三次修订）从未为良心拒服兵役留下任何制度空间。2021 年的修订加重了对逃避兵役的处罚——这一立法方向，除了解释为该招募体制承受着来自它本应汲取的那批人口的压力的供认，几乎再无别的解读。</p>
+    </div>
+
+    <!-- ───── §3 The Sociology of Recruitment ───────────────────── -->
+    <h2 id="sec-poverty-draft"><span class="sec-num">3 ·</span>
+      <span data-lang-content="en">The Sociology of Recruitment</span>
+      <span data-lang-content="zh">招募的社会学</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>The position defended here is that becoming a soldier is something a person of moral seriousness has reason not to do, whether by compulsion or by choice. A natural objection is that under modern all-volunteer arrangements the choice is exactly that — a choice — and that the moral content of an act is determined by whether the actor freely undertook it. This section addresses that objection at the level of social fact.</p>
+
+      <p>The claim is not that volunteer enlistment is, on close inspection, "really" coerced and therefore equivalent to conscription. That would be a weaker form of the present position — it would concede that consent <em>would</em> redeem the act if consent were robust enough. The claim is stronger: even where consent is as robust as social conditions allow it to be, the act is the same and the moral objection to it is the same. What the sociological data establish is a different and additional point — that volunteer recruitment is not, in practice, the meritocratic self-selection its defenders describe; that the system reliably draws from a thin and predictable slice of the population; and that this is not an accident but a design feature.</p>
+
+      <p>Read this way, the "poverty draft" literature is not the argument for the position. It is a description of how the institution behaves when it is told to find soldiers without the use of force. The institution behaves the way the Song <span class="term">mubing</span> system behaved nine hundred years ago, for the same structural reason: armies absorb disproportionately those who have no good alternative, hold out the prospect of upward mobility, and on average fail to deliver it.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>本页所辩护的立场是：一个对道德有所认真的人有理由不去做军人，无论这件事出于强制还是出于自愿。一种自然的反驳是：在现代全志愿兵役安排下，「选择」就是名副其实的选择；而一项行为的道德性质，取决于行为人是否自愿承担。本节就在「社会事实」的层面回应这一反驳。</p>
+
+      <p>本节所主张的<strong>不是</strong>：志愿入伍仔细看是「其实」被强迫的，所以等同于征兵。那将是当前立场的一种较弱形式——它将让步承认：若同意足够稳健，则可以赎回从军行为。本节所主张的更强：即便同意已稳健到社会条件所允许的极限，从军这一行为及其道德反驳依然如故。社会学数据所确立的是另一项<em>附加</em>的事实——志愿招募实际上并非其辩护者所描述的「按个人特质自我筛选」；招募体制可靠地从人口中可识别的、薄薄的一小片中汲取；这不是事故，而是设计本身的特征。</p>
+
+      <p>这样读，「贫穷征兵」（poverty draft）相关文献并不是支撑本立场的论据，而是对该机构在「被要求不动用强制找到士兵」时如何运作的描述。这一机构的运作方式，与九百年前宋代募兵制的运作方式如出一辙，其结构性原因相同：军队不成比例地汲取那些没有更好选择的人，向他们许诺上升流动，而平均而言未能兑现。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">The "poverty draft" thesis</span>
+      <span data-lang-content="zh">「贫穷征兵」假说</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The American all-volunteer force, established in 1973 after the Vietnam draft was abolished, has been studied for fifty years as a natural experiment in self-selection. The term <span class="term">poverty draft</span> was coined by 1980 to describe what the data was beginning to show: that the enlisted ranks were drawn disproportionately from young people in zip codes and school districts with limited civilian economic opportunities, and that military recruiters targeted such areas with explicit operational intent.</p>
+
+      <p>The hard numbers below are drawn from analyses by the National Priorities Project, the Associated Press, and academic studies (McGlynn &amp; Lavariega Monforti 2010; Mariscal 2007). They describe a recruitment system that is not, in any honest sense, randomly populated by patriotic volunteers.</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Finding</th><th>Source</th><th>Year</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>~75% of U.S. troops killed in Iraq came from towns where per-capita income was below the national average</td><td>AP analysis</td><td>2007</td></tr>
+          <tr><td>All 20 of the Army's top recruiting counties in 2004 had below-median household income; 12 of 20 had above-average poverty rates</td><td><em>Seattle Times</em> / National Priorities Project</td><td>2005</td></tr>
+          <tr><td>Puerto Rico is the U.S. Army's single highest-density recruiting territory; the island's unemployment rate at the time was &gt;40%</td><td>AFSC poverty-draft report</td><td>2008</td></tr>
+          <tr><td>DoD spending on outreach targeting "high-achieving low-income" youth: $2.5 billion+ per year</td><td>AFSC, citing DoD budget</td><td>2008</td></tr>
+          <tr><td>GI Bill: ~57% of applicants do not receive benefits; average net payment to those who do, &lt;$2,200</td><td>AFSC analysis of VA data</td><td>2007</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>Pentagon-sponsored research is explicit about the targeting logic; the RAND Corporation's report <em>Recruiting Youth in the College Market</em> openly identifies community college as "the recruiter's number one competitor for the youth market," with the rhetorical strategy "you're not going anywhere here … I can offer you more." A system that defines a community college as a "competitor" is not a system that takes whoever turns up. It is a system that hunts.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>美国 1973 年废除越战征兵之后建立的「全志愿部队」，在过去五十年里已被作为一项关于自我选择的自然实验加以研究。<span class="term">贫穷征兵</span>（poverty draft）这一术语在 1980 年前后被铸造出来，用以描述当时数据开始呈现的事实：入伍士兵不成比例地来自那些平民经济机会有限的邮编与学区，而军方招募者以明确的操作意图针对此类地区。</p>
+
+      <p>下列硬数据来自国家优先项目（National Priorities Project）、美联社（Associated Press）以及学术研究（McGlynn &amp; Lavariega Monforti 2010; Mariscal 2007）的分析。它们所描述的招募体制，在任何诚实的意义上都不是「由爱国志愿者随机填充」。</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>发现</th><th>来源</th><th>年份</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>在伊拉克阵亡的美军中约 75% 来自人均收入低于全国均值的城镇</td><td>美联社分析</td><td>2007</td></tr>
+          <tr><td>2004 年陆军招募量前 20 名县份全部低于家庭收入中位数；其中 12 个县的贫困率高于全国均值</td><td>《西雅图时报》／国家优先项目</td><td>2005</td></tr>
+          <tr><td>波多黎各是美国陆军招募密度最高的单一辖区；当时该岛失业率超过 40%</td><td>AFSC 贫穷征兵报告</td><td>2008</td></tr>
+          <tr><td>国防部针对「低收入高学绩」青年的招募宣传年度开支 25 亿美元以上</td><td>AFSC 援引国防部预算</td><td>2008</td></tr>
+          <tr><td>《退伍军人法》（GI Bill）：约 57% 的申请人未实际领到补助；实际领到者的平均净额低于 2,200 美元</td><td>AFSC 对退伍军人事务部数据的分析</td><td>2007</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>五角大楼资助的研究在这一靶向逻辑上毫不讳言：兰德公司的报告《在大学市场中招募青年》（Recruiting Youth in the College Market）公开把社区学院定义为「招募者在青年市场中的头号竞争对手」，其修辞策略是「你在这里没有任何前途……我能给你更多。」一个把社区学院定义为「竞争对手」的体制，不是一个等谁来就接谁的体制。这是一个在<em>狩猎</em>的体制。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">The Chinese parallel</span>
+      <span data-lang-content="zh">中国的对应</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The PRC system is structurally different — the formal rules combine a nominally universal conscription obligation with de facto quota-based recruitment from rural areas — but the sociological signature is similar. Recruitment is concentrated in less-developed inland provinces and rural counties; university graduates have been a deliberate target of recruitment campaigns since the late 2000s because of long-standing concerns about the educational level of the rank and file. The fact that the official PLA-affiliated press has felt the need, repeatedly, to publish indignant articles classifying objectors into three derogatory types is itself evidence that the proverb's social authority is intact at the level where it matters: among the families being asked to send their children.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>中国的体制结构上有所不同——名义上的普遍兵役义务与事实上对农村地区的配额式招募相结合——但其社会学签名相似。招募集中于欠发达的内陆省份与农村县；高校毕业生自 2000 年代末以来成为有意识的招募目标，因为对一般士兵教育水平的长期担忧。官方军方所属的媒体反复觉得有必要发表义愤之文、把反对者归入三种贬义类型——这件事本身就是证据，证明这条谚语在最关键的层面上仍保有其社会权威：在那些被要求送出自己儿子的家庭之中。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">What the proverb compresses</span>
+      <span data-lang-content="zh">谚语所压缩的内容</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Read against the sociological data, the proverb is not anti-soldier prejudice. It is a piece of compressed risk-management advice, derived inductively over a millennium of observation, addressed to families deciding whether to permit a son to enlist. The compression is doing real epistemic work. It tells the listener three things at once.</p>
+
+      <p>First, that the relevant comparison is to the alternative use of the same person ("good iron is not used for nails" presupposes that there are other uses). Second, that the loss to the alternative use is not recoverable (the iron consumed in nails is not later available for swords; the person consumed in war is not later available to their family). Third, that the asymmetry of information between the recruiter and the recruited is structural and not correctable by individual due diligence — which is why a proverb, transmitted across generations, is the right epistemic format for the warning.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>将谚语放在社会学数据的背景下读，它并不是对士兵的偏见，而是一份压缩过的风险管理建议，由一千年的观察归纳得来，所对应的接收方是那些正在决定是否允许自己儿子入伍的家庭。这一压缩在做实实在在的认识论工作。它一次性告诉听者三件事。</p>
+
+      <p>其一，相关的比较对象是同一个人的其他用途（「好铁不打钉」预设了存在其他用途）。其二，对其他用途的损失不可恢复（用去打钉的铁，事后不能再拿来铸剑；战争吞噬的人，事后不能再回到家庭）。其三，招募者与被招募者之间的信息不对称是结构性的，不可由个人的尽职调查予以修正——正因如此，一句跨代传递的谚语，才是这一警告恰当的认识论格式。</p>
+    </div>
+
+    <!-- ───── §4 Schopenhauer & the Negation of Will ────────────── -->
+    <h2 id="sec-schopenhauer"><span class="sec-num">4 ·</span>
+      <span data-lang-content="en">Schopenhauer &amp; the Negation of Will</span>
+      <span data-lang-content="zh">叔本华与意志的否定</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>The deepest case against soldiering is one that the other three sections point toward but do not state. The historical case shows that armies have systematically consumed those who served them; the Western case shows that the right to refuse is a defensible exercise of conscience; the sociological case shows that the choice is rarely free. The remaining question is metaphysical: what view of the self and its place in the order of beings makes this position cohere with the rest of one's commitments?</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>反对从军的最深一层论证，是前三节所指向但尚未明言的那一层。史学的论证表明军队系统性地消耗其士兵；西方的论证表明拒服兵役权是良知的正当行使；社会学的论证表明这一「选择」鲜有自由可言。剩下的问题是形而上学的：什么样的自我观与什么样的存在秩序图景，能让这一立场与一个人其余的承诺融贯起来？</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">The argument from will</span>
+      <span data-lang-content="zh">来自「意志」的论证</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Schopenhauer's central claim in <em>Die Welt als Wille und Vorstellung</em> (1818) is that the world as we encounter it is the appearance of a single underlying force he calls <span class="term">Will</span> — a blind, ceaseless, purposeless striving that manifests in every individual organism as the drive to persist, to consume, to reproduce, and to do so at the cost of every other organism. The Will is not malevolent; it is simply indifferent, and the suffering it produces is not an accident of its operation but the necessary form of its operation. Pessimism is, for Schopenhauer, the only honest response to the structure of the world.</p>
+
+      <p>From this metaphysics two ethical consequences follow that bear directly on the present question. The first is <em>compassion as the recognition of identity</em>: because the Will that drives me is numerically the same Will that drives every other sentient being, harming another is, at the metaphysical level, harming oneself. The formula Schopenhauer borrows is <span class="lat">tat tvam asi</span> — "that thou art" — from the Chandogya Upanishad. The second consequence is <em>the negation of the Will</em> (<span class="lat">Verneinung des Willens</span>): the recognition that the most ethically clarified life is one that withdraws cooperation from the Will's projects, declines to add to its momentum, and aims at quietude rather than achievement.</p>
+
+      <p>A standing army is the Will's most concentrated institutional form. It is the apparatus by which one collective Will (the state) extracts cooperation from the individual Wills that compose it, in order to inflict damage on the bodies of other individuals whose Wills are, by Schopenhauer's lights, numerically identical to the recruiter's own. Soldiering is therefore, for a person who has thought through the Schopenhauerian metaphysics, the most direct form of bad faith available. It is the use of the recognition that I am the Will, to inflict on another who is also that Will, in service of a state that is merely a transient aggregation of that Will pretending to be something more.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>叔本华在《作为意志与表象的世界》（1818）中的核心主张是：我们所遭遇的世界是某种单一的根本力量的现象呈现，他称之为<span class="term">意志</span>（Wille）——一种盲目、不息、无目的的冲动，在每一个个体生物身上表现为存续、吞食、繁衍的驱力，并且必然以其他生物为代价。意志并非恶毒，而是漠然；它所产生的苦难不是其运作的偶然事故，而是其运作所必需的形式。对叔本华来说，悲观主义是面对世界结构的唯一诚实回应。</p>
+
+      <p>从这一形而上学出发，有两条伦理学后果与当前问题直接相关。其一，<em>同情作为同一性的认知</em>：推动我的意志，与推动其他每一个有感知存在者的意志，在数目上是同一个意志，因此在形而上学层面上，伤害他者就是伤害自己。叔本华借用《唱赞奥义书》（Chandogya Upanishad）的拉丁化梵文公式 <span class="lat">tat tvam asi</span>——「汝即彼」。其二，<em>意志的否定</em>（<span class="lat">Verneinung des Willens</span>）：最有伦理清明度的生活，是从意志的工程中撤回合作，拒绝为它的惯性添柴，并以静（quietude）而非成就为目标。</p>
+
+      <p>常备军是意志最浓缩的制度形式。它是这样一种装置：一个集合性的意志（国家），从构成它的个体意志那里榨取合作，用以对其他个体的身体施加损害——而那些个体的意志，按叔本华的看法，与施加损害者自身在数目上是同一个意志。因此，对一个把叔本华的形而上学想透的人来说，从军就是他可能做出的最直接的自欺。它是这样一种行动：利用「我即是意志」这个自我认知，去伤害另一个同样是该意志的存在者，并以一个不过是该意志的瞬时聚合而冒充更高之物的国家为名义。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Coherence with the antinatalist position</span>
+      <span data-lang-content="zh">与反生育立场的融贯</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The antinatalist position defended on the <a href="/antinatalism">/antinatalism</a> page proceeds from the same Schopenhauerian premise: that the Will's continuation through new individuals is not, at the level of the individuals so produced, a gift but an imposition. Each new birth is a new conscription into the project of being a will, with all the suffering that being a will entails, and without the consent of the conscript. The structural analogy with military conscription is exact and not coincidental.</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Procreation, viewed from the offspring</th>
+            <th>Conscription, viewed from the conscript</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Cannot have been consulted</td><td>No meaningful opt-out before induction</td></tr>
+          <tr><td>Asymmetry of stakes (parent gains; child bears the cost)</td><td>Asymmetry of stakes (state gains; soldier bears the cost)</td></tr>
+          <tr><td>Decision is made by an entity that pre-exists the decision's subject</td><td>Decision is made by an entity that outlives the decision's subject</td></tr>
+          <tr><td>Justifications proceed by appeal to consequences the subject was not present to consent to</td><td>Justifications proceed by appeal to a "duty" the subject was not present to incur</td></tr>
+          <tr><td>The procedure renews the project of the Will at the individual's cost</td><td>The procedure renews the project of the state at the individual's cost</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>The two refusals — refusal to be conscripted, refusal to procreate — are not separate ethical positions held by the same person for separate reasons. They are the same ethical position applied at two different levels of the Will's renewal mechanism. To accept either is to admit the metaphysical claim that one's body is at the disposal of an enterprise larger than oneself, whose continuation matters more than one's own dispensation, and whose authority to draft one into its service is taken for granted.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>在 <a href="/antinatalism">/antinatalism</a> 页所辩护的反生育立场，所依据的正是同一条叔本华前提：意志通过新个体的延续，在被生出的那些个体那里，并非馈赠而是强加。每一次新生都是一次新的征召——征入「成为一个意志」这一工程，连同身为意志所必然带来的全部苦难，并且不经被征者本人的同意。与军事征兵之间的结构相似性是精确的，并非偶然。</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>从子女角度看的生育</th>
+            <th>从被征者角度看的征兵</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>事前不可能被征询</td><td>入伍前没有有意义的退出选项</td></tr>
+          <tr><td>利益不对称（父母得，子女付出代价）</td><td>利益不对称（国家得，士兵付出代价）</td></tr>
+          <tr><td>作出决定的实体先于该决定的承受主体而存在</td><td>作出决定的实体的寿命长于该决定的承受主体</td></tr>
+          <tr><td>辩护诉诸承受主体不曾在场同意的种种后果</td><td>辩护诉诸承受主体不曾在场承担的一种「义务」</td></tr>
+          <tr><td>该程序以个体为代价延续意志的工程</td><td>该程序以个体为代价延续国家的工程</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p>这两项拒绝——拒绝被征兵，拒绝生育——不是同一个人出于不同理由所持的两项独立伦理立场，而是同一项伦理立场在意志续生机制的两个不同层级上的应用。接受其中任何一项，就是承认这一形而上学主张：自己的身体属于某个比自己更宏大的事业可供处置之物，该事业的延续比自己的处境更重要，而它把自己征入其服役的权威则被视为理所当然。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Classical Chinese resonance</span>
+      <span data-lang-content="zh">与中国古典文学的呼应</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>A position consistent with Schopenhauer is not necessarily a Western position. Classical Chinese literature contains some of the most uncompromising anti-military poetry in any tradition. Du Fu's "Ballad of the Army Carts" (<span class="cjk">兵车行</span>, c. 750), written during the Tang military campaigns against Tibet and the Uyghurs, is unambiguous: the conscripts speak of being marshalled north to the Yellow River garrisons at fifteen and still posted to the western frontier farms at forty; the speaker reaches the conclusion that a son's birth is now a sorrow and a daughter's a blessing, because at least a daughter may be married to a neighbour, whereas a son will be buried among a hundred grasses.</p>
+
+      <p>The convergence between Du Fu's eighth century and Schopenhauer's nineteenth is not historical influence — Schopenhauer never read Du Fu — but the more interesting kind of convergence: independent arrival at the same conclusion by minds operating under different conceptual vocabularies on the same underlying facts. The proverb under discussion is the lay summary of what both of them concluded.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>与叔本华一致的立场不必然是西方立场。中国古典文学中包含了任何文学传统中都属最毫不妥协的反战诗。杜甫《兵车行》（约 750 年），写于唐与吐蕃、回纥多次用兵期间，毫不含糊：「行人但云点行频，或从十五北防河，便至四十西营田」；最终得出结论：「信知生男恶，反是生女好。生女犹得嫁比邻，生男埋没随百草。」</p>
+
+      <p>杜甫的八世纪与叔本华的十九世纪之间的趋同，不是历史影响——叔本华从未读过杜甫——而是更有意思的那种趋同：使用不同概念语汇的两个心灵，面对同一底层事实，独立地抵达了同一结论。本页所讨论的那句谚语，是他们两人各自所达成结论的民间总结。</p>
+    </div>
+
+    <!-- ───── §5 The Crime of Disrupting a Military Marriage ────── -->
+    <h2 id="sec-military-marriage"><span class="sec-num">5 ·</span>
+      <span data-lang-content="en">The Crime of Disrupting a Military Marriage</span>
+      <span data-lang-content="zh">破坏军婚罪</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>The Schopenhauerian argument in §4 turns on a structural claim: that a standing army is an apparatus by which a state takes possession of individual bodies for its own purposes. If that claim is right, one should expect the state's possessive reach to extend, by predictable jurisdictional logic, beyond the soldier himself — to the people the soldier is most closely bound to. The principal test case in Chinese law is the crime of <span class="term">disrupting a military marriage</span> (<span class="cjk">破坏军婚罪</span>).</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>§4 中所讨论的叔本华式论证落在一个结构性主张上：常备军是国家把个体身体收为其用的装置。如果这一主张成立，则按可预测的管辖逻辑，国家所行使的占有权延伸超出士兵本人——延伸到与士兵关系最紧密的人——是可以预期的。这一预期在中国法律中的主要检验场是<span class="term">破坏军婚罪</span>。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">The statute</span>
+      <span data-lang-content="zh">法条本身</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Article 259 of the Criminal Law of the People's Republic of China (introduced as art. 181 in the 1979 Criminal Law; renumbered and amended in 1997):</p>
+
+      <blockquote>
+        <p>Whoever knowingly cohabits with or marries the spouse of an active-duty serviceman shall be sentenced to fixed-term imprisonment of not more than three years or criminal detention.</p>
+        <p>Whoever, taking advantage of his official position or a relationship of subordination, uses coercion to have sexual relations with the wife of an active-duty serviceman, shall be punished in accordance with the provisions of Article 236 [rape].</p>
+        <span class="attribution">PRC Criminal Law art. 259 (1997 revision)</span>
+      </blockquote>
+
+      <p>The statute is the only provision in the Chinese Criminal Code that makes an extramarital sexual or marital relationship a criminal offence on the basis of one party's profession. There is no equivalent for the spouses of judges, of police officers, of high officials, or of doctors. The state has chosen, of all the professions whose practitioners' marriages it could place under criminal protection, this one and only this one. The legislative reason given in the official commentary is direct: <em>protection of military marriage is significant for ensuring that servicemen serve with peace of mind</em> (<span class="cjk">保障军人安心服役</span>).</p>
+
+      <p>Three features of the statute deserve attention.</p>
+
+      <p><em>First, the criminal party is the civilian third party, not the spouse.</em> A military spouse who has consensual relations or cohabitation with someone other than the serviceman is, as a matter of doctrine, not criminally liable under art. 259. The civilian who knew of the serviceman's status and proceeded is the one prosecuted. The statute is not designed to police the spouse's behaviour through her own criminal liability; it is designed to police it by criminalising anyone who might engage with her.</p>
+
+      <p><em>Second, "cohabitation" has been judicially expanded.</em> Although the 1997 legislators specifically declined to include simple adultery (<span class="cjk">通奸</span>) in the offence on the grounds that adultery is consensual conduct, court practice since has stretched <span class="cjk">同居</span> to cover repeated short-term sexual contact and, in several reported cases, sexual relationships that produced a child without joint residence at all. In 2022 a court treated a three-year relationship that produced two children as <span class="cjk">同居</span> and sentenced the civilian to 30 months. In effect, the offence reaches a class of conduct broader than the statutory text appears to authorise.</p>
+
+      <p><em>Third, the international comparison is sharp.</em> No other major jurisdiction makes a civilian's sexual or marital relationship with a serviceman's spouse a criminal offence. The United States <em>Uniform Code of Military Justice</em> art. 134 criminalises adultery, but the defendant is the serviceman himself; the UCMJ does not reach civilians. Russia abolished its analogous provision in the post-Soviet period. The PRC stands essentially alone in this particular extension of state jurisdiction.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>《中华人民共和国刑法》第 259 条（1979 年《刑法》原列第 181 条；1997 年修订后改至现行编号）：</p>
+
+      <blockquote>
+        <p>明知是现役军人的配偶而与之同居或者结婚的，处三年以下有期徒刑或者拘役。</p>
+        <p>利用职权、从属关系，以胁迫手段奸淫现役军人的妻子的，依照本法第二百三十六条的规定定罪处罚。</p>
+        <span class="attribution">《中华人民共和国刑法》第 259 条（1997 年修订）</span>
+      </blockquote>
+
+      <p>这一条款是中国刑法中唯一一条以一方的职业身份为依据、将婚外性或婚姻关系本身入罪的规定。法官、警察、高官、医生的配偶都没有同等保护。国家在所有可以将其配偶婚姻置于刑事保护之下的职业之中，选择了这一种，且只选了这一种。立法说明所给出的理由非常直接：<em>保护军婚对于保障军人<strong>安心服役</strong>……意义重大</em>。</p>
+
+      <p>这一法条有三个特征值得注意。</p>
+
+      <p><em>其一，被刑事追究的是平民第三方，而非配偶本身。</em>军人配偶与他人自愿同居或保持婚外关系，按教义本身并不在第 259 条下承担刑责。被起诉的是那个"明知"军人身份仍参与其中的平民。这条法律并不通过追究配偶本身的刑责来约束她，它通过把<em>任何可能与她发生关系的人</em>入罪来约束她。</p>
+
+      <p><em>其二，「同居」一词已被司法扩张。</em>1997 年立法者曾明确不将单纯的<span class="cjk">通奸</span>纳入本罪，理由是通奸属于双方自愿行为；但其后的司法实践把<span class="cjk">同居</span>扩张到反复短期同住、乃至若干判例中虽未共同居住但因发生关系而生育子女的情形。2022 年某法院将一段持续三年并育有二子的婚外关系认定为<span class="cjk">同居</span>，对平民判处有期徒刑两年六个月。其实际打击面比法条文本所授权的范围更宽。</p>
+
+      <p><em>其三，国际对比鲜明。</em>没有其他主要司法管辖区将平民与军人配偶的性或婚姻关系定为刑事罪。美国《统一军事司法法典》（UCMJ）第 134 条将通奸入罪，但被告是军人本人，UCMJ 并不管辖平民。俄罗斯在苏联解体后已废除类似条款。中华人民共和国在国家管辖权这一特定延伸上基本上是孤例。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">What the statute makes explicit</span>
+      <span data-lang-content="zh">这一法条所明示者</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>A standing law that criminalises a civilian's sexual or marital relations with a serviceman's spouse can only be defended on one premise: that the serviceman's marriage is not, in the relevant sense, a private contract between two individuals. It is a relation in which the state has a legally protected interest of its own. The state is not the third party who happens to enforce the marriage contract. The state is one of the parties to it.</p>
+
+      <p>The official commentary makes this premise explicit. The interest the statute is said to protect is not the serviceman's emotional well-being in any vague psychological sense. It is — in the codified statutory rationale — his capacity to <em>serve with peace of mind</em> (<span class="cjk">安心服役</span>). The spouse's sexual fidelity is a state interest because it is a precondition for the serviceman's operational effectiveness. The marriage is, from the state's perspective, a piece of military infrastructure.</p>
+
+      <p>This is the exact shape of the proposition §4 derives from Schopenhauer in metaphysical form. There it was an argument about what a standing army <em>is</em>: an apparatus by which one collective Will extracts the bodies of individuals for its own purposes. Article 259 is the same proposition as positive law. The state, having taken possession of the soldier, takes a partial possession of the people whose intimate relationship the soldier's body now mediates. The civilian who has relations with such a spouse has not merely interfered with someone else's marriage; they have, in the language of the statute, infringed an interest that belongs to the state.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>一项将平民与军人配偶的性或婚姻关系入罪的常设法律，只能在一个前提下得到辩护：军人的婚姻在相关意义上并非两个个体之间的私人契约，而是一种国家本身享有受法律保护之利益的关系。国家不是恰好执行婚姻契约的第三方，国家就是这一契约的<em>当事人之一</em>。</p>
+
+      <p>官方法条注释把这一前提说得很明白。法条所声称保护的利益，并不是军人在某种含糊心理意义上的情感福祉。它是——在法定的立法理由的字面表述中——他<em>安心服役</em>的能力。配偶的性专属性之所以是一项国家利益，是因为它是军人作战效力的前提条件。从国家视角看，这一婚姻是一件军事基础设施。</p>
+
+      <p>这正是 §4 从叔本华形而上学所推出的命题的形态。在那里，它是关于常备军<em>是</em>什么的论证：一个把个体身体征用于其自身目的的集合性意志装置。第 259 条是同一命题以实定法形式呈现。国家在已经占有士兵之后，进一步部分占有那些因士兵之身体而被中介的亲密关系。一个与军人配偶发生关系的平民，并非仅仅干扰了他人的婚姻；按法条的字面表述，他侵犯了一项<em>属于国家</em>的利益。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">A defensible compression</span>
+      <span data-lang-content="zh">一个可辩护的压缩</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The epigraph at the top of this page is Tolstoy's: men of our times perform the very duties required of them to keep them in slavery, especially the duty of military service. The metaphor is structural, not abusive — a slave is a person whose body is at another's disposal by standing legal arrangement, whose labour is appropriated, and whose consent or non-consent at any given moment does not change what is being done. By that test, the modern soldier — conscript or volunteer — satisfies the definition. Article 259 extends the logic without breaking it: the state's standing legal arrangement now reaches the body of the soldier's spouse as well, not to take her labour but to take a protected interest in her sexual conduct.</p>
+
+      <p>The proverb that anchors this page is, after a thousand years, still the cleanest statement of what follows: <em>a good man does not become a soldier</em>. He does not, because the moral cost of becoming one is not exhausted by what is done to him; some of it is paid by the people who love him. Article 259 is the legal documentation of that fact.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>本页顶端的题词出自托尔斯泰本人：我们这个时代的人会去履行那些让他们继续身处奴役之中的种种义务，尤其是服兵役这一项。这一隐喻是结构性的，而非用作辱骂——奴隶是这样一个人：他的身体凭常设的法律安排可供他人处置，他的劳动被征用，他在任何具体时刻的同意或不同意都不改变正在被施加于他的事。以此判准，现代士兵——无论被征召还是自愿入伍——皆符合定义。第 259 条把这一逻辑延伸而未将其破坏：国家的常设法律安排现在也及于士兵配偶的身体——不是去征用她的劳动，而是去征用一项<em>对她性行为的受保护利益</em>。</p>
+
+      <p>本页所立足的那条谚语，在一千年之后仍是对由此所推出的事实最清晰的陈述：<em>好男不当兵</em>。他不当，是因为成为军人的道德代价不止由他本人偿付；其中一部分由爱他的人偿付。第 259 条是这一事实的法律证明。</p>
+    </div>
+
+    <!-- ───── §6 Objections & Replies ───────────────────────────── -->
+    <h2 id="sec-objections"><span class="sec-num">6 ·</span>
+      <span data-lang-content="en">Objections &amp; Replies</span>
+      <span data-lang-content="zh">反驳与回应</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>A position worth holding should be willing to face its strongest opponents in their strongest form. Six objections are recurrent enough to merit a direct hearing.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>一项值得持有的立场，应当愿意以反对者最强形态的论证与之对话。下列六项反驳因反复出现，值得专门回应。</p>
+    </div>
+
+    <h4>
+      <span data-lang-content="en">6.1 · "If everyone took your position, your country would be defenceless."</span>
+      <span data-lang-content="zh">6.1 · 「如果人人都持你这种立场，国家就无法防御了。」</span>
+    </h4>
+
+    <div data-lang-content="en">
+      <p>This is the classical Kantian objection in the form of the universalisation test. The form of the objection assumes that what is being defended is a maxim recommending universal refusal. It is not. The maxim defended here is a maxim of individual conscience: <em>I will not place my body at the disposal of organised state violence.</em> A maxim of conscience does not need to be universalisable to be defensible; the relevant universalisability test is whether one can will that anyone who has reached the same conclusion through the same reasoning should act on it, and the answer is yes. The objection trades on a slip from "what if everyone did this" to "what if this were a binding rule on everyone" — categorically different things. The former is a sociological speculation; the latter is the very totalising claim the position is rejecting.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>这是康德意义上的普遍化检验式反驳。该反驳的形式预设：所要辩护的是一条建议普遍拒服的格律。事实并非如此。本页所辩护的是一条<em>个体良知的格律</em>：「我不会把自己的身体交付给有组织的国家暴力。」良知格律并不需要可普遍化才可辩护；这里相关的普遍化检验是——「凡通过同一推理抵达同一结论之人，是否可以意愿他们都按此行事？」——而答案是肯定的。这一反驳所利用的是一个语义滑动：从「如果人人都这样做会怎样」滑动到「如果这是对所有人都具有约束力的规则会怎样」。这是两件本质上不同的事情：前者是社会学猜测，后者恰恰是本立场所要拒绝的那种总体化主张。</p>
+    </div>
+
+    <h4>
+      <span data-lang-content="en">6.2 · "You enjoy the protection of the army. You owe it service in return."</span>
+      <span data-lang-content="zh">6.2 · 「你享受着军队的保护，因此你欠它服役作为回报。」</span>
+    </h4>
+
+    <div data-lang-content="en">
+      <p>This is the social-contract argument in its standing-army form. It supposes that protection by an army is a service voluntarily received and creating a corresponding obligation. The flaw is empirical: no one is, in any meaningful sense, asked whether they accept the protection. The protection is provided regardless of consent, on the authority of the state itself, and the bill is then presented after the fact. A doctor who operates on an unconscious patient may have done a good thing, but cannot, after the patient regains consciousness, present a bill the patient is morally obliged to pay. The "in return" framing collapses when one notices that the relation was never a transaction in the first place. (This is, incidentally, the same structural objection that applies to the social-contract justification of taxation; the cases stand or fall together.)</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>这是常备军形态下的社会契约论论证，它假设军队的保护是一项被自愿接受的服务，从而产生相应义务。这一论证的缺陷是经验性的：没有任何人在任何有意义的意义上被询问过他是否接受这一保护。保护由国家自身的权威径自提供，事后再开账单。一名为昏迷病人施行手术的医生，可能做了一件好事，但他不能在病人苏醒之后开出一张病人在道德上有义务支付的账单。「作为回报」的框架，一经注意到这种关系从未是一笔交易，就立刻崩塌。（顺便提一句，这正是适用于以社会契约论为依据的征税辩护的同一种结构性反驳——这两个情形要么一起成立，要么一起失败。）</p>
+    </div>
+
+    <h4>
+      <span data-lang-content="en">6.3 · "But many soldiers join sincerely. They want to serve. Who are you to say they shouldn't?"</span>
+      <span data-lang-content="zh">6.3 · 「可是许多士兵是真心愿意入伍的。他们想要服役。你凭什么说他们不该？」</span>
+    </h4>
+
+    <div data-lang-content="en">
+      <p>This is the most important objection on the page, because it is the one the position has to engage on its strongest ground. The objector grants everything: that the proverb has a long history; that the legal right of refusal is well established; that recruitment is class-stratified; and still asks the question that those concessions do not answer — what about the volunteer who, with full information and undivided enthusiasm, wants to be a soldier?</p>
+
+      <p>The answer is in three parts.</p>
+
+      <p><em>First, the position is not that the volunteer is wrong about his own preferences.</em> A person who wants to be a soldier is not making a mistake about what he wants. The position is that what he wants is something he has reason — moral reason, internal to him and not imposed from outside — not to want. The proverb is a piece of compressed advice; it does not say <em>the volunteer is stupid</em>, it says <em>the volunteer is mistaken about what is good for him and for others, and a thousand years of family observation have established the pattern of his mistake</em>. Calling this paternalism is a category error. Antinatalism makes a structurally identical claim about people who want to have children, and nobody calls that paternalism either; it is moral argument, not a constraint on action.</p>
+
+      <p><em>Second, the volunteer's sincerity does not transfer to the institution.</em> Even granting that a given recruit's enthusiasm is undivided, what he enthusiastically joins is not "his own service" — it is an apparatus whose operational logic is the application of organised lethal force on the authority of a state. His will is, by the act of enlistment, surrendered to that apparatus. He is now a unit in a system whose targets, timing, and proportionality are determined by people other than himself, including people he has never met and would not, if asked, trust. The volunteer's enthusiasm at the recruiting office is not the relevant moral fact; the relevant moral fact is what the apparatus does once it has him.</p>
+
+      <p><em>Third, the institution itself depends on misdescribing what it is.</em> Recruitment advertising in every country treats soldiering as a synthesis of education, brotherhood, adventure, and discipline. Combat, killing, and the moral residue of having done both — what Jonathan Shay called "moral injury" in the clinical literature on combat veterans — appear nowhere in the advertising. The volunteer is not consenting to the full description of the role he is taking on; he is consenting to the recruiting officer's version of it. To say "many soldiers join sincerely" is true; to say "they consented to what soldiering actually is" is a much stronger claim, and the consistent empirical evidence of veteran moral injury suggests it is false more often than not.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>这是本页上最重要的一项反驳，因为它是本立场必须在最强的对方阵地上正面应对的反驳。反驳者承认一切：谚语有悠久的源流；拒服兵役的法律权利已确立；招募是阶级分层的——他仍然提出那个上述让步并不回答的问题：那个完全知情、毫无保留地热情想做军人的志愿者怎么说？</p>
+
+      <p>回答分三部分。</p>
+
+      <p><em>第一，本立场并不主张志愿者搞错了自己的偏好。</em>一个想当兵的人，并不是对他自己想要什么这件事搞错。本立场所主张的是：他所想要的，他有理由——来自他内部、并非外部强加的道德理由——去不想要它。这条谚语是一份压缩的劝告；它并未说<em>志愿者愚蠢</em>，它说的是<em>志愿者对什么是于他与他人为善这件事搞错了，而一千年的家族观察已经为他这种搞错确立了模式</em>。把这叫做家长主义是一种范畴错误。反生育论对那些想要孩子的人作出的是结构上完全相同的主张，没有人把那也称为家长主义；那是道德论证，不是对行动的约束。</p>
+
+      <p><em>第二，志愿者的真心并不能转移到他所入伍的机构上。</em>即便承认某个新兵的热情毫无保留，他热情地加入的并不是「他自己的服役」——他加入的是一套运作逻辑为「以国家权威施加有组织致命武力」的装置。在入伍这一行为里，他的意志已被交付给这套装置。他此后是一个体系中的单元，体系的攻击目标、攻击时机、火力比例由他之外的人决定——包括他从未见过、若问及他根本不会信任的人。志愿者在招募办公室里的热情不是道德上相关的事实；道德上相关的事实是这套装置一旦得到他之后会怎样使用他。</p>
+
+      <p><em>第三，这一机构本身依赖于把自身描述错。</em>各国的征兵广告都把从军描述为教育、兄弟情谊、冒险、纪律的综合体。战斗、杀人、以及杀人之后所遗留的道德残渣——Jonathan Shay 在退伍军人临床文献中所称的「道德损伤」（moral injury）——在所有广告中均不见踪影。志愿者并未同意他实际所承担角色之全部描述；他所同意的是招募官口中的那个版本。说「许多士兵真心入伍」是真的；说「他们同意了从军实际上所是的那件事」则是一个强得多的主张，而有关退伍军人道德损伤的一贯经验证据表明：后一主张更多时候为假。</p>
+    </div>
+
+    <h4>
+      <span data-lang-content="en">6.4 · "Your position is a luxury available only because others bear the burden you refuse."</span>
+      <span data-lang-content="zh">6.4 · 「你的立场是一种奢侈品，仅因别人替你承担了你所拒绝的负担才得以可能。」</span>
+    </h4>
+
+    <div data-lang-content="en">
+      <p>The position defended here is empirically a position that is easier to hold for someone with educational and economic alternatives than for someone in a recruitment-targeted zip code. This is not a defect of the position; it is a description of the very inequality the position diagnoses. The objection amounts to saying: <em>"because the costs of refusal are unequally distributed, no one should refuse"</em> — which is exactly the wrong conclusion. The right conclusion is that the costs of refusal should be equalised: by extending legal recognition of conscientious objection, by ending poverty-draft recruiting tactics, and by removing the educational and economic chokepoints that make enlistment a least-bad option for the working class. None of these reforms makes soldiering itself defensible; they make the refusal of soldiering available to more people on equal terms. The argument from the privilege of the objector is, in its operational logic, an argument against the system that creates the privilege, not against the objection itself.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>本立场在经验上确实是这样一种立场：对一个有教育与经济备选项的人来说，比对一个住在招募靶区邮编下的人更易于持有。这不是本立场的缺陷，恰恰是这一立场所诊断的不平等本身的描述。该反驳实际上是在说：「<em>既然拒绝的代价分配不均，那就没人应该拒绝</em>」——而这正是恰好相反的错误结论。正确的结论是：应当把拒绝的代价均等化——通过扩大对良心拒服兵役的法律承认，通过终结贫穷征兵的招募策略，通过取消那些使入伍成为工人阶级「最不差选择」的教育与经济关口。这些改革都不会使从军这件事本身变得可辩护；它们做的事是让「拒绝从军」这一选项以平等的条件向更多人开放。「拒绝者享有特权」这一论证，依其运作逻辑，是反对那个制造特权的体制的论证，而不是反对拒绝本身的论证。</p>
+    </div>
+
+    <h4>
+      <span data-lang-content="en">6.5 · "There are just wars. You would have served against Nazi Germany."</span>
+      <span data-lang-content="zh">6.5 · 「存在正义战争。你在面对纳粹德国时会去服役的。」</span>
+    </h4>
+
+    <div data-lang-content="en">
+      <p>The Just War tradition is a serious philosophical tradition and deserves a serious answer. Two points. First, the position defended here is not pacifism in the strict sense: it is not committed to the claim that no use of force is ever justified, only to the claim that no state has a standing right to a person's body for purposes it determines unilaterally, and that no person of moral seriousness has reason to volunteer that body either. Russell himself was not a strict pacifist; he supported the Allied war effort against Hitler in the 1940s after opposing the British war effort in 1914–18. The relevant test is not whether wars in the abstract can be just, but whether the state currently making the demand has demonstrated that this particular war meets the criteria. The historical answer, for almost every war ever fought, is no. The default is that the state's representation of its own cause is unreliable, and the burden of proof falls on the state.</p>
+
+      <p>Second — and this is more important — even when a war is just, the question of whether a given person ought to fight in it is not settled by the war's justice. A person who declines on grounds of conscience even a just war is not free-riding; they are refusing to relinquish to the state the question of their own complicity in killing. The Just War tradition itself, properly read (Aquinas, Vitoria, Walzer), addresses the conditions under which collective armed action may be morally permissible. It does not address — and does not pretend to address — the question of whether any individual person is obliged to participate, or to volunteer. That question is the one the conscientious-objection tradition takes up, and it is not in competition with Just War theory; it is the next question after it.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>正义战争传统是一个严肃的哲学传统，值得严肃回应。两点。第一，本页所辩护的立场严格意义上并不是和平主义：它并未承诺「使用武力永不正当」这一主张，而只承诺「没有任何国家天然享有把某人的身体征用于它单方面决定的目的的权利，亦没有任何对道德有所认真的人有理由志愿交付这一身体」。罗素本人也不是严格意义上的和平主义者：他在 1914–18 年反对英国的战事，但在 1940 年代支持盟军对希特勒的战争。相关的检验不在于战争抽象地是否可能正义，而在于当前提出要求的国家是否已证明<em>这场</em>战争符合那些判准。在历史上，对几乎所有曾经打过的战争，这个回答都是否。默认情形是：国家对其自身事业的叙述不可信，举证责任落在国家一方。</p>
+
+      <p>第二——也更为重要——即便一场战争是正义的，「某人是否应当参战」这一问题，并不会因战争的正义性而获得解答。一个出于良知即便对正义之战也予以拒绝的人，并不是搭便车者；他所拒绝的是把「自己在杀人中的合谋」这一问题让渡给国家。正义战争传统本身，正确地读（阿奎那、维多利亚、Walzer），所处理的是<em>集体性的武装行动在何种条件下可能在道德上是允许的</em>这个问题。它从未处理——也从未声称要处理——任何个体是否有义务参与这种行动，或是否有理由志愿参与这种行动。这后一个问题，是良心拒服兵役传统所承担的问题，与正义战争论并不构成竞争关系；它是正义战争论之后的下一个问题。</p>
+    </div>
+
+    <h4>
+      <span data-lang-content="en">6.6 · "You are dishonouring soldiers who have died."</span>
+      <span data-lang-content="zh">6.6 · 「你是在亵渎那些已经牺牲的士兵。」</span>
+    </h4>
+
+    <div data-lang-content="en">
+      <p>The accusation conflates two distinct claims. The first is that one should not speak ill of the dead. The second is that one should not criticise the institution that killed them. The first is a reasonable form of human courtesy; the second is the institution's own self-defence projected onto its victims. The position defended here entails the highest possible regard for the individual soldiers who died, and the lowest possible regard for the institutions that consumed them. There is no contradiction. The proverb itself, read carefully, is not contemptuous of soldiers; it is protective of them. <em>Good iron is not used for nails</em> is a piece of advice addressed to families, not an insult addressed to the iron.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>这一指控把两项不同的主张混为一谈。第一项是不应对死者出言不敬；第二项是不应批评那个杀死他们的体制。前者是合理的人之礼貌，后者则是该体制将其自身辩护投射到其受害者身上的伎俩。本页所辩护的立场，必然要求对那些牺牲的个体士兵抱以最高程度的尊敬，并对那个吞噬他们的体制抱以最低程度的尊敬。这两者之间没有矛盾。这条谚语本身，仔细读，并不是对士兵的轻蔑，而是对士兵的保护。「<em>好铁不打钉</em>」是一句说给做父母的家庭听的劝告，不是一句对铁的辱骂。</p>
+    </div>
+
+    <!-- ───── §7 References ──────────────────────────────────────── -->
+    <h2 id="sec-references"><span class="sec-num">7 ·</span>
+      <span data-lang-content="en">References</span>
+      <span data-lang-content="zh">参考文献</span>
+    </h2>
+
+    <h3>
+      <span data-lang-content="en">Primary sources — Chinese history</span>
+      <span data-lang-content="zh">中文史料</span>
+    </h3>
+
+    <ol class="references">
+      <li><span class="ref-author">Liu Xu 刘昫 et al.</span> 945. 《旧唐书》 (<span class="ref-title">Jiu Tang Shu / Old Book of Tang</span>). Biography of Liu Renggui 刘仁轨. Compiled at the late Later Jin court.</li>
+      <li><span class="ref-author">Ouyang Xiu 欧阳修, Song Qi 宋祁 et al.</span> 1060. 《新唐书》 (<span class="ref-title">Xin Tang Shu / New Book of Tang</span>). Monograph on the <span class="cjk">府兵</span> garrison system and its decline.</li>
+      <li><span class="ref-author">Qian Yi 钱易.</span> Early eleventh century. Verses on the southern frontier soldiers, surviving in <span class="ref-title">Quan Song Shi</span> 全宋诗 anthology.</li>
+      <li><span class="ref-author">Wang Anshi 王安石.</span> 1058–1085. Reform memorials proposing the reintroduction of <span class="cjk">良家子弟</span> into the army; surviving in 《临川先生文集》.</li>
+      <li><span class="ref-author">Du Fu 杜甫.</span> c. 750. 《兵车行》 (<span class="ref-title">Bing Che Xing / Ballad of the Army Carts</span>). In 《杜诗详注》, Qiu Zhaoao 仇兆鳌 ed., 1703.</li>
+    </ol>
+
+    <h3>
+      <span data-lang-content="en">Secondary sources — Chinese military history &amp; state rhetoric</span>
+      <span data-lang-content="zh">二手研究——中国军事史与官方修辞</span>
+    </h3>
+
+    <ol class="references">
+      <li><span class="ref-author">Zhejiang Academy of Social Sciences.</span> 2024. "宋代募兵制" [The Song dynasty recruitment system]. Detailed pay scales by army grade, tattooing protocol, and excerpted Qian Yi verse. <a href="https://www.zjskw.gov.cn/art/2024/1/22/art_1229614965_56725.html">zjskw.gov.cn</a>.</li>
+      <li><span class="ref-author">Baidu Baike.</span> "好男不当兵，好铁不打钉" entry (state-affiliated reference work). Useful as a document of official rhetorical strategy. <a href="https://baike.baidu.com/item/%E5%A5%BD%E7%94%B7%E4%B8%8D%E5%BD%93%E5%85%B5">baike.baidu.com</a>.</li>
+      <li><span class="ref-author">He Wutao 何武涛.</span> 2016. "扒一扒哪三种人叫嚷『好男不当兵，好铁不打钉』" [Examining the three types who shout 'a good man does not become a soldier']. <span class="ref-title">Zhongguo Junwang</span> 中国军网 (China Military Online), 10 May 2016. Source of the "three derogatory types" classification. <a href="http://www.81.cn/zbrw/2016-05/10/content_7039366.htm">81.cn</a>.</li>
+      <li><span class="ref-author">People's Daily Online.</span> 2016. "好男不当兵，好铁不打钉是对军人的误读" [The proverb is a misreading of soldiers]. <span class="ref-title">Junshi Pindao</span> 军事频道, 5 May 2016. <a href="http://military.people.com.cn/n1/2016/0505/c1011-28328423.html">military.people.com.cn</a>.</li>
+      <li><span class="ref-author">China Daily.</span> 2020. "京彩好评：共产党改变了『好铁不打钉』的传统" [Beijing Commentary: the Party has changed the 'good iron is not used for nails' tradition]. <a href="https://china.chinadaily.com.cn/a/202008/05/WS5f2a6e62a310a859d09dc1e9.html">china.chinadaily.com.cn</a>, 5 Aug 2020.</li>
+    </ol>
+
+    <h3>
+      <span data-lang-content="en">Western refusal of soldiering &amp; war</span>
+      <span data-lang-content="zh">西方对从军与战争的拒绝</span>
+    </h3>
+
+    <ol class="references">
+      <li><span class="ref-author">Tolstoy, Leo.</span> 1894. <span class="ref-title">The Kingdom of God Is Within You.</span> First German edition. English: Constance Garnett, tr., New York: Cassell, 1894. Full text via Marxists Internet Archive.</li>
+      <li><span class="ref-author">Tolstoy, Leo.</span> 1884. <span class="ref-title">What I Believe</span> (В чём моя вера). Banned in Russia. First setting-out of the non-resistance doctrine.</li>
+      <li><span class="ref-author">Russell, Bertrand.</span> 1916. <span class="ref-title">Principles of Social Reconstruction.</span> London: George Allen &amp; Unwin. American edition: <em>Why Men Fight.</em> New York: Century, 1917. Especially ch. III, "War as an Institution."</li>
+      <li><span class="ref-author">Russell, Bertrand.</span> 1968. <span class="ref-title">The Autobiography of Bertrand Russell, Vol. 2: 1914–1944.</span> London: Allen &amp; Unwin. Chapter 1.</li>
+      <li><span class="ref-author">Russell, Bertrand.</span> 1916. <span class="ref-title">Two Years' Hard Labour for Not Disobeying the Dictates of Conscience</span> (the "Everett Leaflet"). No-Conscription Fellowship.</li>
+      <li><span class="ref-author">Kennedy, Thomas C.</span> 1981. <span class="ref-title">The Hound of Conscience: A History of the No-Conscription Fellowship, 1914–1919.</span> Fayetteville: University of Arkansas Press.</li>
+      <li><span class="ref-author">Vellacott, Jo.</span> 1981. <span class="ref-title">Bertrand Russell and the Pacifists in the First World War.</span> New York: St. Martin's Press.</li>
+      <li><span class="ref-author">Shay, Jonathan.</span> 1994. <span class="ref-title">Achilles in Vietnam: Combat Trauma and the Undoing of Character.</span> New York: Atheneum. Originating clinical statement of the "moral injury" framework cited in §6.3.</li>
+      <li><span class="ref-author">UN Human Rights Committee.</span> 1993. <span class="ref-title">General Comment No. 22 on Article 18 of the International Covenant on Civil and Political Rights.</span> CCPR/C/21/Rev.1/Add.4.</li>
+    </ol>
+
+    <h3>
+      <span data-lang-content="en">Sociology of recruitment</span>
+      <span data-lang-content="zh">招募社会学</span>
+    </h3>
+
+    <ol class="references">
+      <li><span class="ref-author">Mariscal, Jorge.</span> 2007. "The Poverty Draft: Do Military Recruiters Disproportionately Target Communities of Color and the Poor?" <span class="ref-title">Sojourners Magazine</span>, June 2007.</li>
+      <li><span class="ref-author">McGlynn, Adam, and Jessica Lavariega Monforti.</span> 2010. "The Poverty Draft? Exploring the Role of Socioeconomic Status in U.S. Military Recruitment of Hispanic Students." Paper presented at the American Political Science Association Annual Meeting, Washington, DC.</li>
+      <li><span class="ref-author">American Friends Service Committee.</span> 2008. <span class="ref-title">The Poverty Draft.</span> Briefing paper. AFSC National Office.</li>
+      <li><span class="ref-author">Associated Press.</span> 2007. "Analysis: Most Iraq War dead from working-class areas." Wire report, summarised in <em>The Boston Globe</em> and <em>Seattle Times</em>.</li>
+      <li><span class="ref-author">Asch, Beth J., M. Rebecca Kilburn, and Jacob Alex Klerman.</span> 1999. <span class="ref-title">Recruiting Youth in the College Market: Current Practices and Future Policy Options.</span> RAND Corporation, MR-1093-OSD.</li>
+      <li><span class="ref-author">National Priorities Project.</span> 2005–2007. <span class="ref-title">Military Recruiting and County Income Data.</span> Various reports.</li>
+    </ol>
+
+    <h3>
+      <span data-lang-content="en">Philosophy — Schopenhauer &amp; the Just War tradition</span>
+      <span data-lang-content="zh">哲学——叔本华与正义战争传统</span>
+    </h3>
+
+    <ol class="references">
+      <li><span class="ref-author">Schopenhauer, Arthur.</span> 1818, 1844. <span class="ref-title">Die Welt als Wille und Vorstellung.</span> 2 vols. English: <em>The World as Will and Representation,</em> tr. E. F. J. Payne, New York: Dover, 1966. Books III–IV in particular.</li>
+      <li><span class="ref-author">Janaway, Christopher.</span> 1989. <span class="ref-title">Self and World in Schopenhauer's Philosophy.</span> Oxford: Clarendon Press.</li>
+      <li><span class="ref-author">Magee, Bryan.</span> 1997. <span class="ref-title">The Philosophy of Schopenhauer.</span> Revised ed. Oxford: Clarendon Press.</li>
+      <li><span class="ref-author">Walzer, Michael.</span> 1977. <span class="ref-title">Just and Unjust Wars: A Moral Argument with Historical Illustrations.</span> New York: Basic Books.</li>
+      <li><span class="ref-author">Reichberg, Gregory M., Henrik Syse, and Endre Begby, eds.</span> 2006. <span class="ref-title">The Ethics of War: Classic and Contemporary Readings.</span> Oxford: Blackwell. (Aquinas and Vitoria selections.)</li>
+    </ol>
+
+    <h3>
+      <span data-lang-content="en">Military marriage law (§5)</span>
+      <span data-lang-content="zh">军婚法律（§5）</span>
+    </h3>
+
+    <ol class="references">
+      <li><span class="ref-author">Standing Committee of the National People's Congress.</span> 1997. 《中华人民共和国刑法》 (<span class="ref-title">Criminal Law of the People's Republic of China</span>), art. 259. Originating as art. 181 of the 1979 Criminal Law; renumbered and amended in the 1997 revision.</li>
+      <li><span class="ref-author">Gu Lingjuan 顾泠涓.</span> 2021. "破坏军婚罪实质出罪渠道构建之研究" [Research on the Construction of Substantive Decriminalisation Channels for the Crime of Disrupting Military Marriage]. <span class="ref-title">The Paper / 澎湃新闻</span>, 4 August 2021. Includes case statistics (52 first- and second-instance convictions on the Judgments Online database from 2013 onward) and analysis of judicial expansion of <span class="cjk">同居</span>.</li>
+      <li><span class="ref-author">Guangzhou Municipal Justice Bureau.</span> 2023. "钱某、韩某，破坏军婚，双双获刑！" [Qian and Han: Both Sentenced for Disrupting Military Marriage]. Two case studies including a 30-month sentence for a relationship producing two children. <a href="http://sfj.gz.gov.cn/ztlm/fzxc/yasf/content/post_9160707.html">sfj.gz.gov.cn</a>, 31 October 2023.</li>
+      <li><span class="ref-author">Wikipedia (Chinese edition).</span> "破坏军婚罪" [The Crime of Disrupting Military Marriage]. Comparative note on absence of equivalent in non-PRC jurisdictions; legislative-history summary of the 1979 and 1997 drafting decisions on adultery.</li>
+      <li><span class="ref-author">U.S. Department of Defense.</span> 2019. <span class="ref-title">Manual for Courts-Martial</span>, Pt. IV, art. 134 ("Extramarital Sexual Conduct"). The American comparison case: jurisdiction reaches the serviceman, not civilian third parties.</li>
+    </ol>
+
+  </main>
+</div>
+
+<!-- ─── Language toggle script ─────────────────────────────────── -->
+<script>
+(function() {
+  'use strict';
+
+  var body = document.body;
+  var buttons = document.querySelectorAll('.lang-toggle button[data-lang-set]');
+
+  function setLang(lang) {
+    body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh' : 'en');
+    buttons.forEach(function(b) {
+      if (b.getAttribute('data-lang-set') === lang) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+    try { localStorage.setItem('yifanova-lang', lang); } catch (e) { /* ignore */ }
+  }
+
+  // Restore language preference if previously set
+  try {
+    var saved = localStorage.getItem('yifanova-lang');
+    if (saved === 'en' || saved === 'zh') {
+      setLang(saved);
+    }
+  } catch (e) { /* ignore */ }
+
+  buttons.forEach(function(b) {
+    b.addEventListener('click', function() {
+      setLang(b.getAttribute('data-lang-set'));
+    });
+  });
+
+  // Mobile TOC toggle
+  var tocToggle = document.querySelector('.toc-mobile-toggle');
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function() {
+      var expanded = tocToggle.getAttribute('aria-expanded') === 'true';
+      tocToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    });
+    // Auto-close mobile TOC when a link is clicked
+    document.querySelectorAll('.toc-list-wrapper a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (window.innerWidth < 1100) {
+          tocToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
