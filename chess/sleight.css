@@ -1,0 +1,702 @@
+/* ====================================================================
+   yifanova.com — sleight of "chess" stylesheet
+   Self-contained. Scoped under .chess-page.
+   Matches the design system of /antinatalism, /qixing, /flying, /ski,
+   /religion: Atkinson Hyperlegible (EN body) / Noto Serif SC (ZH body),
+   Inter (UI), navy #0a3d62 accent, paper background, sticky TOC sidebar
+   at ≥1100px, bilingual EN/中文 via data-lang attribute.
+
+   Sections:
+     1. CSS variables (tokens)
+     2. Page reset & base body
+     3. Language switching
+     4. Topbar
+     5. Layout (sidebar + main column)
+     6. TOC sidebar
+     7. Main column
+     8. Hero (title, subtitle, epigraphs)
+     9. TL;DR map (entrance widget)
+    10. In-section comparison tables (cmptable)
+    11. Section structure (§ numbers, h2)
+    12. Body prose (paragraphs, lists, strong, em)
+    13. Footnote references
+    14. Footnotes section
+    15. Narrow viewport adjustments
+   ==================================================================== */
+
+
+/* ─── 1. CSS variables ───────────────────────────────────────────── */
+:root {
+  --ch-ink:        #1f2328;
+  --ch-ink-soft:   #4a5159;
+  --ch-ink-faint:  #6b7280;
+  --ch-ink-faded:  #9ca3af;
+  --ch-rule:       #e5e7eb;
+  --ch-rule-soft:  #f1f3f5;
+  --ch-paper:      #fafaf7;
+  --ch-paper-deep: #f5f4ee;
+  --ch-navy:       #0a3d62;
+  --ch-sapphire:   #1e5fa8;
+  --ch-graphite:   #2c2e30;
+  --ch-rust:       #8b3a2a;
+  --ch-pale-blue:  #e8f1f8;
+  --ch-pale-gray:  #eceef1;
+
+  --ch-font-body-en:  "Atkinson Hyperlegible", "Source Sans 3", system-ui, -apple-system, sans-serif;
+  --ch-font-body-zh:  "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  --ch-font-ui:       "Inter", system-ui, sans-serif;
+  --ch-font-cn-sans:  "Noto Sans SC", "Source Han Sans SC", system-ui, sans-serif;
+  --ch-font-mono:     "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+
+/* ─── 2. Page reset & base body ──────────────────────────────────── */
+.chess-page, .chess-page * { box-sizing: border-box; }
+
+body.chess-page {
+  margin: 0;
+  background: var(--ch-paper);
+  color: var(--ch-ink);
+  font-family: var(--ch-font-body-en);
+  font-size: 17px;
+  line-height: 1.7;
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+body.chess-page[data-lang="zh"] {
+  font-family: var(--ch-font-body-zh);
+  line-height: 1.78;
+}
+
+
+/* ─── 3. Language switching ──────────────────────────────────────── */
+.chess-page [data-lang-content] { display: none; }
+.chess-page[data-lang="en"] [data-lang-content="en"] { display: revert; }
+.chess-page[data-lang="zh"] [data-lang-content="zh"] { display: revert; }
+
+
+/* ─── 4. Topbar ──────────────────────────────────────────────────── */
+.chess-page .topbar {
+  border-bottom: 1px solid var(--ch-rule);
+  background: rgba(250, 250, 247, 0.92);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.chess-page .topbar-inner {
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chess-page .brand {
+  font-family: var(--ch-font-ui);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  color: var(--ch-ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chess-page .brand-mark { color: var(--ch-navy); font-weight: 600; }
+.chess-page .sep { color: var(--ch-ink-faded); }
+.chess-page .crumbs { color: var(--ch-ink-soft); }
+.chess-page[data-lang="zh"] .crumbs { font-family: var(--ch-font-cn-sans); }
+
+.chess-page .lang-toggle {
+  display: inline-flex;
+  border: 1px solid var(--ch-rule);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--ch-paper-deep);
+}
+
+.chess-page .lang-toggle button {
+  font-family: var(--ch-font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.7rem;
+  background: transparent;
+  border: 0;
+  color: var(--ch-ink-faint);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.chess-page .lang-toggle button.active { background: var(--ch-navy); color: white; }
+.chess-page .lang-toggle button:not(.active):hover { color: var(--ch-navy); background: var(--ch-pale-blue); }
+
+
+/* ─── 5. Two-column layout: TOC sidebar + main column ────────────── */
+.chess-page .layout {
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 6rem;
+}
+
+@media (min-width: 1100px) {
+  .chess-page .layout {
+    display: grid;
+    grid-template-columns: 15rem 1px 1fr;
+    column-gap: 2.5rem;
+    align-items: start;
+    padding: 0 2rem 6rem;
+    padding-top: 2rem;
+    position: relative;
+  }
+
+  .chess-page .layout::before {
+    content: "";
+    grid-column: 2;
+    grid-row: 1;
+    width: 1px;
+    background: var(--ch-rule);
+    position: sticky;
+    top: 4.5rem;
+    height: calc(100vh - 6rem);
+    align-self: start;
+  }
+}
+
+
+/* ─── 6. TOC sidebar ─────────────────────────────────────────────── */
+.chess-page .toc {
+  font-family: var(--ch-font-ui);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  padding-top: 2rem;
+}
+
+.chess-page[data-lang="zh"] .toc { font-family: var(--ch-font-cn-sans); }
+
+@media (min-width: 1100px) {
+  .chess-page .toc {
+    position: sticky;
+    top: 4.5rem;
+    align-self: start;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    padding-top: 0;
+  }
+}
+
+.chess-page .toc-label {
+  font-family: var(--ch-font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ch-ink-faded);
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ch-rule);
+}
+
+.chess-page[data-lang="zh"] .toc-label {
+  font-family: var(--ch-font-cn-sans);
+  text-transform: none;
+  letter-spacing: 0.1em;
+}
+
+.chess-page .toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.chess-page .toc li {
+  margin: 0 0 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.chess-page .toc-num {
+  font-family: var(--ch-font-ui);
+  font-size: 0.7rem;
+  color: var(--ch-ink-faded);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+  font-weight: 500;
+  padding-top: 0.05em;
+}
+
+.chess-page .toc a {
+  color: var(--ch-ink-soft);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.chess-page .toc a:hover { color: var(--ch-navy); }
+
+.chess-page .toc-meta {
+  margin: 1rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ch-rule);
+  font-family: var(--ch-font-ui);
+  font-size: 0.72rem;
+  color: var(--ch-ink-faded);
+  letter-spacing: 0.04em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.chess-page[data-lang="zh"] .toc-meta { font-family: var(--ch-font-cn-sans); }
+
+
+/* ─── 7. Main column ─────────────────────────────────────────────── */
+.chess-page .main {
+  max-width: 44rem;
+  padding-top: 2rem;
+  position: relative;
+}
+
+@media (min-width: 1100px) {
+  .chess-page .main { padding-top: 0; }
+}
+
+
+/* ─── 8. Hero (title, subtitle, epigraphs) ───────────────────────── */
+.chess-page .hero {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--ch-rule);
+}
+
+.chess-page .kicker {
+  font-family: var(--ch-font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ch-navy);
+  margin: 0 0 1rem;
+}
+
+.chess-page[data-lang="zh"] .kicker {
+  font-family: var(--ch-font-cn-sans);
+  letter-spacing: 0.08em;
+}
+
+.chess-page h1 {
+  font-weight: 700;
+  font-size: clamp(2rem, 4.2vw, 2.6rem);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  color: var(--ch-ink);
+  margin: 0 0 0.8rem;
+}
+
+.chess-page[data-lang="en"] h1 { font-family: var(--ch-font-body-en); }
+.chess-page[data-lang="zh"] h1 { font-family: var(--ch-font-body-zh); }
+
+.chess-page .subtitle {
+  font-size: 1.02rem;
+  color: var(--ch-ink-soft);
+  margin: 0 0 1.8rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.chess-page[data-lang="zh"] .subtitle {
+  font-family: var(--ch-font-cn-sans);
+  font-style: normal;
+}
+
+.chess-page .epigraphs {
+  margin-top: 1.8rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--ch-rule);
+}
+
+.chess-page .epigraph {
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  color: var(--ch-ink-soft);
+  line-height: 1.65;
+  font-style: italic;
+}
+
+.chess-page[data-lang="zh"] .epigraph {
+  font-style: normal;
+  line-height: 1.85;
+}
+
+.chess-page .epigraph:last-child { margin-bottom: 0; }
+
+.chess-page .epigraph .text { display: block; }
+
+.chess-page .epigraph .attribution {
+  display: block;
+  font-family: var(--ch-font-ui);
+  font-size: 0.78rem;
+  color: var(--ch-ink-faint);
+  margin-top: 0.4rem;
+  font-style: normal;
+}
+
+.chess-page[data-lang="zh"] .epigraph .attribution {
+  font-family: var(--ch-font-cn-sans);
+}
+
+.chess-page .epigraph .attribution::before { content: "— "; }
+
+
+/* ─── 9. TL;DR map (entrance widget) ─────────────────────────────── */
+.chess-page .tldr {
+  margin: 0 0 3.5rem;
+  border: 1px solid var(--ch-rule);
+  background: var(--ch-paper-deep);
+}
+
+.chess-page .tldr-label {
+  font-family: var(--ch-font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ch-ink-faded);
+  padding: 0.7rem 1rem 0.5rem;
+  border-bottom: 1px solid var(--ch-rule);
+  background: var(--ch-paper);
+}
+
+.chess-page[data-lang="zh"] .tldr-label {
+  font-family: var(--ch-font-cn-sans);
+  letter-spacing: 0.1em;
+  text-transform: none;
+}
+
+.chess-page .tldr table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.chess-page .tldr tr {
+  border-bottom: 1px solid var(--ch-rule-soft);
+}
+
+.chess-page .tldr tr:last-child { border-bottom: 0; }
+
+.chess-page .tldr td {
+  padding: 0.7rem 1rem;
+  vertical-align: top;
+}
+
+.chess-page .tldr td.tldr-num {
+  font-family: var(--ch-font-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ch-navy);
+  font-variant-numeric: tabular-nums;
+  width: 2.6rem;
+  white-space: nowrap;
+  padding-right: 0.3rem;
+}
+
+.chess-page .tldr td.tldr-claim { color: var(--ch-ink); }
+
+.chess-page .tldr td.tldr-claim a {
+  color: var(--ch-ink);
+  text-decoration: none;
+  display: block;
+  transition: color 0.15s;
+}
+
+.chess-page .tldr td.tldr-claim a:hover { color: var(--ch-navy); }
+
+.chess-page .tldr tr:hover { background: var(--ch-pale-blue); }
+
+.chess-page[data-lang="zh"] .tldr td.tldr-claim {
+  font-family: var(--ch-font-body-zh);
+  line-height: 1.7;
+}
+
+
+/* ─── 10. In-section comparison tables (cmptable) ────────────────── */
+.chess-page .cmptable {
+  margin: 2rem 0 2.5rem;
+  border: 1px solid var(--ch-rule);
+  background: var(--ch-paper);
+}
+
+.chess-page .cmptable-cap {
+  font-family: var(--ch-font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ch-ink-faded);
+  padding: 0.65rem 1rem 0.5rem;
+  border-bottom: 1px solid var(--ch-rule);
+  background: var(--ch-paper-deep);
+}
+
+.chess-page[data-lang="zh"] .cmptable-cap {
+  font-family: var(--ch-font-cn-sans);
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.chess-page .cmptable table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.chess-page .cmptable thead th {
+  font-family: var(--ch-font-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.6rem 0.9rem;
+  color: var(--ch-navy);
+  border-bottom: 1px solid var(--ch-rule);
+  background: var(--ch-paper-deep);
+  letter-spacing: 0.02em;
+  vertical-align: bottom;
+}
+
+.chess-page[data-lang="zh"] .cmptable thead th {
+  font-family: var(--ch-font-cn-sans);
+}
+
+.chess-page .cmptable tbody tr {
+  border-bottom: 1px solid var(--ch-rule-soft);
+}
+
+.chess-page .cmptable tbody tr:last-child { border-bottom: 0; }
+
+.chess-page .cmptable td {
+  padding: 0.7rem 0.9rem;
+  vertical-align: top;
+  color: var(--ch-ink);
+}
+
+.chess-page .cmptable td.cmptable-dim {
+  font-family: var(--ch-font-ui);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ch-ink-soft);
+  white-space: nowrap;
+  width: 22%;
+  letter-spacing: 0.01em;
+}
+
+.chess-page[data-lang="zh"] .cmptable td.cmptable-dim {
+  font-family: var(--ch-font-cn-sans);
+  font-size: 0.85rem;
+}
+
+.chess-page[data-lang="zh"] .cmptable td {
+  font-family: var(--ch-font-body-zh);
+}
+
+@media (max-width: 640px) {
+  .chess-page .cmptable td.cmptable-dim {
+    width: auto;
+    white-space: normal;
+  }
+  .chess-page .cmptable table { font-size: 0.82rem; }
+}
+
+
+/* ─── 11. Section structure (§ numbers, h2) ──────────────────────── */
+.chess-page section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 4.5rem;
+}
+
+.chess-page .section-num {
+  display: inline-block;
+  font-family: var(--ch-font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--ch-navy);
+  margin-bottom: 0.6rem;
+}
+
+.chess-page h2 {
+  font-weight: 700;
+  font-size: 1.45rem;
+  color: var(--ch-ink);
+  line-height: 1.35;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.005em;
+}
+
+.chess-page[data-lang="en"] h2 { font-family: var(--ch-font-body-en); }
+.chess-page[data-lang="zh"] h2 { font-family: var(--ch-font-body-zh); }
+
+.chess-page h2.notes-heading {
+  font-family: var(--ch-font-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ch-ink-faint);
+  margin: 3rem 0 1.2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ch-rule);
+}
+
+.chess-page[data-lang="zh"] h2.notes-heading {
+  font-family: var(--ch-font-cn-sans);
+  text-transform: none;
+  letter-spacing: 0.1em;
+}
+
+html { scroll-behavior: smooth; }
+
+
+/* ─── 12. Body prose (paragraphs, lists, strong, em) ─────────────── */
+.chess-page p {
+  margin: 0 0 1.1em;
+  text-align: justify;
+  hyphens: auto;
+  word-break: normal;
+}
+
+.chess-page[data-lang="zh"] p { hyphens: none; }
+
+.chess-page p:last-child { margin-bottom: 0; }
+
+.chess-page strong {
+  font-weight: 700;
+  color: var(--ch-ink);
+}
+
+.chess-page em {
+  font-style: italic;
+  color: var(--ch-ink);
+}
+
+/* Latin terms inside CJK text render in serif latin face */
+.chess-page[data-lang="zh"] em {
+  font-family: "Source Serif 4", "Source Serif Pro", Georgia, serif;
+}
+
+.chess-page ul,
+.chess-page ol {
+  margin: 0 0 1.2em 0;
+  padding-left: 1.5rem;
+}
+
+.chess-page ul li,
+.chess-page ol li {
+  margin-bottom: 0.55em;
+  line-height: 1.7;
+}
+
+.chess-page ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.chess-page ul li {
+  position: relative;
+  padding-left: 1.3rem;
+}
+
+.chess-page ul li::before {
+  content: "·";
+  position: absolute;
+  left: 0.3rem;
+  top: 0;
+  color: var(--ch-navy);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+
+/* ─── 13. Footnote references ────────────────────────────────────── */
+.chess-page .fn-ref {
+  font-family: var(--ch-font-ui);
+  font-size: 0.7rem;
+  color: var(--ch-navy);
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+  padding: 0 0.12em;
+  vertical-align: 0.2em;
+  font-weight: 500;
+}
+
+.chess-page .fn-ref:hover { text-decoration: underline; }
+
+
+/* ─── 14. Footnotes section ──────────────────────────────────────── */
+.chess-page .footnotes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--ch-font-ui);
+  font-size: 0.84rem;
+  line-height: 1.65;
+  color: var(--ch-ink-soft);
+}
+
+.chess-page[data-lang="zh"] .footnotes {
+  font-family: var(--ch-font-cn-sans);
+}
+
+.chess-page .footnotes li {
+  margin-bottom: 0.7rem;
+  padding-left: 0;
+  scroll-margin-top: 4.5rem;
+}
+
+.chess-page .footnotes li::before { content: none; }
+
+.chess-page .footnotes strong {
+  font-family: var(--ch-font-ui);
+  font-weight: 600;
+  color: var(--ch-navy);
+  margin-right: 0.3em;
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* ─── 15. Narrow viewport adjustments ────────────────────────────── */
+@media (max-width: 1099px) {
+  .chess-page .layout {
+    padding: 1.5rem 1.25rem 4rem;
+  }
+
+  .chess-page .toc {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--ch-rule);
+  }
+
+  .chess-page h1 { font-size: 1.8rem; }
+  .chess-page h2 { font-size: 1.25rem; }
+}
+
+@media (max-width: 640px) {
+  body.chess-page {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .chess-page .layout {
+    padding: 1rem 1rem 3rem;
+  }
+
+  .chess-page p {
+    text-align: left;
+  }
+}

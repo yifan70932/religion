@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Sleight of "Chess" — yifanova.com</title>
+  <meta name="description" content="Notes on what the word 'chess' covers and what it occludes: from BFO category differences, through enforcement ontology and commodity form, to the symmetric form of fair play and the subject theory it presupposes. Bilingual EN / 中文.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+
+  <link rel="stylesheet" href="sleight.css">
+</head>
+
+<body class="chess-page" data-lang="en">
+
+<!-- ─── Topbar ─────────────────────────────────────────────────── -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">Yifanova Personal Wiki</span>
+      <span class="sep">|</span>
+      <span class="crumbs">The Sleight of Chess</span>
+    </div>
+    <div class="lang-toggle" role="tablist" aria-label="Language">
+      <button type="button" data-lang-set="en" class="active">EN</button>
+      <button type="button" data-lang-set="zh">中文</button>
+    </div>
+  </div>
+</header>
+
+<!-- ─── Layout: TOC sidebar + main column ──────────────────────── -->
+<div class="layout">
+
+  <!-- ───── Table of contents ──────────────────────────────────── -->
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-label">
+      <span data-lang-content="en">Contents</span>
+      <span data-lang-content="zh">目录</span>
+    </p>
+    <ol>
+      <li><span class="toc-num">1</span><a href="#sec-question">
+        <span data-lang-content="en">Representation above the board, will beneath it</span>
+        <span data-lang-content="zh">棋盘之上的表象,棋盘之下的意志</span>
+      </a></li>
+      <li><span class="toc-num">2</span><a href="#sec-bfo">
+        <span data-lang-content="en">Category difference: moving pieces vs sending packets</span>
+        <span data-lang-content="zh">范畴差异:走棋与发送报文</span>
+      </a></li>
+      <li><span class="toc-num">3</span><a href="#sec-mystification">
+        <span data-lang-content="en">Institution and the cognitive blind spot</span>
+        <span data-lang-content="zh">制度与认知盲点</span>
+      </a></li>
+      <li><span class="toc-num">4</span><a href="#sec-enforcement">
+        <span data-lang-content="en">The ontological instability of enforcement</span>
+        <span data-lang-content="zh">规范执行的本体不稳定性</span>
+      </a></li>
+      <li><span class="toc-num">5</span><a href="#sec-commodity">
+        <span data-lang-content="en">ELO as commodity</span>
+        <span data-lang-content="zh">作为商品贩卖的 ELO</span>
+      </a></li>
+      <li><span class="toc-num">6</span><a href="#sec-reinforcement">
+        <span data-lang-content="en">Variable-ratio reinforcement and the mechanics of "voluntary" play</span>
+        <span data-lang-content="zh">变率强化与"自愿"参与的机制</span>
+      </a></li>
+      <li><span class="toc-num">7</span><a href="#sec-symmetric">
+        <span data-lang-content="en">The symmetric form and the interchangeable subject</span>
+        <span data-lang-content="zh">对称形式与可互换的主体</span>
+      </a></li>
+      <li><span class="toc-num">8</span><a href="#sec-coda">
+        <span data-lang-content="en">Corollaries and remainders</span>
+        <span data-lang-content="zh">推论与剩余</span>
+      </a></li>
+    </ol>
+  </nav>
+
+  <!-- ───── Main content ──────────────────────────────────────── -->
+  <main class="main">
+
+    <!-- ───── Article header ──────────────────────────────────── -->
+    <header class="hero">
+      <h1>
+        <span data-lang-content="en">The Sleight of "Chess"</span>
+        <span data-lang-content="zh">"象棋"的障眼法</span>
+      </h1>
+      <p class="subtitle">
+        <span data-lang-content="en">Chess as Will and Representation</span>
+        <span data-lang-content="zh">作为意志和表象的象棋</span>
+      </p>
+
+      <div class="epigraphs">
+        <blockquote class="epigraph">
+          <span data-lang-content="en">
+            <span class="text"><em>大音希声,大象无形。</em><br>The greatest sound is barely heard; the greatest form has no shape.</span>
+            <span class="attribution">Laozi, <em>Daodejing</em>, ch. 41</span>
+          </span>
+          <span data-lang-content="zh">
+            <span class="text">大音希声,大象无形。</span>
+            <span class="attribution">老子《道德经》第四十一章</span>
+          </span>
+        </blockquote>
+        <blockquote class="epigraph">
+          <span data-lang-content="en">
+            <span class="text"><em>φύσις κρύπτεσθαι φιλεῖ.</em><br>Nature loves to hide.</span>
+            <span class="attribution">Heraclitus, fragment 123 (Diels-Kranz)</span>
+          </span>
+          <span data-lang-content="zh">
+            <span class="text"><em>φύσις κρύπτεσθαι φιλεῖ.</em><br>自然爱隐藏。</span>
+            <span class="attribution">Heraclitus,残篇 123(Diels-Kranz 编号)</span>
+          </span>
+        </blockquote>
+      </div>
+    </header>
+
+    <!-- ─── TL;DR map ──────────────────────────────────────────── -->
+    <div class="tldr">
+      <div class="tldr-label">
+        <span data-lang-content="en">In one line per section</span>
+        <span data-lang-content="zh">每节一句</span>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <td class="tldr-num">§ 1</td>
+            <td class="tldr-claim">
+              <a href="#sec-question">
+                <span data-lang-content="en">Above the board is representation, beneath it is will; each section lifts one representation and names what runs beneath.</span>
+                <span data-lang-content="zh">棋盘之上是表象,棋盘之下是意志;每一节掀起一处表象,命名其下运作的一种意志。</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="tldr-num">§ 2</td>
+            <td class="tldr-claim">
+              <a href="#sec-bfo">
+                <span data-lang-content="en">Over-the-board chess is the spatial relocation of material pieces under bodily mediation; chess.com is the transmission of packets and update of server-side state. Not two species of one kind.</span>
+                <span data-lang-content="zh">桌前对弈是物质棋子在身体中介下的空间位移;chess.com 是数据包传输与服务器端状态更新。两者并非一类的两个种。</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="tldr-num">§ 3</td>
+            <td class="tldr-claim">
+              <a href="#sec-mystification">
+                <span data-lang-content="en">The institution exists only as long as participants do not see what it is; maintaining the cognitive blind spot is part of the institution's operation.</span>
+                <span data-lang-content="zh">该制度的存在,以参与者不看清其本性为条件;维持认知盲点本身即是制度运转的一部分。</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="tldr-num">§ 4</td>
+            <td class="tldr-claim">
+              <a href="#sec-enforcement">
+                <span data-lang-content="en">The cheating–compliant binary has no natural support on a continuous cognitive process; the enforcement apparatus is Nü Wa patching the sky.</span>
+                <span data-lang-content="zh">"作弊"与"合规"的二元区分,在连续认知过程上无自然支撑;执法体系是女娲补天。</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="tldr-num">§ 5</td>
+            <td class="tldr-claim">
+              <a href="#sec-commodity">
+                <span data-lang-content="en">What is sold is not chess skill but a fiat token (ELO); the cognitive interaction between two players is expressed as a numerical differential between two server-side numbers.</span>
+                <span data-lang-content="zh">被贩卖的不是棋艺,而是法定代币(ELO);两位棋手之间的认知互动,被表现为两个服务器端数字之间的差额。</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="tldr-num">§ 6</td>
+            <td class="tldr-claim">
+              <a href="#sec-reinforcement">
+                <span data-lang-content="en">Variable-ratio reinforcement explains why entry is "voluntary" and why insight into the mechanism does not deactivate it.</span>
+                <span data-lang-content="zh">变率强化解释了为何进入是"自愿"的,以及为何对机制的洞察并不让机制失效。</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="tldr-num">§ 7</td>
+            <td class="tldr-claim">
+              <a href="#sec-symmetric">
+                <span data-lang-content="en">The symmetric rule form reduces participants to interchangeable rational subjects; the agonistic tradition (Homer, Pindar, Confucius, Nietzsche; polo handicaps, Go letting-pieces) shows that symmetry is not neutral but one of two ethical forms.</span>
+                <span data-lang-content="zh">对称的规则形式将参与者简化为可互换的理性主体;agonistic 传统(荷马、品达、孔子、尼采;马球让分、围棋让子)的存在揭示对称并非中立,而只是两种伦理形式之一。</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="tldr-num">§ 8</td>
+            <td class="tldr-claim">
+              <a href="#sec-coda">
+                <span data-lang-content="en">Five corollaries; the platform-specific sleights are in principle removable, the formal one is not.</span>
+                <span data-lang-content="zh">五项推论;平台层的障眼原则上可拆除,形式层的障眼则不可。</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────
+         §1  Representation above the board, will beneath it
+         ───────────────────────────────────────────────────────── -->
+    <section id="sec-question">
+      <span class="section-num">§ 1</span>
+      <h2>
+        <span data-lang-content="en">Representation above the board, will beneath it</span>
+        <span data-lang-content="zh">棋盘之上的表象,棋盘之下的意志</span>
+      </h2>
+
+      <div data-lang-content="en">
+        <p>A person sits down to play chess. On the surface, what is taking place is an old, ordered, intellectual activity: pieces moving in legal sequence, two minds engaged in a structured contest, an outcome arriving at the end. The activity carries the dignity that chess has accumulated over centuries—the symbol of cold rational thought, of patient depth, of competition without violence. <em>This is what chess looks like.</em> Beneath that appearance, however, several other things are actually taking place. On chess.com, the activity is the transmission of network packets and the updating of server-side state. In any implementation that preserves the symmetric rule form, the activity reduces the participant to a position-plus-computation, with everything that distinguishes one person from another set aside as irrelevant. In any platform that delivers wins and losses on a variable-ratio schedule, the activity is the operation of a reward mechanism on the player's reinforcement system. None of these underneath-activities is what chess looks like from above. The surface activity—"playing chess"—and the underneath-activities are connected, but they are not the same.</p>
+
+        <p>This gap between surface and underneath is what the word <em>sleight</em> names here. A sleight, in its ordinary sense, is a misdirection: the visible hand performs a gesture that holds attention, while the actual operation is carried out elsewhere, unseen. Chess, in its contemporary forms, contains several such operations. The discrepancy between what the activity appears to be and what it actually does is not incidental; it is the very condition under which the activity functions. If the surface dignity were absent, the underneath would not run. If the underneath were visible, the surface would not hold. The two layers are coupled by design, by inheritance, or by both.</p>
+
+        <p>The two layers admit a precise pair of names from Schopenhauer. <em>Representation</em> (<em>Vorstellung</em>) is the world as it appears to the participant: a board, a rule set, a contest, a result. <em>Will</em> (<em>Wille</em>) is the world as it actually operates beneath that appearance: forces, drives, mechanisms that do not announce themselves in the representation but run through it and produce its effects. The use of these terms here is not the full metaphysical doctrine; it is a working pair, useful because what each subsequent section identifies is some specific element of the will that operates beneath the chess-representation. The sections progress by lifting the representation in one place at a time and naming what is found underneath: a different process type, an institution whose viability depends on its own opacity, an unstable enforcement object, a commodity machine, a reinforcement schedule, a subject theory imposed by the rule form itself. Each of these is, in Schopenhauer's idiom, a fragment of the will that the representation of "chess" keeps quiet.</p>
+      </div>
+
+      <div data-lang-content="zh">
+        <p>一个人坐下来下棋。在表面上,所发生的是一项古老、有序、智识性的活动:棋子按合法序列移动,两个心智投入一场结构化的较量,终局在最后到来。这一活动承载着国际象棋数百年来积累的尊严——冷静理性思想的象征,耐心与深度的象征,无暴力之竞争的象征。<em>这就是棋看起来的样子。</em>然而在这一外观之下,另有几件事正在实际发生。在 chess.com 上,这一活动实际是网络数据包的传输与服务器端状态的更新。在任一保留对称规则形式的实现中,这一活动将参与者简化为"位置加计算",而把区分一个人与另一个人的一切置于无关紧要的位置。在任一以变率强化时间表交付胜负的平台上,这一活动实际是一台奖励机制在玩家强化系统上的运转。这些"底下的活动"无一是棋从上面看起来的样子。表层活动——"下棋"——与底下的诸多活动彼此相联,却并非同一件事。</p>
+
+        <p>表象与底层之间的这一落差,正是<em>障眼</em>(sleight)一词此处所指。"障眼"取其常义:一种误导——可见的那只手做出一个吸住注意力的动作,而真正的操作在别处、不被看见地进行。当代形式的国际象棋之中,容纳着数项这样的操作。活动看起来是什么、与活动实际在做什么之间的落差,并不是附带的;它正是该活动得以运转的条件。若表层的尊严不在,底下便运行不起来;若底下被看见,表层便撑不住。两个层次或经设计、或经继承、或两者皆有,彼此耦合。</p>
+
+        <p>两个层次恰可借叔本华的一对术语精确命名。<em>表象</em>(<em>Vorstellung</em>)是活动对参与者所显现的世界:一副棋盘、一套规则、一场对局、一个结果。<em>意志</em>(<em>Wille</em>)是该外观之下实际运作的世界:不在表象中宣告自身、却穿过它并制造其效应的力、驱动、机制。此处对这一对术语的使用并非叔本华的完整形上学教义;它是一对工作术语,之所以有用,是因为下文各节所指认的每一项,都是某一种实际运作于"国际象棋"之表象之下的意志的具体片段。下文各节的推进方式,即在某一处将表象掀起,命名其下所见之物:一种不同的过程类型、一种以自身的不透明为存在条件的制度、一个不稳定的执法对象、一台商品机器、一份强化时间表、一种由规则形式自身所强加的主体理论。借叔本华的语汇说,每一项都是"国际象棋"之表象所保持沉默的那个意志的一处碎片。</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         §2  范畴差异:走棋与发送报文 / Category difference: moving pieces vs sending packets
+
+         核心论点:
+         - "下棋" 与 "在 chess.com 上下棋" 不是同一过程类型
+         - 在 BFO 框架下,前者是物质对象在身体中介下的空间位移,
+           后者是数据包传输与服务器端状态更新
+         - 两者参与者范畴完全不同(独立持存者 vs 类依赖持存者)
+         - 共享规则集不构成过程同一(如两群人按同一食谱做菜)
+
+         素材 / 引用:
+         - Smith, Barry et al., BFO 2.0 (ISO/IEC 21838-2:2020) [fn]
+         - 过程的同一性 = 参与者 + 时间区域 + 过程类型
+         - 触子走子规则之所以可能,因 "手与棋子接触" 有清晰物理边界
+         - 一句话压缩:over-the-board chess is moving pieces; chess.com is sending packets
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="sec-bfo">
+      <span class="section-num">§ 2</span>
+      <h2>
+        <span data-lang-content="en">Category difference: moving pieces vs sending packets</span>
+        <span data-lang-content="zh">范畴差异:走棋与发送报文</span>
+      </h2>
+      <div data-lang-content="en">
+        <p>In BFO, a process is determined jointly by its <em>participants</em>, its <em>temporal region</em>, and its <em>process profile</em>.<a class="fn-ref" href="#fn-1">[1]</a> Two process tokens fall under the same process universal only if they share all three.</p>
+
+        <p>A move in over-the-board chess is an embodied process. Its participants are physical objects: wooden or plastic pieces (independent continuants with mass, shape, and density), the board, the player's hand. Its process profile is spatial relocation under bodily mediation—pieces undergo actual displacement in physical space, driven by bodily action, occupying a real spatiotemporal region. The touch-move rule is possible because "hand contacts piece" has a clear physical boundary.</p>
+
+        <p>A "move" on chess.com has participants of an altogether different kind. The user's finger meets a mouse or touchscreen; client-side JavaScript validates input; an HTTPS request travels to a server; the server-side game state—a generically dependent continuant, dependent on server memory as its material bearer—is updated; the new state is broadcast back to clients; pixel luminance on a display changes accordingly. The process profile is information transmission and state update. The visual effect on screen—"pieces moving"—has its bearer in the luminance pattern of LCD or OLED pixels, which is not the displacement of any material piece.</p>
+
+        <p>The ontological status of the piece itself confirms the difference. A physical chess piece is an independent continuant: it can be picked up, weighed, lost, replaced. A "piece" on chess.com is not an independent continuant. It cannot exist independently of the server process, the rendering pipeline, and the display hardware. Its appropriate BFO classification is generically dependent continuant—an information content entity whose concretizations are distributed across distinct material bearers (server memory, network packets, client GPU memory, the photoreceptor activation in the user's retina). The same chess.com game migrated from one server to another remains the same game, because the participants are abstract states; the same over-the-board game with the pieces replaced mid-play is a different game token, because the participants have changed.</p>
+
+        <div class="cmptable" data-lang-content="en">
+          <div class="cmptable-cap">Two process types under one name</div>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Over-the-board chess</th>
+                <th>chess.com</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cmptable-dim">Participants</td>
+                <td>Material pieces, board, hands (independent continuants)</td>
+                <td>Server-side game state, packets, pixel patterns (generically dependent continuants)</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">Process profile</td>
+                <td>Spatial relocation of material objects under bodily mediation</td>
+                <td>Input transmission, server-side state update, broadcast to client devices</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">Status of "a piece"</td>
+                <td>Independent continuant: can be picked up, weighed, lost, replaced</td>
+                <td>Information content entity distributed across server memory, packets, GPU memory, retinal activation</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">Same game across change of bearer</td>
+                <td>Pieces swapped mid-play → different game token (participants changed)</td>
+                <td>Migrated across servers → same game (participants are abstract states)</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">Relation of rule set to process identity</td>
+                <td colspan="2" style="text-align: center; color: var(--ch-ink-soft); font-style: italic;">Shared rule set is a generically dependent continuant concretized separately in each; reference to a shared rule set does not constitute process identity.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Applied to the process universals: the universal for over-the-board chess is approximately <em>material chess pieces undergoing spatial relocations on a material board, mediated by bodily action, subject to the FIDE rule set</em>. The universal for chess.com play is approximately <em>user input events transmitted to a server, server-side state updated by validation rules, rendered states broadcast to client devices</em>. These two universals are not species of a single genus, except at a level of abstraction so contentless ("rule-governed activity") that the genus does no explanatory work. They are distinct process types that happen to share an English lexical item.</p>
+
+        <p>The relation between the two activities is therefore not the relation between two kinds of one thing. Two groups of cooks following one recipe produce different process tokens, instantiating different culinary subtypes; their referencing the same recipe does not constitute process identity. chess.com and over-the-board chess relate in the same way: they reference the same rule set—a generically dependent continuant, separately concretized in both—but referencing a shared rule set is not process identity. Over-the-board chess is the moving of pieces. chess.com is the sending of packets.</p>
+      </div>
+      <div data-lang-content="zh">
+        <p>在 BFO 中,一个过程由其<em>参与者</em>(participants)、<em>时间区域</em>(temporal region)与<em>过程类型</em>(process profile)共同决定。<a class="fn-ref" href="#fn-1">[1]</a> 两个过程例示落入同一过程共相,要求三者皆同。</p>
+
+        <p>桌前对弈中的一步棋,是一个具身过程。其参与者是物理对象:木质或塑料的棋子(具有质量、形状、密度的独立持存者)、棋盘、棋手的手。其过程类型是身体中介下的空间位移——棋子在物理空间中的真实位移,由身体动作驱动,占据真实的时空区域。"触子走子"规则之所以可能,在于"手与棋子接触"具有清晰的物理边界。</p>
+
+        <p>chess.com 上的一步"棋",其参与者完全是另一类实体。用户的手指接触鼠标或触屏;客户端 JavaScript 验证输入;一个 HTTPS 请求传至服务器;服务器端的游戏状态——一个类依赖持存者,以服务器内存为其物质载体——被更新;新状态广播回客户端;显示器像素亮度相应变化。过程类型是信息传输与状态更新。屏幕上"棋子在移动"的视觉效果,其物质载体是 LCD 或 OLED 像素的亮度模式,而非任何物质棋子的位移。</p>
+
+        <p>棋子本身的本体地位确认了这一差异。物理棋子是独立持存者:可被拿起、称重、遗失、替换。chess.com 上的"棋子"不是独立持存者——它无法独立于服务器进程、渲染管线、显示硬件而存在。其在 BFO 中的恰当归类是类依赖持存者:一种信息内容实体,其具体化散布于不同的物质载体(服务器内存、网络数据包、客户端 GPU 内存、用户视网膜的光感受器活动)。同一局 chess.com 对弈从一台服务器迁移至另一台,仍是同一局棋,因为其参与者是抽象状态;桌前对弈中途把棋子换掉,即使位置不变,已是另一局棋例示,因为参与者改变了。</p>
+
+        <div class="cmptable" data-lang-content="zh">
+          <div class="cmptable-cap">同名之下的两种过程类型</div>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>桌前对弈</th>
+                <th>chess.com</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cmptable-dim">参与者</td>
+                <td>物质棋子、棋盘、手(独立持存者)</td>
+                <td>服务器端游戏状态、数据包、像素亮度模式(类依赖持存者)</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">过程类型</td>
+                <td>物质对象在身体中介下的空间位移</td>
+                <td>输入传输、服务器端状态更新、向客户端设备广播</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">"棋子"的本体地位</td>
+                <td>独立持存者:可拿起、称重、遗失、替换</td>
+                <td>信息内容实体,具体化散布于服务器内存、数据包、GPU 内存、视网膜激活</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">承担载体改变时的同一性</td>
+                <td>中途换子 → 另一局棋例示(参与者改变)</td>
+                <td>跨服务器迁移 → 同一局棋(参与者是抽象状态)</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">规则集与过程同一的关系</td>
+                <td colspan="2" style="text-align: center; color: var(--ch-ink-soft); font-style: normal;">共享的规则集是类依赖持存者,在两边各自具体化;指涉同一规则集,不构成过程同一。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>由此可推得两个过程共相。桌前对弈的共相大致为:<em>物质棋子在身体中介下于物质棋盘上的空间位移,受 FIDE 规则集约束</em>。chess.com 对弈的共相大致为:<em>用户输入事件被传输至服务器,服务器端状态依验证规则更新,渲染状态被广播至客户端设备</em>。这两个共相不是同一属之下的两个种——除非把属抽象至"受规则约束的活动"这种几乎无信息量的层次,使该属不发挥任何解释力。它们是两种不同的过程类型,恰好被同一英语词项覆盖。</p>
+
+        <p>两种活动的关系,因此不是一物之两种的关系。两群人按同一份食谱做菜,所产生的是不同的过程例示,例示不同的烹饪子类型;它们共同指涉同一份食谱,并不构成过程同一。chess.com 与桌前对弈关系同构:两者指涉同一份规则集——一个类依赖持存者,在两边各自具体化——而指涉同一规则集不构成过程同一。桌前对弈是走棋。chess.com 是发送报文。</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         §3  制度与认知盲点 / Institution and the cognitive blind spot
+
+         核心论点:
+         - 比 §4 更深一层:chess.com 作为商业制度的存在,
+           依赖于绝大多数参与者不进行 §2–§4 的分析
+         - 批判理论谱系:Marx 商品拜物教(社会关系被误认为物的属性)
+           → 法兰克福学派文化工业 → Debord 景观社会
+           → Zuboff/Han/Stiegler 当代平台资本主义
+         - 共同论证模式:制度通过塑造参与者认知边界来维持自身
+         - chess.com 嵌入这一谱系:有"最大可承受洞察水平"
+         - 日常操作的真实功能是认知边界维持工作:
+           * 持续公布反作弊投入与封号统计
+           * 平台塑造为"国际象棋服务"
+           * 邀请大师入驻(挪用建制合法性)
+           * 主办锦标赛、ELO 系统(挪用体育形式)
+           * 宣扬"体育精神"(挪用体育伦理)
+         - 这些不是阴谋,是制度自我呈现的标准做法
+
+         素材 / 引用:
+         - Marx, Das Kapital I, ch.1 §4 商品拜物教 [fn]
+         - Debord, La Société du spectacle (1967), §4 [fn]
+         - Zuboff, Surveillance Capitalism (2019);
+           Han, Psychopolitik (2014);
+           Stiegler, Prendre soin (2008) [fn]
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="sec-mystification">
+      <span class="section-num">§ 3</span>
+      <h2>
+        <span data-lang-content="en">Institution and the cognitive blind spot</span>
+        <span data-lang-content="zh">制度与认知盲点</span>
+      </h2>
+      <div data-lang-content="en">
+        <p>The category difference established in § 2 has a deeper counterpart at the level of the institution. chess.com, as a commercial operation, depends for its very existence on the vast majority of its participants <em>not</em> seeing what § 2 has set out. The point of analysis here shifts from ontological content to existence conditions.</p>
+
+        <p>This line of argument has a long pedigree in critical theory. The opening of <em>Capital</em>, volume one, sets out commodity fetishism: under capitalism, social relations among workers are perceived as properties of things—the cooperative relation between two producers is expressed as a price relation between two commodities they make.<a class="fn-ref" href="#fn-2">[2]</a> This misperception is not an accidental error but a structural requirement of the institution. Were the proletariat to arrive at clear cognition of its own economic position (the so-called class consciousness), the institution would be threatened. Maintaining the misperception is part of the institution's self-maintenance.</p>
+
+        <p>The same structure recurs across the tradition. The Frankfurt School's critique of the culture industry generalizes it; Debord's <em>society of the spectacle</em> radicalizes it: the spectacle is not something added on top of social life but social life mediated by images, and the mediation is constitutive.<a class="fn-ref" href="#fn-3">[3]</a> Contemporary analyses of platform capitalism extend the same argumentative pattern—Shoshana Zuboff on surveillance capitalism, Byung-Chul Han on digital psychopolitics, Bernard Stiegler on the attention economy—each in its own register restating that institutions maintain themselves by shaping the cognitive boundaries of their participants, and that this shaping is part of the economic operation, not an ideological appendage to it.<a class="fn-ref" href="#fn-4">[4]</a></p>
+
+        <p>chess.com embeds in this pedigree. Its commercial model presupposes that users do not perform the reasoning of § 2. Were every user to arrive at the position established there—seeing that the site is not chess but a process of packet transmission and server-side state update—the site would collapse. It cannot bear the generalization of clear cognition about its own nature. The same constraint applies to any further disclosure in the same direction: the institution can survive only so long as additional clarifications, of the kind the rest of these notes pursues, do not generalize among its participants.</p>
+
+        <p>Strictly, the site need not weather every user's awakening, only enough users' awakening. The critical mass is empirical, depending on cost structure, user-acquisition cost, network-effect strength. The structural claim is unaffected by this refinement: the institution's existence is inversely related to the depth of its participants' insight. A maximum tolerable level of insight exists, beyond which the institution cannot maintain itself.</p>
+
+        <p>Several routine operations on chess.com, presented as ordinary commercial promotion, function structurally as the maintenance of cognitive boundaries.</p>
+
+        <ul>
+          <li>Continual publication of anti-cheating investment and ban statistics. The effect is to produce the impression that cheating is a marginal exception, while the deeper fact—that cheating adjudication is itself ontologically unstable—is kept off the agenda. § 4 sets out this deeper fact in detail.</li>
+          <li>Branding the platform as "chess" rather than as "a chess-themed network service." This sustains user perception that the activity on the site is chess, covering the process-level difference of § 2.</li>
+          <li>Inviting grandmasters to host channels and sponsoring their streams. The legitimacy of institutional chess is imported, and the semantic association "site ≈ chess" is reinforced.</li>
+          <li>Hosting tournaments, awarding titles, maintaining the ELO scoring system. These are forms borrowed wholesale from sport, importing sport's normative weight into an activity that is not sport.</li>
+          <li>Promoting "sportsmanship" and "fair play" as in-UI exhortation (banners, lobby messages, terms-of-service preambles). The ethical vocabulary of sport is imported directly onto an activity whose ontology does not warrant the inheritance. The exhortation operates by repetition, not by argument.</li>
+        </ul>
+
+        <p>These operations do not require conspiratorial intent. They are the standard work of institutional self-presentation, mostly unselfconscious on the part of those who carry them out. They function as cover insofar as their cumulative effect makes the disclosures of §§ 2 and 4 hard to surface from within the institution's everyday cognition.</p>
+      </div>
+      <div data-lang-content="zh">
+        <p>§ 2 所建立的范畴差异,在制度层面有一个更深的对应物。chess.com 作为商业运营,其存在本身依赖于绝大多数参与者并未看清 § 2 所陈述之事。分析的着力点由此从本体内容移向存在条件。</p>
+
+        <p>这一思路在批判理论传统中有长久的谱系。《资本论》第一卷开篇展开商品拜物教:资本主义之下,工人之间的社会关系被知觉为物的属性——两位生产者之间的协作关系,被表现为他们所造的两件商品之间的价格关系。<a class="fn-ref" href="#fn-2">[2]</a> 这种误知不是偶然的认识错误,而是该制度的结构性要求。倘若无产阶级到达对自身经济地位的清晰认知(所谓阶级意识),制度便受到威胁。维持误知,因此是该制度自我维持的一部分。</p>
+
+        <p>同一结构在传统中反复出现。法兰克福学派的文化工业批判将其一般化;Debord 的《景观社会》将其推至极致:景观并非外加于社会生活之上的事物,而是经形象中介的社会生活,而这一中介本身是构成性的。<a class="fn-ref" href="#fn-3">[3]</a> 平台资本主义的当代分析——Shoshana Zuboff 关于监视资本主义、Byung-Chul Han 关于数字心理政治、Bernard Stiegler 关于注意力经济——各自以自身的语调重申同一论证模式:制度通过塑造参与者的认知边界来维持自身,而这种塑造工作是经济运转的一部分,不是经济之上附加的意识形态。<a class="fn-ref" href="#fn-4">[4]</a></p>
+
+        <p>chess.com 嵌入此一谱系。其商业模型预设用户不进行 § 2 的推理。倘若每位用户都到达那里所建立的位置——看清该网站不是国际象棋,而是数据包传输与服务器端状态更新的过程——网站便会崩溃。它无法承受对其自身本性之清晰认知的普遍化。同一约束适用于沿同一方向的进一步揭示:制度的存续,有赖于后续此类澄清——以下各节所追究的那些——不在参与者之间普遍化。</p>
+
+        <p>严格言之,网站无须承受每位用户的觉醒,只需承受足够多用户的觉醒。这一临界量是经验问题,取决于成本结构、获客成本、网络效应强度。结构性命题不受此修正影响:制度的存在与参与者洞察的深度呈负相关。存在着一个最大可承受的洞察水平,超过该水平,制度便难以维持。</p>
+
+        <p>chess.com 上若干日常操作,表面呈现为商业推广,在结构上是认知边界的维持工作。</p>
+
+        <ul>
+          <li>持续公布反作弊投入与封号统计。其效果是制造"作弊属于边缘例外"的印象,而更深的事实——作弊判定本身在本体上即不稳定——被排除在议程之外。§ 4 详述这一更深的事实。</li>
+          <li>把平台塑造为"国际象棋"而非"以国际象棋为主题的网络服务"。这维持着用户把网站上的活动当作国际象棋的知觉,覆盖了 § 2 的过程层面差异。</li>
+          <li>邀请大师入驻、赞助其频道。建制内国际象棋的合法性由此被挪用,"网站 ≈ 国际象棋"的语义联想得以加强。</li>
+          <li>主办锦标赛、颁授头衔、维持 ELO 评分系统。这些是从体育建制整体借用的形式,把体育的规范重量挪用至一项并非体育的活动之上。</li>
+          <li>在界面元素中宣扬"体育精神"与"公平竞赛"(banner、对局大厅提示、服务条款前言)。体育的伦理语汇被直接挪用至一项在本体上并无资格承袭的活动之上。这种宣扬通过重复起作用,不通过论证起作用。</li>
+        </ul>
+
+        <p>这些操作并不要求阴谋意图。它们是制度自我呈现的标准工作,在从业者一侧多属不自觉。它们之所以构成遮盖,是因其累积效应令 §§ 2、4 所揭示的事实难以从制度的日常认知中浮现。</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         §4  规范执行的本体不稳定性 / The ontological instability of enforcement
+
+         核心论点:
+         - chess.com 的反作弊判定建立在二元区分上("作弊 / 合规")
+         - 但其判定对象是连续认知过程,没有自然离散结构
+         - 类比:足球 VAR 时代越位判定问题——把数毫秒过程压成零维瞬间
+         - "对局期间"、"使用引擎"都涉及把连续过程切片为离散事件
+         - 人类认知本身是连续过程,引擎信息与棋感在认知系统内混合而非分隔
+         - 不是测量精度问题,是被测量对象本身没有离散结构
+         - 预测:此类平台永远无法根除作弊,正如足球永远无法根除越位争议
+         - 意象:女娲补天——补的是结构本身的不完整,每补一处别处生新洞
+
+         素材 / 引用:
+         - 上述都是论证本身,不需外部 footnote
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="sec-enforcement">
+      <span class="section-num">§ 4</span>
+      <h2>
+        <span data-lang-content="en">The ontological instability of enforcement</span>
+        <span data-lang-content="zh">规范执行的本体不稳定性</span>
+      </h2>
+      <div data-lang-content="en">
+        <p>The first item in § 3's list—the continuous publication of anti-cheating effort—rides on a fact that § 3 noted but did not analyze: that cheating adjudication on chess.com is itself ontologically unstable. The instability is structural, not a deficiency in current detection technology, and can be set out independently of the institutional question of § 3.</p>
+
+        <p>The anti-cheating apparatus rests on a binary distinction: cheating versus compliant play. The platform's terms of service forbid engine consultation during a game, and the enforcement system classifies each game (and each player) into one of these two categories. The question is whether this binary classification has any natural support in the object it claims to classify.</p>
+
+        <p>An analogous problem in another rule-governed activity sharpens the issue. Offside in association football, in the VAR era, has not become less contested but more—not because of officiating decline but because the object of judgment does not constitute a discrete event. "The moment of release" is a process lasting several milliseconds, during which the attacker's position relative to the offside line, the ball's contact state, and the defenders' positions all vary continuously. Compressing this process into a zero-dimensional "moment" for offside adjudication is to slice a continuous process at a point. Where to slice has no support in any natural fact. The difficulty is not measurement precision; it is the absence of discrete structure in the thing being measured.</p>
+
+        <p>The cheating judgment on chess.com faces an isomorphic difficulty. The rule says: no engine use during a game. What is "during a game"? Between clock-start and clock-end? Then consulting an engine one second before game-start is ontologically indistinguishable from consulting it one second after, yet the former is compliant and the latter is cheating. What is "engine use"? Copying the move? Reading the evaluation bar without copying the move? Watching, on a second device, engine analysis of structurally similar positions? Recalling, from training, what an engine plays in this kind of position? Visualizing what an engine would play? Each of these requires slicing continuous cognitive activity into discrete "use" events.</p>
+
+        <p>Human cognition itself is a continuous process. From glancing at an engine readout to executing a move, information flows through working memory, decision cortex, motor cortex, fingers—a process spanning hundreds of milliseconds without any natural break-point at which information could be said to transition from engine to player. Engine-supplied information and the player's own chess intuition are <em>mixed</em>, not <em>separated</em>, within the cognitive system. Even in principle, "which part of the decision came from the engine and which from the player" admits no clean partition. The limit is not detection technology but the continuity of cognition itself.</p>
+
+        <p>The binary distinction the cheating apparatus imposes—cheating or compliant—therefore lacks ontological support at its object. The boundary is drawn unilaterally by the platform, and the drawing inevitably produces both false positives (compliant players banned) and false negatives (cheating undetected). Each upgrade of the detection system pushes cheating to evolve into regions outside the upgrade, producing an arms race that does not converge. The patch never seals the structure; the structure is what is leaking. Each patch displaces the leak rather than closing it.</p>
+
+        <p>The image of Nü Wa patching the sky fits the situation with unusual precision. Nü Wa's patching is not the repair of an isolated hole but a holding action against a structural failure of the sky itself. Each pillar, each stone of five colors, delays collapse without removing its cause. The anti-cheating apparatus of any online-chess platform operates under the same constraint. The prediction follows: such platforms will not eradicate cheating, just as football will not eradicate offside disputes. The structural source is shared—the imposition of binary norms onto a continuous reality. Empirical practice on chess.com matches the prediction: substantial resources go to publicizing detection improvements and periodic ban statistics, while cheating, far from being eliminated, migrates into more sophisticated forms.</p>
+      </div>
+      <div data-lang-content="zh">
+        <p>§ 3 列表的第一项——对反作弊投入的持续公布——所依附的是 § 3 已注明而未展开的一个事实:chess.com 上的作弊判定本身在本体上即不稳定。这一不稳定是结构性的,不是当前检测技术的不足,且可独立于 § 3 的制度问题加以陈述。</p>
+
+        <p>反作弊体系建立在一种二元区分之上:作弊与合规。平台服务条款禁止对局期间使用引擎,执法系统将每一局棋(以及每一位玩家)归入这两类之一。问题在于,该二元分类在它所欲分类的对象上是否有任何自然支持。</p>
+
+        <p>另一项规则约束的活动中存在同构的问题,可使此处的难题更为清晰。足球的越位判定,在 VAR 时代非但未减少争议,反而更多——其原因不在裁判水平的下降,而在被判定对象本身不构成离散事件。"出球瞬间"是一个持续数毫秒的过程,在此期间进攻队员相对越位线的位置、球的接触状态、防守队员的位置皆在连续变化。把这一过程压缩为一个零维"瞬间"以进行越位判定,即是在一个连续过程上施加切片。<em>切在哪里</em>没有任何自然事实作为支撑。困难不在测量精度,而在被测量对象本身没有离散结构。</p>
+
+        <p>chess.com 的作弊判定面对同构的困难。规则说:对局期间不得使用引擎。何为"对局期间"?计时开始至结束之间?那么对局开始前一秒查阅引擎与开始后一秒查阅引擎在本体上无法区分,前者合规、后者违规。何为"使用引擎"?照搬走法?查看评估而不照搬走法?在另一台设备上观看引擎对结构类似局面的分析?回忆训练中引擎在此类局面的走法?在脑中设想引擎会怎么走?这每一种皆要求把连续的认知活动切片为离散的"使用"事件。</p>
+
+        <p>人类认知本身即是连续过程。从看一眼引擎读数到下出一步棋,信息穿过工作记忆、决策皮层、运动皮层、手指——一个跨越数百毫秒的过程,其中并无任何自然切点能让人说"信息在此处从引擎过渡到棋手"。引擎所提供的信息与棋手自身的棋感,在认知系统内部是<em>混合</em>的,而非<em>分隔</em>的。即便在原则上,"哪部分决策来自引擎、哪部分来自棋手"也无法被干净地划分。其极限不在检测技术,而在认知本身的连续性。</p>
+
+        <p>作弊体系所施加的二元区分——作弊或合规——因此在其判定对象上缺乏本体支持。这条边界由平台单方面划定,而这种划定不可避免地同时产生误报(合规玩家被封)与漏报(作弊未被检出)。检测系统的每一次升级,都把作弊推向升级所不及的区域,造成一种不收敛的军备竞赛。补丁不能封闭结构;漏的正是结构本身。每一处补丁只是把漏移到别处,而非将其封住。</p>
+
+        <p>女娲补天的意象在此处异常精确。女娲所补,不是某个孤立的洞,而是对天本身结构性失效的延缓。每一根支柱、每一块五色石,皆只延迟塌陷而不除其因。任何网络对弈平台的反作弊体系都在同一约束之下运转。由此可得一项预测:此类平台不会根除作弊,正如足球不会根除越位争议。结构源相同——在连续现实之上施加二元规范。chess.com 的经验实践与该预测一致:大量资源被投入宣传检测系统的进步与定期公布的封号统计,而作弊远未被消灭,只是迁移至更精巧的形态。</p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         §5  作为商品贩卖的 ELO / ELO as commodity
+
+         核心论点:
+         - chess.com 在本体上是一台通过算法生产数字代币
+           (ELO、头衔、徽章)并向用户贩卖的商品机器
+         - 用户以注意力时间、订阅费、广告曝光"购买"数字上升
+         - 这是物化(Verdinglichung)的精确实例:
+           用户以为追求棋艺,实际追求 ELO 数字
+         - Marx 拜物教的精确再现:两个棋手之间的认知互动
+           被表现为两个 ELO 数字之间的差额变动
+         - 套写《共产党宣言》:Die Arbeiter haben kein Vaterland
+           → The game players have no ELO rating
+         - "无"是所有权层面的:ELO 不属玩家,属网站
+         - 封号反应远超合同违约,因为 ELO 与自我已物化捆绑
+         - 与 Marx 的差异:这是自愿物化,不是被迫
+           (与社交媒体、流媒体、注意力经济共享同一结构)
+         - "为什么是自愿"——该问题在 §7 中以行为机制层面回答
+
+         素材 / 引用:
+         - Marx, Das Kapital I, ch.1 §4 [fn]
+         - Lukács, "Die Verdinglichung..." (1923) [fn]
+         - Han, Müdigkeitsgesellschaft;Rosa, Resonanz(自愿物化)[fn]
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="sec-commodity">
+      <span class="section-num">§ 5</span>
+      <h2>
+        <span data-lang-content="en">ELO as commodity</span>
+        <span data-lang-content="zh">作为商品贩卖的 ELO</span>
+      </h2>
+      <div data-lang-content="en">
+        <p>The institutional analysis of § 3 admits a sharper reframe at the level of what the institution actually produces. In official discourse, chess.com is a chess service. Ontologically, it is a machine that algorithmically generates numerical tokens—ELO ratings, title ranks, badges, premium account statuses—and sells them to users. Users "purchase" the upward movement of these tokens with attention time, subscription fees, and ad exposure. Grandmaster channels, official tournaments, and partnerships with FIDE function, in this frame, as legitimacy imports: institutional chess's authority is borrowed to underwrite the selling machinery.</p>
+
+        <p>This description follows from the preceding sections. Once the activity on the site is identified as packet transmission and state update (§ 2), and the institution's commercial viability is identified as dependent on participants' incomplete cognition (§ 3), what remains to be specified is the actual saleable product. The product is a set of fiat numerical tokens together with the appearance of legitimacy that surrounds them.</p>
+
+        <p>Reification (<em>Verdinglichung</em>) is the appropriate term for the resulting structure.<a class="fn-ref" href="#fn-5">[5]</a> The user takes herself to be pursuing <em>chess skill</em>—a capacity that belongs to her, can be improved, can be internalized through practice. At the level of reification, what the user actually pursues is an <em>ELO number</em>—a fiat token existing on a server, produced by an algorithm under rules the site chose, ascending and descending by mechanics the site defined. The number is taken to reflect skill; in fact the number is an internal datum of the site, defined by the site.</p>
+
+        <p>Marx's analysis of commodity fetishism applies here as direct instantiation rather than analogy. In over-the-board play, what occurs between two players is cognitive interaction: they jointly produce a game as social activity. Mediated by chess.com, this interaction is expressed as the differential movement of two ELO numbers. The players no longer "see" their interaction with one another; they "see" their ELO numbers changing. A social relation (cognitive cooperation or contest) becomes a relation between things (an arithmetic on numbers). The structure of commodity fetishism reproduces itself precisely on a digital platform: cooperation among users is expressed as a numerical relation between their respective ELO numbers.</p>
+
+        <p>The same structure accounts for a phenomenon that would otherwise seem disproportionate—the emotional reaction users produce on being banned, which routinely exceeds the scope of "service contract terminated." A ban, strictly speaking, is the platform ending service under its agreement. In felt experience, however, it is regularly experienced as a <em>stripping of identity</em>. The source of that experience is the reified bond between the ELO number and the player's self. When the number is treated as belonging to the self, its disappearance is experienced as a diminishment of the self—although the number never belonged to the player; it belonged to the server.</p>
+
+        <p>A line from the <em>Communist Manifesto</em> can be adapted to render the structure compactly: <em>Die Arbeiter haben kein Vaterland</em>—the workers have no fatherland. For its counterpart here: <em>The game players have no ELO rating</em>.</p>
+
+        <p>The "have no" is not empirical—players obviously see a number on a screen. The "have no" is at the level of ownership: the number does not belong to the player but to the site. Its existence depends on the site's servers running. Its movement depends on the site's algorithmic rules. Its meaning depends on the site maintaining its appearance as "a measure of chess skill." Marx's slogan derives its force from exposing the fact that the fatherland the worker is told he belongs to does not belong to him; the same force operates here on the rating.</p>
+
+        <p>The analogy to Marx is not exact. The worker's relation to capitalism is <em>compelled</em>: selling labor power is the precondition of physical survival. The player's relation to chess.com is not compelled; exit costs nothing essential. The political stakes therefore differ: the disclosure does not point toward collective liberation but toward a form of <em>voluntary reification</em>. Voluntary reification has its own analytical tradition in contemporary critical theory, treating how late-modern subjects actively enter alienating structures.<a class="fn-ref" href="#fn-6">[6]</a> chess.com is one instance, sharing structure with social media, streaming platforms, and the attention economy at large.</p>
+
+        <p>The further question—why entry into such a structure is voluntary in the first place, and why exit remains so difficult once entry has occurred—is not answered at the level of reification. The reification structure describes what the user takes the activity to be; it does not describe the mechanism that returns the user to the activity session after session. That mechanism belongs to a different register, behavioral rather than ontological, and is set out in § 6.</p>
+      </div>
+      <div data-lang-content="zh">
+        <p>§ 3 的制度分析在"该制度实际生产什么"的层面接受一种更尖锐的重构。在官方话语中,chess.com 是一家国际象棋服务平台。在本体上,它是一台通过算法生产数字代币——ELO 评分、等级头衔、徽章、付费账户身份——并向用户贩卖的机器。用户以注意力时间、订阅费、广告曝光为代价,"购买"这些代币的上升。在此框架下,大师入驻频道、官方锦标赛、与 FIDE 的合作,皆为合法性的挪用:建制内国际象棋的权威被借用,以为该贩卖机制背书。</p>
+
+        <p>这一描述由前面几节自然推出。一旦该网站上的活动被识别为数据包传输与状态更新(§ 2),且制度的商业可行性被识别为依赖于参与者认知的不完全(§ 3),那么剩余需指明的便是其实际的可贩卖产品。该产品是一组法定数字代币,以及围绕这些代币所维持的合法性外观。</p>
+
+        <p>由此而来的结构,恰当的术语是物化(<em>Verdinglichung</em>)。<a class="fn-ref" href="#fn-5">[5]</a> 用户自认为在追求<em>棋艺</em>——一种属于自己、可被改善、能通过实践内化的能力。在物化的层面,用户实际所追求的是 <em>ELO 数字</em>——一个存在于服务器上的法定代币,由网站算法按其所选规则生产,按网站所定义的机制升降。该数字被当作棋艺的反映;事实上,该数字是网站的内部数据,由网站定义。</p>
+
+        <p>Marx 关于商品拜物教的分析在此处适用为直接实例化,而非类比。在桌前对弈中,两位棋手之间发生的是认知互动:他们作为社会活动共同产生一局棋。经 chess.com 中介后,这一互动被表现为两个 ELO 数字之间的差额变动。棋手不再"看见"彼此的互动,而是"看见"各自的 ELO 数字在变。社会关系(认知协作或对抗)变为物之间的关系(数字之间的算术)。商品拜物教的结构在数字平台上得到精确再现:用户之间的协作被表现为各自 ELO 数字之间的数值关系。</p>
+
+        <p>同一结构解释了一个否则看似不成比例的现象——用户被封号时所产生的情感反应,通常远超"服务合同终止"所应有的范围。封号严格而言只是平台按其协议终止服务。然而在感受层面,它常被经验为<em>身份的剥夺</em>。这种感受的来源,正是 ELO 数字与玩家自我之间的物化捆绑。当数字被视为属于自我时,其消失便被经验为自我的削减——尽管数字从来不属于玩家,而属于服务器。</p>
+
+        <p>《共产党宣言》中的一句话可被改写以紧凑地呈现这一结构:<em>Die Arbeiter haben kein Vaterland</em>——工人无祖国。其在此处的对应物:<em>玩家无 ELO 评分</em>(The game players have no ELO rating)。</p>
+
+        <p>此处的"无"不是经验层面的——玩家屏幕上当然显示着某个数字。"无"在所有权层面:数字不属玩家,属网站。其存在依赖于网站服务器的运行。其变动依赖于网站的算法规则。其意义依赖于网站维持其作为"棋艺测量"的外观。Marx 那句口号的力量,在于揭示工人被告知所属的"祖国"实际不属于他;同一力量在此处作用于评分。</p>
+
+        <p>与 Marx 类比并不完全。工人对资本主义的关系是<em>被迫</em>的:出卖劳动力是物质生存的前提。玩家对 chess.com 的关系不是被迫的;退出不带来任何根本代价。政治赌注因此不同:此处的揭示不指向集体解放,而指向一种<em>自愿的物化</em>。自愿物化在当代批判理论中已有专门的分析传统,处理晚期现代主体主动进入异化结构的现象。<a class="fn-ref" href="#fn-6">[6]</a> chess.com 是其中一例,与社交媒体、流媒体、注意力经济共享同一结构。</p>
+
+        <p>由此而来的进一步问题——为何对此类结构的进入首先是自愿的、且一旦进入又何以难以退出——在物化层面并不得到回答。物化结构刻画用户把活动当作什么;它并不刻画那种让用户一次又一次返回活动的机制。该机制属于另一语域——行为层面而非本体层面——见 § 6。</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         §6  变率强化与"自愿"参与的机制 / Variable-ratio reinforcement and
+             the mechanics of "voluntary" play
+
+         核心论点:
+         - §6 末尾留下的"为什么自愿"的问题,在行为科学层面有具体回答
+         - Skinner 强化时间表理论:variable-ratio reinforcement
+           使反应率最大化、最难消退
+         - 当奖励按不可预测的反应次数发出(而非固定间隔、固定次数),
+           活动量最高、最稳、最持久
+         - 老虎机是这一时间表的工业化实现典型
+         - Schüll《Addiction by Design》:拉斯维加斯老虎机产业
+           对变率强化机制的系统优化;"the zone"——解离性持续投注状态
+         - 同一时间表(经介质改造)结构了:
+           社交媒体信息流、移动游戏、在线竞技平台
+         - chess.com 闪电棋/子弹棋以异常纯粹的形式实现:
+           * 匹配近乎即时
+           * 胜负在数分钟内交付
+           * ELO delta 数字形式可见呈现
+           * 胜负比率在会话尺度上不可预测
+         - 高峰(干净取胜、击败高分对手、连胜破天花板)= 强化物
+         - 低谷不消退行为,反而加强下一反应(下次结果始终可能是强化物)
+         - "自愿"进入这一结构,在操作性条件作用层面,
+           是设计良好的变率强化的标准产物,不需主体选择或理性偏好的独立解释
+         - 在商品形式中的位置(回到 §6):
+           * 被卖的商品(ELO) = 强化物
+           * 胜负分布 = 强化时间表
+           * 物化保证意义感外观;操作性条件作用保证回归率
+           * 双轨运行,皆是平台经济可行性所结构性要求的
+
+         素材 / 引用:
+         - Ferster & Skinner, Schedules of Reinforcement (1957) [fn]
+         - Schüll, Addiction by Design (2012) [fn]
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="sec-reinforcement">
+      <span class="section-num">§ 6</span>
+      <h2>
+        <span data-lang-content="en">Variable-ratio reinforcement and the mechanics of "voluntary" play</span>
+        <span data-lang-content="zh">变率强化与"自愿"参与的机制</span>
+      </h2>
+      <div data-lang-content="en">
+        <p>The question left open at the end of § 5 is mechanism: under what conditions does the consumer return, session after session, to a structure that produces incomplete satisfaction. The behaviorist literature on schedules of reinforcement gives a precise answer.</p>
+
+        <p>Schedules of reinforcement classify the temporal patterns by which a reinforcing stimulus is delivered to an organism in response to behavior. Among the four basic schedules studied by Ferster and Skinner—fixed interval, variable interval, fixed ratio, variable ratio—<em>variable-ratio reinforcement</em> stands out empirically.<a class="fn-ref" href="#fn-7">[7]</a> When reward is delivered after an unpredictable number of responses (rather than at a fixed time interval, or after a fixed number of responses), the resulting response rate is the highest of any schedule, the most stable, and the most resistant to extinction—an organism on a variable-ratio schedule continues to respond at high rate long after reinforcement has been discontinued. The slot machine is the canonical industrial implementation of variable-ratio reinforcement, and the gambling industry has refined its mechanics over the course of the twentieth century. Natasha Dow Schüll's ethnographic study of Las Vegas machine gambling documents this refinement and identifies the player state that the optimized machines produce: <em>the zone</em>, a condition of dissociated continuous play in which time, financial outcome, and self-monitoring all recede.<a class="fn-ref" href="#fn-8">[8]</a></p>
+
+        <p>The same schedule, adapted to the medium, structures the consumption surfaces of social-media feeds, mobile games, and online competitive platforms. Pull-to-refresh, infinite scroll, ladder ranks, lootboxes—each is a vehicle for delivering reinforcement on an unpredictable response count.</p>
+
+        <p>chess.com's blitz and bullet modes implement variable-ratio reinforcement with unusual purity. Match-making is near-instantaneous; the outcome of a game is delivered within minutes; the ELO delta is rendered numerically and visibly at the close of each game; the ratio of wins to losses, even for a player at stable rating, remains unpredictable on the local time scale of any given session. The peaks—an unusually clean tactical win, a defeat of a higher-rated opponent, a streak that pushes the rating past a previous ceiling—occur at irregular intervals and function as the reinforcers. The troughs—a streak of losses, a blunder in a winning position, a tilt-induced cascade—do not extinguish the behavior. Under variable-ratio schedules, troughs intensify the next response: the next outcome is always potentially the reinforcer, and the lower the recent trough, the larger the prospective contrast against it.</p>
+
+        <p>"Voluntary" entry into this structure, in the language of operant conditioning, is the standard product of well-designed variable-ratio reinforcement. It does not require independent explanation at the level of subject choice or rational preference. The user enters because the medium is at hand and the cost of entry is zero; the user returns because the schedule of reinforcement, once a few reinforcers have been delivered, produces the behavioral persistence the schedule is mathematically guaranteed to produce.</p>
+
+        <p>The mechanism sits exactly where § 5's commodity analysis leaves a gap. The commodity being sold (the ELO number) is also the reinforcer that secures the consumer's return. The unpredictable distribution of wins and losses is the schedule on which the reinforcer is delivered. Reification (the user's experience that the number "is" her skill) and operant conditioning (the user's behavioral persistence under variable-ratio reward) operate in tandem. The former secures the <em>appearance of meaningfulness</em>—the activity feels like the pursuit of a real ability rather than the pursuit of an algorithmic token. The latter secures the <em>rate of return</em>—the user comes back, again and again, on a schedule that the platform's economics requires. Neither component is incidental to the platform's commercial viability; both are structurally required for the machine described in § 5 to function.</p>
+
+        <p>The two-component description also clarifies why the disclosures of §§ 2–5 do not, by themselves, terminate participation. A user can grant every result in §§ 2–5—that the activity is packet transmission, that the institution depends on cognitive blind spots, that the ELO number is a fiat token belonging to the server—and continue to play. The reification component is reachable by argument; the operant-conditioning component is not. Operant conditioning operates on the player's reinforcement system, which does not consult the player's cognitive endorsements when deciding whether to fire the next motivational impulse. Insight into the mechanism does not deactivate it. This is one of the recurring observations of contemporary gambling research, and it applies to the platform analyzed here with full force.</p>
+      </div>
+      <div data-lang-content="zh">
+        <p>§ 5 末尾留下的问题是机制问题:在何种条件之下,消费者会一次又一次地返回一个产生不完全满足的结构。行为主义关于强化时间表的文献给出了精确的回答。</p>
+
+        <p>强化时间表(schedules of reinforcement)分类的是强化刺激依有机体行为而被发出的时间模式。在 Ferster 与 Skinner 所研究的四种基本时间表——固定间隔、变率间隔、固定比率、变率比率——之中,<em>变率强化</em>(variable-ratio reinforcement)在经验上格外突出。<a class="fn-ref" href="#fn-7">[7]</a> 当奖励按不可预测的反应次数发出(而非按固定时间间隔、亦非按固定反应次数),所产生的反应率是所有时间表中最高的,最稳定的,且最难消退——处于变率时间表下的有机体,在强化已经停止之后仍可长时间维持高反应率。老虎机是变率强化在工业上的典型实现,赌博业在二十世纪过程中对其机制进行了持续的精细化。Natasha Dow Schüll 对拉斯维加斯机器赌博的人类学研究记录了这一精细化,并指认了被优化的机器所产生的玩家状态:<em>the zone</em>(投注之"区域"),一种解离性的持续投注状态,在其中时间、财务结果、自我监控皆退场。<a class="fn-ref" href="#fn-8">[8]</a></p>
+
+        <p>同一时间表,经介质适当改造,构成了社交媒体信息流、移动游戏、在线竞技平台之面向用户那一侧的消费表面骨架。下拉刷新、无限滚动、天梯排位、抽卡奖励——每一项都是按不可预测反应次数发出强化的载体。</p>
+
+        <p>chess.com 的闪电棋(blitz)与子弹棋(bullet)模式以异常纯粹的形式实现变率强化。匹配近乎即时;胜负在数分钟内交付;每局结束时 ELO 变动以数字形式可见呈现;胜负比率,即使对一位评分稳定的玩家而言,在任一具体对局段的时间尺度上仍然不可预测。高峰——一次格外干净的战术取胜、击败一位评分较高的对手、一波将评分推过既往天花板的连胜——以不规则的间隔出现,充当强化物。低谷——一波连败、在优势局面中的失误、一次因情绪激动而引发的连续崩盘——并不消退该行为。在变率时间表下,低谷反而加强下一次反应:下一次结果始终可能成为强化物,而新近低谷越深,与之形成的预期反差便越大。</p>
+
+        <p>在操作性条件作用的语言中,"自愿"进入这一结构,是设计良好的变率强化的标准产物。这并不需要在主体选择或理性偏好的层面再加一层独立的解释。用户进入,是因为介质就在手边而进入成本为零;用户返回,是因为时间表本身——一旦数个强化物已被发出——便产生该时间表在数学上所必然产生的行为持续性。</p>
+
+        <p>这一机制恰好落在 § 5 的商品分析所留下的缺口上。被贩卖的商品(ELO 数字)同时也是确保消费者回归的强化物。胜负的不可预测分布是发出该强化物的时间表。物化(用户经验上把数字<em>视为</em>自己的棋艺)与操作性条件作用(用户在变率强化下的行为持续性)双轨运行。前者保证<em>意义感的外观</em>——活动让人觉得像是在追求某种真实能力,而非追求一个算法代币。后者保证<em>回归率</em>——用户一次又一次地返回,按照平台经济所要求的频率。这两个组件对于平台的商业可行性都不是附属;§ 5 所述机器的运转结构性地要求两者皆在位。</p>
+
+        <p>这一双组件描述也澄清了一个事实:§§ 2–5 的揭示本身并不终止参与。一位用户可以承认 §§ 2–5 的每一项结论——活动是数据包传输、制度依赖认知盲点、ELO 数字是属于服务器的法定代币——同时继续下棋。物化组件可经论证抵达;操作性条件作用组件则不可。操作性条件作用作用于玩家的强化系统,而强化系统在决定是否发出下一次动机冲动时,并不咨询玩家的认知层面的承认。对机制的洞察并不让机制失效。这是当代赌博研究反复观察到的事实之一,并以其完整的力量适用于此处所分析的平台。</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         §7  对称形式与可互换的主体 / The symmetric form and the interchangeable subject
+
+         核心论点:
+         - §2–§6 的障眼属于平台层,在原则上可改革
+         - 更深一层:在规则形式本身,不依附任何平台
+         - 国际象棋规则规定开局完全对称:
+           每方 16 子、棋盘等分、先手附属于颜色而非人
+         - "公平博弈"的形式签名:结果只能从过程中产生,不从起始结构
+         - 对称形式预设一种特定的主体理论:
+           参与者是可互换的理性主体——
+           历史、身体、语言、文化、训练、特殊性,全部不被规则形式登记
+         - 与 Kant 可普遍化、Rawls 无知之幕同构
+         - 一个古老的对立传统——agonistic(竞争性的)——主张
+           人与人间真实差异应在竞争结构中被承认,而非抽象掉
+         - 西方:荷马(Iliad I, Achilles 拒绝 Agamemnon 对 timē 的分配)
+                 Pindar 颂胜诗(具体的人,而非位置)
+                 Nietzsche "Homer's Wettkampf"
+         - 东方:《论语·八佾》"君子无所争,必也射乎"
+                射礼:形式上仪典,实质上让差异在仪典中被承认
+                周代士的等级伦理
+         - 当代具体形式仍保留 agonistic 结构:
+           马球 handicap(强者多带让分);围棋让子
+         - 两个回答都有传统支撑;对称形式作为"默认"是
+           现代自由主义、成文化体育、法律行政装置的历史成就
+         - 障眼:对称形式将自己呈现为中立框架,实际是两种伦理形式
+           传统之一,藉"看起来中立"遮蔽其所强加的主体理论
+         - 这是最深一层,不可经平台改革解除
+         - agonistic 传统的系统处理 → 留待独立专文
+
+         素材 / 引用:
+         - Rawls, A Theory of Justice (1971), § 24 veil of ignorance [fn]
+         - Homer, Iliad I.149–171, 225–244;Adkins, Merit and Responsibility [fn]
+         - Pindar, Olympian Odes;Race trans. (Loeb);Kurke, Traffic in Praise [fn]
+         - Nietzsche, "Homer's Wettkampf" (1872);Acampora, Contesting Nietzsche [fn]
+         - 《论语》3.7;《礼记·射义》;Legge trans. [fn]
+         - Hurka, Perfectionism;Anderson, "What Is the Point of Equality?";
+           Connolly, Political Theory and Modernity [fn]
+
+         十六枚同型号、同分布的棋子,仍是把隔棋盘相坐的人
+         简化为"位置加计算"的方式。
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="sec-symmetric">
+      <span class="section-num">§ 7</span>
+      <h2>
+        <span data-lang-content="en">The symmetric form and the interchangeable subject</span>
+        <span data-lang-content="zh">对称形式与可互换的主体</span>
+      </h2>
+      <div data-lang-content="en">
+        <p>The sleights set out in §§ 2–6 belong to the contemporary commercial implementation of chess. They are recent, contingent on a particular institutional and economic structure, and in principle removable: a different platform, a different business model, a different enforcement regime could in principle alter any of them. A further sleight, older and more thoroughly naturalized, operates at the level of the rule form of chess itself, and is specific to no platform. It concerns the theory of the subject that the symmetric form of fair play presupposes.</p>
+
+        <p>The rules of chess prescribe full positional symmetry at the start. Each side begins with sixteen pieces of identical type and distribution. The board is bisected without remainder. The first-move advantage attaches to a color, not to a person. The only asymmetry permitted is the asymmetry that emerges in the course of play, through the decisions of the two sides. This is the formal signature of <em>fair play</em>: outcomes are required to derive from the process, not from the starting structure. Sport in its modern codified form generalizes the pattern; the ELO rating system and the competitive ladders of online play extend it numerically.</p>
+
+        <p>The symmetric form is not a neutral form. It carries a specific theory of the subject. To enter the game one must occupy the position of "White" or "Black"—and these positions are defined exclusively by the moves available to them under the rule set. Everything that distinguishes one player from another outside the game—history, body, language, culture, training, the particulars that constitute a person as the person she is—is not registered by the rule form. Within the game, the participants are <em>interchangeable rational subjects</em>, individuated only by position (which side, which moves taken) and by computational output (which moves they will take). This is structurally cognate to the subject theory of Kantian universalizability and of Rawlsian justice behind the veil of ignorance,<a class="fn-ref" href="#fn-9">[9]</a> in which justice is secured precisely by stripping the particulars of persons and treating them as exchangeable bearers of rational agency.</p>
+
+        <p>The reduction is not derivative of any platform; it is in the rules. Over-the-board chess and chess.com both perform it, though the platform layer further mechanizes and quantifies the reduced subject (§ 5). What is naturalized in both cases is the identification of "the player" with the position-plus-computation that the rule form admits. The remainder—the person who actually sits down—is treated as outside the activity, available perhaps for post-game commentary or biographical interest, but not as a participant <em>qua</em> particular.</p>
+
+        <p>An ancient and continuous philosophical tradition treats this reduction as the wrong answer to the question of how persons and differences ought to be related under conditions of competition. The tradition is <em>agonistic</em>—from Greek <em>ἀγών</em>, contest—and its core thesis is that real differences between persons ought to be acknowledged in the structure of the competition rather than abstracted away from it. The locus classicus is Homeric. In <em>Iliad</em> I, Achilles refuses Agamemnon's distribution of honor (<em>τιμή</em>) on the grounds that it fails to reflect actual excellence (<em>ἀρετή</em>); the conflict that drives the poem turns on a discrepancy between formal rank and real worth.<a class="fn-ref" href="#fn-10">[10]</a> Pindar's epinician odes give the position its sustained articulation: the Olympic victor is celebrated not as the holder of a position abstractable from his person but as a particular man whose specific excellence has been revealed through the contest, and whose victory is the contest's actual point.<a class="fn-ref" href="#fn-11">[11]</a> Nietzsche, in the early essay <em>Homer's Contest</em>, reads the whole of pre-Socratic Greek culture through this category, and treats the modern egalitarian reflex—the impulse to neutralize differences through formal equality—as a late and pathological reversal.<a class="fn-ref" href="#fn-12">[12]</a></p>
+
+        <p>The position is not exclusive to the Greek lineage. In the <em>Analects</em> 3.7, Confucius observes that the gentleman does not contend; if he must, it is in archery. The structure of the archery rite—mutual bowing on ascent, the descent, the drinking that follows—is ceremonial and on its surface egalitarian; but the entire point of the rite is that the differences in skill among the participants are made visible and acknowledged within it, with the losing party drinking the ritual cup.<a class="fn-ref" href="#fn-13">[13]</a> The rite does not erase difference; it stages a form within which difference is honored. The pre-Confucian Zhou aristocratic ethic of the <em>shi</em> (士) more broadly treats the proportional acknowledgment of <em>de</em> (德) and martial-ritual excellence through rank and honor as the basic shape of justice.</p>
+
+        <p>Concrete contemporary game forms preserve the agonistic structure. In polo, the handicap system assigns each player a numerical rating; in matches between teams of unequal aggregate rating, the difference is awarded as a starting score to the lower-rated side, so that the formal asymmetry of the starting condition reflects the actual asymmetry of player strength. The handicap is not a concession but a structural feature of the competition. In Go, the <em>letting-pieces</em> (让子) tradition has the stronger player place stones on the board before play begins, in numbers proportional to the rating gap, so that the game proper begins from an asymmetric position calibrated to the actual difference between the two players. In both cases the starting position is asymmetric <em>because</em> the players are; the formal asymmetry is the means by which competition between actually unequal participants can be genuine. The contrast with chess is exact: chess refuses, at the level of rule form, to acknowledge in the starting position any difference between the participants that exists prior to the game.</p>
+
+        <p>The contrast yields a structural claim. The symmetric form of fair play and the agonistic form of acknowledged difference are two distinct answers to the same underlying question: <em>how should real differences between persons enter the structure of competition?</em> The symmetric form answers: they should not; the competition should be insulated from prior differences, so that its outcome reflects only what occurs within it. The agonistic form answers: they should; the competition should register prior differences in its starting structure, so that what occurs within it is a genuine contest between the participants as they actually are. Both answers carry philosophical tradition behind them; neither is the default position of "competition as such." The symmetric form's appearance as default is itself a historical achievement of modern liberalism, codified sport, and the legal-administrative apparatus that supports them.</p>
+
+        <div class="cmptable" data-lang-content="en">
+          <div class="cmptable-cap">Two ethical forms, one underlying question</div>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Symmetric form (fair play)</th>
+                <th>Agonistic form (acknowledged difference)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cmptable-dim">Starting position</td>
+                <td>Fully symmetric; the two sides are formally equivalent</td>
+                <td>Asymmetric; prior differences are registered in the starting structure</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">Status of difference</td>
+                <td>Must emerge from the process</td>
+                <td>Must be registered before the process begins</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">Participant treated as</td>
+                <td>Interchangeable rational subject (position + computation)</td>
+                <td>Concrete person carrying particular history, body, training</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">Conception of justice</td>
+                <td>Formal equality (arithmetic)</td>
+                <td>Proportional acknowledgment (geometric)</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">Philosophical tradition</td>
+                <td>Kantian universalizability; Rawls's veil of ignorance</td>
+                <td>Homer (Iliad I); Pindar; Confucius (Analects 3.7); Nietzsche</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">Contemporary instances</td>
+                <td>Chess; codified modern sport; ELO ladders</td>
+                <td>Polo handicap; Go letting-pieces; archery rites</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The sleight lies in this appearance. The symmetric rule form presents itself as a neutral framework for competition, when it is in fact one of two available ethical-formal traditions. By appearing neutral, it conceals the subject theory it imposes—that participants enter the activity as interchangeable rational subjects, and that whatever they are outside this position is irrelevant to the activity. The agonistic tradition, when set beside it, exposes the concealment: the symmetric form is not the absence of a subject theory but the presence of a specific and contestable one. A systematic exposition of the agonistic tradition—its internal tensions, its modern fate, its relation to ritual and to ranked societies—awaits separate development; the comparison drawn here serves only to displace the symmetric form's claim to neutrality.<a class="fn-ref" href="#fn-14">[14]</a></p>
+
+        <p>This is the deepest of the sleights set out above, and the one most resistant to disclosure. Unlike the platform-specific sleights of §§ 3–6, it cannot be undone by changing platforms or business models. Any future online or offline implementation of chess that preserves the symmetric rule form preserves this sleight as well. The sixteen pieces, identically distributed, remain the means by which the persons who sit down across them are reduced to position-plus-computation. What is taken for the natural form of "a fair game" is one of two formal traditions, presented as if there were no other.</p>
+      </div>
+      <div data-lang-content="zh">
+        <p>§§ 2–6 所陈述的障眼,属于国际象棋的当代商业实现。它们是新近的、依附于某种特定的制度与经济结构、原则上可拆除的——不同的平台、不同的商业模式、不同的执法体制,在原则上皆可改变其中任意一项。还有一层障眼,更古老、更彻底被自然化,运作于国际象棋自身的规则形式层面,不专属于任何平台。它涉及公平博弈的对称形式所预设的主体理论。</p>
+
+        <p>国际象棋的规则规定开局完全的位置对称。每一方以十六枚同型号、同分布的棋子起手。棋盘被无余地等分。先手优势附属于颜色,不附属于人。所允许的唯一不对称,是行棋过程中由双方决策产生的不对称。这是<em>公平博弈</em>的形式标志:结果被要求从过程中产生,而非从起始结构中产生。现代成文化的体育将这一形态一般化;在线对弈的 ELO 评分系统与排位天梯将其作数值上的延伸。</p>
+
+        <p>对称形式并非中立形式。它承载着一种特定的主体理论。要进入对局,参与者必须占据"白方"或"黑方"的位置——而这两个位置仅由规则集所允许的可走着法所定义。区分一位棋手与另一位棋手于对局之外的一切——历史、身体、语言、文化、训练、使一个人之所以为这个人的种种特殊性——并不被规则形式登记。在对局之内,参与者是<em>可互换的理性主体</em>,仅以位置(执何方、走过何子)与计算输出(将走何步)被个体化。这与康德的可普遍化主体理论、Rawls 无知之幕之后的正义理论所设的主体在结构上同源——<a class="fn-ref" href="#fn-9">[9]</a> 正义在那一传统中,正是通过剥除人之特殊性、将人作为可互换的理性能动者承担者来加以保障的。</p>
+
+        <p>这一简化不是平台层面的衍生物;它就在规则之中。桌前对弈与 chess.com 同样在执行它,只是平台层进一步将被简化的主体予以机械化与量化(§ 5)。两种情况下被自然化的,皆是把"棋手"等同于规则形式所允许的"位置加计算"。其余的——那个实际坐下来的人——被处理为活动之外,或许可供对局之后的评论或传记兴趣使用,但不作为<em>具特殊性</em>的参与者进入活动。</p>
+
+        <p>有一个古老而绵延的哲学传统,把这一简化判作"在竞争条件下应如何处理人与人之差异"这一问题的错误答案。这一传统是<em>agonistic</em>(竞争性的)——其名取自希腊语 <em>ἀγών</em>(竞赛)——其核心命题为:人与人之间真实的差异,应当在竞争的结构之中被承认,而非从结构中被抽象掉。经典出处是荷马式的。阿喀琉斯在《伊利亚特》第一卷中拒绝阿伽门农对荣誉(<em>τιμή</em>)的分配,理由是该分配不能反映实际的卓越(<em>ἀρετή</em>);驱动整部史诗的冲突,即转动于形式等级与真实价值之间的落差。<a class="fn-ref" href="#fn-10">[10]</a> 品达的颂胜诗为这一立场给出了持续而完整的表达:奥运胜者并不是作为一个可从其本人抽象出的位置占据者被歌颂,而是作为一个具体的人,其特定卓越通过竞赛得到揭示,而这一胜利正是竞赛真正的所在。<a class="fn-ref" href="#fn-11">[11]</a> 尼采在早期文稿《荷马的竞赛》(<em>Homer's Contest</em>)中以这一范畴贯穿对前苏格拉底希腊文化的整体阅读,并把现代的平等主义反射——通过形式平等中和差异的冲动——视为一种晚期的、病态的逆转。<a class="fn-ref" href="#fn-12">[12]</a></p>
+
+        <p>这一立场不专属于希腊脉络。《论语·八佾》第七章载孔子曰:"君子无所争,必也射乎!揖让而升,下而饮,其争也君子。"射礼的结构——升时互揖、降时如仪、终而饮酒——在形式上是仪典化的,表层上看是均等的;但整个射礼的真正所在,恰在于使参与者之间的射艺差异在仪典之内得以可见与承认,败者饮罚酒。<a class="fn-ref" href="#fn-13">[13]</a> 仪典并不消去差异;它陈设一种形式,在其中差异得以礼敬。前儒的周代士的等级伦理,更广泛地把对德与礼乐武艺之卓越按比例予以等级与荣誉的承认,视为正义的基本形态。</p>
+
+        <p>具体的当代游戏形式中,仍保有 agonistic 结构。马球(polo)有让分制度,为每位球员设定一个数值评级;在两队总评级不等的对局中,差额作为起始比分授予评级较低的一方,使开局条件在形式上的不对称反映球员实力上的实际不对称。让分不是一种迁就,而是竞赛的结构性特征。围棋有<em>让子</em>的传统:较强一方在对局开始前于棋盘上摆下子粒,数量与双方水平差额成比例,使正式对局自一个按双方实际差异校准的不对称位置开始。两种情形中,开局位置之所以不对称,<em>正是因为</em>对局双方不对称;形式上的不对称,是实际不相等的参与者之间得以进行真正竞争的方法。与国际象棋的对照是精确的:国际象棋在规则形式层面拒绝在开局位置中承认参与者于对局之前已有的任何差异。</p>
+
+        <p>这一对照给出一个结构性命题。公平博弈的对称形式与承认差异的 agonistic 形式,是对同一个底层问题的两种不同回答:<em>人与人之间真实的差异,应如何进入竞争的结构</em>?对称形式的回答是:不应进入;竞争应当被预先与既有差异隔绝,使其结果只反映其内部发生的事。Agonistic 形式的回答是:应当进入;竞争应当在起始结构中登记既有差异,使其内部发生的事,是参与者作为其实际所是者之间的真正较量。两个回答各有哲学传统支撑;两者都不是"竞争之为竞争"的默认立场。对称形式作为默认立场的外观,本身是现代自由主义、成文化体育、以及支持这二者的法律-行政装置的一项历史成就。</p>
+
+        <div class="cmptable" data-lang-content="zh">
+          <div class="cmptable-cap">两种伦理形式,同一个底层问题</div>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>对称形式(公平博弈)</th>
+                <th>Agonistic 形式(承认差异)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cmptable-dim">起始位置</td>
+                <td>完全对称;双方在形式上等价</td>
+                <td>不对称;既有差异在起始结构中被登记</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">差异的地位</td>
+                <td>必须从过程中产生</td>
+                <td>必须在过程开始之前被登记</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">参与者被视为</td>
+                <td>可互换的理性主体(位置 + 计算)</td>
+                <td>具特殊历史、身体、训练的具体人</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">对正义的设想</td>
+                <td>形式平等(算术)</td>
+                <td>按比例的承认(几何)</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">哲学传统</td>
+                <td>康德的可普遍化;Rawls 的无知之幕</td>
+                <td>荷马《伊利亚特》第一卷;品达;《论语·八佾》;尼采</td>
+              </tr>
+              <tr>
+                <td class="cmptable-dim">当代实例</td>
+                <td>国际象棋;成文化的现代体育;ELO 排位</td>
+                <td>马球让分;围棋让子;射礼</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>障眼即在这一外观之中。对称的规则形式将自己呈现为竞争的中立框架,实则它是两种可用的伦理-形式传统之一。藉由"看起来中立",它遮蔽了它所强加的主体理论——参与者以可互换的理性主体身份进入活动,而其在此位置之外所是,与活动无关。把 agonistic 传统与其并置,即可暴露此一遮蔽:对称形式不是某种主体理论之缺席,而是一种特定的、可争议的主体理论之在场。对 agonistic 传统的系统阐发——它的内部张力、它在现代世界中的命运、它与仪典与等级社会的关系——留待专文展开;此处对照的引入,仅在于消解对称形式对中立性的主张。<a class="fn-ref" href="#fn-14">[14]</a></p>
+
+        <p>这是上文所列障眼之中最深的一层,也是最难被揭穿的一层。不同于 §§ 3–6 中那些专属于平台的障眼,这一层不能通过更换平台或商业模式来解除。任何未来对国际象棋的在线或线下实现,只要保留对称规则形式,即同样保留这一障眼。十六枚同型号、同分布的棋子,仍是把隔棋盘相坐的人简化为"位置加计算"的方式。被当作"一局公平棋"之自然形式者,实为两种形式传统之一,以仿佛别无他途的姿态被呈现。</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         §8  推论与剩余 / Corollaries and remainders
+
+         核心论点:
+         - 五项推论:
+
+         一,关于"体育精神"的适用性
+            chess.com 上的活动不是体育,sportsmanship 不可平移
+            整个电竞产业在大规模做这种范畴错置
+            (借用体育语汇而不承担体育本体)
+
+         二,关于"作弊"概念的本体不稳定性
+            传统对弈中 "作弊" 指清晰物理事件,
+            chess.com 上指人为切割的连续认知谱边界
+            两者共享词项,本体范畴不同
+
+         三,关于"对手"的认识地位
+            无法在具体一局中严格证明对手为真人
+            统计命题不传递到具体局命题
+            "把对手当真人"是规范选择,不是事实推论
+
+         四,关于网络对弈平台的演化
+            换平台不改变底层本体
+            chess.com / lichess / chess24 共享同一 BFO 结构
+            批判针对整类,不针对具体公司
+
+         五,关于形式层障眼的不可拆除性
+            §2–§6 平台层障眼原则上可拆除
+            §7 形式层障眼不可——只能改规则形式本身
+            (让分/让子/仪典框架),那将是另一种游戏
+
+         剩余 / 邻接问题:
+         - 推广至其他电竞(MOBA/FPS/RTS)
+         - 与 game studies 传统(Consalvo)的关系
+         - 推广至其他"对连续现实施加离散规范"的制度
+           (学术诚信、IP法、内容审核、AI 文本鉴别)
+         - agonistic 传统的系统处理留待专文
+
+         素材 / 引用:
+         - Consalvo, Cheating (2007) [fn]
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="sec-coda">
+      <span class="section-num">§ 8</span>
+      <h2>
+        <span data-lang-content="en">Corollaries and remainders</span>
+        <span data-lang-content="zh">推论与剩余</span>
+      </h2>
+      <div data-lang-content="en">
+        <p>The preceding sections set out a layered account. § 2 establishes a category-level difference between over-the-board chess and chess.com play. § 3 identifies the institution's dependence on participants' cognitive blind spots. § 4 traces one such blind spot to its ontological source in the binary distinction between cheating and compliant play. § 5 reframes the institution as a commodity machine that sells fiat numerical tokens under the appearance of skill. § 6 supplies the behavioral mechanism by which consumption of those tokens is secured. § 7 locates a further sleight in the symmetric rule form itself, beneath any platform implementation. The name "chess" covers all of this at the lexical surface, and the appearance of unity is the condition under which the several sleights operate.</p>
+
+        <p>Several corollaries follow.</p>
+
+        <p><strong>First, on the applicability of "sportsmanship."</strong> The question whether one ought to observe sportsmanship on chess.com admits a strict answer: one ought not, on the ground that sportsmanship is the internal norm of the institution of sport, and the activity on chess.com is not sport, nor even chess (§ 2). Transplanting sportsmanship into the new setting is a category mistake—moving a norm whose home is embodied, face-to-face activity onto something whose ontology is information transmission. The esports industry currently performs this category mistake at scale: it borrows the vocabulary of sport (athletes, coaches, training, sportsmanship) without taking on sport's ontology. The result is free-riding on semantic resources—the ethical legitimacy of sport enjoyed, the ontological constraints of sport declined.</p>
+
+        <p><strong>Second, on the ontological instability of "cheating."</strong> chess.com and over-the-board chess share the word "cheating," but the word's ontological ground differs utterly. In over-the-board play, "cheating" picks out a clear class of physical events—engine smuggling, communication with a confederate. On chess.com, "cheating" picks out an artificial boundary on a continuous cognitive spectrum, drawn unilaterally by the site (§ 4). The two share a lexical item; they belong to different ontological categories. Carrying over the cheater's guilt from over-the-board play to chess.com is the same category mistake as the sportsmanship transplant.</p>
+
+        <p><strong>Third, on the epistemic status of "the opponent."</strong> In any particular game, the proposition "my chess.com opponent is human" cannot be rigorously demonstrated. Aggregate statistics—platform daily active users, total games played, offline-tournament participation—establish only a statistical proposition (most opponents are human); they do not transmit to a proposition about any specific game. Defaulting to "treat the opponent as human" under such uncertainty is a normative choice, not a factual inference. The choice is reasonable; the alternative, defaulting to "treat the opponent as non-human," would place the burden of proof on a possibly-existing real person, which is an unusual ethical posture. The result, however, is that any argument about "harming a real person" on chess.com cannot, strictly, be grounded in confirmation of a specific opponent's identity.</p>
+
+        <p><strong>Fourth, on the evolution of online-chess platforms.</strong> Switching from chess.com to lichess, chess24, or any future entrant does not alter the underlying ontology. Each is a network service that transmits packets and runs server-side state machines, not a process involving material pieces under bodily mediation. Whatever differences obtain at the level of business model, moderation policy, or non-profit status, all share the structure set out in §§ 2–6. The critique therefore targets the entire <em>class</em> of online-chess platforms; chess.com merely furnishes the most developed instance. Institutions of this class are structurally unstable: their enforcement objects do not constitute discrete events (§ 4); their legitimacy depends on participants' incomplete cognition (§ 3); the "value" of their actual product (ELO numbers) depends on a maintained appearance (§ 5); and the consumer's persistence depends on a reinforcement schedule rather than on the activity's intrinsic merit (§ 6). None of this implies immediate collapse—commercial institutions can persist for a long time under structural instability, so long as they can economically sustain the cost of maintaining appearances.</p>
+
+        <p><strong>Fifth, on the non-removability of the formal sleight.</strong> The platform-specific sleights of §§ 3–6 are in principle removable. A different legal regime, a non-profit operator, a different enforcement model, or a different commodity structure could in principle alter any of them. The sleight set out in § 7 is not removable in this way. Any future implementation of chess—offline or online, commercial or non-commercial—that preserves the symmetric rule form preserves the reduction of participants to interchangeable rational subjects. Reform at the institutional level does not reach the formal level. The only modifications that would reach it are modifications to the rule form itself: pre-game handicaps (as in polo, or in Go's letting-pieces tradition), a ritual frame that registers difference (as in archery rites), or some similar structural acknowledgment of pre-existing asymmetry between participants. Such modifications transform chess into a different game; they do not reform it.</p>
+
+        <p>Several adjacent questions sit at the edge of these results. How far the platform-level account generalizes beyond chess to other esports (MOBA, FPS, RTS) depends on the ontological specifics of those games; though they share with chess.com the basic framework of information transmission, their institutional structures, community dynamics, and sources of legitimacy differ. The relation to the game-studies tradition on "cheating as a form of participation" (Mia Consalvo and others)<a class="fn-ref" href="#fn-15">[15]</a> is complementary: that tradition emphasizes cheating's internality to game culture; the present account emphasizes its ontological underdetermination. How far the critical framework applies to other contemporary institutions that impose discrete norms on continuous cognitive or informational reality—academic integrity systems, intellectual-property law, content moderation, AI-versus-human text detection—remains an open generalization. The agonistic tradition introduced in § 7 awaits its own systematic treatment, of which the comparison drawn there is only an instance.</p>
+      </div>
+      <div data-lang-content="zh">
+        <p>前述各节构成一个分层的叙述。§ 2 在范畴层面确立桌前对弈与 chess.com 对弈之间的差异。§ 3 指认制度对参与者认知盲点的依赖。§ 4 把其中一种盲点追溯至其本体源头——"作弊"与"合规"之间的二元区分。§ 5 把该制度重构为一台以"棋艺"外观贩卖法定数字代币的商品机器。§ 6 提供保证该代币被消费的行为机制。§ 7 在规则形式本身之下指认更深的一层障眼,该障眼独立于任何平台实现。"chess"一词在词项表层覆盖以上一切,而统一外观正是诸种障眼得以运作的条件。</p>
+
+        <p>由此而来的若干推论。</p>
+
+        <p><strong>其一,关于"体育精神"的适用性</strong>。chess.com 上是否应当遵守体育精神,可被严格回答:不应,因为体育精神是体育建制的内在规范,而 chess.com 上的活动不是体育,甚至不是国际象棋(§ 2)。把体育精神平移至此,是一种范畴错置——将一项以具身、面对面活动为本籍的规范,平移至一项本体上是信息传输的活动。电竞产业目前正在大规模做这种范畴错置:借用体育的语汇(运动员、教练、训练、体育精神)而不承担体育的本体特性。结果是对语义资源的搭便车——享受体育伦理的合法性,而拒绝体育本体的约束。</p>
+
+        <p><strong>其二,关于"作弊"概念的本体不稳定性</strong>。chess.com 与桌前对弈共享"作弊"一词,但该词的本体地基在两处完全不同。桌前对弈中,"作弊"指向一类清晰的物理事件——走私引擎、与共谋者通讯。在 chess.com 上,"作弊"指向一条在连续认知谱上由网站单方面划定的人为边界(§ 4)。两者共用同一词项;它们属于不同的本体范畴。把桌前对弈的作弊愧疚感平移至 chess.com,与体育精神的平移,是同一类范畴错置。</p>
+
+        <p><strong>其三,关于"对手"的认识地位</strong>。在任一具体对局中,"我的 chess.com 对手是真人"这一命题无法被严格证明。整体统计——平台日活、对局总数、线下锦标赛参与——只能确立一个统计命题(对手们大多是真人),而不能传递至关于具体一局的命题。在此不确定之下,默认"按真人对待对手"是一种规范选择,不是事实推论。这一选择是合理的;其反面——默认"按非真人对待对手"——将举证责任放在可能存在的真人对手那一边,是非常规的伦理立场。但其结果是:关于 chess.com 上"伤害真人"的论证,在严格意义上无法基于对具体对手身份的确证。</p>
+
+        <p><strong>其四,关于网络对弈平台的演化</strong>。从 chess.com 切换至 lichess、chess24、或将来任何新进入者,并不改变底层本体。每一个皆是传输数据包、运行服务器端状态机的网络服务,而非涉及物质棋子在身体中介下移动的过程。无论它们在商业模式、内容审核政策、是否营利等方面有何差异,皆共享 §§ 2–6 所陈述的结构。批判因此针对网络对弈平台这一<em>整类</em>;chess.com 只是该类中最成熟的实例。该类制度在结构上是不稳定的:其执法对象不构成离散事件(§ 4);其合法性依赖于参与者认知的不完全(§ 3);其实际产品(ELO 数字)的"含金量"依赖于持续维持的外观(§ 5);消费者的持续性依赖于一份强化时间表,而非依赖于活动自身的内在价值(§ 6)。这并不意味着它们会立即崩溃——商业制度可以在结构性不稳定的条件下维持相当长时间,只要其经济上能持续支付维持外观的成本。</p>
+
+        <p><strong>其五,关于形式层障眼的不可拆除性</strong>。§§ 3–6 所陈述的平台层障眼原则上可拆除。一套不同的法律框架、一个非营利运营者、一种不同的执法模型、或一种不同的商品结构,在原则上皆可改变其中任意一项。§ 7 所陈述的障眼则不属此列。任何未来对国际象棋的实现——线下或在线、商业或非商业——只要保留对称规则形式,即同样保留把参与者简化为可互换的理性主体这一操作。制度层面的改革达不到形式层面。能够到达形式层面的修改,只有对规则形式本身的修改:开局前的让分(如马球、围棋让子)、登记差异的仪典框架(如射礼)、或某种结构上对参与者既有不对称的承认。此类修改将国际象棋变为另一种游戏;它们并不改革国际象棋。</p>
+
+        <p>另有若干邻接问题位于上述论述的边缘。平台层叙述在多大程度上可推广至非象棋的电子竞技(MOBA、FPS、RTS),取决于这些游戏的本体特异性;它们与 chess.com 共享信息传输的基本框架,但其制度结构、社群动态、合法性来源各不相同。与游戏研究(game studies)传统中关于"作弊作为参与的一种形式"的讨论(Mia Consalvo 等)<a class="fn-ref" href="#fn-15">[15]</a>之间的关系是互补性的:该传统强调作弊在游戏文化中的内生性,上文则强调其本体上的欠定。该批判框架在多大程度上适用于其他将离散规范施加于连续认知或信息现实之上的当代制度——学术诚信制度、知识产权法、内容审核系统、AI 与人类文本鉴别——尚是开放的推广问题。§ 7 所引入的 agonistic 传统有待其自身的系统处理,此处的对照仅是其一例。</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         Notes & references — 重写各节后再补
+         ═══════════════════════════════════════════════════════════ -->
+    <section id="sec-notes">
+      <h2 class="notes-heading">
+        <span data-lang-content="en">Notes</span>
+        <span data-lang-content="zh">注释</span>
+      </h2>
+      <ol class="footnotes">
+        <li id="fn-1"><strong>[1]</strong> Smith, Barry, et al. "Basic Formal Ontology 2.0: Specification and User's Guide." 2015. ISO/IEC 21838-2:2020.
+          <span data-lang-content="en"> The participants–temporal-region–process-profile triad is the core of BFO's definition of process. Smith insists in multiple places that <em>process identity is jointly determined by its participants</em>.</span>
+          <span data-lang-content="zh"> 参与者—时间区域—过程类型三元组是 BFO 对过程之定义的核心。Smith 在多处反复强调:<em>过程的同一性由其参与者共同决定</em>。</span>
+        </li>
+        <li id="fn-2"><strong>[2]</strong> Marx, Karl. <em>Das Kapital</em>, Band I, Kapitel 1, Abschnitt 4: "Der Fetischcharakter der Ware und sein Geheimnis." 1867.
+          <span data-lang-content="en"> Chinese translation:《资本论》第一卷第一章第四节"商品的拜物教性质及其秘密"。</span>
+          <span data-lang-content="zh"> 中译可参《资本论》第一卷第一章第四节"商品的拜物教性质及其秘密"。</span>
+        </li>
+        <li id="fn-3"><strong>[3]</strong> Debord, Guy. <em>La Société du spectacle</em>. Paris: Buchet/Chastel, 1967. § 4: "Le spectacle n'est pas un ensemble d'images, mais un rapport social entre des personnes, médiatisé par des images."</li>
+        <li id="fn-4"><strong>[4]</strong> Zuboff, Shoshana. <em>The Age of Surveillance Capitalism</em>. New York: PublicAffairs, 2019. Han, Byung-Chul. <em>Psychopolitik: Neoliberalismus und die neuen Machttechniken</em>. Frankfurt: S. Fischer, 2014. Stiegler, Bernard. <em>Prendre soin: De la jeunesse et des générations</em>. Paris: Flammarion, 2008.</li>
+        <li id="fn-5"><strong>[5]</strong> Lukács, Georg. "Die Verdinglichung und das Bewußtsein des Proletariats." In <em>Geschichte und Klassenbewußtsein</em>. Berlin: Malik-Verlag, 1923.
+          <span data-lang-content="en"> Lukács derives the concept of Verdinglichung from Marx's commodity fetishism: the process by which inter-personal relations are experienced as relations between things.</span>
+          <span data-lang-content="zh"> Verdinglichung 概念由 Lukács 从 Marx 的商品拜物教引申而来,指人际关系被经验为物的关系的过程。</span>
+        </li>
+        <li id="fn-6"><strong>[6]</strong>
+          <span data-lang-content="en"> On voluntary reification and alienation in late modernity, see Han, Byung-Chul. <em>Müdigkeitsgesellschaft</em>. Berlin: Matthes & Seitz, 2010; and Rosa, Hartmut. <em>Resonanz: Eine Soziologie der Weltbeziehung</em>. Frankfurt: Suhrkamp, 2016. Both treat how late-modern subjects actively enter alienating structures, in contrast to the "compelled" worker of classical Marxism.</span>
+          <span data-lang-content="zh"> 关于自愿物化与晚期现代的异化,见 Han, Byung-Chul. <em>Müdigkeitsgesellschaft</em>. Berlin: Matthes & Seitz, 2010;及 Rosa, Hartmut. <em>Resonanz: Eine Soziologie der Weltbeziehung</em>. Frankfurt: Suhrkamp, 2016。两者皆处理晚期现代主体如何主动进入异化结构的现象,与古典 Marx 框架中"被迫进入"的工人形象形成对照。</span>
+        </li>
+        <li id="fn-7"><strong>[7]</strong> Ferster, C. B., and B. F. Skinner. <em>Schedules of Reinforcement</em>. New York: Appleton-Century-Crofts, 1957.
+          <span data-lang-content="en"> The canonical experimental treatment of fixed-interval, variable-interval, fixed-ratio, and variable-ratio schedules and their differential effects on response rate, persistence, and resistance to extinction.</span>
+          <span data-lang-content="zh"> 关于固定间隔、变率间隔、固定比率、变率比率四类强化时间表及其对反应率、持续性、抗消退性差异化影响的经典实验研究。</span>
+        </li>
+        <li id="fn-8"><strong>[8]</strong> Schüll, Natasha Dow. <em>Addiction by Design: Machine Gambling in Las Vegas</em>. Princeton: Princeton University Press, 2012.
+          <span data-lang-content="en"> Ethnographic and historical study of the deliberate optimization of variable-ratio mechanisms in twentieth-century slot-machine design, including the engineering of "the zone"—a state of dissociated continuous play.</span>
+          <span data-lang-content="zh"> 关于二十世纪老虎机设计中对变率强化机制之系统优化的人类学与历史研究,含对"the zone"(一种解离性持续投注状态)之工程化制造的考察。</span>
+        </li>
+        <li id="fn-9"><strong>[9]</strong> Rawls, John. <em>A Theory of Justice</em>. Cambridge, MA: Harvard University Press, 1971.
+          <span data-lang-content="en"> The veil of ignorance is introduced in § 24. The structurally relevant feature is that justice is secured by stripping particulars (race, class, talent, conception of the good) from the contracting parties, leaving rational agents individuated only by their position in the choice situation.</span>
+          <span data-lang-content="zh"> 无知之幕在第 24 节引入。在结构上相关的特征是:正义经由从契约者身上剥除特殊性(种族、阶级、禀赋、善的观念)而获得保障,留下的只是仅以其在选择情境中的位置而个体化的理性能动者。</span>
+        </li>
+        <li id="fn-10"><strong>[10]</strong> Homer, <em>Iliad</em> I.149–171, 225–244.
+          <span data-lang-content="en"> Achilles's rejection of Agamemnon's allocation of <em>geras</em> (war prize) and the resulting withdrawal from battle. On <em>timē</em> and <em>aretē</em> as agonistic categories, see Adkins, Arthur W. H. <em>Merit and Responsibility: A Study in Greek Values</em>. Oxford: Clarendon Press, 1960.</span>
+          <span data-lang-content="zh"> 阿喀琉斯拒绝阿伽门农对 <em>geras</em>(战利品)的分配,并因此退出战斗。关于 <em>timē</em>(荣誉)与 <em>aretē</em>(卓越)作为 agonistic 范畴的讨论,见 Adkins, Arthur W. H. <em>Merit and Responsibility: A Study in Greek Values</em>. Oxford: Clarendon Press, 1960。</span>
+        </li>
+        <li id="fn-11"><strong>[11]</strong> Pindar, <em>Olympian Odes</em>, esp. Ol. 1 (Hieron of Syracuse, 476 BCE) and Ol. 13 (Xenophon of Corinth, 464 BCE). Greek text and English translation: Race, William H. <em>Pindar I: Olympian Odes, Pythian Odes</em>. Loeb Classical Library 56. Cambridge, MA: Harvard University Press, 1997.
+          <span data-lang-content="en"> Kurke, Leslie. <em>The Traffic in Praise: Pindar and the Poetics of Social Economy</em>. Ithaca: Cornell University Press, 1991. Treats the epinician ode as a social mechanism for converting victory into proportional honor within the aristocratic order.</span>
+          <span data-lang-content="zh"> Kurke, Leslie. <em>The Traffic in Praise: Pindar and the Poetics of Social Economy</em>. Ithaca: Cornell University Press, 1991。把颂胜诗作为贵族秩序中将胜利转换为按比例分配之荣誉的社会机制来处理。</span>
+        </li>
+        <li id="fn-12"><strong>[12]</strong> Nietzsche, Friedrich. "Homer's Wettkampf" (1872). In <em>Kritische Studienausgabe</em>, vol. 1, edited by Giorgio Colli and Mazzino Montinari. Berlin: de Gruyter, 1980.
+          <span data-lang-content="en"> English translation: "Homer's Contest," in <em>The Portable Nietzsche</em>, edited by Walter Kaufmann. New York: Viking, 1954, pp. 32–39. On Nietzsche's agonistic ethics more broadly: Acampora, Christa Davis. <em>Contesting Nietzsche</em>. Chicago: University of Chicago Press, 2013.</span>
+          <span data-lang-content="zh"> 英译:"Homer's Contest",见 Walter Kaufmann 编 <em>The Portable Nietzsche</em>. New York: Viking, 1954, pp. 32–39。关于尼采 agonistic 伦理学的更系统讨论,见 Acampora, Christa Davis. <em>Contesting Nietzsche</em>. Chicago: University of Chicago Press, 2013。</span>
+        </li>
+        <li id="fn-13"><strong>[13]</strong> <em>论语·八佾</em> 3.7:"子曰:君子无所争,必也射乎!揖让而升,下而饮,其争也君子。"
+          <span data-lang-content="en"> See also <em>Liji</em>, "Sheyi" (射义) chapter, for the ceremonial structure of the archery rite and its function in registering rank-appropriate differences. English: Legge, James, trans. <em>The Lî Kî</em>. Sacred Books of the East 27–28. Oxford: Clarendon Press, 1885.</span>
+          <span data-lang-content="zh"> 另见《礼记·射义》对射礼仪典结构及其在差等承认上的功能之论述。</span>
+        </li>
+        <li id="fn-14"><strong>[14]</strong>
+          <span data-lang-content="en"> Adjacent treatments of the symmetric–agonistic tension include Hurka, Thomas. <em>Perfectionism</em>. Oxford: Oxford University Press, 1993, on excellence-based ethics; Anderson, Elizabeth. "What Is the Point of Equality?" <em>Ethics</em> 109, no. 2 (1999): 287–337, on the limits of egalitarian frameworks; and Connolly, William E. <em>Political Theory and Modernity</em>. Oxford: Blackwell, 1988, on agonistic strands in modern political thought. A standalone exposition of the agonistic tradition as it bears on competition, ritual, and the structure of difference remains to be written.</span>
+          <span data-lang-content="zh"> 与对称-agonistic 张力相邻的处理包括:Hurka, Thomas. <em>Perfectionism</em>. Oxford: Oxford University Press, 1993,关于以卓越为基础的伦理学;Anderson, Elizabeth. "What Is the Point of Equality?" <em>Ethics</em> 109, no. 2 (1999): 287–337,关于平等主义框架的限度;以及 Connolly, William E. <em>Political Theory and Modernity</em>. Oxford: Blackwell, 1988,关于现代政治思想中的 agonistic 脉络。把 agonistic 传统就其与竞争、仪典、差异结构的关系作为独立对象加以阐发的工作,尚待完成。</span>
+        </li>
+        <li id="fn-15"><strong>[15]</strong> Consalvo, Mia. <em>Cheating: Gaining Advantage in Videogames</em>. Cambridge, MA: MIT Press, 2007.
+          <span data-lang-content="en"> Consalvo treats cheating as internal to game culture rather than as external violation—complementary to but not coincident with the ontological path taken above.</span>
+          <span data-lang-content="zh"> Consalvo 把作弊视为游戏文化的内生组成部分而非外在违反,与上文所采取的本体论路径互补但不重合。</span>
+        </li>
+      </ol>
+    </section>
+
+
+  </main>
+</div>
+
+<!-- ─── Language toggle script ─────────────────────────────────── -->
+<script>
+(function() {
+  'use strict';
+
+  var body = document.body;
+  var buttons = document.querySelectorAll('.lang-toggle button[data-lang-set]');
+
+  function setLang(lang) {
+    body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh' : 'en');
+    buttons.forEach(function(b) {
+      if (b.getAttribute('data-lang-set') === lang) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+    try { localStorage.setItem('yifanova-lang', lang); } catch (e) { /* ignore */ }
+  }
+
+  try {
+    var saved = localStorage.getItem('yifanova-lang');
+    if (saved === 'en' || saved === 'zh') {
+      setLang(saved);
+    }
+  } catch (e) { /* ignore */ }
+
+  buttons.forEach(function(b) {
+    b.addEventListener('click', function() {
+      setLang(b.getAttribute('data-lang-set'));
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
