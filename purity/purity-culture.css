@@ -883,6 +883,73 @@ html { scroll-behavior: smooth; }
   font-size: 1.02rem;
 }
 
+/* ─── Objections (collapsible) ───────────────────────────────────── */
+.purity-culture-page .objection {
+  max-width: 50rem;
+  margin: 0.7rem 0;
+  border: 1px solid var(--an-rule);
+  border-radius: 3px;
+  background: var(--an-paper-deep);
+  overflow: hidden;
+}
+.purity-culture-page .objection summary {
+  display: list-item;
+  list-style: none;
+  padding: 0.85rem 1.1rem 0.85rem 2.2rem;
+  cursor: pointer;
+  font-family: var(--an-font-body);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--an-ink);
+  line-height: 1.5;
+  position: relative;
+  user-select: none;
+  transition: background 0.12s ease;
+}
+.purity-culture-page[data-lang="zh"] .objection summary {
+  font-family: var(--an-font-cn);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+.purity-culture-page .objection summary::-webkit-details-marker {
+  display: none;
+}
+.purity-culture-page .objection summary::marker {
+  content: "";
+}
+.purity-culture-page .objection summary::before {
+  content: "▸";
+  position: absolute;
+  left: 0.95rem;
+  top: 0.85rem;
+  color: var(--an-navy);
+  font-size: 0.85rem;
+  transition: transform 0.15s ease;
+  display: inline-block;
+}
+.purity-culture-page .objection[open] summary::before {
+  transform: rotate(90deg);
+  top: 0.9rem;
+  left: 0.85rem;
+}
+.purity-culture-page .objection summary:hover {
+  background: var(--an-pale-gray);
+}
+.purity-culture-page .objection[open] summary {
+  border-bottom: 1px solid var(--an-rule);
+  background: var(--an-paper-deep);
+}
+.purity-culture-page .objection > div {
+  padding: 1.1rem 1.25rem 0.4rem;
+  background: var(--an-paper);
+}
+.purity-culture-page .objection p {
+  font-size: 0.96rem;
+}
+.purity-culture-page[data-lang="zh"] .objection p {
+  font-size: 1rem;
+}
+
 /* Print styles — clean output if ever printed */
 @media print {
   .purity-culture-page .topbar, .purity-culture-page .toc, .purity-culture-page .lang-toggle { display: none; }
@@ -890,5 +957,11 @@ html { scroll-behavior: smooth; }
   .purity-culture-page .main { max-width: none; padding: 0; }
   .purity-culture-page .quiz { background: white; border-left-width: 2px; }
   .purity-culture-page .quiz-explanation { display: block !important; }
+  .purity-culture-page .objection { border: none; background: white; }
+  .purity-culture-page .objection summary { padding-left: 0; font-size: 1.05rem; }
+  .purity-culture-page .objection summary::before { display: none; }
+  .purity-culture-page .objection > div { padding: 0.5rem 0; }
+  .purity-culture-page details { display: block; }
+  .purity-culture-page details > *:not(summary) { display: block !important; }
   body.purity-culture-page { background: white; font-size: 11pt; }
 }
