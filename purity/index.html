@@ -1986,16 +1986,19 @@
 
   // Mobile TOC toggle
   var tocToggle = document.querySelector('.toc-mobile-toggle');
-  if (tocToggle) {
+  var tocListWrapper = document.querySelector('.toc-list-wrapper');
+  if (tocToggle && tocListWrapper) {
     tocToggle.addEventListener('click', function() {
       var expanded = tocToggle.getAttribute('aria-expanded') === 'true';
       tocToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      tocListWrapper.classList.toggle('is-open', !expanded);
     });
     // Auto-close mobile TOC when a link is clicked
     document.querySelectorAll('.toc-list-wrapper a').forEach(function(a) {
       a.addEventListener('click', function() {
         if (window.innerWidth < 1100) {
           tocToggle.setAttribute('aria-expanded', 'false');
+          tocListWrapper.classList.remove('is-open');
         }
       });
     });

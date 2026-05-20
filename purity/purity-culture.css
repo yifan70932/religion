@@ -601,7 +601,7 @@ html { scroll-behavior: smooth; }
     padding-top: 0.6rem;
     border-top: 1px solid var(--an-rule);
   }
-  .purity-culture-page .toc-mobile-toggle[aria-expanded="true"] + .toc-list-wrapper {
+  .purity-culture-page .toc-list-wrapper.is-open {
     display: block;
   }
 }
