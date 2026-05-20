@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mirage of Abstinence — yifanova.com</title>
+  <meta name="description" content="Personal wiki on purity cultures — the anthropology of pollution, Western and Chinese lineages, the empirical claims of the anti-masturbation tradition, gender politics, and documented harms. Bilingual EN / 中文.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&family=JetBrains+Mono:wght@400&display=swap">
+
+  <link rel="stylesheet" href="purity-culture.css">
+</head>
+
+<body class="purity-culture-page" data-lang="en">
+
+<!-- ─── Topbar ─────────────────────────────────────────────────── -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">Yifanova Personal Wiki</span>
+      <span class="brand-sep">|</span>
+      <span class="brand-page">Purity Culture</span>
+    </div>
+    <div class="lang-toggle" role="tablist" aria-label="Language">
+      <button type="button" data-lang-set="en" class="active">EN</button>
+      <button type="button" data-lang-set="zh">中文</button>
+    </div>
+  </div>
+</header>
+
+<!-- ─── Layout: TOC sidebar + main column ──────────────────────── -->
+<div class="layout">
+
+  <!-- ───── Table of contents ──────────────────────────────────── -->
+  <nav class="toc" aria-label="Table of contents">
+    <button class="toc-mobile-toggle" type="button" aria-expanded="false">
+      <span data-lang-content="en">Contents</span>
+      <span data-lang-content="zh">目录</span>
+    </button>
+    <p class="toc-title">
+      <span data-lang-content="en">Contents</span>
+      <span data-lang-content="zh">目录</span>
+    </p>
+    <div class="toc-list-wrapper">
+      <ol>
+        <li><a href="#sec-concepts">
+          <span data-lang-content="en">1 · Concepts &amp; Distinctions</span>
+          <span data-lang-content="zh">一 · 概念与区分</span>
+        </a></li>
+        <li><a href="#sec-frame">
+          <span data-lang-content="en">2 · The Anthropology of Purity</span>
+          <span data-lang-content="zh">二 · 贞洁文化的人类学</span>
+        </a></li>
+        <li><a href="#sec-western">
+          <span data-lang-content="en">3 · Western Lineage</span>
+          <span data-lang-content="zh">三 · 西方思想史脉络</span>
+        </a></li>
+        <li><a href="#sec-chinese">
+          <span data-lang-content="en">4 · Chinese Lineage</span>
+          <span data-lang-content="zh">四 · 中国思想史脉络</span>
+        </a></li>
+        <li><a href="#sec-empirical">
+          <span data-lang-content="en">5 · The Empirical Claims</span>
+          <span data-lang-content="zh">五 · 核心经验主张及其证据评估</span>
+        </a></li>
+        <li><a href="#sec-anatomy">
+          <span data-lang-content="en">6 · Anatomy of the Argument</span>
+          <span data-lang-content="zh">六 · 论证结构的批判</span>
+        </a></li>
+        <li><a href="#sec-gender">
+          <span data-lang-content="en">7 · Gender Politics</span>
+          <span data-lang-content="zh">七 · 性别政治</span>
+        </a></li>
+        <li><a href="#sec-sociology">
+          <span data-lang-content="en">8 · Sociological Dimensions</span>
+          <span data-lang-content="zh">八 · 社会学维度</span>
+        </a></li>
+        <li><a href="#sec-adjacent">
+          <span data-lang-content="en">9 · Adjacent Phenomena</span>
+          <span data-lang-content="zh">九 · 邻近现象与对照</span>
+        </a></li>
+        <li><a href="#sec-objections">
+          <span data-lang-content="en">10 · Objections &amp; Replies</span>
+          <span data-lang-content="zh">十 · 反驳与回应</span>
+        </a></li>
+        <li><a href="#sec-references">
+          <span data-lang-content="en">11 · References</span>
+          <span data-lang-content="zh">十一 · 参考文献</span>
+        </a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ───── Main column ────────────────────────────────────────── -->
+  <main class="main">
+
+    <!-- ───── Article header ──────────────────────────────────── -->
+    <header class="article-header">
+      <p class="kicker">
+        <span data-lang-content="en">On Purity Cultures</span>
+        <span data-lang-content="zh">论贞洁文化（purity cultures）</span>
+      </p>
+      <h1>
+        <span data-lang-content="en">The Mirage of Abstinence</span>
+        <span data-lang-content="zh">戒非良药</span>
+      </h1>
+
+      <blockquote class="epigraph">
+        <span data-lang-content="en">
+          The history of medicine proves that in so far as man seeks to know himself and face his whole nature, he has become free from bewildered fear, despondent shame, or arrant hypocrisy. As long as sex is dealt with in the current confusion of ignorance and sophistication, denial and indulgence, suppression and stimulation, punishment and exploitation, secrecy and display, it will be associated with a duplicity and indecency that lead neither to intellectual honesty nor human dignity.
+          <span class="attribution">Alfred Kinsey, <em>Sexual Behavior in the Human Male</em> (1948), p. 660</span>
+        </span>
+        <span data-lang-content="zh">
+          The history of medicine proves that in so far as man seeks to know himself and face his whole nature, he has become free from bewildered fear, despondent shame, or arrant hypocrisy. As long as sex is dealt with in the current confusion of ignorance and sophistication, denial and indulgence, suppression and stimulation, punishment and exploitation, secrecy and display, it will be associated with a duplicity and indecency that lead neither to intellectual honesty nor human dignity.
+          <span class="attribution">Alfred Kinsey, <em>Sexual Behavior in the Human Male</em> (1948), p. 660</span>
+        </span>
+      </blockquote>
+
+      <blockquote class="epigraph">
+        <span data-lang-content="en">
+          <em class="cjk">节烈这事，是极难，极苦，不愿身受，然而不利自他，无益社会国家，于人生将来又毫无意义的行为。……我们追悼了过去的人，还要发愿：要除去于人生毫无意义的苦痛。要除去制造并赏玩别人苦痛的昏迷和强暴。</em><br>
+          Chastity and martyrdom are something extremely difficult, extremely painful, not willingly borne, yet of no benefit to oneself or others, of no use to society or country, and of no meaning whatever for the life to come. … In mourning those who came before, we must also make this vow: to do away with the suffering that has no meaning for human life — to do away with the stupor and the violence that fabricates and savors the suffering of others.
+          <span class="attribution">Lu Xun 鲁迅, "My Views on Chastity" 《我之节烈观》, <em>New Youth 新青年</em> (1918)</span>
+        </span>
+        <span data-lang-content="zh">
+          <em>节烈这事，是极难，极苦，不愿身受，然而不利自他，无益社会国家，于人生将来又毫无意义的行为。……我们追悼了过去的人，还要发愿：要除去于人生毫无意义的苦痛。要除去制造并赏玩别人苦痛的昏迷和强暴。</em>
+          <span class="attribution">鲁迅，《我之节烈观》，《新青年》1918 年第 5 卷第 2 号</span>
+        </span>
+      </blockquote>
+    </header>
+
+    <!-- ───── §1 Concepts & Distinctions ──────────────────────── -->
+    <h2 id="sec-concepts"><span class="sec-num">1 ·</span>
+      <span data-lang-content="en">Concepts &amp; Distinctions</span>
+      <span data-lang-content="zh">概念与区分</span>
+    </h2>
+
+    <h3>
+      <span data-lang-content="en">Purity cultures, in the plural</span>
+      <span data-lang-content="zh">复数形态的贞洁文化</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p><span class="term">Purity cultures</span> — plural — name the family of belief systems that treat ordinary sexual experience, and in particular masturbation, as a form of pollution requiring abstinence, vigilance, and ritualized self-correction. American evangelical purity culture, the Chinese <em class="cjk">戒色</em> (<em>jiese</em>, "abstain from lust") subculture organized around the Baidu forum <em class="cjk">戒色吧</em>, the English-language <em>NoFap</em> / Semen Retention / "Reboot" community, the Indian revival of <em>brahmacharya</em> outside its classical renunciate context — not the same movement, but a shared structure.</p>
+
+      <p>None of these movements is best understood as a position about health, a position about religion, or a position about productivity, although each presents itself in those terms. They are instances of a single anthropological phenomenon: the management of bodies through the production of pollution.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p><span class="term">贞洁文化</span>（purity cultures，复数形式至关重要）——一组将普通的性经验、尤其将自慰视为一种需要禁绝、警惕、并通过仪式化的自我修正加以纠治的污染形式的信念系统。美国福音派的 purity culture、围绕百度贴吧戒色吧组织起来的中文戒色亚文化、英语世界的 NoFap / Semen Retention / "Reboot" 社群、在脱离古典遁世传统的语境下被重新激活的印度教 brahmacharya 复兴——不是同一运动，而是共享结构。</p>
+
+      <p>这些运动皆不能被恰当地理解为「关于健康的立场」、「关于宗教的立场」或「关于自律生产力的立场」，尽管它们各自正是以这些语言自我呈现。它们是同一种人类学现象的不同形态：通过<em>生产污染</em>来管理身体。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">The semantic field of <em class="cjk">色</em></span>
+      <span data-lang-content="zh">「色」的语义谱系</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The Chinese word <em class="cjk">色</em> (<em>sè</em>) that anchors the term <em class="cjk">戒色</em> has a layered history. In the classical Buddhist register it translates Sanskrit <em>rūpa</em> — form, materiality, the first of the five <em>skandhas</em>; the famous phrase <em class="cjk">色即是空</em> ("form is emptiness") in the <em>Heart Sūtra</em> uses <em class="cjk">色</em> in this sense and has nothing to do with sexual conduct. The narrower sense — lust, sexual desire, the sexually charged appearance of the female body — accumulated in vernacular usage and was reinforced by the Buddhist lay precept against <em class="cjk">邪淫</em> ("wrong sexual conduct").</p>
+
+      <p>The contemporary <em class="cjk">戒色</em> subculture inherits and exploits this ambiguity. Its rhetoric draws authority from the Buddhist register (citations of <em class="cjk">色即是空</em>, the contemplation of impurity <em class="cjk">不净观</em>, the white-bone visualization <em class="cjk">白骨观</em>) while operating entirely within the narrower sexual register. The same word that in the <em>Heart Sūtra</em> names the totality of conditioned phenomena is, in <em class="cjk">戒色吧</em>, narrowed to mean masturbation and pornography. This semantic compression is the first move of the subculture; everything else follows from it.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>「戒色」之中的「色」字，自带一段层累的语义史。在佛教经典语域中，「色」对译梵文 <em>rūpa</em>，意为形相、物质、五蕴之首；《心经》中「色即是空」之「色」即此义，与性事毫无关涉。狭义的「色」——指淫欲、性欲、女体所带的性意味——在白话用法中逐渐累积，又因佛教在家戒之「<em>邪淫</em>」而得到加强。</p>
+
+      <p>当代戒色亚文化正是承袭并利用了这一含混。其修辞从佛教语域中借取权威（援引「色即是空」，以「不净观」「白骨观」为戒色工具），却完全运作于狭义的性事语域内。在《心经》中本指一切有为法之总相的字，在戒色吧中被收窄为仅指自慰与色情。这一语义压缩，是戒色亚文化所做的第一个动作；之后的一切，都从这一动作衍生而来。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Core distinctions</span>
+      <span data-lang-content="zh">核心区分</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <dl>
+        <dt>Abstinence vs. temperance vs. <em>jiese</em></dt>
+        <dd><em>Abstinence</em> is the complete refraining from a class of action. <em>Temperance</em> is moderation within it. <em>Jiese</em> as a contemporary subcultural practice is neither: it is an open-ended program of self-correction in which any sexual self-stimulation, any sexual thought, and any exposure to sexually charged stimuli are construed as relapses against an unreachable target. The structural feature is not "no sex" but "perpetual vigilance against an enemy that resides in oneself."</dd>
+
+        <dt><em>Jiese</em> vs. NoFap vs. Semen Retention vs. Reboot</dt>
+        <dd>Independent genealogies that converged after roughly 2015. <em>Jiese</em> (PRC, organized through online forums from 2002, consolidated on Baidu Tieba in 2010) grew out of traditional Chinese medical discourse on <em class="cjk">肾精</em>, Buddhist lay precepts on <em class="cjk">邪淫</em>, and Confucian-inflected self-cultivation rhetoric. <em>NoFap</em> (Anglophone, 2011, founded by Alexander Rhodes) grew out of the online "porn addiction" recovery movement and Gary Wilson's <em>Your Brain on Porn</em>. <em>Semen Retention</em> (often capitalized as SR) and <em>Reboot</em> are roughly synonymous Anglophone terms, with SR carrying additional Hindu-tantric and "spiritual energy" overtones. These movements increasingly translate, cite, and reinforce one another despite their different historical sources — a convergence that is itself diagnostic.</dd>
+
+        <dt>Personal abstinence vs. <em>jiese</em> ideology</dt>
+        <dd>An individual who chooses celibacy or low sexual activity for reasons of preference, religious practice, or temperament is not a participant in a purity culture. What distinguishes the ideology is (i) a normative claim that <em>others</em> ought also to abstain, (ii) a causal claim that non-abstinence produces medical, psychological, or moral harm, and (iii) a social structure of mutual surveillance and confession through which (i) and (ii) are enforced.</dd>
+
+        <dt>The "harm of masturbation" claim: empirical, normative, or theological?</dt>
+        <dd>One of the persistent confusions in <em>jiese</em> discourse is the slide between three logically distinct claims: that masturbation is bad <em>for one's health</em> (empirical), that masturbation is bad <em>for one's life prospects and character</em> (normative), and that masturbation is <em>impure</em> or <em>polluting</em> (theological / quasi-theological). The subculture trades on the rhetoric of the first to do the work of the third. Distinguishing these is the precondition for any serious critique.</dd>
+
+        <dt>Purity culture vs. sex-negative conservatism</dt>
+        <dd>Sex-negative conservatism (religious traditionalism, classical Confucianism, much of mainstream culture before the 1960s) restricts sex to certain contexts — marriage, procreation, monogamy. Purity culture adds a further layer: it pathologizes sexual desire itself, not merely its expression outside sanctioned contexts. The conservative position permits marital sex without anxiety; the purity-culture position treats arousal itself as a pollution even within marriage. This distinction matters because purity culture cannot be defended as a "moderate" or "traditional" position — it is more extreme than the traditions whose authority it claims.</dd>
+      </dl>
+    </div>
+
+    <div data-lang-content="zh">
+      <dl>
+        <dt>禁欲（abstinence）vs. 节欲（temperance）vs. 戒色（<em>jiese</em>）</dt>
+        <dd>禁欲指对某类行为的完全戒除；节欲指在其中保持节制；当代戒色亚文化所言的「戒色」二者皆非——它是一项无终点的自我纠治计划，在其中任何性的自体刺激、任何性念头、任何对带有性意味之物的接触，都被诠释为对一个本不可达之目标的「破戒」。其结构特征不是「没有性」，而是「对栖居于自身之内的敌人的永久警戒」。</dd>
+
+        <dt>戒色 vs. NoFap vs. Semen Retention vs. Reboot</dt>
+        <dd>各自独立的谱系，约 2015 年后开始合流。「戒色」（中国大陆，自 2002 年起在网络论坛中组织，2010 年于百度贴吧定型）源自中医「肾精」话语、佛教在家戒「邪淫」之禁、以及带儒家底色的修身辞令。「NoFap」（英语世界，2011 年，由 Alexander Rhodes 创立）源自网络「色情成瘾」恢复运动以及 Gary Wilson 的《Your Brain on Porn》。「Semen Retention」（常缩写为 SR）与「Reboot」是大体同义的英语术语，其中 SR 另带印度教密宗与「灵性能量」色彩。这些运动虽源自不同历史，却日益相互翻译、相互援引、相互加固——这一合流本身就是诊断性的。</dd>
+
+        <dt>个人禁欲 vs. 戒色意识形态</dt>
+        <dd>一个出于偏好、宗教修行或性情而选择独身或低性活动的个体，并不因此就是某种贞洁文化的参与者。区分意识形态的，是：（i）一项规范性主张，即<em>他人</em>也应当戒除；（ii）一项因果主张，即不戒会带来医学、心理或道德上的伤害；以及（iii）一种通过相互监视与忏悔来执行（i）与（ii）的社会结构。</dd>
+
+        <dt>「手淫有害论」是经验命题、规范命题，还是神学命题？</dt>
+        <dd>戒色话语中一个反复出现的混淆，是在三种逻辑上不同的主张之间滑动：手淫有损<em>健康</em>（经验命题）、手淫有损<em>人生前景与品格</em>（规范命题）、手淫是<em>不洁</em>或<em>污染</em>（神学/准神学命题）。戒色亚文化借第一类的修辞，做第三类的工作。区分这三者，是任何严肃批判的前提。</dd>
+
+        <dt>贞洁文化 vs. 性消极保守主义</dt>
+        <dd>性消极保守主义（宗教传统主义、古典儒家、1960 年代前的多数主流文化）将性限制在特定语境中——婚姻、生殖、一夫一妻。贞洁文化在此之上又加一层：它将性欲本身病理化，而不仅是病理化其在被准许的语境之外的表达。保守立场允许夫妻间无焦虑的性事；贞洁文化立场则将「唤起」本身视为污染，即使在夫妻之间亦然。这一区分至关重要：贞洁文化不能被作为「温和」或「传统」立场来辩护——它比它所援引权威的那些传统本身要更极端。</dd>
+      </dl>
+    </div>
+
+
+    <!-- ───── §2 The Anthropology of Purity ───────────────────── -->
+    <h2 id="sec-frame"><span class="sec-num">2 ·</span>
+      <span data-lang-content="en">The Anthropology of Purity</span>
+      <span data-lang-content="zh">贞洁文化的人类学</span>
+    </h2>
+
+    <h3>
+      <span data-lang-content="en">Douglas: "matter out of place"</span>
+      <span data-lang-content="zh">道格拉斯：「错位之物」</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The anthropological foundation is Mary Douglas's <em>Purity and Danger</em> (1966). Douglas's central thesis can be stated very compactly: dirt is not an objective property of substances; dirt is "matter out of place." A shoe is not dirty on the doorstep; it is dirty on the dining table. Soil is not dirty in the garden; it is dirty under fingernails. What is treated as polluting in any given culture is whatever crosses or fails to respect the boundaries of that culture's classification system. Pollution beliefs are therefore not records of public-health knowledge; they are diagnostics of the social order's anxieties about its own boundaries.</p>
+
+      <p>Bodily fluids are universally polluting candidates because the body is itself the most immediate model of a bounded system. Anything that crosses the body's surface — blood, semen, saliva, urine, feces, menstrual fluid, tears, mucus, hair, nail clippings — sits in an ambiguous zone between "self" and "not-self." Different cultures elaborate this raw ambiguity into different pollution rules, but the basic structure recurs with remarkable consistency. Julia Kristeva's <em>Powers of Horror</em> (1980) develops the same intuition under the term <em>abject</em>: substances that elicit both repulsion and fascination precisely because they threaten the boundary between subject and object.</p>
+
+      <p>Semen is a particularly fraught case. It is simultaneously the carrier of generative life (highly sacred in most traditions) and an exudate of the body (highly polluting in most traditions). Released within the marital, procreative context, it is socially absorbed by the institutions that frame it. Released in masturbation, it crosses the body's boundary while connecting to nothing — no partner, no offspring, no institutional location. From the Douglasian standpoint, masturbation is the form of seminal emission least metabolizable by any classification system. This explains why anti-masturbation anxiety recurs across cultures with no historical contact between them — not because masturbation is "really" harmful, but because it occupies the structural position most likely to trigger pollution thinking.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>人类学的基础是 Mary Douglas《纯洁与危险》（<em>Purity and Danger</em>, 1966）。其核心论题可以极简陈述：污秽不是某种物质的客观属性；污秽是「错位之物」（matter out of place）。鞋在门口不脏，搬上餐桌就脏；土在花园里不脏，钻进指甲缝就脏。任何文化中被视为污染的，乃是那些跨越或未能尊重该文化分类系统之边界的物事。因此，污染观念并不是关于公共卫生知识的记录，而是社会秩序对其自身边界之焦虑的诊断书。</p>
+
+      <p>体液在跨文化的语料中普遍是污染的候选项，因为身体本身就是被划界系统最直接的模型。任何跨越身体表面的——血、精液、唾液、尿、便、经血、泪、黏液、毛发、指甲——都处在「我」与「非我」之间的模糊地带。不同文化把这一原初模糊性详化为不同的污染规则，但其基本结构以惊人的一致性反复出现。Julia Kristeva 在《恐怖的力量》（<em>Powers of Horror</em>, 1980）中用「卑贱体」（<em>abject</em>）一词发展了同一直觉：那些恰恰因为威胁了主客之界、而既引发排斥又引发着迷的物质。</p>
+
+      <p>精液是一个尤为棘手的案例。它同时是生殖生命的载体（在多数传统中高度神圣），又是身体的外渗物（在多数传统中高度污染）。在婚姻、生殖语境内释出时，它被框定它的社会制度吸纳消化；在自慰中释出时，它跨越了身体边界却不通向任何处——不通向伴侣，不通向子嗣，不通向制度位置。从道格拉斯的视角看，自慰是最难被任何分类系统消化的那种精液释出形式。这就解释了为什么反自慰焦虑会在彼此并无历史接触的文化中反复出现——不是因为自慰「真的」有害，而是因为它占据了最容易触发污染思维的那个结构位置。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Ricoeur: defilement as the most archaic symbol of evil</span>
+      <span data-lang-content="zh">利科：污秽作为关于恶的最古老象征</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Paul Ricoeur's <em>The Symbolism of Evil</em> (1960) approaches the same terrain from phenomenology rather than ethnography. Ricoeur reconstructs three successive "symbols" through which the experience of evil has been articulated in the religious traditions of the West: <em>defilement</em> (<em>souillure</em>), <em>sin</em>, and <em>guilt</em>. Defilement is the most archaic. It is the experience of evil <em>as if</em> it were a stain — something that adheres to the body and to objects, that contaminates by contact, and that demands purification through ritual washing, separation, or expulsion. Sin presupposes a relation to a personal God whose covenant has been violated; guilt presupposes an inward, juridical self that judges itself. Defilement presupposes neither — it is pre-personal, pre-juridical, somatic.</p>
+
+      <p>Ricoeur's point is not that defilement is a "primitive" form humanity has outgrown. His point is the opposite: defilement is the deepest stratum, the one onto which sin and guilt are superimposed but which they never replace. Even the most rationalized juridical conception of evil retains a residue of defilement-thinking. This is why a modern, secular, scientifically educated person can know intellectually that masturbation is harmless and still feel, somatically, that they are "dirty." The knowledge operates at the level of sin and guilt; the feeling operates at the level of defilement. Purity cultures work by activating and amplifying the defilement stratum that the rest of one's worldview has not been able to reach.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>Paul Ricoeur 的《恶的象征》（<em>La symbolique du mal</em>, 1960）从现象学而非民族志路径切入同一地带。利科重建了西方宗教传统中关于「恶」之经验的三个层累象征：<em>污秽</em>（défilement）、<em>罪</em>（péché）、<em>罪咎</em>（culpabilité）。污秽是最古老的。它是这样一种经验：将恶<em>仿佛</em>体验为一道污渍——附着于身体与器物，因接触而传染，必须通过仪式性的洗涤、隔离或驱逐而被清除。罪以与立约之人格神之关系的违反为前设；罪咎以内向的、法学化的、自我审判的我之形成为前设。污秽则二者皆不预设——它先于人格、先于法学，是身体性的。</p>
+
+      <p>利科要强调的不是污秽是人类已经超越的某种「原始」形式。他要强调的恰恰相反：污秽是最深的地层，罪与罪咎叠加于其上，却永远不能将它取代。即使是最理性化、最法学化的恶之观念，也保有污秽思维的残余。这就解释了为什么一个现代的、世俗的、受过科学教育的人，可以在理智上知道自慰无害，却仍然在身体层面感到自己「很脏」。知识运作于罪与罪咎的层面；感受运作于污秽的层面。贞洁文化正是通过激活并放大那一道其余世界观未能触达的污秽地层来发挥作用的。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Why is masturbation a target of shame? The multi-layered structure</span>
+      <span data-lang-content="zh">自慰何以成为羞耻的对象？罪感的多层结构</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The question why masturbation in particular attracts shame across so many independently developed cultures admits no single-discipline answer. The most honest reconstruction is multi-layered. At the deepest layer — Douglas, Kristeva — there is the anthropology of body-boundary anxiety, which gives semen its structural position as a high-potential pollution candidate. This layer is universal but does not, by itself, produce shame; it only marks the position where shame may settle.</p>
+
+      <p>A second layer is the teleological conception of sexuality, in which sexual activity is legitimate only insofar as it serves an external purpose: procreation, marital union, spiritual cultivation. Augustine's <em>De civitate Dei</em>, Aquinas's <em>Summa Theologiae</em> II-II q.154 (which ranks "sins against nature" — masturbation, contraception, same-sex activity — as graver than rape and adultery because they violate natural order, not merely interpersonal order), the classical Confucian framing of <em class="cjk">夫妇之道</em>, the Buddhist lay precept against <em class="cjk">邪淫</em>, and Hindu <em>brahmacharya</em> all share this structure. None of them is identical, but each makes the same move: sexual pleasure must be tethered to a purpose, and untethered pleasure — masturbation paradigmatically — becomes the position hardest to legitimate.</p>
+
+      <p>A third layer is psychoanalytic. Freud's <em>Three Essays on the Theory of Sexuality</em> (1905) and <em>Civilization and Its Discontents</em> (1930) propose that sexual shame is not externally imposed knowledge that can be revised by counter-evidence, but a permanent psychic structure produced by the early internalization of prohibition. Even after the external prohibition has been rescinded — even when parents, doctors, and society explicitly affirm that masturbation is normal — the superego continues to operate at a layer beneath conscious belief. Wilhelm Reich (<em>The Mass Psychology of Fascism</em>, 1933) politicized this insight: sexual repression is not just an individual phenomenon but a technology that specific social orders use to produce compliant subjects. Foucault (<em>Histoire de la sexualité</em> I, 1976) partly inherits, partly contests this — for Foucault it is not <em>repression</em> but <em>discursive production</em> — but the operative consensus across these thinkers is that sexual shame is not adequately understood as a cognitive error.</p>
+
+      <p>A fourth layer is offered by evolutionary psychology. Dan Sznycer and colleagues (PNAS 2016 and subsequent work) argue that shame is an evolved emotion that tracks not "objective wrongdoing" but "reputational damage given information leakage." Masturbation in many cultures is constructed as a marker of low status — the resort of those who cannot secure partners, those without self-control — so it activates the shame system independently of any moral teaching. This layer explains why the affective signature of masturbation guilt is so heavily oriented toward concealment: not "I did wrong" but "I would be diminished if anyone knew."</p>
+
+      <p>A fifth, integrative layer is the work of contemporary purity-culture researchers — Linda Kay Klein's <em>Pure</em> (2018), Sara Moslener's <em>Virgin Nation</em> (2015), Jessica Valenti's <em>The Purity Myth</em> (2009), the Purity Culture Research Collective (House and Moslener, eds., 2024). Their contribution is to show that none of the above layers operates in isolation: a contemporary purity culture is a specific historical configuration in which body-boundary anxiety, teleological sexuality, internalized prohibition, reputational shame, and explicit doctrinal teaching are bound together into a self-reinforcing system. Klein's term for the resulting psychological pattern is <em>religious sexual shame trauma</em>, and her clinical observation is that its symptomatology — intrusive guilt, compulsive ritualized self-correction, dissociation, fear of one's own arousal, post-relapse despair — is recognizable across cases regardless of which specific purity culture produced it.</p>
+
+      <p>This is why <em>jiese</em> in China, NoFap on Reddit, and evangelical purity culture in the American Southeast produce phenomenologically similar suffering despite the absence of shared doctrine or shared institutional history. They are not the same teaching; they are the same psychological pattern, recruiting different teachings to clothe itself.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>「为什么唯独自慰会在如此之多彼此独立发展的文化中成为羞耻的对象」这一问题，没有任何单一学科的回答能称得上完整。最诚实的重建是分层的。在最深的一层——道格拉斯、克里斯蒂娃——是关于身体边界焦虑的人类学，它赋予精液在污染候选物中的那个结构性的高位。这一层是普遍的，但其自身并不直接产生羞耻；它只是标出羞耻可能落脚的位置。</p>
+
+      <p>第二层是性的目的论观念：性活动的正当性，仅在其服务于某一外在目的时方得成立——生殖、夫妇之合、灵修。奥古斯丁《上帝之城》、阿奎那《神学大全》II-II q.154（将「违反自然之罪」——自慰、避孕、同性行为——定为比强奸与通奸更重之罪，因前者违反自然秩序而不仅是人际秩序）、古典儒家对「夫妇之道」之框定、佛教在家戒之「邪淫」、印度教 brahmacharya——彼此并不全同，但都在做同一个动作：性快感必须系于一个目的，而脱离目的的快感——以自慰为典型——便成为最难以被正当化的那个位置。</p>
+
+      <p>第三层是精神分析的。Freud《性学三论》（1905）与《文明及其不满》（1930）提出：性羞耻并非可由反证修正的外在强加之知识，而是禁令早期内化所产生的一种永久心理结构。即使外部禁令已被解除——即使父母、医生与社会都明确表态自慰正常——超我仍在意识信念之下的层面持续运作。Wilhelm Reich（《法西斯主义群众心理学》，1933）将这一洞见政治化：性压抑不仅是个体现象，更是特定社会秩序用以生产顺从主体的技术。Foucault（《性史》第一卷，1976）部分继承部分反驳之——在他看来这不是「压抑」而是「话语生产」——但这一传统的操作性共识是：性羞耻不能被恰当地理解为一种认知错误。</p>
+
+      <p>第四层由进化心理学提供。Dan Sznycer 及合作者（PNAS 2016 及后续工作）论证：羞耻是一种进化形成的情感系统，它追踪的不是「客观上做错了」，而是「假如信息泄露我的声誉会受多大损害」。自慰在许多文化中被建构为低地位的标记——是无法获得伴侣者的退路、是自控力不足者的标志——它因而独立于任何道德教化而触发羞耻系统。这一层解释了为什么自慰罪感的情感签名如此重地朝向<em>隐蔽</em>而非朝向「做错了」：核心恐惧是「假如有人知道，我就被贬低了」。</p>
+
+      <p>第五层、也是整合性的一层，由当代贞洁文化研究者完成——Linda Kay Klein《Pure》（2018）、Sara Moslener《Virgin Nation》（2015）、Jessica Valenti《The Purity Myth》（2009）、Purity Culture Research Collective（House and Moslener 主编，2024）。她们的贡献在于揭示：上述各层从不孤立运作；任何具体的贞洁文化都是一组特定的历史配置，将身体边界焦虑、目的论性观念、内化禁令、声誉羞耻、明确教义熔于一炉，构成自我加固的系统。Klein 称由此产生的心理模式为<em>宗教-性羞耻创伤</em>（religious sexual shame trauma），其临床观察是：这一模式的症状学——侵入性罪感、强迫性的仪式化自我纠治、解离、对自己性唤起的恐惧、破戒后的绝望——可以在不同案例间被辨认出来，不论产生它的具体贞洁文化为何。</p>
+
+      <p>这就是为什么：中国的戒色、Reddit 上的 NoFap、美国东南部福音派的 purity culture，尽管彼此既无共同教义也无共同制度史，却产生现象学上高度相似的痛苦。它们不是同一套教导；它们是同一种心理模式，征用不同的教导为自己作衣。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">The recognizable structure of a purity culture</span>
+      <span data-lang-content="zh">可辨认的贞洁文化结构</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Across the literature on evangelical purity culture (Moslener, Klein, Valenti, Burke) and the literature on <em>jiese</em> (Liu and Chen 2019, Zhou 2020, He 2018), a recurring structural inventory emerges. Any specific movement that exhibits all or most of the following can be identified as an instance of the same anthropological phenomenon:</p>
+
+      <ul>
+        <li><strong>The pollution/purity binary.</strong> Persons and acts are sorted into the categories of "clean" and "dirty"; the categories are exhaustive and stable; intermediate or contextual judgments are foreclosed.</li>
+        <li><strong>Pathologization of desire itself.</strong> Not only acts but the experience of arousal, the occurrence of fantasy, the involuntary physiological responses of the body, are construed as failures requiring correction.</li>
+        <li><strong>The body as a container that can be defiled.</strong> The body is figured as a vessel — God's temple in evangelical discourse, the storehouse of <em class="cjk">肾精</em> in <em>jiese</em> discourse, the dopamine-regulated reward system in NoFap discourse — whose contents can be depleted, contaminated, or corrupted by improper use.</li>
+        <li><strong>The relapse-shame-recommitment cycle.</strong> Inevitable failure is built into the practice. Failure produces intensified shame, which is metabolized as renewed commitment. The cycle is self-reinforcing because each relapse "proves" the doctrine of the seriousness of the offense.</li>
+        <li><strong>Public commitment and external surveillance.</strong> Purity rings, purity pledges, and purity balls in evangelical contexts; daily check-ins, "streak" counters, sponsor relationships, and confession threads in <em>jiese</em> and NoFap. The practice is structurally social even when ostensibly private.</li>
+        <li><strong>Gender asymmetry.</strong> Almost without exception, purity cultures construct one gender (usually male) as the locus of "struggle" against desire, and the other (usually female) as either the contaminating stimulus or the contaminated victim of the struggle. This asymmetry is constitutive, not incidental.</li>
+        <li><strong>Binding of personal purity to collective destiny.</strong> Evangelical purity culture ties sexual purity to national security (Moslener 2015); <em>jiese</em> ties it to national rejuvenation through the <em class="cjk">少年强则国强</em> ("when youth are strong the nation is strong") rhetoric and the inherited spectre of the <em class="cjk">东亚病夫</em> ("sick man of East Asia"). The individual body becomes a synecdoche for the body politic.</li>
+      </ul>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>跨越福音派 purity culture 研究（Moslener、Klein、Valenti、Burke）与戒色研究（Liu 与 Chen 2019、周浪 2020、何竞祺 2018）的文献，可以归纳出一份反复出现的结构清单。任何具体运动只要展现以下大部分或全部条目，即可被辨认为同一人类学现象的一个例子：</p>
+
+      <ul>
+        <li><strong>污染/纯洁的二元。</strong>人与行为被归入「干净」与「脏」两类；这一分类穷尽且稳定；中间的、依语境而定的判断被预先封闭。</li>
+        <li><strong>性欲本身的病理化。</strong>不仅行为，而且性唤起的感受、性幻想的发生、身体不自主的生理反应，都被诠释为需要纠治的失败。</li>
+        <li><strong>身体作为可被玷污的容器。</strong>身体被形象化为一个容器——在福音派话语中是「神的殿」，在戒色话语中是「肾精」之府，在 NoFap 话语中是由多巴胺调节的奖赏系统——其内容可因使用不当而被耗损、污染、败坏。</li>
+        <li><strong>破戒-羞耻-重新承诺的循环。</strong>不可避免的失败被建构进实践本身。失败催生加深的羞耻，羞耻被代谢为重新的承诺。这一循环自我加固——每一次破戒都「证明」了该信条所主张之罪的严重性。</li>
+        <li><strong>公开承诺与外部监视。</strong>福音派语境中的贞洁戒指、贞洁誓言、贞洁舞会；戒色与 NoFap 中的每日打卡、连续天数计数、师兄-戒友关系、忏悔贴。其实践在结构上是社会性的，即使表面上是私人事务。</li>
+        <li><strong>性别非对称。</strong>几乎无例外地，贞洁文化将一性（通常是男性）建构为对抗欲望「挣扎」的承担者，将另一性（通常是女性）建构为污染源、或为这一挣扎的受害者。这一非对称是构成性的，不是附带的。</li>
+        <li><strong>个人纯洁与集体命运的绑定。</strong>福音派 purity culture 将性纯洁系于国家安全（Moslener 2015）；戒色话语借「少年强则国强」之论与「东亚病夫」的传承幽灵，将其系于民族复兴。个体身体成为国族身体的提喻。</li>
+      </ul>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Three consequences of the framing</span>
+      <span data-lang-content="zh">由这一框架推出的三项后果</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>First: the question "is the empirical claim about masturbation true?" (§5) is one question among several, and not the deepest. The <em>jiese</em> framework can be rejected even by someone who took its empirical claims at face value, because the framework is doing anthropological work that does not depend on its empirical claims being true.</p>
+
+      <p>Second: the defense that "<em>jiese</em> is simply a culturally specific Chinese practice grounded in traditional medicine and Buddhism" cannot succeed. The comparative anthropological data show that the same structural pattern appears in places with no Chinese cultural input — which means the framework's authority does not derive from the Chinese tradition it cites, even though the citations are real. The citations are post-hoc dressings on a pattern that would have appeared in some form regardless.</p>
+
+      <p>Third: the defense that "<em>jiese</em> is, at worst, a harmless placebo that helps young men live more disciplined lives" (the <em>Dingxiang Yisheng</em> position) cannot succeed either. The cost of the framework is not exhausted by its false empirical claims — it includes the entire weight of purity-culture pathology: the religious sexual shame trauma documented by Klein, the gendered violence documented by Moslener and Valenti, the iatrogenic harm documented by Prause and Binnie (2024). A framework that produces these costs cannot be defended on the grounds that its falsehoods happen to have some incidental benefits. The benefits are local; the harms are structural.</p>
+    </div>
+
+    <div data-lang-content="zh">
+      <p>其一：「关于自慰的经验主张是否为真」（§5）只是诸多问题之一，且不是最深的那一个。即使有人愿意接受戒色的经验主张为真，也仍然可以拒斥戒色框架，因为该框架所做的人类学工作并不依赖其经验主张为真。</p>
+
+      <p>其二：「戒色只是建立在中医与佛教之上的、有文化特殊性的中国实践」这一辩护不能成立。比较人类学数据显示：同一结构模式出现在没有任何中国文化输入的地方——这意味着该框架的权威不源自它所援引的中国传统，尽管那些援引本身是真实的。那些援引是事后披在一个无论如何都会以某种形式出现的模式之上的衣装。</p>
+
+      <p>其三：「戒色至多不过是一种无害的安慰剂，帮助年轻男性过上更有自律的生活」这一辩护（以「丁香医生」立场为代表）亦不能成立。该框架的代价并不能由其虚假的经验主张穷尽——它包含贞洁文化病理学的全部重量：Klein 所记录的宗教-性羞耻创伤、Moslener 与 Valenti 所记录的性别化暴力、Prause 与 Binnie（2024）所记录的医源性伤害。一个产生这些代价的框架，不能以其虚假主张恰好附带产生某些好处为由而被辩护。好处是局部的；伤害是结构性的。</p>
+    </div>
+
+
+    <!-- ───── §3 Western Lineage ──────────────────────────────── -->
+    <h2 id="sec-western"><span class="sec-num">3 ·</span>
+      <span data-lang-content="en">Western Lineage</span>
+      <span data-lang-content="zh">西方思想史脉络</span>
+    </h2>
+
+    <!-- TODO: §3 content -->
+
+    <!-- ───── §4 Chinese Lineage ──────────────────────────────── -->
+    <h2 id="sec-chinese"><span class="sec-num">4 ·</span>
+      <span data-lang-content="en">Chinese Lineage</span>
+      <span data-lang-content="zh">中国思想史脉络</span>
+    </h2>
+
+    <!-- TODO: §4 content -->
+
+    <!-- ───── §5 The Empirical Claims ─────────────────────────── -->
+    <h2 id="sec-empirical"><span class="sec-num">5 ·</span>
+      <span data-lang-content="en">The Empirical Claims</span>
+      <span data-lang-content="zh">核心经验主张及其证据评估</span>
+    </h2>
+
+    <!-- TODO: §5 content -->
+
+    <!-- ───── §6 Anatomy of the Argument ──────────────────────── -->
+    <h2 id="sec-anatomy"><span class="sec-num">6 ·</span>
+      <span data-lang-content="en">Anatomy of the Argument</span>
+      <span data-lang-content="zh">论证结构的批判</span>
+    </h2>
+
+    <!-- TODO: §6 content -->
+
+    <!-- ───── §7 Gender Politics ──────────────────────────────── -->
+    <h2 id="sec-gender"><span class="sec-num">7 ·</span>
+      <span data-lang-content="en">Gender Politics</span>
+      <span data-lang-content="zh">性别政治</span>
+    </h2>
+
+    <!-- TODO: §7 content -->
+
+    <!-- ───── §8 Sociological Dimensions ──────────────────────── -->
+    <h2 id="sec-sociology"><span class="sec-num">8 ·</span>
+      <span data-lang-content="en">Sociological Dimensions</span>
+      <span data-lang-content="zh">社会学维度</span>
+    </h2>
+
+    <!-- TODO: §8 content -->
+
+    <!-- ───── §9 Adjacent Phenomena ───────────────────────────── -->
+    <h2 id="sec-adjacent"><span class="sec-num">9 ·</span>
+      <span data-lang-content="en">Adjacent Phenomena</span>
+      <span data-lang-content="zh">邻近现象与对照</span>
+    </h2>
+
+    <!-- TODO: §9 content -->
+
+    <!-- ───── §10 Objections & Replies ────────────────────────── -->
+    <h2 id="sec-objections"><span class="sec-num">10 ·</span>
+      <span data-lang-content="en">Objections &amp; Replies</span>
+      <span data-lang-content="zh">反驳与回应</span>
+    </h2>
+
+    <!-- TODO: §10 content -->
+
+    <!-- ───── §11 References ──────────────────────────────────── -->
+    <h2 id="sec-references"><span class="sec-num">11 ·</span>
+      <span data-lang-content="en">References</span>
+      <span data-lang-content="zh">参考文献</span>
+    </h2>
+
+    <!-- TODO: §11 content -->
+
+  </main>
+</div>
+
+<!-- ─── Language toggle script ─────────────────────────────────── -->
+<script>
+(function() {
+  'use strict';
+
+  var body = document.body;
+  var buttons = document.querySelectorAll('.lang-toggle button[data-lang-set]');
+
+  function setLang(lang) {
+    body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh' : 'en');
+    buttons.forEach(function(b) {
+      if (b.getAttribute('data-lang-set') === lang) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+    try { localStorage.setItem('yifanova-lang', lang); } catch (e) { /* ignore */ }
+  }
+
+  // Restore language preference if previously set
+  try {
+    var saved = localStorage.getItem('yifanova-lang');
+    if (saved === 'en' || saved === 'zh') {
+      setLang(saved);
+    }
+  } catch (e) { /* ignore */ }
+
+  buttons.forEach(function(b) {
+    b.addEventListener('click', function() {
+      setLang(b.getAttribute('data-lang-set'));
+    });
+  });
+
+  // Mobile TOC toggle
+  var tocToggle = document.querySelector('.toc-mobile-toggle');
+  if (tocToggle) {
+    tocToggle.addEventListener('click', function() {
+      var expanded = tocToggle.getAttribute('aria-expanded') === 'true';
+      tocToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    });
+    // Auto-close mobile TOC when a link is clicked
+    document.querySelectorAll('.toc-list-wrapper a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (window.innerWidth < 1100) {
+          tocToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
