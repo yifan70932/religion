@@ -843,6 +843,46 @@ html { scroll-behavior: smooth; }
   margin-top: 0.6rem;
 }
 
+/* ─── Coda ───────────────────────────────────────────────────────── */
+.purity-culture-page .coda {
+  max-width: 50rem;
+  margin: 4rem 0 3.5rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--an-rule);
+}
+.purity-culture-page .coda-lead {
+  font-family: var(--an-font-ui);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--an-ink-soft);
+  font-style: italic;
+  max-width: 42rem;
+  margin: 0 0 1.75rem 2.5rem;
+}
+.purity-culture-page[data-lang="zh"] .coda-lead {
+  font-family: var(--an-font-cn);
+  font-style: normal;
+  line-height: 1.85;
+  font-size: 0.96rem;
+}
+.purity-culture-page .coda-lead em {
+  font-style: italic;
+  color: var(--an-ink);
+}
+.purity-culture-page[data-lang="zh"] .coda-lead em {
+  font-style: normal;
+}
+.purity-culture-page .coda-epigraph {
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--an-ink);
+  border-left: 3px solid var(--an-navy);
+  padding-left: 1.25rem;
+}
+.purity-culture-page[data-lang="zh"] .coda-epigraph {
+  font-size: 1.02rem;
+}
+
 /* Print styles — clean output if ever printed */
 @media print {
   .purity-culture-page .topbar, .purity-culture-page .toc, .purity-culture-page .lang-toggle { display: none; }
