@@ -189,7 +189,7 @@ body.purity-culture-page[data-lang="zh"] {
   font-size: clamp(2rem, 4.2vw, 2.6rem);
   line-height: 1.18;
   letter-spacing: -0.015em;
-  color: var(--an-ink);
+  color: var(--an-navy);
   margin: 0 0 0.6rem;
   max-width: 50rem;
 }
@@ -881,6 +881,32 @@ html { scroll-behavior: smooth; }
 }
 .purity-culture-page[data-lang="zh"] .coda-epigraph {
   font-size: 1.02rem;
+}
+
+/* ─── In-text citation links ─────────────────────────────────────── */
+.purity-culture-page .main p a[href^="#ref-"],
+.purity-culture-page .objection a[href^="#ref-"] {
+  color: var(--an-navy);
+  text-decoration: none;
+  border-bottom: 1px solid var(--an-rule);
+  transition: border-color 0.12s ease;
+}
+.purity-culture-page .main p a[href^="#ref-"]:hover,
+.purity-culture-page .objection a[href^="#ref-"]:hover {
+  border-bottom-color: var(--an-navy);
+}
+/* Highlight the referenced entry when jumped to */
+.purity-culture-page .references li:target {
+  background: var(--an-pale-blue);
+  outline: 2px solid var(--an-navy);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ─── Medical verdict emphasis ───────────────────────────────────── */
+.purity-culture-page .verdict {
+  font-weight: 700;
+  color: var(--an-navy);
 }
 
 /* ─── Objections (collapsible) ───────────────────────────────────── */
