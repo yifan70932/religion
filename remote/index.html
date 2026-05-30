@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To the Sublime Remote — yifanova.com</title>
+  <meta name="description" content="Personal wiki on remoteness and the sublime — the philosophy of the sublime from Burke to Schopenhauer, and an ontology of remoteness as a multidimensional, relational property rather than a function of distance. Bilingual EN / 中文.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&family=JetBrains+Mono:wght@400&display=swap">
+
+  <link rel="stylesheet" href="remoteness-sublime.css">
+</head>
+
+<body class="remoteness-page" data-lang="en">
+
+<!-- ─── Topbar ─────────────────────────────────────────────────── -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">Yifanova Personal Wiki</span>
+      <span class="brand-sep">|</span>
+      <span class="brand-page">Remoteness &amp; the Sublime</span>
+    </div>
+    <div class="lang-toggle" role="tablist" aria-label="Language">
+      <button type="button" data-lang-set="en" class="active">EN</button>
+      <button type="button" data-lang-set="zh">中文</button>
+    </div>
+  </div>
+</header>
+
+<!-- ─── Layout: TOC sidebar + main column ──────────────────────── -->
+<div class="layout">
+
+  <!-- ───── Table of contents ──────────────────────────────────── -->
+  <nav class="toc" aria-label="Table of contents">
+    <button class="toc-mobile-toggle" type="button" aria-expanded="false">
+      <span data-lang-content="en">Contents</span>
+      <span data-lang-content="zh">目录</span>
+    </button>
+    <p class="toc-title">
+      <span data-lang-content="en">Contents</span>
+      <span data-lang-content="zh">目录</span>
+    </p>
+    <div class="toc-list-wrapper">
+      <ol>
+        <li><a href="#sec-sublime">
+          <span data-lang-content="en">1 · The Sublime: A Philosophical Lineage</span>
+          <span data-lang-content="zh">一 · 崇高：一条哲学谱系</span>
+        </a></li>
+        <li><a href="#sec-vector">
+          <span data-lang-content="en">2 · The Ontology of the Remote</span>
+          <span data-lang-content="zh">二 · 远方的本体论</span>
+        </a></li>
+        <li><a href="#sec-probes">
+          <span data-lang-content="en">3 · Non-Places and the Anthropology of the Network</span>
+          <span data-lang-content="zh">三 · 非地方与网络的人类学</span>
+        </a></li>
+        <li><a href="#sec-corners">
+          <span data-lang-content="en">4 · Fiat Corners &amp; Bona Fide Corners</span>
+          <span data-lang-content="zh">四 · fiat 角落与 bona fide 角落</span>
+        </a></li>
+        <li><a href="#sec-axes">
+          <span data-lang-content="en">5 · Latitude, Longitude, and Two Geographies</span>
+          <span data-lang-content="zh">五 · 纬度、经度与两种地理学</span>
+        </a></li>
+        <li><a href="#sec-region">
+          <span data-lang-content="en">6 · Functional Regions, Enrolment, Withdrawal</span>
+          <span data-lang-content="zh">六 · 功能区、认领与撤离</span>
+        </a></li>
+        <li><a href="#sec-convergence">
+          <span data-lang-content="en">7 · Where the Two Concepts Meet</span>
+          <span data-lang-content="zh">七 · 两个概念的交汇</span>
+        </a></li>
+        <li><a href="#sec-references">
+          <span data-lang-content="en">8 · References</span>
+          <span data-lang-content="zh">八 · 参考文献</span>
+        </a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ───── Main column ────────────────────────────────────────── -->
+  <main class="main">
+
+    <!-- ───── Article header ──────────────────────────────────── -->
+    <header class="article-header">
+      <p class="kicker">
+        <span data-lang-content="en">On Remoteness &amp; the Sublime</span>
+        <span data-lang-content="zh">论远方与崇高</span>
+      </p>
+      <h1>
+        <span data-lang-content="en">To the Sublime Remote</span>
+        <span data-lang-content="zh">致崇高的远方</span>
+      </h1>
+
+      <blockquote class="epigraph">
+        <span data-lang-content="en">
+          The high mountain, one looks up to; the great way, one travels. Though one cannot reach it, in one's heart one yearns toward it.
+          <span class="attribution">Sima Qian, <em>Records of the Grand Historian</em>, "Hereditary House of Confucius" (c. 94 BCE); the first couplet quotes <em>Shijing</em>, "Chexia" (Mao 218).</span>
+        </span>
+        <span data-lang-content="zh">
+          高山仰止，景行行止。虽不能至，然心向往之。
+          <span class="attribution">司马迁，《史记·孔子世家》「太史公曰」（约公元前 94 年）；前两句出自《诗经·小雅·车舝》。</span>
+        </span>
+      </blockquote>
+
+      <blockquote class="epigraph">
+        <span data-lang-content="en">
+          The sublime may be described in this way: it is an object (of nature) the representation of which determines the mind to regard the elevation of nature beyond our reach as equivalent to a presentation of ideas.
+          <span class="attribution">Immanuel Kant, <em>Critique of the Power of Judgment</em> (1790), §29</span>
+        </span>
+        <span data-lang-content="zh">
+          崇高可以如此描述：它是（自然的）一个对象，对它的表象规定心灵去把那超出我们所能企及的自然之提升，看作对诸理念的一种呈现。
+          <span class="attribution">伊曼努尔·康德，《判断力批判》（1790），§29</span>
+        </span>
+      </blockquote>
+    </header>
+
+    <!-- ───── §1 The Sublime: A Philosophical Lineage ─────────── -->
+    <h2 id="sec-sublime"><span class="sec-num">1 ·</span>
+      <span data-lang-content="en">The Sublime: A Philosophical Lineage</span>
+      <span data-lang-content="zh">崇高：一条哲学谱系</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>"The sublime" (<em>hypsos</em>, <em>das Erhabene</em>, <em>le sublime</em>) names an aesthetic category whose object has shifted dramatically across two millennia, while the inner logic of the category has remained recognizably one and the same. What follows traces that logic through five waystations: the rhetorical sublime of Longinus, the empirical-psychological sublime of Burke, the critical sublime of Kant, the metaphysical sublime of Schopenhauer, and the human-geographical recasting in Yi-Fu Tuan. Across these treatments the sublime never finally settles in any object; it is consistently rediscovered as a <em>relation</em> in which a finite subject encounters a magnitude, power, or extent that exceeds its faculties, and registers that excess as a peculiar elevation. This subject-relational structure is what licences, much later, the move from aesthetic theory to a geography of the remote: if the sublime is the encounter with what exceeds the subject's reach, then the geography of remote places is, among other things, the geography of where such encounters are most readily occasioned.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>「崇高」（希腊文 <em>hypsos</em>、德文 <em>das Erhabene</em>、法文 <em>le sublime</em>）所命名的，是一个美学范畴；在两千年间，它所指认的对象屡经迁移，而范畴自身的内在逻辑却始终保持着可被辨识的同一。下文沿五个驿站追溯这一逻辑：朗吉努斯的修辞学崇高、伯克的经验心理学崇高、康德的批判哲学崇高、叔本华的形而上学崇高，以及段义孚把它重铸到人文地理学之中。在这一连串处理之中，崇高从未最终安置于任何对象之内；它一再被重新发现为一种<em>关系</em>——有限的主体与某种超出其官能的量级、威力或广延相遇，并把这一逾越登录为一种独特的升越。正是这一以主体—关系为中心的结构，使得长久之后，从美学理论向远方之地理的过渡成为可能：倘若崇高是与那超出主体所能笼罩之物的相遇，则远方之地理，便也是这类相遇最易发生之地的地理。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Longinus: the rhetorical prehistory</span>
+      <span data-lang-content="zh">朗吉努斯：修辞学的前史</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The earliest systematic discussion enters the Western tradition through a first-century Greek treatise, <em>Peri Hypsous</em> (<em>On the Sublime</em>), conventionally attributed to "Longinus." There the sublime (<em>hypsos</em>, literally "height") is a quality of <em>discourse</em>, not of nature: the power of great writing to transport the reader and to produce not persuasion but ecstasy (<em>ekstasis</em>, a standing-outside-oneself). What matters for the later geographical sublime is already present in embryo. The sublime is defined by its <em>effect upon the subject</em>, by the experience of being lifted, displaced, overwhelmed, rather than by any catalogue of intrinsic features. The relocation of the term from rhetoric to mountains and oceans took seventeen centuries, but its subject-centred logic was settled from the start.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>最早的系统讨论，是经由公元一世纪一篇希腊文论著《论崇高》（<em>Peri Hypsous</em>）进入西方传统的，该文通常被归于「朗吉努斯」。在那里，崇高（<em>hypsos</em>，字面意为「高度」）是<em>言辞</em>的品质，而非自然的品质：是伟大的写作把读者带走、产生的不是说服而是出神（<em>ekstasis</em>，一种站立于自身之外）的力量。对后来「地理学的崇高」至关重要的内核，已在此萌芽。崇高由其<em>对主体的效果</em>所定义——被提升、被移位、被压倒的经验——而非由任何内在特征的清单所定义。这一术语从修辞学迁移到山岳与海洋之间，花去了十七个世纪；但以主体为中心的逻辑，自一开始便已奠定。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Burke: terror at a safe distance</span>
+      <span data-lang-content="zh">伯克：安全距离之外的恐惧</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Edmund Burke's <em>Philosophical Enquiry</em> (1757) gives the sublime its first systematic modern treatment and grounds it not in reason but in the passions, ultimately in the body. For Burke the ruling principle of the sublime is <em>terror</em>: whatever is fitted to excite the ideas of pain and danger. The self-preservation instinct, the strongest of the passions, is engaged. But the decisive qualification is that the terror must be contemplated from safety. Actual danger merely terrifies; danger viewed from a position of security converts into <em>delight</em> (Burke's technical term for the sublime's negative pleasure, distinguished from positive <em>pleasure</em>). The sublime is "a sort of delightful horror, a sort of tranquillity tinged with terror."</p>
+
+      <p>Burke catalogues the sources: <em>obscurity</em> (what is dimly seen is more terrible than what is clearly shown, as in darkness or fog), <em>power</em>, <em>privation</em> (vacuity, darkness, solitude, and silence), <em>vastness</em>, <em>infinity</em>, <em>difficulty</em>, and <em>magnificence</em>. The list reads, in retrospect, as a precise inventory of the affective repertoire of the remote: the obscuring fog of a northern coast, the privation of an empty tundra, the vastness of an icefield, the silence of a depopulated place. Burke did not write about geography, but his catalogue of the terrible-at-a-distance is the affective grammar that the cult of remote landscape would later draw on.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>埃德蒙·伯克的《哲学探究》（1757）给予崇高以第一次系统的现代处理，并将它奠基于理性之外、奠基于激情，最终奠基于身体。对伯克而言，崇高的统辖原则是<em>恐惧</em>（terror）：凡适于激起痛苦与危险之观念者。自我保存的本能，激情中最强者，被调动起来。然而决定性的限定在于：这恐惧必须从安全处被观照。真实的危险只会令人恐怖；从安全位置观看的危险，则转化为<em>delight</em>（伯克用以指称崇高之否定性愉悦的专门术语，与肯定性的 <em>pleasure</em> 相区别）。崇高是「一种令人愉悦的惊骇，一种染着恐惧色彩的宁静」。</p>
+
+      <p>伯克列举了它的来源：<em>晦暗</em>（隐约所见比清晰所示更可怖，如黑暗、如雾）、<em>力量</em>、<em>匮乏</em>（空无、黑暗、孤独与寂静）、<em>广袤</em>、<em>无限</em>、<em>艰难</em>、以及<em>壮丽</em>。事后回看，这份清单读起来恰是「远方」之情感曲目的一份精确清单：北方海岸那遮蔽视线的雾、空旷苔原的匮乏、冰原的广袤、一座被弃之地的寂静。伯克并未书写地理，但他这份「远处之可怖」的清单，正是后来对远方景观之崇拜所借取的情感语法。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Kant: the sublime is in us, not in nature</span>
+      <span data-lang-content="zh">康德：崇高在我们之中，不在自然之中</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Kant's treatment in the <em>Critique of the Power of Judgment</em> (1790) is the hinge on which the whole concept turns from object to subject. Kant agrees the sublime begins in an encounter with magnitude or might, but insists that, strictly speaking, <span class="verdict">we express ourselves incorrectly if we call any object of nature sublime</span>. The ocean is not sublime; the formless, boundless, or overwhelming object merely <em>occasions</em> a movement in us, and it is that movement which deserves the name.</p>
+
+      <p>The mechanism is a two-beat drama. First, a check: the imagination, tasked with comprehending an absolute magnitude (the <em>mathematical</em> sublime) or confronted with overwhelming might (the <em>dynamical</em> sublime), <em>fails</em>. It cannot present the whole, and the mind suffers a momentary "outrage on the imagination," a felt inadequacy. Then, a recoil: this very failure awakens the awareness of a faculty in us that <em>does</em> exceed all sense, namely reason, with its ideas of the infinite and of our moral vocation. The displeasure of imaginative defeat flips into the elevated pleasure of discovering our supersensible destiny. The sublime, for Kant, is therefore not a feeling of nature's superiority but, paradoxically, of <em>our own</em>: the storm reveals that there is something in us no storm can touch.</p>
+
+      <p>Two consequences carry forward. First, the doctrine of <em>negative presentation</em>: the sublime is given only through the inadequacy of presentation, in the breakdown of the imagination's effort, never shown directly, only indicated by a failure to show. Second, the relocation of the sublime to the subject is the exact template for the relocation of remoteness to the subject-network relation. Kant's move, expressed as "no object is sublime; the relation is," is reproduced, structurally, in the move "no place is remote; the relation is."</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>康德在《判断力批判》（1790）中的处理，是整个概念由对象转向主体所凭借的枢轴。康德同意崇高始于与量级或威力的相遇，却坚持：严格说来，<span class="verdict">如果我们把任何自然对象称为崇高的，我们的表达就是不正确的</span>。大海并不崇高；那无形的、无界的、或压倒性的对象，仅仅<em>引发</em>我们之中的一个运动，而正是那运动才配得上这一名号。</p>
+
+      <p>其机制是一出两拍的戏剧。第一拍，受挫：想象力受命去综合一个绝对的量级（<em>数学的</em>崇高），或面对压倒性的威力（<em>力学的</em>崇高），却<em>失败</em>了。它无法呈现那整体，心灵遭受片刻「对想象力的凌辱」，一种被感受到的不足。第二拍，反弹：恰恰是这一失败，唤醒了对我们之中某种<em>确实</em>超出一切感官之官能的觉知，即理性，连同它关于无限、关于我们道德使命的诸理念。想象力之败北的不快，翻转为发现我们超感性使命的崇高愉悦。因此，对康德而言，崇高并非一种关于自然之优越的感受，而吊诡地，是关于<em>我们自身</em>之优越的感受：风暴揭示出，我们之中有某种东西是任何风暴都触不到的。</p>
+
+      <p>有两个后果向后延展。其一，<em>否定性呈现</em>的学说：崇高只能经由呈现之不足、经由想象力之努力的崩解而被给予——从不被直接展示，唯由展示的失败所指示。其二，崇高向主体的重新定位，正是「远」向「主体—网络之关系」之重新定位的精确范本。康德的步骤——「没有对象是崇高的；崇高的是关系」——在结构上被「没有地方就其自身而言是远的；远的是关系」这一步骤所复制。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Schopenhauer: the sublime as will-less seeing</span>
+      <span data-lang-content="zh">叔本华：作为无意志之观看的崇高</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Schopenhauer, in <em>The World as Will and Representation</em> (1818), inherits Kant's subject-centred analysis but recasts it in his own metaphysics. For Schopenhauer, ordinary perception is enslaved to the will: we see things as means or threats to our striving. Aesthetic contemplation is the rare suspension of this servitude. The subject becomes a "pure, will-less, painless, timeless subject of knowledge," contemplating the object's Platonic Idea rather than its relation to one's desires.</p>
+
+      <p>The beautiful makes this suspension easy; the object is amenable, and we slide into disinterested contemplation. The sublime makes it <em>hard</em>. The object is hostile to the will, vast enough to annihilate the body, or so overpowering that it threatens the perceiver, and yet the subject <em>tears itself free</em> of the will's clamour and contemplates anyway. Schopenhauer grades the sublime by the violence of this self-extrication, from the "weakest" sublime (a still, empty landscape that merely lacks objects for the will) up through storms and cataracts to the "fullest" sublime: the contemplation of the immensity of the universe, in which the individual dwindles to nothing and yet, as the knowing subject, is paradoxically the bearer of that whole world. The empty, will-indifferent landscape (the desert, the tundra, the polar waste) is for Schopenhauer a privileged occasion of the sublime precisely <em>because</em> it offers the will nothing: nothing to want, nothing to fear immediately, only bare extent. This is the most direct philosophical warrant for the felt pull of barren, remote country.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>叔本华在《作为意志与表象的世界》（1818）中，承袭了康德以主体为中心的分析，却在自己的形而上学中将其重铸。对叔本华而言，寻常的知觉受奴役于意志：我们把事物看作对我们欲求之追逐的手段或威胁。审美的观照，是这一奴役状态的罕见悬置。主体成为「纯粹的、无意志的、无痛苦的、无时间的认识主体」，所观照的是对象的柏拉图理念，而非它与人之欲望的关系。</p>
+
+      <p>优美使这一悬置变得容易；对象是顺从的，我们滑入无利害的观照之中。崇高则使它变得<em>艰难</em>。对象敌对于意志：广袤到足以毁灭身体，或压倒性到威胁着观看者；而主体却<em>挣脱</em>意志的喧嚣，仍然去观照。叔本华按这一自我挣脱之剧烈的程度，为崇高分级：自「最弱」的崇高（一片静止、空旷、仅仅缺乏供意志攫取之对象的风景），经由风暴与瀑布，直至「最完满」的崇高，即对宇宙之无垠的观照——其中个体萎缩为乌有，却作为认识的主体，吊诡地成为那整个世界的承载者。空旷的、与意志漠不相关的风景——沙漠、苔原、极地的荒野——之所以对叔本华而言是崇高的优先场合，恰恰<em>因为</em>它向意志提供了一无所有：无可欲求，无可立即恐惧，唯余赤裸的广延。这是「贫瘠的远方」那被感受到的吸引力，最直接的哲学根据。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Tuan: topophilia and the landscapes of fear</span>
+      <span data-lang-content="zh">段义孚：恋地情结与恐惧的地景</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The geographer Yi-Fu Tuan provides the bridge from the philosophical sublime to lived geographical experience. In <em>Topophilia</em> (1974) he names the affective bond between person and place, and insists that environmental perception is never neutral registration but always value-laden, shaped by culture, body, and biography. In <em>Landscapes of Fear</em> (1979) he maps the obverse: the way human environments are structured around dread of nature, of the wilderness beyond the settlement, of the dark beyond the fire. Tuan's contribution to the present argument is to convert the sublime from a moment of disinterested aesthetic contemplation (Kant, Schopenhauer) into a fact about how humans <em>inhabit</em> and <em>fear</em> space, and so to make the sublime continuous with the geography of the remote. The settlement defines itself against an outside; the edge of the inhabited is also the edge of the comprehensible; and the pull toward that edge, the desire to stand where the human network thins to nothing, is topophilia and the sublime fused into a single motive.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>地理学家段义孚（Yi-Fu Tuan）提供了从哲学的崇高通往生活之地理经验的桥梁。在《恋地情结》（<em>Topophilia</em>, 1974）中，他为人与地之间的情感纽带命名，并坚持：环境知觉从来不是中性的记录，而总是负载着价值——由文化、由身体、由个人的生命史所塑造。在《恐惧的地景》（<em>Landscapes of Fear</em>, 1979）中，他描绘其反面：人类的环境如何围绕着惧怕而建构，惧怕自然，惧怕聚落之外的荒野，惧怕火光之外的黑暗。段义孚的贡献，是把崇高从一桩无利害的审美观照之片刻（康德、叔本华那里），还原为关于人类如何<em>栖居</em>并<em>惧怕</em>空间的事实，从而使崇高与远方之地理相连续。聚落是对着一个外部来界定自身的；可栖居者的边缘，亦即可理解者的边缘；而朝向那边缘的吸引，那种想要站到人类网络稀薄至无之处的欲望，正是恋地情结与崇高熔为单一动机之处。</p>
+    </div>
+
+    <!-- ───── §2 The Ontology of the Remote ───────────────────── -->
+    <h2 id="sec-vector"><span class="sec-num">2 ·</span>
+      <span data-lang-content="en">The Ontology of the Remote</span>
+      <span data-lang-content="zh">远方的本体论</span>
+    </h2>
+
+    <blockquote class="epigraph">
+      <span data-lang-content="en">
+        The wonders, marvels, and extraordinary sights of the world commonly lie in the perilous and the remote.
+        <span class="attribution">Wang Anshi, <em>Record of a Visit to Mount Baochan</em> (1054).</span>
+      </span>
+      <span data-lang-content="zh">
+        而世之奇伟、瑰怪、非常之观，常在于险远。
+        <span class="attribution">王安石，《游褒禅山记》（1054 年）。</span>
+      </span>
+    </blockquote>
+
+    <div data-lang-content="en">
+      <p>The relational conception of space developed in human geography over the past four decades supplies the frame for what follows. In the tradition associated above all with Doreen Massey, for whom space is not a container in which things sit but a "simultaneity of stories-so-far," a precarious achievement made of relations between entities with relation prior to identity, a place's properties are constituted by its connections rather than possessed intrinsically <span class="ref-cite">(Massey 1994, 2005)</span>. Remoteness, read through this lens, cannot be a property a place simply <em>has</em>. It is a fact about a place's position within, or exclusion from, the webs of relation through which space is produced. Massey's <em>power-geometry</em>, the thesis that movement and connection are distributed unevenly by relations of power, so that the same arrangement that extends one party's reach contracts another's, already implies that "how connected a place is" resolves into several distinct relations rather than one <span class="ref-cite">(Massey 1993)</span>.</p>
+
+      <p>From this follows the central claim of this part: <span class="term">remoteness is not a scalar</span>. The intuition that places can be arranged along a single axis from "near" to "remote," each assigned a number, is the source of most of the paradoxes the notion generates. The relational view recommends instead a <em>vector</em>: a bundle of related but non-coincident relations, on each of which a place stands independently, and which do not reduce to a common measure. This is continuous with a long recognition in spatial analysis that even accessibility, apparently a simple notion, is irreducibly multidimensional, and that <em>distance decay</em>, the attenuation of interaction with distance, runs at different rates for different kinds of flow, so that no single gradient captures a place's overall connectedness <span class="ref-cite">(Tobler 1970; Hägerstrand 1967)</span>.</p>
+
+      <p>That remoteness has this composite character can be drawn out of the older core-periphery literature, in which the "periphery" of a system is never defined by distance alone but by a confluence of dependence, weak integration, and limited control over the flows that pass through it <span class="ref-cite">(Friedmann 1966; Wallerstein 1974)</span>. To be peripheral is to stand in a particular kind of relation to a centre, and a place can be peripheral in one relation while central in another. Remoteness is the limiting case of peripherality: the condition of a place that several of these relations have thinned, or never reached. Because the relations are heterogeneous, the condition they jointly produce cannot be a single quantity.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>过去四十年间人文地理学所发展的空间关系性观念，为下文提供框架。在尤以多琳·马西（Doreen Massey）为代表的传统中，空间不是事物置身其中的容器，而是「诸『迄今为止的故事』之同时并存」，是由实体间关系构成的、不稳定的成就，其中关系先于身份；一个地方的种种性质，由它与他处的连接所构成，而非内在地自有<span class="ref-cite">（Massey 1994, 2005）</span>。循此而观，远方便不是一个地方所「拥有」之物。所谓远方，是说一处之所在，落在了空间得以生成的那张关系之网的稀薄处，或网眼之外。马西的<em>权力几何</em>（power-geometry）更指出，移动与连接由权力关系不均地分配，以致同一套安排在伸展一方的触及范围时收缩了另一方的；于是「一处与世界相连到何种程度」本就分解为若干条不同的关系，而非单一的一条<span class="ref-cite">（Massey 1993）</span>。</p>
+
+      <p>由此引出这一部分的核心主张：<span class="term">通往远方，从来不是一道可以用单一刻度量出的距离</span>。以为各处可以沿一根轴线、从「近」到「远」依次排开、各得一个数——这一念头，是这个题目所滋生之大半吊诡的根源。关系性的眼光转而提示一种<em>多维</em>的看法：远不是一个量，而是一束彼此相关却不重合的关系，一处在每一条关系上各自落位，而这些关系并不汇成一个共同的尺度。这与空间分析中由来已久的认识相通：连可达性这样看似简单的概念也不可化约地是多维的，而<em>距离衰减</em>（distance decay），即交往随距离而递减，对不同种类的流动以不同的速率发生，因而没有哪一条梯度能够独力道尽一处与世界相连的全貌<span class="ref-cite">（Tobler 1970；Hägerstrand 1967）</span>。</p>
+
+      <p>远之为远，其复合的性状，可以从更早的核心—边缘理论中抽绎出来。在那里，一个系统的「边缘」从来不由距离单独界定，而由依附、整合之薄弱、以及对穿行其间之流动缺乏掌控，三者交汇而成<span class="ref-cite">（Friedmann 1966；Wallerstein 1974）</span>。身处边缘，是与某个中心结成某一种关系；而一处可以在此一关系中居于边缘，却在彼一关系中身处中心。远方是边缘性的极限情形：是数条这样的关系都已稀薄、或从未抵达的所在。正因这些关系性质各异，它们共同生成的那个状态，便不可能是单一的一个量。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">The dimensions, derived from kinds of relation</span>
+      <span data-lang-content="zh">从关系的种类推导出的诸维度</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>If remoteness is the condition of standing outside, or weakly within, the relations through which space is produced, then its dimensions can be derived rather than merely listed. Each answers to a distinct <em>kind</em> of relation whose attenuation or absence constitutes a distinct mode of being remote. The decomposition below follows that principle: relation through physical distance, through enrolment in standardized networks, through the reliability of whatever links exist, through the reach of administration, through proximity to the physical limits of land and habitability, and through nearness to a cultural and historical world. It is offered as a working analysis, neither exhaustive nor strictly orthogonal; the substantive point is the multiplicity, and that no weighting which collapses the dimensions into one number is privileged over the others.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>若远方是「立于空间得以生成的诸关系之外、或仅微弱地居于其中」的状态，那么它的维度便可被推导，而非仅仅罗列。每一维各应于一<em>种</em>不同的关系，那关系的稀薄或缺席，便构成一种不同的「远」。下面的分解依此而来：经由物理距离的关系，经由对标准化网络之接入的关系，经由既有连接是否可靠的关系，经由行政所及的关系，经由与陆地及可栖居之物理极限相邻的关系，以及经由与某个文化与历史世界相亲近的关系。这是一种可用的分析，既不求穷尽，也不强求彼此正交；要紧的是这一多重本身，以及没有哪一种把诸维并作一个数的加权，能凌驾于其余之上。</p>
+    </div>
+
+    <div class="criterion" data-lang-content="en">
+      <span class="crit-label">Dimension 1 · Distance</span>
+      <p>The kilometres, hours, or fuel separating a place from a reference point. The plainest sense of "remote," and the least informative on its own. It is real but easily overridden by the others. In spatial analysis this is the province of <em>distance decay</em> and of Tobler's "first law of geography," that near things are more related than distant ones; yet the decay rate is specific to each kind of interaction, so distance alone underdetermines how connected a place is <span class="ref-cite">(Tobler 1970)</span>.</p>
+    </div>
+    <div class="criterion" data-lang-content="zh">
+      <span class="crit-label">维度一 · 距离</span>
+      <p>一处与某参照点之间相隔的公里、时辰或路程之耗。这是「远」最朴素的一义，单独看去也最少信息。它确乎存在，却极易被其余各维所盖过。在空间分析里，这属于<em>距离衰减</em>与托布勒「地理学第一定律」（近者较远者更相关）的领域；然而衰减之率因交往的种类而各异，故单凭距离，不足以道尽一处与世界相连的深浅<span class="ref-cite">（Tobler 1970）</span>。</p>
+    </div>
+
+    <div class="criterion" data-lang-content="en">
+      <span class="crit-label">Dimension 2 · Enrolment in standardized networks</span>
+      <p>Whether, and by which networks, a place has been taken up as worth connecting. The standardized, uniformly governed spaces that Augé calls <em>non-places</em>, his own examples being the motorway, the airport concourse, and the supermarket, extend their coverage to some points and not others <span class="ref-cite">(Augé 1992)</span>. A place enrolled in such networks is, in this dimension, not remote whatever its coordinates; a place none of them has reached is remote whatever its coordinates. Enrolment is a relation, not a position, which is why this dimension can vary independently of distance, in the manner Relph analyzes as the spread of "placelessness" <span class="ref-cite">(Relph 1976)</span>.</p>
+    </div>
+    <div class="criterion" data-lang-content="zh">
+      <span class="crit-label">维度二 · 对标准化网络的接入</span>
+      <p>一处是否、又被哪些网络当作「值得接通」而纳入。奥热（Augé）称为<em>非地方</em>（non-places）的那些标准化、被划一治理的空间——他自己所举之例是高速公路、机场候机厅与超级市场——把它们的覆盖伸向某些点，而不伸向另一些<span class="ref-cite">（Augé 1992）</span>。一处若已被这类网络接入，则在此一维上便不远，无论其坐标几何；一处若无任何此类网络触及，则在此一维上即远，无论其坐标几何。接入是一种关系，而非一个位置，故此一维能独立于距离而变动，一如雷尔夫（Relph）所析「无地方性」之蔓延<span class="ref-cite">（Relph 1976）</span>。</p>
+    </div>
+
+    <div class="criterion" data-lang-content="en">
+      <span class="crit-label">Dimension 3 · Reliability of the link</span>
+      <p>The redundancy and dependability of whatever connections a place does have. A single link that fails easily, and whose failure severs the place entirely, marks a place as more remote in this dimension than several robust links would, even where the singly-linked place is the nearer in kilometres. What is at stake is not the existence of a connection but how readily it lapses and how completely its lapse isolates.</p>
+    </div>
+    <div class="criterion" data-lang-content="zh">
+      <span class="crit-label">维度三 · 连接的可靠</span>
+      <p>一处既有的那些连接，其冗余与可托付的程度。一条易断、且一断便将此地整个切离的孤线，在此一维上所标示的远，胜过数条稳固的连接所标示的，纵然那系于孤线之处在公里数上更近。要紧的不是连接之有无，而是它何其易于失效、其失效又何其彻底地使一处沦于孤绝。</p>
+    </div>
+
+    <div class="criterion" data-lang-content="en">
+      <span class="crit-label">Dimension 4 · Reach of administration</span>
+      <p>How fully the standardizing apparatus of the state has enrolled a place: the ordinary instruments of administration, registration, standardized signage, the routine furniture of modern governance, present in full or only in part. A place at the limit of the state's standardizing reach is remote in this dimension even when it is otherwise well connected, a point the literature on the legibility of territory makes precise: the state sees, and reaches, what it has standardized <span class="ref-cite">(Scott 1998)</span>.</p>
+    </div>
+    <div class="criterion" data-lang-content="zh">
+      <span class="crit-label">维度四 · 行政所及</span>
+      <p>国家那套标准化的装置，将一处纳入到何等程度：行政、登录、划一的标识、现代治理的种种日常配置，是齐备，还是仅及一二。一处若处在国家标准化所能及的边沿，则纵然它在别的维度上连接良好，在此一维上仍是远的。关于领土「可读性」的研究把这一点说得分明：国家所能看见、所能伸手抵达的，正是它已然标准化了的<span class="ref-cite">（Scott 1998）</span>。</p>
+    </div>
+
+    <div class="criterion" data-lang-content="en">
+      <span class="crit-label">Dimension 5 · Terminality</span>
+      <p>Nearness to a real edge of the inhabited or the continental: a pole, the physical end of a landmass, the last solid ground before an ocean. This dimension separates a place near a genuine terminus of land or latitude from a place that is merely far from a centre. It is the dimension on which the distinction between a fiat edge and a bona fide edge (§4) does its work.</p>
+    </div>
+    <div class="criterion" data-lang-content="zh">
+      <span class="crit-label">维度五 · 终端性</span>
+      <p>与可栖居者、或与大陆之某个真实边沿的相邻：一极、一块陆地的物理尽头、面朝大洋之前最后的实土。此一维把「邻于陆地或纬度之真正尽头」的所在，与「仅仅离某中心很远」的所在区别开来。fiat 边界与 bona fide 边界之分（见第四节），正在此一维上施其作用。</p>
+    </div>
+
+    <div class="criterion" data-lang-content="en">
+      <span class="crit-label">Dimension 6 · Cultural and historical distance</span>
+      <p>How far a place lies from the cultural, linguistic, and historical world of whoever judges it: which "other shore" it faces, at the margin of which civilizational sphere it sits. Since environmental perception is never neutral but always value-laden <span class="ref-cite">(Tuan 1974)</span>, this dimension is what lets a place near in kilometres feel remote, and a place far in kilometres feel unaccountably familiar. It is bound up with the distinction between latitude and longitude developed in §5.</p>
+    </div>
+    <div class="criterion" data-lang-content="zh">
+      <span class="crit-label">维度六 · 文化与历史的距离</span>
+      <p>一处距离评判者的文化、语言与历史世界有多远：它面朝哪一道「对岸」，坐落在哪一个文明圈的边缘。既然对环境的知觉从来不是中立的，而总是负载着价值<span class="ref-cite">（Tuan 1974）</span>，正是此一维，令一处在公里上虽近却觉其远，令另一处在公里上虽远却觉其莫名地熟。它与第五节所论纬度与经度之分，纠结在一处。</p>
+    </div>
+
+    <div class="thesis" data-lang-content="en">
+      <p><strong>The thesis.</strong> "Remote" is not a natural kind but a family of related yet distinct relations, distance, enrolment, reliability, administration, terminality, and cultural distance, which ordinary language folds into one word. The folding holds in clear cases, where a place stands low or high on every dimension at once, and comes apart in mixed cases, where a place is at an extreme on one relation while fully taken up in another. The mixed cases are not failures of the word to apply; they are the word disclosing its internal seams.</p>
+    </div>
+    <div class="thesis" data-lang-content="zh">
+      <p><strong>论题。</strong>「远」并非一个自然类，而是一族彼此相关却又各异的关系——距离、接入、可靠、行政、终端性、文化距离——被日常言语叠拢进了一个字。这一叠拢，在清楚的情形里成立，即一处在每一维上同时为低、或同时为高；却在混合的情形里松开，即一处在某一关系上臻于极端，同时又在另一关系上被全然接纳。这些混合的情形，并非这个字之适用的失败；它们是这个字，在显露自身内部的接缝。</p>
+    </div>
+
+    <!-- ───── Figure: multidimensional remoteness radar ───────── -->
+    <figure>
+      <svg class="diagram-svg" viewBox="-40 0 680 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Radar chart comparing three place-types across six dimensions of remoteness">
+        <!-- grid rings -->
+        <polygon class="grid-line" fill="none" points="300.0,208.8 335.7,229.4 335.7,270.6 300.0,291.2 264.3,270.6 264.3,229.4"/>
+        <polygon class="grid-line" fill="none" points="300.0,167.5 371.4,208.8 371.4,291.2 300.0,332.5 228.6,291.2 228.6,208.8"/>
+        <polygon class="grid-line" fill="none" points="300.0,126.2 407.2,188.1 407.2,311.9 300.0,373.8 192.8,311.9 192.8,188.1"/>
+        <polygon class="faint-line" fill="none" points="300.0,85.0 442.9,167.5 442.9,332.5 300.0,415.0 157.1,332.5 157.1,167.5"/>
+        <!-- spokes -->
+        <g class="faint-line">
+          <line x1="300" y1="250" x2="300.0" y2="85.0"/>
+          <line x1="300" y1="250" x2="442.9" y2="167.5"/>
+          <line x1="300" y1="250" x2="442.9" y2="332.5"/>
+          <line x1="300" y1="250" x2="300.0" y2="415.0"/>
+          <line x1="300" y1="250" x2="157.1" y2="332.5"/>
+          <line x1="300" y1="250" x2="157.1" y2="167.5"/>
+        </g>
+
+        <!-- Place A: integrated metropolis -->
+        <polygon class="navy-line" fill="#0a3d62" fill-opacity="0.10" stroke-width="2"
+          points="300.0,109.8 421.5,179.9 364.3,287.1 300.0,299.5 250.0,278.9 221.4,204.6"/>
+        <!-- Place B: peripheral administered town -->
+        <polygon class="rust-line" fill="#8b3a2a" fill-opacity="0.09" stroke-width="2" stroke-dasharray="5 3"
+          points="300.0,93.2 378.6,204.6 378.6,295.4 300.0,382.0 228.6,291.2 228.6,208.8"/>
+        <!-- Place C: terminal outpost -->
+        <polygon class="sapphire-line" fill="#1e5fa8" fill-opacity="0.10" stroke-width="2"
+          points="300.0,134.5 378.6,204.6 371.4,291.2 300.0,324.2 168.5,325.9 178.5,179.9"/>
+
+        <!-- axis labels -->
+        <g class="axis-title" font-size="12.5" text-anchor="middle">
+          <text x="300" y="72"><tspan data-lang-svg="en">Distance</tspan><tspan data-lang-svg="zh">距离</tspan></text>
+          <text x="452" y="158" text-anchor="start"><tspan data-lang-svg="en">Network enrolment</tspan><tspan data-lang-svg="zh">网络接入</tspan></text>
+          <text x="452" y="345" text-anchor="start"><tspan data-lang-svg="en">Link reliability</tspan><tspan data-lang-svg="zh">连接可靠</tspan></text>
+          <text x="300" y="437"><tspan data-lang-svg="en">Reach of administration</tspan><tspan data-lang-svg="zh">行政所及</tspan></text>
+          <text x="148" y="345" text-anchor="end"><tspan data-lang-svg="en">Terminality</tspan><tspan data-lang-svg="zh">终端性</tspan></text>
+          <text x="148" y="158" text-anchor="end"><tspan data-lang-svg="en">Cultural distance</tspan><tspan data-lang-svg="zh">文化距离</tspan></text>
+        </g>
+
+        <!-- legend -->
+        <g class="node-label" font-size="12" transform="translate(40, 475)">
+          <line x1="0" y1="-4" x2="22" y2="-4" class="navy-line" stroke-width="2"/>
+          <text x="28" y="0"><tspan data-lang-svg="en">A · integrated metropolis</tspan><tspan data-lang-svg="zh">甲 · 整合良好的大都会</tspan></text>
+          <line x1="0" y1="16" x2="22" y2="16" class="sapphire-line" stroke-width="2"/>
+          <text x="28" y="20"><tspan data-lang-svg="en">B · terminal outpost</tspan><tspan data-lang-svg="zh">乙 · 终端处的前哨</tspan></text>
+          <line x1="0" y1="36" x2="22" y2="36" class="rust-line" stroke-width="2" stroke-dasharray="5 3"/>
+          <text x="28" y="40"><tspan data-lang-svg="en">C · peripheral administered town</tspan><tspan data-lang-svg="zh">丙 · 边缘而受治理的市镇</tspan></text>
+        </g>
+      </svg>
+      <figcaption>
+        <span data-lang-content="en">Three abstracted place-types plotted on six dimensions. No single ranking survives: the integrated metropolis (A) scores highest on network enrolment yet low on terminality; the terminal outpost (B) dominates terminality and cultural distance while remaining only moderately enrolled; the peripheral administered town (C) is extreme on distance and on reach of administration yet middling on terminality. Because the profiles cross rather than nest, no weighting collapses them into a single "more remote / less remote" order. The figure is a geometric demonstration that remoteness is a vector, not a scalar.</span>
+        <span data-lang-content="zh">三个抽象的地点类型，画在六个维度上。没有哪一种排序能够立住：整合良好的大都会（甲）在网络接入上最高，终端性却低；终端处的前哨（乙）在终端性与文化距离上据其首，而接入只属中等；边缘而受治理的市镇（丙）在距离与行政所及上臻于极端，终端性却平平。诸剖面彼此交叉而不层层相套，故无论怎样加权，都无法把它们并作单一的「更远／更近」之序。此图，是把「远不是一个量，而是一束关系」化作了可见的几何。</span>
+      </figcaption>
+    </figure>
+
+    <!-- ───── §3 Non-Places and the Anthropology of the Network ─ -->
+    <h2 id="sec-probes"><span class="sec-num">3 ·</span>
+      <span data-lang-content="en">Non-Places and the Anthropology of the Network</span>
+      <span data-lang-content="zh">非地方与网络的人类学</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>The second dimension of the previous chapter, <em>enrolment in standardized networks</em>, has its own substantial literature in the anthropology and human geography of the late twentieth century. Marc Augé's <em>Non-Places: Introduction to an Anthropology of Supermodernity</em> (1992) supplies the term and the apparatus most often borrowed for the diagnosis of what the remote, conversely, is the absence of <span class="ref-cite">(Augé 1992)</span>. The complementary movement of thought, in which the remote acquires its form through the receding of network enrolment, deserves a separate chapter because the relation is not symmetric: a place can be remote in many ways, but to be enrolled in the supermodern network is to be enrolled in something whose own ethnography is fairly specific.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>上一章所列的第二个维度——「对标准化网络的接入」——在二十世纪后期的人类学与人文地理学中，有其本身相当厚重的文献。马克·奥热（Marc Augé）的《非地方：超级现代性人类学导论》（1992）提供了今日最常被援引的术语与装置；这套装置，恰好用以诊断「远方」反面而存在的那种状态<span class="ref-cite">（Augé 1992）</span>。这一相补的运思——远方经由网络接入之退缩而获得其形状——值得单立一章；因为这对关系并不对称：一处可在许多种意义上是远的，而被接入超级现代之网络，却是被接入一种自身有着相当明确民族志的事物。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Place and non-place</span>
+      <span data-lang-content="zh">地方与非地方</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Augé organizes the analysis around a strict opposition. An <em>anthropological place</em> is one constituted by relations, history, and identity: it has been inhabited, named, walked, ritualized; its meanings have been laid down in time and are inherited by those who enter. A <em>non-place</em> is its complement: a space whose existence is fully exhausted by its functional role, transited rather than inhabited, encountered as a uniform interior whose codes are the same wherever one meets them. Augé's own examples are precise. The motorway, the airport concourse, the supermarket aisle, the chain hotel room, the ATM, the duty-free zone, all are spaces governed by the same set of standardized signs and the same kind of contractual relation between user and environment. They are spaces in which the individual is addressed solely as passenger, customer, or driver, and in which a singular biographical history has nothing to attach to.</p>
+
+      <p>The non-place is not a deficient place but the characteristic spatial form of a particular historical condition Augé calls <em>supermodernity</em>, defined by an excess of three things: of events (an accelerated production of history), of space (territories opened by speed of movement and image), and of individual reference (a turning of the subject upon itself in the absence of inherited collective frames). Non-places are where these excesses are processed and routed. They are not the negation of place so much as place's modern double, and most of contemporary life is spent passing through them.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>奥热把分析组织在一对严格的对立之上。<em>人类学意义上的地方</em>（anthropological place）由关系、历史与身份所构成：它曾被居住、被命名、被踏行、被仪式化；它的意义在时间中层层铺设，被踏入其中之人所承继。<em>非地方</em>则是它的补集：那种存在被其功能性角色所穷尽的空间——是被穿越、而非被栖居的；是作为一个划一的内部被遭遇的，其各种符码无论在何处相遇都是同一套。奥热自己所举的例子极为精确：高速公路、机场候机厅、超级市场的过道、连锁旅店的房间、自动柜员机、免税区——皆为受同一套标准化标识所治理的空间，使用者与环境之间的关系皆为同一类的契约关系。在这些空间里，个体唯被以乘客、顾客或司机的身份所招呼；任何独一的生命史，皆无所附着。</p>
+
+      <p>非地方并非有所欠缺的地方，而是某一特殊历史状况——奥热称之为<em>超级现代性</em>（supermodernity）——所特具的空间形态。这一状况由三种过剩所界定：事件之过剩（被加速生产的历史）、空间之过剩（由移动与影像之速度所打开的疆域）、个体参照之过剩（在所承继之集体框架阙如的情形下，主体向自身的回转）。非地方，即是上述这些过剩在其中被处置与转运的所在。它与其说是地方的否定，不如说是地方在现代世界的孪生影子；当代生活的大部，是在穿行其间。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">The remote as the complement of supermodern enrolment</span>
+      <span data-lang-content="zh">远方：超级现代之接入的补集</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>From Augé's distinction follows a working definition of one important dimension of remoteness. To the extent that the non-place is the dense interior of the supermodern network, the remote is what falls outside it: not the negation of place (the remote can still be richly an anthropological place, perhaps even more so), but the absence of the standardized signage, contractual relation, and uniform circulation by which the network identifies its own members. A place can be deep in the system of inhabited and historical place while being almost entirely outside the system of non-place. That double standing, fully a place in Augé's first sense and almost not a non-place in his second, is one rigorous form of remoteness.</p>
+
+      <p>The same point was approached a decade and a half earlier by Edward Relph, in <em>Place and Placelessness</em> (1976), as a diagnosis of "placelessness": the spread of an interchangeable, standardized environment that drains particular places of their specificity <span class="ref-cite">(Relph 1976)</span>. Relph's worry is the inverse of the present argument's: he fears that placelessness will leave nowhere properly a place. The argument here is that placelessness, in its triumphant supermodern expansion, also redefines, by its outer edge, what it means to be far from it. The remote, on this account, is whatever has not yet been turned into non-place, or has been let go by it.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>由奥热的区分，便可得出「远方」之一重要维度的可用定义。既然非地方是超级现代网络的浓密内部，远方便是落在其外者：不是地方的否定（远方仍可以是、甚至更可以是奥热所言第一意义上充分意义的「地方」），而是网络借以识别其成员的那一整套——标准化的标识、契约式的关系、划一的循环——之阙如。一处可以深处于「被栖居、有历史」的地方系统之中，同时几乎全然处于「非地方」系统之外。这一双重身份——在奥热的第一义上是充分的地方，在他的第二义上几近不是非地方——便是「远方」的一种严整形态。</p>
+
+      <p>同一论点，在十五年前已被爱德华·雷尔夫（Edward Relph）在《地方与无地方性》（1976）中以「无地方性」（placelessness）之诊断而触及：可互换的、标准化的环境四下蔓延，把每一具体之地从其特异性中抽空<span class="ref-cite">（Relph 1976）</span>。雷尔夫的忧惧是当前论证的反面：他担心无地方性将使无处真正成其为「地方」。本章的论点则是：无地方性，在其凯歌般的超级现代扩张之中，也经由其外缘，重新界定了「远离它」意味着什么。在此意义上，远方便是那尚未被转化为非地方者，或已被它放下者。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Two clarifications</span>
+      <span data-lang-content="zh">两点澄清</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>First, "supermodern enrolment" does not mean "modernity" in general. Modernity in the sense of literacy, electrification, telecommunications, and citizenship is not what is at issue. The non-place is a specific aesthetic and contractual form—the highway, the airport, the chain interior—that pervades but does not exhaust modern life. A village can be fully modern without being a non-place; a high-speed rail terminal in a less wealthy country can be a non-place without being unambiguously modern in the developmentalist sense. The dimension at stake here is enrolment in a particular kind of standardized circulation, not in modernity per se.</p>
+
+      <p>Second, the absence of enrolment is not, in itself, virtuous, nor is enrolment in itself a loss. The literature has at times tilted in one direction or the other—Relph mourning the loss of place, Augé observing the new condition with a measured anthropological distance, others lamenting "Disneyfication," still others celebrating mobility. The use being made of Augé here is structural rather than evaluative: he supplies a clean way to identify one dimension along which a place can stand outside the dense circulation of supermodernity, and that standing-outside is, in turn, one rigorous component of what is called the remote. The other components, identified in the previous chapter, do not reduce to this one.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>第一，「超级现代之接入」并非泛指「现代性」。识字、电力、电信、公民身份意义上的现代性，不是此处所论。非地方是一种特定的美学与契约形态——高速公路、机场、连锁内饰——它弥漫于现代生活、却未将现代生活穷尽。一个村庄可以全然现代而非非地方；一座位于较不富裕之国的高铁枢纽，可以是非地方，却未必在发展主义的意义上无歧义地「现代」。此处所论的维度，是对某种特定的标准化循环的接入，而非对现代性本身的接入。</p>
+
+      <p>第二，未被接入并不因此而具有德性，被接入亦非自身即是失落。文献有时偏向一方或另一方——雷尔夫为「地方」之失落而哀悼，奥热以人类学的克制距离观察这一新状况，他人则痛斥「迪斯尼化」，又有他人为移动性欢呼。本章对奥热的用法是结构性的，而非评价性的：他提供了一种洁净的方式，来辨识出一条维度，沿此维度，一处可以立于超级现代之浓密循环之外；而这种立于其外，正是被称作「远方」者所拥有的一份严整的成分。其余成分，已于上一章列举，并不归约为这一条。</p>
+    </div>
+
+    <div class="thesis" data-lang-content="en">
+      <p><strong>The thesis of this chapter.</strong> One dimension of the remote—a substantive and not trivial one—is structural distance from the spaces of supermodern circulation that Augé calls non-places. To stand outside the non-place is not yet to be remote on every dimension, but it is to be remote on this one, and the dimension is independent enough of metric distance to repay separate study.</p>
+    </div>
+    <div class="thesis" data-lang-content="zh">
+      <p><strong>本章论题。</strong>远方的一个维度——一个实质的、并不琐细的维度——是与奥热称为「非地方」的那类超级现代循环空间之间的结构性距离。立于非地方之外，并不意味着在每一维度上皆为远；但这意味着在这一维度上为远，而这一维度，与「度量上的距离」分离到足够的程度，值得单独考察。</p>
+    </div>
+
+    <!-- ───── §4 Fiat Corners & Bona Fide Corners ─────────────── -->
+    <h2 id="sec-corners"><span class="sec-num">4 ·</span>
+      <span data-lang-content="en">Fiat Corners &amp; Bona Fide Corners</span>
+      <span data-lang-content="zh">fiat 角落与 bona fide 角落</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>The terminality dimension of §2 calls for a finer distinction, one drawn from the ontology of geographic boundaries developed by Barry Smith and Achille Varzi <span class="ref-cite">(Smith &amp; Varzi 2000; Smith 1995)</span>. By their now-standard division, a <span class="term">bona fide boundary</span> is one that corresponds to a genuine physical discontinuity in the world: a coastline at the high-water mark, a watershed ridge, the bank of a river. A <span class="term">fiat boundary</span>, by contrast, is one laid down by human stipulation, with no answering discontinuity in the underlying reality: a meridian, a property line, an administrative border drawn straight through homogeneous terrain. Both kinds of boundary are perfectly real—the fiat boundary has legal force and is in that sense as real as anything else—but they answer to different orders of fact, and the remoteness they confer is correspondingly distinct.</p>
+
+      <p>"Edges of the world," as ordinary geographical language uses the phrase, encompasses both kinds, and the distinction matters because the felt remoteness each confers is correspondingly different. A place can be near the <em>fiat</em> edge: close to a stipulated line such as a meridian, an international date convention, or an administrative limit. Or it can be near the <em>bona fide</em> edge: close to a real terminus such as the physical end of a continent, the last solid ground before an ocean, the polar limit of habitability, the timberline that marks where forest gives out. These are ontologically distinct sorts of "corner," and they stand at the edges of different things.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>第二章的终端性维度，需要一个更精细的区分；这一区分，借自巴里·史密斯（Barry Smith）与阿希勒·瓦尔齐（Achille Varzi）所发展的地理边界的本体论<span class="ref-cite">（Smith &amp; Varzi 2000；Smith 1995）</span>。依其如今已成标准的划分，<span class="term">bona fide 边界</span>对应于世界中真实的物理间断：海岸于高潮线处的轮廓，山岭分水之脊，河道之岸。<span class="term">fiat 边界</span>则相反，由人为规定铺设，在其底层实在中并无相应的间断：一条子午线，一道地界，一条穿过均质地形被笔直画出的行政界线。两种边界皆充分真实——fiat 边界具有法律效力，在那一意义上与任何他物同样真实——但它们应于不同的事实秩序，所赋予的「远」亦因而判然有别。</p>
+
+      <p>日常地理语言所称的「世界的边缘」，实兼指此两种；而这一区分之所以紧要，正因两类边缘各自所赋予的、被感受到的「远」并不相同。一处可以邻近 <em>fiat</em> 边缘，即靠近一条被规定的线——一条子午线、一项国际日期约定、一道行政界限；也可以邻近 <em>bona fide</em> 边缘，即靠近一个真实的尽头——一块大陆的物理终极、面朝大洋之前最后的实土、可栖居者的极地极限、那道划开森林与无林之地的林线。这是本体论上有别的两类「角落」，各自所立的，是不同种类之物的边沿。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">The asymmetry of the two corners</span>
+      <span data-lang-content="zh">两种角落的不对称</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The two corners are not symmetric in the kind of remoteness they confer. A place near a fiat edge derives its edge-ness entirely from a convention. At the meridian itself, considered as a purely geometrical fact, there is nothing: no discontinuity in the air or water, no mark on the world that a body or an instrument can register without an external system of reference. Standing at a fiat corner one is at the edge of an <em>agreement</em>, not at the edge of anything real in the unmediated sense; the surrounding terrain looks exactly like terrain anywhere on either side. The terminality is notional. It is no less consequential for that—fiat lines can stop a passport at a desk, divide property, reroute time—but its consequence flows from the durability of the convention rather than from the structure of the planet.</p>
+
+      <p>A place near a bona fide edge stands, by contrast, at the edge of something the world itself supplies. The land really does end; the habitable really does give out; the forest really does stop. Such an edge is available to the body and the eye, not only to the map. It would be there if no human had named it. Its terminality is substantive, not notional, and its remoteness is correspondingly answerable to the structure of the planet rather than to the durability of an agreement.</p>
+
+      <p>An ontology-trained intuition will tend to score the bona fide corner as the more genuine edge, because its edge-ness is grounded in a fact about the world rather than in a fact about human stipulation. This is not mere preference. The fiat corner is answerable to a convention that could be redrawn tomorrow; the bona fide corner is answerable to a geological, biotic, or hydrographic configuration that long predates any agreement and will outlast it. The two kinds of terminality therefore have different temporal scales as well: the one is the scale of treaty, the other of deep time.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>两种角落在它们所赋予的「远」之种类上并不对称。邻近 fiat 边缘的一处，其边缘性完全衍生自一项约定。在子午线本身处——若仅作为一个纯粹的几何事实来考虑——空无一物：空气或水中并无间断，世界上亦无任何身体或仪器在外部参照系阙如时仍可登录的标记。站在一个 fiat 角落，人是站在一项<em>协议</em>的边缘，而非（在未经中介的意义上）任何真实之物的边缘；两侧的地貌，看起来与别处无异。其终端性是观念性的——这并不使它后果更小。fiat 线可以在一处柜台前止住一本护照，可以分割财产，可以重新调度时间——但其后果来自约定之耐久，而非来自这颗行星的结构。</p>
+
+      <p>邻近 bona fide 边缘的一处，则站在世界本身所提供之物的边缘。陆地确实终结了；可栖居者确实耗尽了；森林确实止住了。这样的边缘向身体与眼睛敞开，而不仅仅向地图敞开。即便从未有人为之命名，它仍在那里。其终端性是实质的而非观念的，所赋予的「远」相应地应于这颗行星的结构，而不仅是某项约定的耐久。</p>
+
+      <p>一种经本体论训练过的直觉，会倾向于把 bona fide 角落评为「更真正地是一个边缘」，因为它的边缘性奠基于关于世界的事实，而非关于人类规定的事实。这不仅是一种偏好。fiat 角落要对一项明天就可能被重画的规定负责；bona fide 角落则要对地质的、生物的、或水文的某种构形负责，这构形远远先于任何协议而存在，并将比任何协议更为长久。两种终端性，因此也有着不同的时间尺度：一者是条约的尺度，另一者是深时的尺度。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Coincidence at the coastline</span>
+      <span data-lang-content="zh">海岸线上的重合</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The instructive cases are those in which a fiat and a bona fide edge happen to coincide—where convention has been laid down along the very line at which a physical discontinuity already runs. The clearest standing example is the coastline of a maritime state. As a bona fide boundary the coastline is given by physical geography: the line at which solid ground meets open water, with its tides, its sediment regimes, its perceptible discontinuity for any body that walks toward it. As a fiat boundary the coastline is also, simultaneously, the line at which one legal regime gives way to another, where sovereign land ends and maritime jurisdiction begins. The two lines lie atop each other not by accident but because the political has, in this case, taken its cue from the physical.</p>
+
+      <p>This coincidence is doing work that neither edge would do alone. To stand at the edge of a continent is to stand at a bona fide edge of the inhabitable, and simultaneously at a fiat edge of the polity. The peculiar density of the experience comes from the stacking: the land that ends here is the land of <em>this state</em>, and the water that begins here is the water of nobody's everyday. The remoteness conferred by such a place draws on both edges at once, and this is why the experience of standing at a continent's edge is, characteristically, both bodily and political, both geological and historical.</p>
+
+      <p>Other cases stack the two kinds of edge less perfectly. An administrative border traced through unbroken steppe is purely fiat, and a place near it can be remote in the fiat sense (one is at the edge of a legal order) without being remote in the bona fide sense (the steppe continues unchanged on either side). A high mountain pass that also happens to mark a state border stacks the two more thoroughly: the pass is a bona fide gap between watersheds, and the border ratifies what the topography has already declared. The general lesson is that "edge of the world" is a composite term whose force varies with how many kinds of edge a place gathers under itself.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>富于教益的，是 fiat 与 bona fide 两种边缘恰好重合的个案——亦即约定恰沿着物理间断已然存在的那条线被铺设。最清晰的现成例证，是临海国家的海岸线。作为 bona fide 边界，海岸由物理地理所给定：是坚实陆地遇见开阔水域之处的那条线，连同它的潮汐、它的沉积体制、以及对任何走向它的身体而言可被感知的间断。作为 fiat 边界，海岸线同时也是一种法律体制让位于另一种法律体制之处——主权陆地终结、海事管辖开始之处。两条线层叠相覆并非偶然，乃因在此一个案中，政治采取了来自物理的指引。</p>
+
+      <p>这一重合所做的工作，是两种边缘中任何一个单独都做不到的。立于一片大陆的边沿，便是同时立于可栖居者的 bona fide 边沿与共同体的 fiat 边沿之上。这经验的独特密度，来自这一层叠：在此终结的陆地，是<em>这个国家</em>的陆地；在此开始的水域，则是任何人的日常都不在其中的水域。这样一处所赋予的「远」，是同时从两道边缘上汲取而来；这也正是「立于大陆之沿」的经验，何以在其性格上既是身体的也是政治的、既是地质的也是历史的。</p>
+
+      <p>其他个案，两种边缘的层叠便不如此完整。一条画过未受切割之草原的行政边界纯属 fiat；一处邻近它者，可以在 fiat 的意义上是远的（人立于一项法律秩序的边沿），却不在 bona fide 的意义上为远（草原在两侧无差地延伸）。一道又恰好是国界的高山垭口，则将两种边缘层叠得更为彻底：垭口是分水岭之间的 bona fide 间断，而国界不过是把地形已宣告之物加以追认。其一般教训是：「世界的边缘」是一个复合词，其力量随一处在自身之下聚集了多少种边缘而变化。</p>
+    </div>
+
+    <!-- ───── §5 Latitude, Longitude, Two Geographies ─────────── -->
+    <h2 id="sec-axes"><span class="sec-num">5 ·</span>
+      <span data-lang-content="en">Latitude, Longitude, and Two Geographies</span>
+      <span data-lang-content="zh">纬度、经度与两种地理学</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>A second-order observation about travel makes the same point from a different angle: latitude and longitude do not measure the same kind of thing, and a great deal of confusion about what makes a place "worth travelling to" comes from treating them as interchangeable spatial coordinates.</p>
+
+      <p><span class="term">Latitude</span> indexes the natural order. As one moves across latitudes, the sun's elevation, day length, seasonal rhythm, biome, vegetation, and the whole apparatus of physical geography change systematically; move along a line of latitude and they hold roughly constant. To define travel as "leaving one's own latitude," a defensible aesthetic creed, is to define its value as the experience of a <em>different natural order</em>: different light, different seasons, different life. Latitude is the axis of the <em>physical-geographical</em> exotic.</p>
+
+      <p><span class="term">Longitude</span> measures almost no natural difference at all. Travel along a parallel and the climate band, the biome, the solar geometry are unchanged. What longitude indexes instead is time (the time zones) and, decisively, <em>position in the human and historical world</em>: which civilizational sphere a place sits in, which ocean's far side it faces, which history runs through it, which "other shore" lies across the water. Longitude is the axis of the <em>human-historical</em> exotic.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>一个关于旅行的二阶观察，从另一角度道出同一要点：纬度与经度并不度量同一种东西，而关于「什么使一个地方值得前往」的大量混乱，正源自把它们当作可互换的空间坐标来对待。</p>
+
+      <p><span class="term">纬度</span>标示自然秩序。当人跨越纬度移动时，太阳高度、昼长、季节节律、生物群系、植被、以及物理地理的整套装置都系统地变化；沿一条纬线移动，它们则大体保持恒定。把旅行定义为「离开自己的纬度」，是一条站得住脚的美学信条，也就是把旅行的价值定义为对一种<em>不同自然秩序</em>的体验：不同的光、不同的季节、不同的生命。纬度是<em>物理／地理</em>之异域的轴。</p>
+
+      <p><span class="term">经度</span>则几乎不度量任何自然差异。沿一条纬线移动，气候带、生物群系、太阳几何都不变。经度所标示的，毋宁是时间（时区），以及更为决定性地，<em>在人类与历史世界中的位置</em>：一个地方坐落于哪个文明圈，面向哪一片大洋的彼岸，哪一段历史穿行其间，水的对面横亘着哪一道「对岸」。经度是<em>人类／历史</em>之异域的轴。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">The two-geography supplement</span>
+      <span data-lang-content="zh">两种地理学的增补</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>The interesting case for this distinction is a place whose <em>latitude</em> is unremarkable (a temperate, maritime latitude not far from one's own, with a climate and biome one has seen) but whose <em>longitude</em> is extraordinary: far out toward a meridian, deep in an oceanic arc, positioned at the margin of a distant civilizational sphere and facing, across the water, an old and foreign mainland. Such a place fails the latitude creed (its nature is familiar) yet exerts a strong pull, and the puzzle of <em>why</em> reveals that the pull is longitudinal: it is the draw of historical and geopolitical position, not of natural novelty.</p>
+
+      <p>This forces a supplement to the travel creed. The original formulation, "the essence of travel is to leave one's latitude," captures only the physical-geographical exotic. A second axiom is needed: <em>some travel's essence is to leave one's longitude</em>, that is, to seek difference in historical-geopolitical position rather than in natural order. The two are not in conflict; they re-stage, at the scale of a personal aesthetic, the oldest division within the discipline itself, namely the division between physical geography (the latitudinal, natural order) and human geography (the longitudinal world of culture, history, and position), around which the field's self-definition has long turned <span class="ref-cite">(Hartshorne 1939)</span>. That the "far shore" one faces is felt as remote is itself a culturally constituted perception, not a natural fact: which mainland counts as the exotic "other" is a matter of one's own civilizational standpoint, in the manner Tuan analyzes for environmental perception generally and Said for the imaginative geography of the "Orient" <span class="ref-cite">(Tuan 1974; Said 1978)</span>. A traveller drawn to barren northern coasts, drowned land bridges, contested straits, and the ruins of withdrawn empires is, on inspection, almost never drawn by latitude. The pull is longitudinal throughout: a desire not to experience a different nature but to stand at a different historical position and face a different far shore.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>这一区分的有趣个案，是一个其<em>纬度</em>平平无奇的地方（一个温带的、海洋性的、离自己不远的纬度，气候与生物群系都是见过的），而其<em>经度</em>却非比寻常：远向某条子午线伸出，深入一道大洋的岛弧，坐落于某个遥远文明圈的边缘，并隔水面向一块古老而陌生的大陆。这样一个地方未能通过纬度信条（它的自然是熟悉的），却施加着强烈的吸引；而追问<em>为何</em>，便揭示出这吸引是经度性的：它是历史与地缘位置的吸引，而非自然新奇的吸引。</p>
+
+      <p>这迫使旅行信条作出一项增补。原初的信条「旅行的本质是离开自己的纬度」只捕捉了物理／地理之异域。还需要第二条公理：<em>某些旅行的本质是离开自己的经度</em>，即在历史／地缘位置中、而非在自然秩序中寻求差异。二者并不冲突；它们在个人美学的尺度上，重演了学科自身最古老的划分，即物理地理（纬度性的自然秩序）与人文地理（经度性的、文化、历史与位置的世界）之间的划分，而这一划分长久以来正是该领域自我界定所围绕的枢轴<span class="ref-cite">（Hartshorne 1939）</span>。而人所面向的那道「对岸」之被感到为远，本身是一种文化地被建构的知觉，而非自然的事实：哪一块大陆算作那异域的「他者」，取决于人自身的文明立足点，一如段义孚就环境知觉之总体、萨义德就「东方」之想象地理所分析的那样<span class="ref-cite">（Tuan 1974；Said 1978）</span>。一个被贫瘠的北方海岸、被淹没的陆桥、有争议的海峡、以及撤离的帝国之废墟所吸引的旅行者，一经审视，几乎从不是被纬度所吸引。那吸引自始至终是经度性的：是一种欲望，不在于体验一种不同的自然，而在于站在一个不同的历史位置上、面向一道不同的远岸。</p>
+    </div>
+
+    <!-- ───── §6 Functional Regions ───────────────────────────── -->
+    <h2 id="sec-region"><span class="sec-num">6 ·</span>
+      <span data-lang-content="en">Functional Regions, Enrolment, Withdrawal</span>
+      <span data-lang-content="zh">功能区、认领与撤离</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>The dimension of network enrolment introduced in §2 rests on a classical distinction in regional geography. A <span class="term">formal region</span> is defined by some internal homogeneity—a climate zone, a language area, a geological province, a soil type; membership is a matter of sharing the defining trait. A <span class="term">functional region</span>, by contrast, is defined by a pattern of <em>flows and connections</em>—a port's hinterland, the catchment of a transport network, the labour market of a city, the coverage of a supply system; membership is a matter of being plugged into the same circulation. The distinction, conventionally attributed to Richard Hartshorne and the regional school of mid-century American geography, remains foundational; it identifies two altogether different ways in which "belonging to the same region" can be true of two places <span class="ref-cite">(Hartshorne 1939)</span>.</p>
+
+      <p>On the relational account developed in §2, remoteness is largely a fact about a place's position relative to functional regions: a place is remote to the degree that the functional networks of a given era have not enrolled it, or have withdrawn from it. The vocabulary of <em>enrolment</em> and <em>withdrawal</em>, rather than of presence and absence, is what the temporal character of remoteness requires.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>第二章所引入的「网络接入」之维度，奠基于区域地理学中一个经典的区分。<span class="term">形式区</span>（formal region）由某种内部同质性所定义——一个气候带、一个语言区、一个地质省、一种土壤类型；成员资格在于共享那个定义性特征。<span class="term">功能区</span>（functional region）则不然，由<em>流动与连接</em>的模式所定义——一个港口的腹地、一个交通网络的汇集范围、一座城市的劳动力市场、一套供应系统的覆盖；成员资格在于被接入同一套循环。这一区分通常被归于理查德·哈特肖恩（Richard Hartshorne）与二十世纪中叶美国地理学的区域学派；它至今奠基性地辨明出两种判然不同的方式，使「同属一区」这一陈述可以对两处皆成立<span class="ref-cite">（Hartshorne 1939）</span>。</p>
+
+      <p>循第二章所展开的关系性论述，远在很大程度上是关于一处相对于功能区之位置的事实：一处之远的程度，取决于某一时代的功能网络在多大程度上未曾认领它、或已从它撤离。需要采用<em>认领</em>与<em>撤离</em>的词汇而非<em>在场</em>与<em>缺席</em>，正是因为「远」之性质本身带有时间的维度。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Formal and functional do not coincide</span>
+      <span data-lang-content="zh">形式与功能并不重合</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>Two places that share no formal region can be members of the same functional region; conversely, two places that lie within the same formal region can belong to entirely different functional ones. The geographer's vigilance, in either direction, lies in keeping the two questions distinct: <em>what is this place like?</em> (formal) and <em>what is it plugged into?</em> (functional). The folk concept of remoteness habitually conflates them, treating shared characteristics (sparse population, harsh climate, "frontier" appearance) as if they were direct evidence of disconnection. They may be; they may not be. A community within an unremarkable formal region may sit at the periphery of every functional region that matters to it, and a community in a striking formal region (high latitude, mountainous terrain) may be solidly enrolled in functional networks of state, capital, and information that draw it into a thicker web than its visible surroundings suggest.</p>
+
+      <p>This is why the analysis of remoteness cannot be done from satellite imagery alone, nor from population density, nor from any indicator of formal-region type. The relevant question is always: <em>by whose flows, in whose region, and how recently?</em> Functional regions are temporal objects in a way that formal regions are not. A climate zone changes on the scale of centuries or millennia; a port's hinterland can change in years.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>不共享任何形式区的两处，可以同属一个功能区；反之，共处同一形式区的两处，也可以分属全然不同的功能区。地理学家在任一方向上的警觉，皆在于保持两类问题之分别：<em>这地方是什么模样？</em>（形式）与<em>它接入了什么？</em>（功能）。「远」之民间概念惯常将二者混同，把共同的特征（人口稀少、气候严苛、「边疆」之貌）当作连接稀薄的直接证据。这或许成立，或许不成立。一处坐落于平平无奇之形式区的聚落，可能恰处于一切对它至关重要的功能区之边缘；而一处坐落于醒目之形式区（高纬、山地）的聚落，可能稳固地被国家、资本与信息的功能网络所接入，被牵入一张比其可见周遭所示更密的网中。</p>
+
+      <p>正因如此，关于「远」的分析无法仅凭遥感影像作出，也无法仅凭人口密度、或任何关于形式区类型的指标。相关的问题始终是：<em>由谁的流动？在谁的区域之中？时隔几何？</em>功能区是时间性的对象，方式与形式区不同。一个气候带的变化以世纪或千年为尺度；一个港口的腹地可以在数年间改写。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Withdrawal: remoteness as a state in time</span>
+      <span data-lang-content="zh">撤离：作为时间中之状态的远</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>If enrolment by a functional network can render a place, on this dimension, not remote, then the withdrawal of the network can render it remote again. This reveals what is perhaps the most consequential property of remoteness: <span class="verdict">it is not an attribute of location but a state in time, one that can switch on and off while the coordinates stay fixed.</span></p>
+
+      <p>The point is most visible in places where industrial or extractive functional regions have been dismantled, leaving the physical fabric of integration behind. The geographer Tim Edensor has made a sustained case for the philosophical and political importance of <em>industrial ruins</em>: the abandoned mills, factories, dockyards, and processing complexes of the late-modern North Atlantic, whose ruination is not picturesque decay but the material residue of withdrawn functional integration. For Edensor, such ruins matter precisely through their fragmentary and unfixed character. They blur the boundary between past and present; they are saturated with involuntary memory; and, through their very disorder, they contest the "fixed, classified, and commodified" remembering that official heritage imposes, licensing instead a remembering that is "inarticulate, sensual, and conjectural" <span class="ref-cite">(Edensor 2005a, 2005b; DeSilvey &amp; Edensor 2013)</span>.</p>
+
+      <p>The connection to remoteness is direct. An industrial ruin is the material trace of a place that was once an enrolled node of a functional region and is no longer one. It records, in its very fabric, both the enrolment and the withdrawal. The streets and shells are built at the scale that integration required; the silence and emptiness are the gauge of the withdrawal. To stand in such a place is not, as the picturesque tradition would have it, to contemplate timeless decay; it is to confront a specific historical sequence in which a network arrived, organized a settlement around itself, and left. The coordinates have not moved. What has moved is the network of relations that gave the coordinates their meaning, and the remoteness that has returned is exactly the remoteness that was, for a time, suppressed by enrolment.</p>
+
+      <p>This formulation also clarifies what is at stake in the otherwise vague phrase "ghost town." A ghost town is not merely a depopulated place. It is the visible aftermath of a particular kind of functional-regional history: a settlement whose existence depended on its membership in a now-departed network, preserved in its built form by chance of climate, by the durability of materials, or by the slowness of decay. The literature on modern ruins makes this precise. The remoteness of such places is not the remoteness they had before the network arrived (which may have been ordinary remoteness of distance); it is a <em>second</em> remoteness, the remoteness of having been integrated and let go, which is unlike anything in unbroken wilderness.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>如果某个功能网络的认领能使一处在此一维度上变得不远，那么该网络的撤离便能使它重新变远。这揭示了「远」之最具后果的性质，或许莫此为甚：<span class="verdict">它不是位置的属性，而是时间中的一种状态，能够在坐标保持不变的同时被开启与关闭。</span></p>
+
+      <p>这一点，最清晰地见于工业或采掘性功能区已被拆除、却把整合的物理躯壳遗留于此的那些地方。地理学家蒂姆·埃登索（Tim Edensor）持续地为<em>工业废墟</em>之哲学与政治意义作出论证：晚期现代北大西洋世界那些被弃的纺织厂、制造厂、船坞与加工厂群——它们的废墟化并不是如画的衰朽，而是被收回的功能整合所留下的物质残余。对埃登索而言，此类废墟之所以重要，恰恰在于其碎片化、其意义的不固定。它们模糊过去与现在的边界；它们浸透着非自主的记忆；而正是通过其无序，它们抗辩着官方遗产所强加的那种「固定的、被分类的、被商品化的」记忆，转而许可一种「不善言辞的、感官的、推测性的」记忆<span class="ref-cite">（Edensor 2005a, 2005b；DeSilvey &amp; Edensor 2013）</span>。</p>
+
+      <p>与「远」的连接是直接的。一处工业废墟是某地的物质痕迹——这地曾是一个功能区中被认领的节点，而今不再是。它在其肌理之中，同时录下了认领与撤离。街道与外壳建造于整合所需的尺度之上；寂静与空旷则是撤离的度量。立于这样一处，不是如风景如画的传统所声称的那样观照永恒之衰朽，而是与一段具体的历史序列正面相遇：一个网络曾抵达此地，把一座聚落围绕自身组织起来，然后离去。坐标未曾移动。移动的是给予这些坐标以意义的那张关系之网，而重新涌回的「远」，正是先前被认领所一度压制的那种远。</p>
+
+      <p>这一表述也澄清了「鬼城」这一在别处颇含糊的词所牵涉之事。鬼城并不仅仅是一处人口流失之地。它是一类特定的功能—区域史所遗下的可见结果：一处聚落，其存在曾仰赖于在某个如今已离去之网络中的成员资格，而其建成形态因气候之偶然、因建材之耐久、或因衰朽之缓慢而得以保留。关于现代废墟的文献把这一点说得分明：此类地方所有之「远」，不是网络抵达之前的那种远（那或许只是寻常的距离之远）；而是一种<em>二度</em>之远——曾被整合而又被放下的那种远——它不同于未受切割之荒野所有的任何东西。</p>
+    </div>
+
+    <h3>
+      <span data-lang-content="en">Two corollaries</span>
+      <span data-lang-content="zh">两条推论</span>
+    </h3>
+
+    <div data-lang-content="en">
+      <p>First, since enrolment and withdrawal are temporal, the question "is this place remote?" cannot be answered without a date stamp. A place may be remote in 2025 that was not in 1925, and vice versa. Historical atlases that depict only the cartography of nation-states without overlaying the functional-regional history of a region therefore systematically miss the kind of remoteness most relevant to lived experience. A proper account requires the diachronic dimension that core-periphery and world-systems analysis introduced and that the regional school had largely treated synchronically <span class="ref-cite">(Friedmann 1966; Wallerstein 1974)</span>.</p>
+
+      <p>Second, the remoteness of a once-integrated place is asymmetric in time, in the sense that its character cannot be recovered by reversing the chronology. The first remoteness of a place is its untouched remoteness: the remoteness of a landscape before any network has reached it. The second remoteness is the remoteness of a landscape after a network has reached it and gone. The two are not interchangeable. The second is marked by the residue of integration in its very fabric—the streets cut for traffic that no longer comes, the foundations of buildings serving institutions that no longer exist. To stand in the second is to encounter the trace of an absent network as part of the experience of standing there. This is, properly, an Edensorian remoteness rather than a Tuanian one: the geography of withdrawn relation rather than of untouched topophilia.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>第一，既然认领与撤离皆属时间，则「这一处是否为远？」这一问题，没有日期戳记便无法作答。一处在 2025 年为远者，可能在 1925 年并不为远，反之亦然。仅以国族之地图学呈现、而不叠加某一区域之功能—区域史的历史地图册，因此系统地错失了对生活经验而言最为相关的那种「远」。一份得体的论述需要历时性的维度——而这一维度，是核心—边缘分析与世界体系分析所引入，而区域学派则在很大程度上以共时方式处理的<span class="ref-cite">（Friedmann 1966；Wallerstein 1974）</span>。</p>
+
+      <p>第二，一处曾被整合者所有之「远」，在时间上是不对称的——其性格不可以经由颠倒时序而被复原。一处的「初度之远」，是它未受触动时的远：在任何网络抵达之前，一片景观所有的远。而「二度之远」，是网络抵达过、又离去之后，那片景观所有的远。二者不可互换。后者，在其肌理本身之中带着整合的残余——那些为再无车流的交通而切开的街道，那些为不再存在的机构而砌下的地基。立于这「二度」之中，便是把一张缺席之网的痕迹，作为「立于此处」之经验的一部分来遭遇。这一意义上，是属于埃登索的「远」，而非段义孚的「远」：是关于已被收回之关系的地理学，而非关于未受触动之恋地情结的地理学。</p>
+    </div>
+
+    <!-- ───── §7 Where the Two Concepts Meet ──────────────────── -->
+    <h2 id="sec-convergence"><span class="sec-num">7 ·</span>
+      <span data-lang-content="en">Where the Two Concepts Meet</span>
+      <span data-lang-content="zh">两个概念的交汇</span>
+    </h2>
+
+    <div data-lang-content="en">
+      <p>The two strands of this discussion, the philosophy of the sublime and the relational ontology of remoteness, can now be joined. The sublime, after Kant, is the relation in which a subject confronts something its faculties cannot compass and, in the failure, discovers the boundary of comprehension itself. Remoteness, on the relational view, is the state of a place that lies beyond, or has fallen out of, the networks through which a subject ordinarily connects to the world. Both are relations to a <em>boundary</em>: the sublime to the boundary of what the mind can grasp, remoteness to the boundary of what the network has claimed. Both are mislocated when treated as properties of the object: the sublime wrongly placed "in the mountain," remoteness wrongly placed "in the coordinates." Both are correctly located in a relation between a subject (or a subject's networks) and what exceeds it.</p>
+
+      <p>This shared structure explains why the remote and the sublime are so persistently fused in experience, and why the most intense geographical encounters occur where they coincide. A barren, will-indifferent landscape at the edge of the inhabited (Schopenhauer's privileged occasion of the sublime) is also a place at the edge of the functional networks (the condition of remoteness). The fog that obscures a northern coast is at once Burke's terrible obscurity and the literal failure of the link. The empty extent of polar tundra is at once the mathematical sublime's defeat of the imagination and the visible absence of network claiming. To stand at a bona fide corner, the real end of the land, is to occupy simultaneously the edge of the comprehensible and the edge of the connected.</p>
+    </div>
+    <div data-lang-content="zh">
+      <p>两条线索，即崇高的哲学与远方的关系性本体论，现在可以接合了。崇高，自康德以降，是一种关系：在其中，主体面对其官能所无法笼罩之物，并在这一失败之中，发现理解的边界本身。「远」，按关系性的观点，是一处之所在所处的状态：它落在、或已跌出主体借以日常连接世界的那张网络之外。二者皆是对一道<em>边界</em>的关系：崇高对的是心灵所能把握者之界，远对的是网络所认领者之界。二者一旦被当作对象的属性，便皆被错置了——崇高被错置于「山中」，远被错置于「坐标中」。二者皆应被正确地安放在「主体（或主体的网络）」与「超出它者」之间的一种关系之中。</p>
+
+      <p>这一共享的结构，解释了远方与崇高在经验中何以如此执拗地熔为一体，也解释了最强烈的地理相遇何以恰恰发生在二者重合之处。一片贫瘠的、与意志漠不相关的、位于可栖居者边缘的风景（叔本华所特许的崇高场合），同时也是一处位于功能网络边缘的所在（「远」之状态）。遮蔽北方海岸的雾，既是伯克所言可怖的晦暗，亦是连接的字面失效。极地苔原那空旷的广延，既是数学的崇高对想象力的挫败，亦是网络认领之可见的缺席。立于一个 bona fide 角落——陆地真正的尽头——便是同时占据可理解者的边缘与已被连接者的边缘。</p>
+    </div>
+
+    <div class="thesis" data-lang-content="en">
+      <p>The traveller who seeks the remote and the contemplative who seeks the sublime are, in the end, after the same thing under two descriptions: the experience of standing at a boundary of the self's reach—the reach of comprehension and the reach of connection—and feeling, in the encounter with what lies beyond it, both one's own smallness and the strange elevation that, for Kant and Schopenhauer alike, attends the recognition of a limit.</p>
+    </div>
+    <div class="thesis" data-lang-content="zh">
+      <p>寻求远方的旅行者，与寻求崇高的观照者，到头来，是在两种描述之下追逐同一样东西：立于自我之触及范围的某个边界之上——理解的触及范围、连接的触及范围；并在与那超出它者的相遇之中，同时感到自身的渺小，以及那种奇异的升越——对康德与叔本华而言，这升越皆伴随着对一个界限的认识而来。</p>
+    </div>
+
+    <!-- ───── Coda ────────────────────────────────────────────── -->
+    <section class="coda">
+      <p class="coda-lead" data-lang-content="en">
+        A note on method. The examples throughout are deliberately abstracted: place-types rather than places, a sea rather than a named sea. The abstraction is not evasion; it is the claim. If the argument is right that remoteness and the sublime are <em>relational</em> rather than <em>intrinsic</em>, then no particular place is needed to make the point, and naming one would falsely suggest the property lives in that place. The structure is meant to be recognizable in any far coast one has stood on.
+      </p>
+      <p class="coda-lead" data-lang-content="zh">
+        关于方法的一则说明。通篇的例子都被刻意保持抽象：是地点的类型，而非地点；是一片海，而非某片有名有姓的海。这种抽象不是回避，而正是主张本身。如果论证无误——远与崇高皆为<em>关系性的</em>而非<em>内在的</em>——那么便无需任何特定地点来支撑这一要点；点名一处，反倒会错误地暗示那属性栖居于那处之中。这套结构，意在能在任何一道人曾驻足过的远岸之上被辨认出来。
+      </p>
+
+      <blockquote class="epigraph coda-epigraph">
+        <span data-lang-content="en">
+          We can describe Nature as sublime merely because it raises the imagination to a presentation of those cases in which the mind can make itself sensible of the proper sublimity of the destination of its own being, even above Nature.
+          <span class="attribution">Immanuel Kant, <em>Critique of the Power of Judgment</em> (1790), §28</span>
+        </span>
+        <span data-lang-content="zh">
+          我们之所以能把自然称为崇高，仅仅因为它把想象力提升到对那些情形的呈现——在这些情形中，心灵能使自身感受到其自身存在之使命的、甚至高于自然的、本己的崇高性。
+          <span class="attribution">伊曼努尔·康德，《判断力批判》（1790），§28</span>
+        </span>
+      </blockquote>
+    </section>
+
+    <!-- ───── §8 References ──────────────────────────────────── -->
+    <h2 id="sec-references"><span class="sec-num">8 ·</span>
+      <span data-lang-content="en">References</span>
+      <span data-lang-content="zh">参考文献</span>
+    </h2>
+
+    <h3>
+      <span data-lang-content="en">The sublime: primary philosophical sources</span>
+      <span data-lang-content="zh">崇高：哲学一手文献</span>
+    </h3>
+
+    <ol class="references">
+      <li id="ref-longinus"><span class="ref-author">[Longinus].</span> 1st c. CE. <span class="ref-title">On the Sublime (Peri Hypsous).</span> Trans. W. Hamilton Fyfe, rev. Donald Russell. Loeb Classical Library.</li>
+      <li id="ref-burke1757"><span class="ref-author">Burke, Edmund.</span> 1757. <span class="ref-title">A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful.</span> London: R. and J. Dodsley.</li>
+      <li id="ref-kant1790"><span class="ref-author">Kant, Immanuel.</span> 1790. <span class="ref-title">Kritik der Urteilskraft (Critique of the Power of Judgment).</span> "Analytic of the Sublime," §§23–29. Cited from the Guyer &amp; Matthews translation, Cambridge University Press, 2000.</li>
+      <li id="ref-schopenhauer1818"><span class="ref-author">Schopenhauer, Arthur.</span> 1818. <span class="ref-title">Die Welt als Wille und Vorstellung (The World as Will and Representation).</span> Vol. 1, §39 (on the sublime). Cited from the Payne translation, Dover, 1969.</li>
+    </ol>
+
+    <h3>
+      <span data-lang-content="en">The sublime and landscape: critical and historical studies</span>
+      <span data-lang-content="zh">崇高与风景：批判与历史研究</span>
+    </h3>
+
+    <ol class="references">
+      <li id="ref-nicolson1959"><span class="ref-author">Nicolson, Marjorie Hope.</span> 1959. <span class="ref-title">Mountain Gloom and Mountain Glory: The Development of the Aesthetics of the Infinite.</span> Ithaca: Cornell University Press.</li>
+      <li id="ref-monk1935"><span class="ref-author">Monk, Samuel H.</span> 1935. <span class="ref-title">The Sublime: A Study of Critical Theories in XVIII-Century England.</span> New York: Modern Language Association.</li>
+      <li id="ref-shaw2006"><span class="ref-author">Shaw, Philip.</span> 2006. <span class="ref-title">The Sublime.</span> The New Critical Idiom. London: Routledge.</li>
+      <li id="ref-lyotard1991"><span class="ref-author">Lyotard, Jean-François.</span> 1991. <span class="ref-title">Lessons on the Analytic of the Sublime.</span> Trans. Elizabeth Rottenberg. Stanford: Stanford University Press.</li>
+    </ol>
+
+    <h3>
+      <span data-lang-content="en">Geography: place, perception, and region</span>
+      <span data-lang-content="zh">地理学：地方、知觉与区域</span>
+    </h3>
+
+    <ol class="references">
+      <li id="ref-tuan1974"><span class="ref-author">Tuan, Yi-Fu.</span> 1974. <span class="ref-title">Topophilia: A Study of Environmental Perception, Attitudes, and Values.</span> Englewood Cliffs: Prentice-Hall.</li>
+      <li id="ref-tuan1977"><span class="ref-author">Tuan, Yi-Fu.</span> 1977. <span class="ref-title">Space and Place: The Perspective of Experience.</span> Minneapolis: University of Minnesota Press.</li>
+      <li id="ref-tuan1979"><span class="ref-author">Tuan, Yi-Fu.</span> 1979. <span class="ref-title">Landscapes of Fear.</span> New York: Pantheon.</li>
+      <li id="ref-relph1976"><span class="ref-author">Relph, Edward.</span> 1976. <span class="ref-title">Place and Placelessness.</span> London: Pion.</li>
+      <li id="ref-cresswell2004"><span class="ref-author">Cresswell, Tim.</span> 2004. <span class="ref-title">Place: A Short Introduction.</span> Oxford: Blackwell.</li>
+      <li id="ref-said1978"><span class="ref-author">Said, Edward W.</span> 1978. <span class="ref-title">Orientalism.</span> New York: Pantheon. [On "imaginative geography" and the cultural constitution of the exotic.]</li>
+    </ol>
+
+    <h3>
+      <span data-lang-content="en">The ontology of geographic boundaries and regions</span>
+      <span data-lang-content="zh">地理边界与区域的本体论</span>
+    </h3>
+
+    <ol class="references">
+      <li id="ref-smith2001"><span class="ref-author">Smith, Barry, and Achille C. Varzi.</span> 2000. "Fiat and Bona Fide Boundaries." <span class="ref-title">Philosophy and Phenomenological Research</span> 60 (2): 401–420.</li>
+      <li id="ref-smith1995"><span class="ref-author">Smith, Barry.</span> 1995. "On Drawing Lines on a Map." In <span class="ref-title">Spatial Information Theory (COSIT '95)</span>, ed. Frank, Kuhn, &amp; Mark. Berlin: Springer.</li>
+      <li id="ref-casati1999"><span class="ref-author">Casati, Roberto, and Achille C. Varzi.</span> 1999. <span class="ref-title">Parts and Places: The Structures of Spatial Representation.</span> Cambridge, MA: MIT Press.</li>
+      <li id="ref-hartshorne1939"><span class="ref-author">Hartshorne, Richard.</span> 1939. <span class="ref-title">The Nature of Geography: A Critical Survey of Current Thought in the Light of the Past.</span> Lancaster, PA: Association of American Geographers. [On the formal/functional region distinction.]</li>
+    </ol>
+
+    <h3>
+      <span data-lang-content="en">Remoteness, accessibility, and the geography of connection</span>
+      <span data-lang-content="zh">远方、可达性与连接的地理学</span>
+    </h3>
+
+    <ol class="references">
+      <li id="ref-massey1993"><span class="ref-author">Massey, Doreen.</span> 1993. "Power-Geometry and a Progressive Sense of Place." In <span class="ref-title">Mapping the Futures: Local Cultures, Global Change</span>, ed. Bird et al. London: Routledge.</li>
+      <li id="ref-massey1994"><span class="ref-author">Massey, Doreen.</span> 1994. <span class="ref-title">Space, Place and Gender.</span> Minneapolis: University of Minnesota Press.</li>
+      <li id="ref-massey2005"><span class="ref-author">Massey, Doreen.</span> 2005. <span class="ref-title">For Space.</span> London: Sage. [On the relational constitution of space, the notion of "stories-so-far," and the power-geometry of connection.]</li>
+      <li id="ref-auge1992"><span class="ref-author">Augé, Marc.</span> 1992. <span class="ref-title">Non-Places: Introduction to an Anthropology of Supermodernity.</span> Trans. John Howe. London: Verso (1995).</li>
+      <li id="ref-friedmann1966"><span class="ref-author">Friedmann, John.</span> 1966. <span class="ref-title">Regional Development Policy: A Case Study of Venezuela.</span> Cambridge, MA: MIT Press. [Core-periphery model.]</li>
+      <li id="ref-wallerstein1974"><span class="ref-author">Wallerstein, Immanuel.</span> 1974. <span class="ref-title">The Modern World-System I.</span> New York: Academic Press. [Core, semi-periphery, and periphery as relational positions.]</li>
+      <li id="ref-scott1998"><span class="ref-author">Scott, James C.</span> 1998. <span class="ref-title">Seeing Like a State.</span> New Haven: Yale University Press. [On legibility and the standardizing reach of the state.]</li>
+      <li id="ref-harvey1989"><span class="ref-author">Harvey, David.</span> 1989. <span class="ref-title">The Condition of Postmodernity.</span> Oxford: Blackwell. [On time-space compression.]</li>
+      <li id="ref-tobler1970"><span class="ref-author">Tobler, Waldo.</span> 1970. "A Computer Movie Simulating Urban Growth in the Detroit Region." <span class="ref-title">Economic Geography</span> 46: 234–240. [Source of the "first law of geography" and distance decay.]</li>
+      <li id="ref-hagerstrand1967"><span class="ref-author">Hägerstrand, Torsten.</span> 1967. <span class="ref-title">Innovation Diffusion as a Spatial Process.</span> Chicago: University of Chicago Press.</li>
+      <li id="ref-sheller2006"><span class="ref-author">Sheller, Mimi, and John Urry.</span> 2006. "The New Mobilities Paradigm." <span class="ref-title">Environment and Planning A</span> 38 (2): 207–226.</li>
+      <li id="ref-gieryn2000"><span class="ref-author">Gieryn, Thomas F.</span> 2000. "A Space for Place in Sociology." <span class="ref-title">Annual Review of Sociology</span> 26: 463–496.</li>
+    </ol>
+
+    <h3>
+      <span data-lang-content="en">Modern ruins, memory, and abandonment</span>
+      <span data-lang-content="zh">现代废墟、记忆与撤离</span>
+    </h3>
+
+    <ol class="references">
+      <li id="ref-edensor2005a"><span class="ref-author">Edensor, Tim.</span> 2005. <span class="ref-title">Industrial Ruins: Space, Aesthetics and Materiality.</span> Oxford: Berg.</li>
+      <li id="ref-edensor2005b"><span class="ref-author">Edensor, Tim.</span> 2005. "The Ghosts of Industrial Ruins: Ordering and Disordering Memory in Excessive Space." <span class="ref-title">Environment and Planning D: Society and Space</span> 23 (6): 829–849.</li>
+      <li id="ref-desilvey2013"><span class="ref-author">DeSilvey, Caitlin, and Tim Edensor.</span> 2013. "Reckoning with Ruins." <span class="ref-title">Progress in Human Geography</span> 37 (4): 465–485.</li>
+    </ol>
+
+  </main>
+</div>
+
+<!-- ─── Language toggle script ─────────────────────────────────── -->
+<script>
+(function() {
+  'use strict';
+
+  var body = document.body;
+  var buttons = document.querySelectorAll('.lang-toggle button[data-lang-set]');
+
+  function setLang(lang) {
+    body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh' : 'en');
+    buttons.forEach(function(b) {
+      if (b.getAttribute('data-lang-set') === lang) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+    try { localStorage.setItem('yifanova-lang', lang); } catch (e) { /* ignore */ }
+  }
+
+  // Restore language preference if previously set
+  try {
+    var saved = localStorage.getItem('yifanova-lang');
+    if (saved === 'en' || saved === 'zh') {
+      setLang(saved);
+    }
+  } catch (e) { /* ignore */ }
+
+  buttons.forEach(function(b) {
+    b.addEventListener('click', function() {
+      setLang(b.getAttribute('data-lang-set'));
+    });
+  });
+
+  // Mobile TOC toggle
+  var tocToggle = document.querySelector('.toc-mobile-toggle');
+  var tocListWrapper = document.querySelector('.toc-list-wrapper');
+  if (tocToggle && tocListWrapper) {
+    tocToggle.addEventListener('click', function() {
+      var expanded = tocToggle.getAttribute('aria-expanded') === 'true';
+      tocToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      tocListWrapper.classList.toggle('is-open', !expanded);
+    });
+    document.querySelectorAll('.toc-list-wrapper a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (window.innerWidth < 1100) {
+          tocToggle.setAttribute('aria-expanded', 'false');
+          tocListWrapper.classList.remove('is-open');
+        }
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
