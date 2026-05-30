@@ -277,6 +277,15 @@ body.remoteness-page[data-lang="zh"] {
   letter-spacing: 0.02em;
 }
 
+/* English headings: enlarged for stronger contrast with body, since
+   Latin script has lower visual density than Chinese at the same em. */
+.remoteness-page[data-lang="en"] h1 {
+  font-size: clamp(2.6rem, 5.4vw, 3.4rem);
+}
+.remoteness-page[data-lang="en"] h2 {
+  font-size: 1.85rem;
+}
+
 .remoteness-page h4 {
   font-family: var(--an-font-body);
   font-weight: 700;
